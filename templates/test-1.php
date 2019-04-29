@@ -3,21 +3,26 @@
 <head>
   <title>Gallevisionery</title>
   <meta charset="utf-8">
+
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <!-- <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.min.js'></script> -->
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.min.js'></script>
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.min.js'></script>
-  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.css' type='text/css' />
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.css' type='text/css' />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+
   
   <style>
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 927px;}
+    .row.content {height: 100vh;}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -29,46 +34,52 @@
     footer {
       background-color: #555;
       color: white;
-      padding: 15px; /*Footer*/
+      height: 100%;
+      width:100%;
+      z-index:1;
+      padding: 25px; /*Footer*/
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 737px;) {
       .sidenav {
         height: auto;
         padding: 15px;
       }
       .row.content {height: auto;} 
     }
-  </style>
 
-<style>
+  .svgCanvas {
+      border: solid 1px;
+      width : 100%;
+  }
+
   #menu {
-  background: #fff;
-  position: absolute;
-  z-index: 2;
-  top: 60px;
-  right: 10px;
-  border-radius: 3px;
-  width: 120px;
-  border: 1px solid rgba(0,0,0,0.4);
-  font-family: 'Open Sans', sans-serif;
+    background: #fff;
+    position: absolute;
+    z-index: 2;
+    top: 60px;
+    right: 10px;
+    border-radius: 3px;
+    width: 120px;
+    border: 1px solid rgba(0,0,0,0.4);
+    font-family: 'Open Sans', sans-serif;
   }
 
   #menu a {
-  font-size: 13px;
-  color: #404040;
-  display: block;
-  margin: 0;
-  padding: 0;
-  padding: 10px;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,0.25);
-  text-align: center;
+    font-size: 13px;
+    color: #404040;
+    display: block;
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+    text-align: center;
   }
 
   #menu a:last-child {
-  border: none;
+    border: none;
   }
 
   #menu a:hover {
@@ -82,13 +93,12 @@
   }
 
   #menu a.active:hover {
-  background: #3074a4;
+    background: #3074a4;
   }
-  </style>
+</style>
 
 
 
-<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.css' type='text/css' />
 <style>
 .geocoder {
   position:absolute;
@@ -118,11 +128,13 @@
 </style>
 
 
-  <style>
-  body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; left:0; width:100%; }
-  </style>
+<style>
+body { margin:0; padding:0;}
+#map { position:absolute; top:0; bottom:0; left:0; width:100%; height:100vh;}
+</style>
+
 </head>
+
 <body>
 
 <div class="container-fluid">
@@ -328,22 +340,36 @@
 
           });
       });
+  
 
     </script>
     </div>
 
 
-
   <!–– Below is Right side area ––>
 
-    <div class="col-sm-3">
-      <h4><small>Graph</small></h4>
-      <hr>
+    <div class="col-sm-3 ct-chart" >
       <h2>Graph</h2>
+      <hr>
       <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
       <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><br>
+      
+      <script>
+        var data = {
+          labels: ['Mon', 'Tue', ' Wed', ' Thu', ' Fri'],
+          series :[
+            [15,1,40,5,10]
+          ]
+        };
+
+        var options = {
+          width : 360,
+          height : 400,
+        }
+      
+        var myChart = new Chartist.Line('.ct-chart', data, options);
+      </script>
+
 
       <h4><small>RECENT POSTS</small></h4>
       <hr>
@@ -351,19 +377,14 @@
       <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
       <h5><span class="label label-success">Lorem</span></h5><br>
       <hr>
-
-      <h4>Leave a Comment:</h4>
-      <form role="form">
-        <div class="form-group">
-          <textarea class="form-control" rows="3" required></textarea>
-        </div>
       </div>
-    </div>
 
-    <div class="col-sm-3">
-      <h4><small>Graph</small></h4>
+
+
+      <div class="col-sm-3">
+      <h2>Comparison</h2>
       <hr>
-      <h2>Graph</h2>
+      <h2>Text</h2>
       <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
       <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -371,26 +392,21 @@
 
       <h4><small>RECENT POSTS</small></h4>
       <hr>
-      <h2>Hello World</h2>
       <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
       <h5><span class="label label-success">Lorem</span></h5><br>
-      <hr>
+      
+        
 
+      <hr>
       <h4>Leave a Comment:</h4>
       <form role="form">
         <div class="form-group">
           <textarea class="form-control" rows="3" required></textarea>
         </div>
       </div>
+
+
     </div>
-  </div>
-
-
-
-
-<footer class="container-fluid">
-  <p>Habel & Digital</p>
-</footer>
 
 </body>
 </html>
