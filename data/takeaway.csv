@@ -1,0 +1,461 @@
+,Census year,Block ID,Property ID,Base property ID,Street address,CLUE small area,Trading name,Industry (ANZSIC4) code,Industry (ANZSIC4) description,Seating type,Number of seats,Latitude,Longitude
+0,2015,246,104447,104447,81-109 Grattan Street,Carlton,Tutto Premium Frozen Yogurt And Dessert ,4512,Takeaway Food Services,Seats - Indoor,16,-37.8011023, 144.9661325
+1,2015,246,104447,104447,81-109 Grattan Street,Carlton,Tutto Premium Frozen Yogurt And Dessert ,4512,Takeaway Food Services,Seats - Outdoor,16,-37.8011023, 144.9661325
+2,2015,246,106111,106111,197 Lygon Street,Carlton,Gelatissimo Carlton,4512,Takeaway Food Services,Seats - Outdoor,18,-37.8010174, 144.9666499
+3,2015,246,106112,106112,199 Lygon Street,Carlton,Seasons Provedore,4512,Takeaway Food Services,Seats - Indoor,10,-37.80096704, 144.9666591
+4,2015,246,106112,106112,199 Lygon Street,Carlton,Seasons Provedore,4512,Takeaway Food Services,Seats - Outdoor,18,-37.80096704, 144.9666591
+5,2015,230,106969,106969,237-239 Nicholson Street,Carlton,French Lettuce,4512,Takeaway Food Services,Seats - Indoor,12,-37.79439894, 144.9751345
+6,2015,230,106969,106969,237-239 Nicholson Street,Carlton,French Lettuce,4512,Takeaway Food Services,Seats - Outdoor,9,-37.79439894, 144.9751345
+7,2015,226,108229,108229,178 Rathdowne Street,Carlton,Carlton Fish & Chips,4512,Takeaway Food Services,Seats - Indoor,4,-37.79518777, 144.9711835
+8,2015,226,108229,108229,178 Rathdowne Street,Carlton,Carlton Fish & Chips,4512,Takeaway Food Services,Seats - Outdoor,4,-37.79518777, 144.9711835
+9,2015,218,106200,106200,344 Lygon Street,Carlton,Boost Juice,4512,Takeaway Food Services,Seats - Outdoor,4,-37.79900008, 144.9675043
+10,2015,257,525988,525988,165 Pelham Street,Carlton,Uni Square Cafe,4512,Takeaway Food Services,Seats - Indoor,6,-37.80239254, 144.9610729
+11,2015,257,525988,525988,165 Pelham Street,Carlton,Uni Square Cafe,4512,Takeaway Food Services,Seats - Outdoor,8,-37.80239254, 144.9610729
+12,2015,245,110987,110987,660-674 Swanston Street,Carlton,Momo Sushi ,4512,Takeaway Food Services,Seats - Indoor,18,-37.80099105, 144.9642885
+13,2015,245,110987,110987,660-674 Swanston Street,Carlton,Momo Sushi ,4512,Takeaway Food Services,Seats - Outdoor,6,-37.80099105, 144.9642885
+14,2015,257,525989,525989,163 Pelham Street,Carlton,Momo Sushi Melbourne,4512,Takeaway Food Services,Seats - Indoor,10,-37.80239894, 144.961131
+15,2015,265,101592,101592,87 Cardigan Street,Carlton,Woodside Green,4512,Takeaway Food Services,Seats - Indoor,18,-37.80486182, 144.9644461
+16,2015,265,101592,101592,87 Cardigan Street,Carlton,Woodside Green,4512,Takeaway Food Services,Seats - Outdoor,18,-37.80486182, 144.9644461
+17,2015,247,107558,107558,60 Pelham Street,Carlton,Assembly Store,4512,Takeaway Food Services,Seats - Indoor,6,-37.80262561, 144.9673351
+18,2015,247,107558,107558,60 Pelham Street,Carlton,Assembly Store,4512,Takeaway Food Services,Seats - Outdoor,4,-37.80262561, 144.9673351
+19,2015,265,101581,101581,55 Cardigan Street,Carlton,Soul Soup Cafe,4512,Takeaway Food Services,Seats - Indoor,26,-37.80543863, 144.9642791
+20,2015,265,101581,101581,55 Cardigan Street,Carlton,Soul Soup Cafe,4512,Takeaway Food Services,Seats - Outdoor,25,-37.80543863, 144.9642791
+21,2015,214,103134,103134,192 Elgin Street,Carlton,Lahore Biryani House,4512,Takeaway Food Services,Seats - Indoor,20,-37.79698294, 144.9681645
+22,2015,214,103134,103134,192 Elgin Street,Carlton,Lahore Biryani House,4512,Takeaway Food Services,Seats - Outdoor,6,-37.79698294, 144.9681645
+23,2015,245,104450,104450,251-257 Cardigan Street,Carlton,Domino's Pizza,4512,Takeaway Food Services,Seats - Indoor,15,-37.80077102, 144.9651037
+24,2015,245,104450,104450,251-257 Cardigan Street,Carlton,Domino's Pizza,4512,Takeaway Food Services,Seats - Outdoor,10,-37.80077102, 144.9651037
+25,2015,245,581508,538825,604 Swanston Street,Carlton,Minang Nasi Padang,4512,Takeaway Food Services,Seats - Indoor,24,-37.80188571, 144.9643119
+26,2015,246,559024,559024,115 Grattan Street,Carlton,NL House,4512,Takeaway Food Services,Seats - Indoor,12,-37.80080712, 144.9656841
+27,2015,246,559024,559024,115 Grattan Street,Carlton,NL House,4512,Takeaway Food Services,Seats - Outdoor,16,-37.80080712, 144.9656841
+28,2015,206,106125,106125,241 Lygon Street,Carlton,New Zealand Natural Ice Cream,4512,Takeaway Food Services,Seats - Outdoor,16,-37.79978368, 144.9667834
+29,2015,217,106195,106195,364 Lygon Street,Carlton,Seasalt Fish & Sushi Bar,4512,Takeaway Food Services,Seats - Indoor,10,-37.79828024, 144.9676437
+30,2015,217,106195,106195,364 Lygon Street,Carlton,Seasalt Fish & Sushi Bar,4512,Takeaway Food Services,Seats - Outdoor,24,-37.79828024, 144.9676437
+31,2015,252,111069,106250,104 Lygon Street,Carlton,Sr's Namaste,4512,Takeaway Food Services,Seats - Indoor,25,-37.80443778, 144.9666993
+32,2015,239,103258,103258,774-782 Elizabeth Street,Carlton,Top End Cafe,4512,Takeaway Food Services,Seats - Indoor,4,-37.80033364, 144.9580246
+33,2015,239,103258,103258,774-782 Elizabeth Street,Carlton,Top End Cafe,4512,Takeaway Food Services,Seats - Outdoor,10,-37.80033364, 144.9580246
+34,2015,245,110987,110987,660-674 Swanston Street,Carlton,Subway Carlton,4512,Takeaway Food Services,Seats - Indoor,30,-37.80099105, 144.9642885
+35,2015,245,110987,110987,660-674 Swanston Street,Carlton,Subway Carlton,4512,Takeaway Food Services,Seats - Outdoor,9,-37.80099105, 144.9642885
+36,2015,95,109312,109312,377-391 Swanston Street,Melbourne (CBD),Hokuto Japanese Cafe,4512,Takeaway Food Services,Seats - Indoor,12,-37.80945732, 144.9634198
+37,2015,95,109312,109312,377-391 Swanston Street,Melbourne (CBD),Hokuto Japanese Cafe,4512,Takeaway Food Services,Seats - Outdoor,8,-37.80945732, 144.9634198
+38,2015,57,108584,108584,170-190 Russell Street,Melbourne (CBD),Cafe Simply T,4512,Takeaway Food Services,Seats - Indoor,15,-37.81199369, 144.9681391
+39,2015,57,108584,108584,170-190 Russell Street,Melbourne (CBD),Cafe Simply T,4512,Takeaway Food Services,Seats - Outdoor,5,-37.81199369, 144.9681391
+40,2015,67,105681,110701,145-147 Lonsdale Street,Melbourne (CBD),Nishiki Healthy Hut,4512,Takeaway Food Services,Seats - Indoor,10,-37.81081665, 144.9681529
+41,2015,67,105681,110701,145-147 Lonsdale Street,Melbourne (CBD),Nishiki Healthy Hut,4512,Takeaway Food Services,Seats - Outdoor,4,-37.81081665, 144.9681529
+42,2015,28,102063,102060,45 Collins Street,Melbourne (CBD),Nashi,4512,Takeaway Food Services,Seats - Outdoor,10,-37.81430616, 144.9726281
+43,2015,38,108982,108982,93-101 Spring Street,Melbourne (CBD),Saki Sushi Bar,4512,Takeaway Food Services,Seats - Indoor,12,-37.81260039, 144.9731836
+44,2015,38,108982,108982,93-101 Spring Street,Melbourne (CBD),Saki Sushi Bar,4512,Takeaway Food Services,Seats - Outdoor,14,-37.81260039, 144.9731836
+45,2015,17,104025,104025,114-128 Flinders Street,Melbourne (CBD),Deli 101,4512,Takeaway Food Services,Seats - Indoor,10,-37.81595762, 144.9707353
+46,2015,67,105681,110701,145-147 Lonsdale Street,Melbourne (CBD),Dhaka Restaurant & Supplies,4512,Takeaway Food Services,Seats - Indoor,15,-37.81081665, 144.9681529
+47,2015,67,105681,110701,145-147 Lonsdale Street,Melbourne (CBD),Dhaka Restaurant & Supplies,4512,Takeaway Food Services,Seats - Outdoor,4,-37.81081665, 144.9681529
+48,2015,114,562692,562692,465 Elizabeth Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Indoor,18,-37.80806541, 144.9600075
+49,2015,114,562692,562692,465 Elizabeth Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Outdoor,8,-37.80806541, 144.9600075
+50,2015,68,103620,103620,196-226 Exhibition Street,Melbourne (CBD),I Bean Cafe,4512,Takeaway Food Services,Seats - Indoor,16,-37.81055707, 144.9704962
+51,2015,27,102067,102067,89-105 Collins Street,Melbourne (CBD),Sushi Land,4512,Takeaway Food Services,Seats - Indoor,10,-37.81492031, 144.9707498
+52,2015,27,102067,102067,89-105 Collins Street,Melbourne (CBD),Sushi Land,4512,Takeaway Food Services,Seats - Outdoor,10,-37.81492031, 144.9707498
+53,2015,48,101117,101117,87-91 Bourke Street,Melbourne (CBD),More Than Fresh,4512,Takeaway Food Services,Seats - Indoor,10,-37.812234, 144.9709029
+54,2015,48,101117,101117,87-91 Bourke Street,Melbourne (CBD),More Than Fresh,4512,Takeaway Food Services,Seats - Outdoor,5,-37.812234, 144.9709029
+55,2015,95,105485,105485,224-252 La Trobe Street,Melbourne (CBD),Diane Sushi on La Trobe,4512,Takeaway Food Services,Seats - Indoor,4,-37.80965592, 144.9623409
+56,2015,57,101219,101219,100-116 Bourke Street,Melbourne (CBD),D'Marcos  Espresso Bar,4512,Takeaway Food Services,Seats - Indoor,11,-37.81170307, 144.9697778
+57,2015,38,103627,103627,104-110 Exhibition Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Indoor,5,-37.81310178, 144.9713561
+58,2015,67,103606,103606,237-239 Exhibition Street,Melbourne (CBD),Curry Bowl,4512,Takeaway Food Services,Seats - Indoor,10,-37.81037184, 144.9694513
+59,2015,114,562693,562693,467 Elizabeth Street,Melbourne (CBD),Boost Juice ,4512,Takeaway Food Services,Seats - Indoor,3,-37.80802361, 144.9599882
+60,2015,114,562693,562693,467 Elizabeth Street,Melbourne (CBD),Boost Juice ,4512,Takeaway Food Services,Seats - Outdoor,4,-37.80802361, 144.9599882
+61,2015,18,103919,103919,75-77 Flinders Lane,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Indoor,18,-37.81514512, 144.9722399
+62,2015,28,102063,102060,45 Collins Street,Melbourne (CBD),Rush Sushi,4512,Takeaway Food Services,Seats - Indoor,16,-37.81430616, 144.9726281
+63,2015,28,102063,102060,45 Collins Street,Melbourne (CBD),Roll'd Collins Place,4512,Takeaway Food Services,Seats - Indoor,30,-37.81430616, 144.9726281
+64,2015,95,500323,500323,19-37 A'Beckett Street,Melbourne (CBD),Wonderbao,4512,Takeaway Food Services,Seats - Indoor,8,-37.80894099, 144.9626101
+65,2015,114,103231,103231,473-481 Elizabeth Street,Melbourne (CBD),Borek Bakehouse,4512,Takeaway Food Services,Seats - Indoor,8,-37.80781933, 144.959753
+66,2015,38,102168,102168,24-28 Collins Street,Melbourne (CBD),Pie Face ,4512,Takeaway Food Services,Seats - Indoor,14,-37.81342593, 144.9727083
+67,2015,38,102168,102168,24-28 Collins Street,Melbourne (CBD),Pie Face ,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81342593, 144.9727083
+68,2015,48,101117,101117,87-91 Bourke Street,Melbourne (CBD),Panini Bar,4512,Takeaway Food Services,Seats - Indoor,18,-37.812234, 144.9709029
+69,2015,48,101117,101117,87-91 Bourke Street,Melbourne (CBD),Panini Bar,4512,Takeaway Food Services,Seats - Outdoor,4,-37.812234, 144.9709029
+70,2015,104,103227,103227,441-447 Elizabeth Street,Melbourne (CBD),Tea Up,4512,Takeaway Food Services,Seats - Indoor,6,-37.8087318, 144.9601146
+71,2015,78,603923,580091,32-54 Lonsdale Street,Melbourne (CBD),Zoom Organic ,4512,Takeaway Food Services,Seats - Indoor,14,-37.8091842, 144.9707325
+72,2015,78,603923,580091,32-54 Lonsdale Street,Melbourne (CBD),Zoom Organic ,4512,Takeaway Food Services,Seats - Outdoor,8,-37.8091842, 144.9707325
+73,2015,67,103605,103605,231-233 Exhibition Street,Melbourne (CBD),That Schnitzel Place,4512,Takeaway Food Services,Seats - Indoor,20,-37.81051104, 144.9695206
+74,2015,37,102161,102161,76-80 Collins Street,Melbourne (CBD),The Coffee Commission ,4512,Takeaway Food Services,Seats - Indoor,17,-37.81358646, 144.9707087
+75,2015,37,102161,102161,76-80 Collins Street,Melbourne (CBD),The Coffee Commission ,4512,Takeaway Food Services,Seats - Outdoor,12,-37.81358646, 144.9707087
+76,2015,38,108272,108272,22 Ridgway Place,Melbourne (CBD),Liaision,4512,Takeaway Food Services,Seats - Indoor,22,-37.81292259, 144.9724886
+77,2015,38,108272,108272,22 Ridgway Place,Melbourne (CBD),Liaision,4512,Takeaway Food Services,Seats - Outdoor,22,-37.81292259, 144.9724886
+78,2015,47,108591,108591,114-120 Russell Street,Melbourne (CBD),Brioche by Phillip,4512,Takeaway Food Services,Seats - Indoor,10,-37.81350285, 144.9689753
+79,2015,47,108591,108591,114-120 Russell Street,Melbourne (CBD),Brioche by Phillip,4512,Takeaway Food Services,Seats - Outdoor,3,-37.81350285, 144.9689753
+80,2015,17,104022,104022,138-140 Flinders Street,Melbourne (CBD),Cento Mani,4512,Takeaway Food Services,Seats - Indoor,17,-37.81637277, 144.9703367
+81,2015,87,108569,108569,288-294 Russell Street,Melbourne (CBD),Dolan Uyghur Food Heaven,4512,Takeaway Food Services,Seats - Indoor,20,-37.80966479, 144.966972
+82,2015,48,101117,101117,87-91 Bourke Street,Melbourne (CBD),Pie Face Exhibition Street,4512,Takeaway Food Services,Seats - Indoor,12,-37.812234, 144.9709029
+83,2015,48,101117,101117,87-91 Bourke Street,Melbourne (CBD),Pie Face Exhibition Street,4512,Takeaway Food Services,Seats - Outdoor,2,-37.812234, 144.9709029
+84,2015,38,102169,102169,18-22 Collins Street,Melbourne (CBD),Engel's Espresso,4512,Takeaway Food Services,Seats - Indoor,15,-37.81330535, 144.9728919
+85,2015,38,102169,102169,18-22 Collins Street,Melbourne (CBD),Engel's Espresso,4512,Takeaway Food Services,Seats - Outdoor,10,-37.81330535, 144.9728919
+86,2015,48,103623,103623,136-144 Exhibition Street,Melbourne (CBD),Black Velvet Espresso ,4512,Takeaway Food Services,Seats - Indoor,14,-37.81240259, 144.9711075
+87,2015,38,108982,108982,93-101 Spring Street,Melbourne (CBD),Little Bean Blue,4512,Takeaway Food Services,Seats - Indoor,20,-37.81260039, 144.9731836
+88,2015,38,108982,108982,93-101 Spring Street,Melbourne (CBD),Little Bean Blue,4512,Takeaway Food Services,Seats - Outdoor,16,-37.81260039, 144.9731836
+89,2015,17,103591,103591,1-9 Exhibition Street,Melbourne (CBD),Bon a Manger,4512,Takeaway Food Services,Seats - Indoor,13,-37.81584246, 144.9720412
+90,2015,17,103591,103591,1-9 Exhibition Street,Melbourne (CBD),Mama Wongs,4512,Takeaway Food Services,Seats - Indoor,25,-37.81584246, 144.9720412
+91,2015,37,102155,102155,106-120 Collins Street,Melbourne (CBD),Raku Raku,4512,Takeaway Food Services,Seats - Indoor,12,-37.81398457, 144.9693797
+92,2015,58,102272,102272,10-26 Crossley Street,Melbourne (CBD),Traveller,4512,Takeaway Food Services,Seats - Indoor,5,-37.81138377, 144.9712095
+93,2015,58,102272,102272,10-26 Crossley Street,Melbourne (CBD),Traveller,4512,Takeaway Food Services,Seats - Outdoor,4,-37.81138377, 144.9712095
+94,2015,87,105441,105441,141-149 La Trobe Street,Melbourne (CBD),Flipboard Cafe,4512,Takeaway Food Services,Seats - Indoor,12,-37.80876614, 144.9674801
+95,2015,87,105441,105441,141-149 La Trobe Street,Melbourne (CBD),Flipboard Cafe,4512,Takeaway Food Services,Seats - Outdoor,8,-37.80876614, 144.9674801
+96,2015,104,103227,103227,441-447 Elizabeth Street,Melbourne (CBD),Tea Up,4512,Takeaway Food Services,Seats - Outdoor,6,-37.8087318, 144.9601146
+97,2015,95,103308,103308,368-378 Elizabeth Street,Melbourne (CBD),Real Food For You,4512,Takeaway Food Services,Seats - Indoor,4,-37.80994879, 144.961747
+98,2015,105,109318,109318,427-457 Swanston Street,Melbourne (CBD),In A Rush,4512,Takeaway Food Services,Seats - Indoor,26,-37.80826292, 144.9626932
+99,2015,105,109318,109318,427-457 Swanston Street,Melbourne (CBD),In A Rush,4512,Takeaway Food Services,Seats - Outdoor,4,-37.80826292, 144.9626932
+100,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),The Soup Place,4512,Takeaway Food Services,Seats - Indoor,16,-37.8166033, 144.9655966
+101,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),The Soup Place,4512,Takeaway Food Services,Seats - Outdoor,2,-37.8166033, 144.9655966
+102,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),Yen Sushi Noodle,4512,Takeaway Food Services,Seats - Indoor,9,-37.8166033, 144.9655966
+103,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),Yen Sushi Noodle,4512,Takeaway Food Services,Seats - Outdoor,4,-37.8166033, 144.9655966
+104,2015,25,102084,102084,259-263 Collins Street,Melbourne (CBD),Delight Sandwich Bar,4512,Takeaway Food Services,Seats - Indoor,17,-37.81620631, 144.9653407
+105,2015,25,102084,102084,259-263 Collins Street,Melbourne (CBD),Matsuki Japanese Cafe,4512,Takeaway Food Services,Seats - Indoor,20,-37.81620631, 144.9653407
+106,2015,25,102084,102084,259-263 Collins Street,Melbourne (CBD),Health Cosmos,4512,Takeaway Food Services,Seats - Indoor,8,-37.81620631, 144.9653407
+107,2015,15,103942,103942,253-265 Flinders Lane,Melbourne (CBD),Pear Drop Foods,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81706291, 144.9659028
+108,2015,45,101142,101142,309-325 Bourke Street,Melbourne (CBD),V R Thai,4512,Takeaway Food Services,Seats - Indoor,16,-37.81445406, 144.9645323
+109,2015,45,101142,101142,309-325 Bourke Street,Melbourne (CBD),V R Thai,4512,Takeaway Food Services,Seats - Outdoor,10,-37.81445406, 144.9645323
+110,2015,14,103165,103165,1-5 Elizabeth Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Indoor,14,-37.81805666, 144.964608
+111,2015,66,109389,109389,247-255 Lonsdale Street,Melbourne (CBD),Pie Face,4512,Takeaway Food Services,Seats - Indoor,12,-37.81169356, 144.9651047
+112,2015,15,103326,103326,281-291 Flinders Lane,Melbourne (CBD),Migo's,4512,Takeaway Food Services,Seats - Indoor,24,-37.81719024, 144.9649678
+113,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),3 Lt Monkeys,4512,Takeaway Food Services,Seats - Indoor,8,-37.8166033, 144.9655966
+114,2015,46,101137,101137,235-251 Bourke Street,Melbourne (CBD),FOB Rolls,4512,Takeaway Food Services,Seats - Indoor,3,-37.81376503, 144.9665978
+115,2015,46,101137,101137,235-251 Bourke Street,Melbourne (CBD),FOB Rolls,4512,Takeaway Food Services,Seats - Outdoor,4,-37.81376503, 144.9665978
+116,2015,64,103187,103187,219-233 Elizabeth Street,Melbourne (CBD),Pie Face,4512,Takeaway Food Services,Seats - Indoor,12,-37.81321386, 144.9622831
+117,2015,64,103187,103187,219-233 Elizabeth Street,Melbourne (CBD),Pie Face,4512,Takeaway Food Services,Seats - Outdoor,7,-37.81321386, 144.9622831
+118,2015,64,103187,103187,219-233 Elizabeth Street,Melbourne (CBD),Mai's Bakery,4512,Takeaway Food Services,Seats - Indoor,16,-37.81321386, 144.9622831
+119,2015,64,103187,103187,219-233 Elizabeth Street,Melbourne (CBD),Mai's Bakery,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81321386, 144.9622831
+120,2015,64,105868,105868,394-400 Little Bourke Street,Melbourne (CBD),Spud Bar,4512,Takeaway Food Services,Seats - Indoor,16,-37.81365679, 144.9609004
+121,2015,65,103312,103312,222-260 Elizabeth Street,Melbourne (CBD),Sushi Sushi,4512,Takeaway Food Services,Seats - Indoor,27,-37.81261442, 144.9628783
+122,2015,65,103312,103312,222-260 Elizabeth Street,Melbourne (CBD),Cacao Lab,4512,Takeaway Food Services,Seats - Indoor,21,-37.81261442, 144.9628783
+123,2015,65,105698,105698,269-321 Lonsdale Street,Melbourne (CBD),Botica,4512,Takeaway Food Services,Seats - Indoor,16,-37.81245199, 144.9638386
+124,2015,65,105698,105698,269-321 Lonsdale Street,Melbourne (CBD),ES Teler 77,4512,Takeaway Food Services,Seats - Indoor,6,-37.81245199, 144.9638386
+125,2015,65,105698,105698,269-321 Lonsdale Street,Melbourne (CBD),South Melbourne Market Dim Sims,4512,Takeaway Food Services,Seats - Indoor,4,-37.81245199, 144.9638386
+126,2015,65,105698,105698,269-321 Lonsdale Street,Melbourne (CBD),Bombay Duck,4512,Takeaway Food Services,Seats - Indoor,10,-37.81245199, 144.9638386
+127,2015,65,105698,105698,269-321 Lonsdale Street,Melbourne (CBD),Sushi Hon,4512,Takeaway Food Services,Seats - Indoor,20,-37.81245199, 144.9638386
+128,2015,65,105698,105698,269-321 Lonsdale Street,Melbourne (CBD),Earl Canteen,4512,Takeaway Food Services,Seats - Indoor,20,-37.81245199, 144.9638386
+129,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),Chatime,4512,Takeaway Food Services,Seats - Indoor,21,-37.810658, 144.9657034
+130,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),Chatime,4512,Takeaway Food Services,Seats - Outdoor,10,-37.810658, 144.9657034
+131,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),Where's Marcel?,4512,Takeaway Food Services,Seats - Indoor,36,-37.810658, 144.9657034
+132,2015,84,650593,106044,2-20 Sutherland Street,Melbourne (CBD),Shortstop Coffee & Donuts,4512,Takeaway Food Services,Seats - Indoor,7,-37.81131629, 144.9609484
+133,2015,84,650594,106044,1-11 Sutherland Street,Melbourne (CBD),Somethin Fishy,4512,Takeaway Food Services,Seats - Indoor,15,-37.81131629, 144.9609484
+134,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Snag Stand,4512,Takeaway Food Services,Seats - Indoor,21,-37.81073331, 144.9630189
+135,2015,85,105747,105747,272-282 Lonsdale Street,Melbourne (CBD),Blackball Lonsdale,4512,Takeaway Food Services,Seats - Indoor,20,-37.81152964, 144.9639969
+136,2015,85,109302,109302,281-287 Swanston Street,Melbourne (CBD),L+ Nic ,4512,Takeaway Food Services,Seats - Indoor,12,-37.81143223, 144.9643593
+137,2015,85,109309,109309,319-323 Swanston Street,Melbourne (CBD),Five & Plus,4512,Takeaway Food Services,Seats - Indoor,10,-37.81076317, 144.9640475
+138,2015,36,102151,102151,170-174 Collins Street,Melbourne (CBD),Verandah Cafe,4512,Takeaway Food Services,Seats - Indoor,12,-37.81474661, 144.9677144
+139,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Vita Patisserie,4512,Takeaway Food Services,Seats - Indoor,6,-37.81073331, 144.9630189
+140,2015,56,101202,101202,206-218 Bourke Street,Melbourne (CBD),Kiss N' Fly,4512,Takeaway Food Services,Seats - Indoor,16,-37.81259409, 144.9668768
+141,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Pie Face,4512,Takeaway Food Services,Seats - Indoor,14,-37.81073331, 144.9630189
+142,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Chatime,4512,Takeaway Food Services,Seats - Indoor,24,-37.81073331, 144.9630189
+143,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Schnitz Melbourne Central,4512,Takeaway Food Services,Seats - Indoor,7,-37.81073331, 144.9630189
+144,2015,74,105739,105739,386-392 Lonsdale Street,Melbourne (CBD),Souperman Cafe,4512,Takeaway Food Services,Seats - Indoor,26,-37.81236842, 144.9607949
+145,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),STREAT ,4512,Takeaway Food Services,Seats - Indoor,15,-37.81073331, 144.9630189
+146,2015,15,103328,103328,274-282 Flinders Street,Melbourne (CBD),Starbucks,4512,Takeaway Food Services,Seats - Indoor,3,-37.81763649, 144.965095
+147,2015,15,103328,103328,274-282 Flinders Street,Melbourne (CBD),Spanish Doughnuts ,4512,Takeaway Food Services,Seats - Outdoor,12,-37.81763649, 144.965095
+148,2015,15,103328,103328,274-282 Flinders Street,Melbourne (CBD),Metro Baguette,4512,Takeaway Food Services,Seats - Indoor,15,-37.81763649, 144.965095
+149,2015,15,103943,103943,267-275 Flinders Lane,Melbourne (CBD),10 Ounce,4512,Takeaway Food Services,Seats - Indoor,6,-37.81710105, 144.9654844
+150,2015,15,104011,104011,250-254 Flinders Street,Melbourne (CBD),Perkup Burgers,4512,Takeaway Food Services,Seats - Indoor,17,-37.81752037, 144.9659973
+151,2015,25,102079,102079,221-231 Collins Street,Melbourne (CBD),Waffee,4512,Takeaway Food Services,Seats - Indoor,7,-37.81584476, 144.9663304
+152,2015,24,102091,102091,351-357 Collins Street,Melbourne (CBD),Roll'D,4512,Takeaway Food Services,Seats - Indoor,6,-37.81722704, 144.9627888
+153,2015,24,102091,102091,351-357 Collins Street,Melbourne (CBD),Roll'D,4512,Takeaway Food Services,Seats - Outdoor,20,-37.81722704, 144.9627888
+154,2015,24,102091,102091,351-357 Collins Street,Melbourne (CBD),Cafe Mesh,4512,Takeaway Food Services,Seats - Indoor,21,-37.81722704, 144.9627888
+155,2015,56,109400,109400,216-220 Swanston Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Indoor,25,-37.81270203, 144.9655719
+156,2015,56,101206,101206,188 Bourke Street,Melbourne (CBD),The Lab Nitrogen Gelato,4512,Takeaway Food Services,Seats - Indoor,20,-37.81269744, 144.9676139
+157,2015,56,101206,101206,188 Bourke Street,Melbourne (CBD),The Lab Nitrogen Gelato,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81269744, 144.9676139
+158,2015,46,101137,101137,235-251 Bourke Street,Melbourne (CBD),Nusantara,4512,Takeaway Food Services,Seats - Indoor,16,-37.81376503, 144.9665978
+159,2015,54,101187,101187,392-406 Bourke Street,Melbourne (CBD),Curry Point,4512,Takeaway Food Services,Seats - Indoor,12,-37.81416355, 144.9617562
+160,2015,54,101187,101187,392-406 Bourke Street,Melbourne (CBD),Curry Point,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81416355, 144.9617562
+161,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Top Juice,4512,Takeaway Food Services,Seats - Indoor,9,-37.81073331, 144.9630189
+162,2015,85,109309,109309,319-323 Swanston Street,Melbourne (CBD),Mr Kitchen,4512,Takeaway Food Services,Seats - Indoor,24,-37.81076317, 144.9640475
+163,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Plantation Cafe,4512,Takeaway Food Services,Seats - Indoor,6,-37.81073331, 144.9630189
+164,2015,34,102137,102137,308-336 Collins Street,Melbourne (CBD),Brown Bagels,4512,Takeaway Food Services,Seats - Indoor,8,-37.81611256, 144.9633433
+165,2015,34,102137,102137,308-336 Collins Street,Melbourne (CBD),Brown Bagels,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81611256, 144.9633433
+166,2015,34,110669,110669,353-359 Little Collins Street,Melbourne (CBD),11 Inch Pizza,4512,Takeaway Food Services,Seats - Indoor,14,-37.81570426, 144.9629844
+167,2015,34,110669,110669,353-359 Little Collins Street,Melbourne (CBD),11 Inch Pizza,4512,Takeaway Food Services,Seats - Outdoor,4,-37.81570426, 144.9629844
+168,2015,34,110669,110669,353-359 Little Collins Street,Melbourne (CBD),Vietnam Street Eats,4512,Takeaway Food Services,Seats - Indoor,2,-37.81570426, 144.9629844
+169,2015,34,110669,110669,353-359 Little Collins Street,Melbourne (CBD),Vietnam Street Eats,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81570426, 144.9629844
+170,2015,15,103327,103327,28-32 Elizabeth Street,Melbourne (CBD),Chatime,4512,Takeaway Food Services,Seats - Indoor,8,-37.81729894, 144.9648816
+171,2015,15,103326,103326,281-291 Flinders Lane,Melbourne (CBD),Pie Face ,4512,Takeaway Food Services,Seats - Indoor,12,-37.81719024, 144.9649678
+172,2015,54,103180,103180,187-193 Elizabeth Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Indoor,17,-37.81388737, 144.9627079
+173,2015,54,103180,103180,187-193 Elizabeth Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81388737, 144.9627079
+174,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),3 Lt Monkeys,4512,Takeaway Food Services,Seats - Outdoor,4,-37.8166033, 144.9655966
+175,2015,45,105960,105960,318-322 Little Collins Street,Melbourne (CBD),De Alleyway Espresso,4512,Takeaway Food Services,Seats - Indoor,26,-37.81488174, 144.9640121
+176,2015,45,105960,105960,318-322 Little Collins Street,Melbourne (CBD),De Alleyway Espresso,4512,Takeaway Food Services,Seats - Outdoor,1,-37.81488174, 144.9640121
+177,2015,15,104011,104011,250-254 Flinders Street,Melbourne (CBD),Waffle On,4512,Takeaway Food Services,Seats - Indoor,2,-37.81752037, 144.9659973
+178,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),Jungle Juice Bar,4512,Takeaway Food Services,Seats - Indoor,16,-37.8166033, 144.9655966
+179,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),Jungle Juice Bar,4512,Takeaway Food Services,Seats - Outdoor,10,-37.8166033, 144.9655966
+180,2015,15,104011,104011,250-254 Flinders Street,Melbourne (CBD),Pie Face Flinders Street,4512,Takeaway Food Services,Seats - Indoor,8,-37.81752037, 144.9659973
+181,2015,64,103187,103187,219-233 Elizabeth Street,Melbourne (CBD),Saigon Fusion,4512,Takeaway Food Services,Seats - Indoor,14,-37.81321386, 144.9622831
+182,2015,64,103187,103187,219-233 Elizabeth Street,Melbourne (CBD),Saigon Fusion,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81321386, 144.9622831
+183,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),Centro Espresso Caffe,4512,Takeaway Food Services,Seats - Indoor,17,-37.8166033, 144.9655966
+184,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),Centro Espresso Caffe,4512,Takeaway Food Services,Seats - Outdoor,4,-37.8166033, 144.9655966
+185,2015,54,108104,108104,184-192 Queen Street,Melbourne (CBD),Seven Wraps,4512,Takeaway Food Services,Seats - Indoor,9,-37.81402844, 144.9606804
+186,2015,74,104661,104661,115-123 Hardware Street,Melbourne (CBD),Koba KBBQ,4512,Takeaway Food Services,Seats - Indoor,9,-37.81210735, 144.9603936
+187,2015,74,104661,104661,115-123 Hardware Street,Melbourne (CBD),Koba KBBQ,4512,Takeaway Food Services,Seats - Outdoor,7,-37.81210735, 144.9603936
+188,2015,24,102091,102091,351-357 Collins Street,Melbourne (CBD),Huxtaburger,4512,Takeaway Food Services,Seats - Indoor,11,-37.81722704, 144.9627888
+189,2015,25,109264,109264,45-63 Swanston Street,Melbourne (CBD),Melbourne Halal Kebabs,4512,Takeaway Food Services,Seats - Indoor,4,-37.8163275, 144.9666228
+190,2015,25,109265,109265,65 Swanston Street,Melbourne (CBD),Fresh Food Market Hawkers,4512,Takeaway Food Services,Seats - Indoor,14,-37.81612975, 144.9665327
+191,2015,15,103941,103941,247-251 Flinders Lane,Melbourne (CBD),Dukes Coffee Roasters,4512,Takeaway Food Services,Seats - Indoor,18,-37.81699341, 144.9661707
+192,2015,35,109267,109267,220-226 Collins Street,Melbourne (CBD),Cupp,4512,Takeaway Food Services,Seats - Indoor,12,-37.81528474, 144.9661258
+193,2015,35,109267,109267,220-226 Collins Street,Melbourne (CBD),Chatime,4512,Takeaway Food Services,Seats - Indoor,6,-37.81528474, 144.9661258
+194,2015,36,102152,102152,162-168 Collins Street,Melbourne (CBD),Cafenatics,4512,Takeaway Food Services,Seats - Indoor,14,-37.81450301, 144.9678476
+195,2015,36,102152,102152,162-168 Collins Street,Melbourne (CBD),Cafenatics,4512,Takeaway Food Services,Seats - Outdoor,2,-37.81450301, 144.9678476
+196,2015,45,105961,105961,304-306 Little Collins Street,Melbourne (CBD),Local Birds,4512,Takeaway Food Services,Seats - Outdoor,4,-37.81473293, 144.9643486
+197,2015,45,105960,105960,318-322 Little Collins Street,Melbourne (CBD),Chuckle Deli,4512,Takeaway Food Services,Seats - Indoor,15,-37.81488174, 144.9640121
+198,2015,45,105960,105960,318-322 Little Collins Street,Melbourne (CBD),Mackeral Sushi,4512,Takeaway Food Services,Seats - Indoor,11,-37.81488174, 144.9640121
+199,2015,54,108104,108104,184-192 Queen Street,Melbourne (CBD),Seven Wraps,4512,Takeaway Food Services,Seats - Outdoor,12,-37.81402844, 144.9606804
+200,2015,46,101127,101127,143-153 Russell Street,Melbourne (CBD),Simpsons Chips & Burgers,4512,Takeaway Food Services,Seats - Indoor,8,-37.81310923, 144.9679684
+201,2015,46,101127,101127,143-153 Russell Street,Melbourne (CBD),Simpsons Chips & Burgers,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81310923, 144.9679684
+202,2015,46,101137,101137,235-251 Bourke Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Outdoor,30,-37.81376503, 144.9665978
+203,2015,46,101137,101137,235-251 Bourke Street,Melbourne (CBD),Cacao Green,4512,Takeaway Food Services,Seats - Indoor,28,-37.81376503, 144.9665978
+204,2015,16,110761,110760,197-209 Flinders Lane,Melbourne (CBD),Little King Cafe,4512,Takeaway Food Services,Seats - Indoor,12,-37.81676378, 144.9676946
+205,2015,16,110761,110760,197-209 Flinders Lane,Melbourne (CBD),Little King Cafe,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81676378, 144.9676946
+206,2015,74,108103,108103,244-250 Queen Street,Melbourne (CBD),Pie Face,4512,Takeaway Food Services,Seats - Indoor,14,-37.81269018, 144.959964
+207,2015,74,108103,108103,244-250 Queen Street,Melbourne (CBD),Pie Face,4512,Takeaway Food Services,Seats - Outdoor,4,-37.81269018, 144.959964
+208,2015,85,109302,109302,281-287 Swanston Street,Melbourne (CBD),Cacao Green,4512,Takeaway Food Services,Seats - Indoor,14,-37.81143223, 144.9643593
+209,2015,85,109302,109302,281-287 Swanston Street,Melbourne (CBD),Cacao Green,4512,Takeaway Food Services,Seats - Outdoor,20,-37.81143223, 144.9643593
+210,2015,54,105851,105851,393-397 Little Bourke Street,Melbourne (CBD),Sushi Deli,4512,Takeaway Food Services,Seats - Indoor,9,-37.8138513, 144.9612043
+211,2015,54,105851,105851,393-397 Little Bourke Street,Melbourne (CBD),Sushi Deli,4512,Takeaway Food Services,Seats - Outdoor,6,-37.8138513, 144.9612043
+212,2015,54,101187,101187,392-406 Bourke Street,Melbourne (CBD),La Belle Miette,4512,Takeaway Food Services,Seats - Indoor,4,-37.81416355, 144.9617562
+213,2015,54,101187,101187,392-406 Bourke Street,Melbourne (CBD),La Belle Miette,4512,Takeaway Food Services,Seats - Outdoor,4,-37.81416355, 144.9617562
+214,2015,64,105869,105869,386-392 Little Bourke Street,Melbourne (CBD),Naked Espresso Bar,4512,Takeaway Food Services,Seats - Indoor,18,-37.81359799, 144.9610735
+215,2015,85,109311,109311,335-347 Swanston Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Indoor,22,-37.8103651, 144.9637506
+216,2015,14,104008,104008,292-298 Flinders Street,Melbourne (CBD),Vita Juice Energy For Life,4512,Takeaway Food Services,Seats - Indoor,8,-37.81807489, 144.9643537
+217,2015,34,105929,105929,335-349 Little Collins Street,Melbourne (CBD),Vietnoms,4512,Takeaway Food Services,Seats - Outdoor,12,-37.81554941, 144.9632938
+218,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),RJ's Sandwich Works,4512,Takeaway Food Services,Seats - Indoor,8,-37.810658, 144.9657034
+219,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),Mike's Mediterranean,4512,Takeaway Food Services,Seats - Indoor,4,-37.810658, 144.9657034
+220,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),Oporto @ QV,4512,Takeaway Food Services,Seats - Indoor,28,-37.810658, 144.9657034
+221,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),Expresso Bagels,4512,Takeaway Food Services,Seats - Indoor,30,-37.810658, 144.9657034
+222,2015,15,103940,103940,241-243 Flinders Lane,Melbourne (CBD),La Cassolette,4512,Takeaway Food Services,Seats - Indoor,13,-37.81685974, 144.9663028
+223,2015,15,103940,103940,241-243 Flinders Lane,Melbourne (CBD),La Cassolette,4512,Takeaway Food Services,Seats - Outdoor,10,-37.81685974, 144.9663028
+224,2015,15,104010,104010,256-268 Flinders Street,Melbourne (CBD),Kikoo Sushi,4512,Takeaway Food Services,Seats - Indoor,6,-37.81760781, 144.9656264
+225,2015,15,103328,103328,274-282 Flinders Street,Melbourne (CBD),Walker's Doughnuts,4512,Takeaway Food Services,Seats - Indoor,6,-37.81763649, 144.965095
+226,2015,15,103328,103328,274-282 Flinders Street,Melbourne (CBD),Cone Heads,4512,Takeaway Food Services,Seats - Indoor,3,-37.81763649, 144.965095
+227,2015,15,103328,103328,274-282 Flinders Street,Melbourne (CBD),Cone Heads,4512,Takeaway Food Services,Seats - Outdoor,12,-37.81763649, 144.965095
+228,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Hungry Jack's,4512,Takeaway Food Services,Seats - Indoor,30,-37.81073331, 144.9630189
+229,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Sushi Sushi Central,4512,Takeaway Food Services,Seats - Indoor,28,-37.81073331, 144.9630189
+230,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Pizza Rapido,4512,Takeaway Food Services,Seats - Indoor,6,-37.81073331, 144.9630189
+231,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Michel's Patisserie Melbourne Central,4512,Takeaway Food Services,Seats - Indoor,20,-37.81073331, 144.9630189
+232,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Lord Of The Fries Melbourne Central,4512,Takeaway Food Services,Seats - Indoor,4,-37.81073331, 144.9630189
+233,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Lord Of The Fries Melbourne Central,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81073331, 144.9630189
+234,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Menya Ramen,4512,Takeaway Food Services,Seats - Indoor,20,-37.81073331, 144.9630189
+235,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Menya Ramen,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81073331, 144.9630189
+236,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),Pie Face,4512,Takeaway Food Services,Seats - Indoor,14,-37.810658, 144.9657034
+237,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),Pie Face,4512,Takeaway Food Services,Seats - Outdoor,22,-37.810658, 144.9657034
+238,2015,34,103177,103177,105 Elizabeth Street,Melbourne (CBD),Kenny's Bakery Cafe,4512,Takeaway Food Services,Seats - Indoor,6,-37.81582211, 144.9634513
+239,2015,34,110669,110669,353-359 Little Collins Street,Melbourne (CBD),D & D Kebabs & Spuds,4512,Takeaway Food Services,Seats - Indoor,4,-37.81570426, 144.9629844
+240,2015,34,110669,110669,353-359 Little Collins Street,Melbourne (CBD),D & D Kebabs & Spuds,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81570426, 144.9629844
+241,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Harajuku Crepes,4512,Takeaway Food Services,Seats - Indoor,4,-37.81073331, 144.9630189
+242,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Harajuku Crepes,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81073331, 144.9630189
+243,2015,85,109302,109302,281-287 Swanston Street,Melbourne (CBD),Tokui Sushi,4512,Takeaway Food Services,Seats - Indoor,10,-37.81143223, 144.9643593
+244,2015,34,110669,110669,353-359 Little Collins Street,Melbourne (CBD),Sushi Hut,4512,Takeaway Food Services,Seats - Indoor,6,-37.81570426, 144.9629844
+245,2015,34,110669,110669,353-359 Little Collins Street,Melbourne (CBD),Sushi Hut,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81570426, 144.9629844
+246,2015,72,105375,105375,276-282 King Street,Melbourne (CBD),Sbriga Espresso Bar,4512,Takeaway Food Services,Seats - Indoor,12,-37.81349786, 144.9548222
+247,2015,72,105375,105375,276-282 King Street,Melbourne (CBD),Sbriga Espresso Bar,4512,Takeaway Food Services,Seats - Outdoor,12,-37.81349786, 144.9548222
+248,2015,72,106022,106022,527-533 Little Lonsdale Street,Melbourne (CBD),Marble Fox,4512,Takeaway Food Services,Seats - Indoor,20,-37.81323022, 144.9563105
+249,2015,52,111283,636824,550 Bourke Street,Melbourne (CBD),Crisp Creative Salad,4512,Takeaway Food Services,Seats - Indoor,20,-37.81531863, 144.9573923
+250,2015,42,105950,105950,520-536 Little Collins Street,Melbourne (CBD),Bambini Barrista,4512,Takeaway Food Services,Seats - Indoor,16,-37.81686865, 144.957088
+251,2015,42,105950,105950,520-536 Little Collins Street,Melbourne (CBD),Bambini Barrista,4512,Takeaway Food Services,Seats - Outdoor,14,-37.81686865, 144.957088
+252,2015,11,559405,559405,547-555 Flinders Lane,Melbourne (CBD),Rex Tremendae,4512,Takeaway Food Services,Seats - Indoor,4,-37.82001952, 144.9558379
+253,2015,11,559405,559405,547-555 Flinders Lane,Melbourne (CBD),Rex Tremendae,4512,Takeaway Food Services,Seats - Outdoor,14,-37.82001952, 144.9558379
+254,2015,51,101170,101170,624-634 Bourke Street,Melbourne (CBD),Power Cafe,4512,Takeaway Food Services,Seats - Indoor,20,-37.81601898, 144.9548146
+255,2015,33,102123,102123,446-452 Collins Street,Melbourne (CBD),Kenny's Bakery Cafe ,4512,Takeaway Food Services,Seats - Indoor,7,-37.81730302, 144.959442
+256,2015,33,102125,102125,422-428 Collins Street,Melbourne (CBD),Bagel Works,4512,Takeaway Food Services,Seats - Indoor,16,-37.81679183, 144.9599965
+257,2015,42,105950,105950,520-536 Little Collins Street,Melbourne (CBD),Genmai Cuisine,4512,Takeaway Food Services,Seats - Indoor,3,-37.81686865, 144.957088
+258,2015,63,108079,108079,221-231 Queen Street,Melbourne (CBD),Nourish Salads,4512,Takeaway Food Services,Seats - Indoor,12,-37.81355361, 144.9597543
+259,2015,63,108079,108079,221-231 Queen Street,Melbourne (CBD),Nourish Salads,4512,Takeaway Food Services,Seats - Outdoor,4,-37.81355361, 144.9597543
+260,2015,12,110091,110091,15-33 William Street,Melbourne (CBD),Satay Bar,4512,Takeaway Food Services,Seats - Indoor,10,-37.8192157, 144.9591876
+261,2015,12,110091,110091,15-33 William Street,Melbourne (CBD),Satay Bar,4512,Takeaway Food Services,Seats - Outdoor,18,-37.8192157, 144.9591876
+262,2015,32,102115,102115,522-534 Collins Street,Melbourne (CBD),Roast & Brew,4512,Takeaway Food Services,Seats - Indoor,80,-37.81767359, 144.9568348
+263,2015,51,105301,105301,175-177 King Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Indoor,16,-37.81602499, 144.9552322
+264,2015,51,105301,105301,175-177 King Street,Melbourne (CBD),Subway,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81602499, 144.9552322
+265,2015,52,105389,105389,184 King Street,Melbourne (CBD),Burger Edge,4512,Takeaway Food Services,Seats - Indoor,6,-37.81571633, 144.9557168
+266,2015,52,105389,105389,184 King Street,Melbourne (CBD),Burger Edge,4512,Takeaway Food Services,Seats - Outdoor,20,-37.81571633, 144.9557168
+267,2015,72,105727,105727,528-538 Lonsdale Street,Melbourne (CBD),Subway ,4512,Takeaway Food Services,Seats - Indoor,8,-37.81365662, 144.9564217
+268,2015,72,105727,105727,528-538 Lonsdale Street,Melbourne (CBD),Subway ,4512,Takeaway Food Services,Seats - Outdoor,12,-37.81365662, 144.9564217
+269,2015,93,105477,105477,378-392 La Trobe Street,Melbourne (CBD),Cafe Nostimo,4512,Takeaway Food Services,Seats - Indoor,15,-37.81075363, 144.9580529
+270,2015,93,105477,105477,378-392 La Trobe Street,Melbourne (CBD),Cafe Nostimo,4512,Takeaway Food Services,Seats - Outdoor,2,-37.81075363, 144.9580529
+271,2015,53,108071,108071,155-161 Queen Street,Melbourne (CBD),Dose Espresso ,4512,Takeaway Food Services,Seats - Indoor,9,-37.81485954, 144.9602891
+272,2015,53,108071,108071,155-161 Queen Street,Melbourne (CBD),Dose Espresso ,4512,Takeaway Food Services,Seats - Outdoor,10,-37.81485954, 144.9602891
+273,2015,42,105949,105949,538-542 Little Collins Street,Melbourne (CBD),LB2,4512,Takeaway Food Services,Seats - Indoor,16,-37.81695942, 144.956774
+274,2015,113,110688,108118,65-81 Victoria Street,Melbourne (CBD),Drums Cafe,4512,Takeaway Food Services,Seats - Indoor,10,-37.80745984, 144.9572395
+275,2015,113,110688,108118,65-81 Victoria Street,Melbourne (CBD),Canton Fast Food Pty Ltd,4512,Takeaway Food Services,Seats - Indoor,8,-37.80745984, 144.9572395
+276,2015,113,110688,108118,65-81 Victoria Street,Melbourne (CBD),Ripe,4512,Takeaway Food Services,Seats - Indoor,12,-37.80745984, 144.9572395
+277,2015,113,110688,108118,65-81 Victoria Street,Melbourne (CBD),Pide Bread Bakery,4512,Takeaway Food Services,Seats - Indoor,12,-37.80745984, 144.9572395
+278,2015,113,110688,108118,65-81 Victoria Street,Melbourne (CBD),Funk Fish,4512,Takeaway Food Services,Seats - Indoor,24,-37.80745984, 144.9572395
+279,2015,33,105935,105935,431 Little Collins Street,Melbourne (CBD),Tengu Sushi,4512,Takeaway Food Services,Seats - Indoor,20,-37.81629333, 144.9603969
+280,2015,113,110679,108118, Peel Street,Melbourne (CBD),Romeo Takeaway Cafe,4512,Takeaway Food Services,Seats - Indoor,6,-37.80745984, 144.9572395
+281,2015,113,110679,108118, Peel Street,Melbourne (CBD),Romeo Takeaway Cafe,4512,Takeaway Food Services,Seats - Outdoor,36,-37.80745984, 144.9572395
+282,2015,113,110679,108118, Peel Street,Melbourne (CBD),Ant's Dumplings,4512,Takeaway Food Services,Seats - Outdoor,16,-37.80745984, 144.9572395
+283,2015,71,105316,105316,273 King Street,Melbourne (CBD),Tom Toon 3 Thai Restaurant,4512,Takeaway Food Services,Seats - Indoor,14,-37.81384802, 144.9542801
+284,2015,53,108074,108074,185-199 Queen Street,Melbourne (CBD),Bluebag ,4512,Takeaway Food Services,Seats - Indoor,22,-37.81428585, 144.9599687
+285,2015,72,110708,110707,535 Little Lonsdale Street,Melbourne (CBD),Bluebag,4512,Takeaway Food Services,Seats - Indoor,8,-37.8134766, 144.9560169
+286,2015,72,110708,110707,535 Little Lonsdale Street,Melbourne (CBD),Bluebag,4512,Takeaway Food Services,Seats - Outdoor,4,-37.8134766, 144.9560169
+287,2015,42,105950,105950,520-536 Little Collins Street,Melbourne (CBD),Hudsons Coffee,4512,Takeaway Food Services,Seats - Outdoor,14,-37.81686865, 144.957088
+288,2015,33,102124,102124,430-442 Collins Street,Melbourne (CBD),Japanese Lunch Place Don-Bay,4512,Takeaway Food Services,Seats - Indoor,8,-37.81703239, 144.9597623
+289,2015,31,102111,102111,608-610 Collins Street,Melbourne (CBD),Wonderful Garden,4512,Takeaway Food Services,Seats - Indoor,4,-37.81861166, 144.9545688
+290,2015,31,102111,102111,608-610 Collins Street,Melbourne (CBD),Wonderful Garden,4512,Takeaway Food Services,Seats - Outdoor,5,-37.81861166, 144.9545688
+291,2015,31,102111,102111,608-610 Collins Street,Melbourne (CBD),Perk Up Cafe Burger Bar,4512,Takeaway Food Services,Seats - Indoor,15,-37.81861166, 144.9545688
+292,2015,31,102111,102111,608-610 Collins Street,Melbourne (CBD),Perk Up Cafe Burger Bar,4512,Takeaway Food Services,Seats - Outdoor,18,-37.81861166, 144.9545688
+293,2015,61,105311,105311,217-219 King Street,Melbourne (CBD),Kings Takeaway,4512,Takeaway Food Services,Seats - Indoor,1,-37.81514931, 144.9548584
+294,2015,61,105311,105311,217-219 King Street,Melbourne (CBD),Kings Takeaway,4512,Takeaway Food Services,Seats - Outdoor,5,-37.81514931, 144.9548584
+295,2015,82,106032,106032,474 Little Lonsdale Street,Melbourne (CBD),Shalom Indonesian Restaurant,4512,Takeaway Food Services,Seats - Indoor,24,-37.81301654, 144.9554126
+296,2015,1,108843,108843,2-92 Rebecca Walk,Melbourne (CBD),Gangnam Style No1,4512,Takeaway Food Services,Seats - Outdoor,16,-37.8213142, 144.9563969
+297,2015,11,103957,103957,517-537 Flinders Lane,Melbourne (CBD),Altius Coffee Brewers,4512,Takeaway Food Services,Seats - Indoor,6,-37.81988484, 144.9566017
+298,2015,11,103957,103957,517-537 Flinders Lane,Melbourne (CBD),Altius Coffee Brewers,4512,Takeaway Food Services,Seats - Outdoor,4,-37.81988484, 144.9566017
+299,2015,53,101182,101182,458-466 Bourke Street,Melbourne (CBD),Yes Sushi  & Cafe,4512,Takeaway Food Services,Seats - Outdoor,10,-37.81482935, 144.9599676
+300,2015,42,105949,105949,538-542 Little Collins Street,Melbourne (CBD),Curry Bowl,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81695942, 144.956774
+301,2015,72,110102,110102,233-245 William Street,Melbourne (CBD),Marios On The Wheels,4512,Takeaway Food Services,Seats - Indoor,6,-37.81349327, 144.9567836
+302,2015,12,105399,105399,26-32 King Street,Melbourne (CBD),Queen's Kebabs,4512,Takeaway Food Services,Seats - Indoor,22,-37.81952934, 144.957466
+303,2015,31,105945,105945,601-611 Little Collins Street,Melbourne (CBD),Hugo's Expresso,4512,Takeaway Food Services,Seats - Indoor,6,-37.81802782, 144.9549054
+304,2015,31,105945,105945,601-611 Little Collins Street,Melbourne (CBD),Hugo's Expresso,4512,Takeaway Food Services,Seats - Outdoor,12,-37.81802782, 144.9549054
+305,2015,31,105945,105945,601-611 Little Collins Street,Melbourne (CBD),Brim CC,4512,Takeaway Food Services,Seats - Indoor,14,-37.81802782, 144.9549054
+306,2015,31,105945,105945,601-611 Little Collins Street,Melbourne (CBD),Brim CC,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81802782, 144.9549054
+307,2015,31,105942,105942,585-587 Little Collins Street,Melbourne (CBD),Pho n Roll,4512,Takeaway Food Services,Seats - Indoor,16,-37.81787118, 144.955444
+308,2015,31,105942,105942,585-587 Little Collins Street,Melbourne (CBD),Pho n Roll,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81787118, 144.955444
+309,2015,113,110679,108118, Peel Street,Melbourne (CBD),La Cantina ,4512,Takeaway Food Services,Seats - Indoor,6,-37.80745984, 144.9572395
+310,2015,113,110679,108118, Peel Street,Melbourne (CBD),La Cantina ,4512,Takeaway Food Services,Seats - Outdoor,32,-37.80745984, 144.9572395
+311,2015,11,103957,103957,517-537 Flinders Lane,Melbourne (CBD),Degani Bakery Cafe,4512,Takeaway Food Services,Seats - Indoor,2,-37.81988484, 144.9566017
+312,2015,11,103957,103957,517-537 Flinders Lane,Melbourne (CBD),Degani Bakery Cafe,4512,Takeaway Food Services,Seats - Outdoor,18,-37.81988484, 144.9566017
+313,2015,73,559300,559300,240-278 William Street,Melbourne (CBD),Octane Espresso ,4512,Takeaway Food Services,Seats - Outdoor,20,-37.81301855, 144.957658
+314,2015,42,105950,105950,520-536 Little Collins Street,Melbourne (CBD),Little Wish,4512,Takeaway Food Services,Seats - Indoor,18,-37.81686865, 144.957088
+315,2015,1,611394,611394,545-557 Flinders Street,Melbourne (CBD),Eat Pizza Flinders,4512,Takeaway Food Services,Seats - Indoor,6,-37.82099397, 144.9565185
+316,2015,1,611394,611394,545-557 Flinders Street,Melbourne (CBD),Eat Pizza Flinders,4512,Takeaway Food Services,Seats - Outdoor,4,-37.82099397, 144.9565185
+317,2015,32,102117,102117,500-514 Collins Street,Melbourne (CBD),Express Kartel,4512,Takeaway Food Services,Seats - Indoor,8,-37.81753383, 144.9574732
+318,2015,32,102117,102117,500-514 Collins Street,Melbourne (CBD),Express Kartel,4512,Takeaway Food Services,Seats - Outdoor,16,-37.81753383, 144.9574732
+319,2015,1,611395,611395,561-581 Flinders Street,Melbourne (CBD),Michel's Pattiserie Flinders Street,4512,Takeaway Food Services,Seats - Indoor,10,-37.82113126, 144.9558649
+320,2015,1,611395,611395,561-581 Flinders Street,Melbourne (CBD),Michel's Pattiserie Flinders Street,4512,Takeaway Food Services,Seats - Outdoor,12,-37.82113126, 144.9558649
+321,2015,52,612820,636824,181 William Street,Melbourne (CBD),Little Cupcakes,4512,Takeaway Food Services,Seats - Indoor,13,-37.81531863, 144.9573923
+322,2015,52,612820,636824,181 William Street,Melbourne (CBD),Little Cupcakes,4512,Takeaway Food Services,Seats - Outdoor,14,-37.81531863, 144.9573923
+323,2015,52,612820,636824,181 William Street,Melbourne (CBD),Bread & Meat Co,4512,Takeaway Food Services,Seats - Outdoor,24,-37.81531863, 144.9573923
+324,2015,22,102103,102103,487-503 Collins Street,Melbourne (CBD),Bonnie Coffee Brewers,4512,Takeaway Food Services,Seats - Indoor,10,-37.81853877, 144.9581185
+325,2015,82,105460,105460,479-495 La Trobe Street,Melbourne (CBD),Atrium 485,4512,Takeaway Food Services,Seats - Indoor,32,-37.81275166, 144.9549514
+326,2015,1,108843,108843,2-92 Rebecca Walk,Melbourne (CBD),Gangnam Style No1,4512,Takeaway Food Services,Seats - Indoor,4,-37.8213142, 144.9563969
+327,2015,51,566659,566659,182-200 Spencer Street,Melbourne (CBD),Itoya ,4512,Takeaway Food Services,Seats - Indoor,4,-37.81625435, 144.9532987
+328,2015,51,566659,566659,182-200 Spencer Street,Melbourne (CBD),Itoya ,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81625435, 144.9532987
+329,2015,33,108066,108066,97-101 Queen Street,Melbourne (CBD),Brioche By Philip ,4512,Takeaway Food Services,Seats - Indoor,25,-37.81625601, 144.9609288
+330,2015,31,108968,108968,613-639 Little Collins Street,Melbourne (CBD),Atami Sushi,4512,Takeaway Food Services,Seats - Indoor,8,-37.81818484, 144.9543659
+331,2015,22,102103,102103,487-503 Collins Street,Melbourne (CBD),Bonnie Coffee Brewers,4512,Takeaway Food Services,Seats - Outdoor,12,-37.81853877, 144.9581185
+332,2015,32,102115,102115,522-534 Collins Street,Melbourne (CBD),Roast & Brew,4512,Takeaway Food Services,Seats - Outdoor,12,-37.81767359, 144.9568348
+333,2015,33,108067,108067,103-105 Queen Street,Melbourne (CBD),I Bean,4512,Takeaway Food Services,Seats - Indoor,3,-37.81614776, 144.9608476
+334,2015,33,102123,102123,446-452 Collins Street,Melbourne (CBD),Oli & Levi Espresso,4512,Takeaway Food Services,Seats - Indoor,5,-37.81730302, 144.959442
+335,2015,33,102123,102123,446-452 Collins Street,Melbourne (CBD),Oli & Levi Espresso,4512,Takeaway Food Services,Seats - Outdoor,18,-37.81730302, 144.959442
+336,2015,42,110095,101155,555 Bourke Street,Melbourne (CBD),Goz City,4512,Takeaway Food Services,Seats - Indoor,11,-37.81636534, 144.9578132
+337,2015,42,110095,101155,555 Bourke Street,Melbourne (CBD),Goz City,4512,Takeaway Food Services,Seats - Outdoor,8,-37.81636534, 144.9578132
+338,2015,42,105949,105949,538-542 Little Collins Street,Melbourne (CBD),Kinship & Co,4512,Takeaway Food Services,Seats - Indoor,12,-37.81695942, 144.956774
+339,2015,42,105949,105949,538-542 Little Collins Street,Melbourne (CBD),Kinship & Co,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81695942, 144.956774
+340,2015,1110,620314,593737,3-5 Star Circus,Docklands,Rainbows Icecream Parlour ,4512,Takeaway Food Services,Seats - Indoor,10,-37.81315031, 144.9378299
+341,2015,1110,620314,593737,3-5 Star Circus,Docklands,Rainbows Icecream Parlour ,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81315031, 144.9378299
+342,2015,131,103978,111287,18-38 Siddeley Street,Docklands,Baraonda ,4512,Takeaway Food Services,Seats - Indoor,9,-37.82253633, 144.9536422
+343,2015,1108,613252,613252,790-814 Collins Street,Docklands,Feeling Fruity Docklands,4512,Takeaway Food Services,Seats - Outdoor,16,-37.821044, 144.9458305
+344,2015,1108,604118,604118,834-846 Bourke Street,Docklands,Subway Vic Harbour,4512,Takeaway Food Services,Seats - Indoor,10,-37.81977079, 144.9431188
+345,2015,1103,599505,573403,744-770 Bourke Street,Docklands,Grab 'n' Go,4512,Takeaway Food Services,Seats - Indoor,6,-37.81817241, 144.947217
+346,2015,1103,599505,573403,744-770 Bourke Street,Docklands,Grab 'n' Go,4512,Takeaway Food Services,Seats - Outdoor,14,-37.81817241, 144.947217
+347,2015,1103,599505,573403,744-770 Bourke Street,Docklands,Subway ,4512,Takeaway Food Services,Seats - Outdoor,24,-37.81817241, 144.947217
+348,2015,1101,108973,108973,85-161 Spencer Street,Docklands,Grains Galore Bakery & Kebabs,4512,Takeaway Food Services,Seats - Indoor,12,-37.81815358, 144.9523393
+349,2015,1101,108973,108973,85-161 Spencer Street,Docklands,Red Rooster,4512,Takeaway Food Services,Seats - Indoor,24,-37.81815358, 144.9523393
+350,2015,1101,108973,108973,85-161 Spencer Street,Docklands,Pie Face,4512,Takeaway Food Services,Seats - Indoor,17,-37.81815358, 144.9523393
+351,2015,1101,108973,108973,85-161 Spencer Street,Docklands,Red Rooster 2,4512,Takeaway Food Services,Seats - Indoor,18,-37.81815358, 144.9523393
+352,2015,1101,108973,108973,85-161 Spencer Street,Docklands,Sumo Salad,4512,Takeaway Food Services,Seats - Indoor,12,-37.81815358, 144.9523393
+353,2015,1101,108973,108973,85-161 Spencer Street,Docklands,Spanish Doughnuts,4512,Takeaway Food Services,Seats - Indoor,20,-37.81815358, 144.9523393
+354,2015,1101,110843,110843,163-261 Spencer Street,Docklands,Subway,4512,Takeaway Food Services,Seats - Indoor,18,-37.81501701, 144.951187
+355,2015,1108,611366,611366,813-817 Bourke Street,Docklands,Suhara Sushi,4512,Takeaway Food Services,Seats - Indoor,9,-37.81993681, 144.9446836
+356,2015,1103,599505,573403,744-770 Bourke Street,Docklands,Subway ,4512,Takeaway Food Services,Seats - Indoor,6,-37.81817241, 144.947217
+357,2015,1103,599505,573403,744-770 Bourke Street,Docklands,Souvlaki Way ,4512,Takeaway Food Services,Seats - Indoor,20,-37.81817241, 144.947217
+358,2015,1108,609480,609480,829-843 Bourke Street,Docklands,Breadtop Docklands,4512,Takeaway Food Services,Seats - Indoor,24,-37.82044558, 144.9434599
+359,2015,1110,620312,593737,23-37 Star Crescent,Docklands,KFC,4512,Takeaway Food Services,Seats - Indoor,26,-37.81315031, 144.9378299
+360,2015,1110,620312,593737,23-37 Star Crescent,Docklands,KFC,4512,Takeaway Food Services,Seats - Outdoor,22,-37.81315031, 144.9378299
+361,2015,1110,620312,593737,23-37 Star Crescent,Docklands,Burger Monster,4512,Takeaway Food Services,Seats - Indoor,9,-37.81315031, 144.9378299
+362,2015,1110,620312,593737,23-37 Star Crescent,Docklands,Burger Monster,4512,Takeaway Food Services,Seats - Outdoor,24,-37.81315031, 144.9378299
+363,2015,651,107430,107430,2-12 Parliament Place,East Melbourne,Commune Pitstop ,4512,Takeaway Food Services,Seats - Outdoor,10,-37.81162322, 144.9757456
+364,2015,613,593695,109643,158 Albert Street,East Melbourne,Kiwi Tribeca Fish Burger Bar,4512,Takeaway Food Services,Seats - Indoor,17,-37.81004657, 144.9856254
+365,2015,607,110007,110007,80 Wellington Parade,East Melbourne,Nikko Sushi Noodle ,4512,Takeaway Food Services,Seats - Indoor,16,-37.81635606, 144.9873663
+366,2015,607,110007,110007,80 Wellington Parade,East Melbourne,Nikko Sushi Noodle ,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81635606, 144.9873663
+367,2015,613,593695,109643,158 Albert Street,East Melbourne,Kiwi Tribeca Fish Burger Bar,4512,Takeaway Food Services,Seats - Outdoor,5,-37.81004657, 144.9856254
+368,2015,607,110010,110010,76 Wellington Parade,East Melbourne,Eastbourne Deli,4512,Takeaway Food Services,Seats - Indoor,25,-37.81637751, 144.987555
+369,2015,607,110010,110010,76 Wellington Parade,East Melbourne,Eastbourne Deli,4512,Takeaway Food Services,Seats - Outdoor,6,-37.81637751, 144.987555
+370,2015,505,100508,100508,330-344 Arden Street,Kensington,Memphis Blues Cafe,4512,Takeaway Food Services,Seats - Indoor,8,-37.79900382, 144.9349411
+371,2015,505,100508,100508,330-344 Arden Street,Kensington,Memphis Blues Cafe,4512,Takeaway Food Services,Seats - Outdoor,4,-37.79900382, 144.9349411
+372,2015,524,106320,106320,497 Macaulay Road,Kensington,MacAulay's Charcol Chicken,4512,Takeaway Food Services,Seats - Indoor,8,-37.79455811, 144.9295071
+373,2015,513,597960,597960,429-431 Macaulay Road,Kensington,Saha Thai Cafe,4512,Takeaway Food Services,Seats - Indoor,12,-37.79496478, 144.9324915
+374,2015,2523,614831,614831,522 Macaulay Road,Kensington,Amania Indian Takeaway ,4512,Takeaway Food Services,Seats - Indoor,25,-37.79404907, 144.9286995
+375,2015,571,602256,602256,320-386 Epsom Road,Kensington,Bamboo Garden,4512,Takeaway Food Services,Seats - Indoor,14,-37.78257294, 144.9155212
+376,2015,2523,614821,614821,532-534 Macaulay Road,Kensington,Crust Gourmet Pizza Bar Kensington,4512,Takeaway Food Services,Seats - Indoor,6,-37.79401627, 144.9284337
+377,2015,2523,614821,614821,532-534 Macaulay Road,Kensington,Crust Gourmet Pizza Bar Kensington,4512,Takeaway Food Services,Seats - Outdoor,8,-37.79401627, 144.9284337
+378,2015,338,106799,106799,27-31 Munster Terrace,North Melbourne,Green Light Cafe & Sandwich Bar,4512,Takeaway Food Services,Seats - Indoor,6,-37.80328527, 144.9418165
+379,2015,334,107956,107956,680-684 Queensberry Street,North Melbourne,Queensberry Lunch Bar,4512,Takeaway Food Services,Seats - Indoor,4,-37.80234575, 144.944795
+380,2015,334,107956,107956,680-684 Queensberry Street,North Melbourne,Queensberry Lunch Bar,4512,Takeaway Food Services,Seats - Outdoor,2,-37.80234575, 144.944795
+381,2015,326,104588,104588,38-48 Haines Street,North Melbourne,Pioneer Pizza A,4512,Takeaway Food Services,Seats - Indoor,12,-37.79823272, 144.9466965
+382,2015,345,570824,570824,520-528 Victoria Street,North Melbourne,Kanoodles,4512,Takeaway Food Services,Seats - Indoor,10,-37.80474738, 144.9487135
+383,2015,345,570824,570824,520-528 Victoria Street,North Melbourne,Kanoodles,4512,Takeaway Food Services,Seats - Outdoor,4,-37.80474738, 144.9487135
+384,2015,345,570824,570824,520-528 Victoria Street,North Melbourne,Subway,4512,Takeaway Food Services,Seats - Indoor,12,-37.80474738, 144.9487135
+385,2015,357,109825,109825,328-350 Victoria Street,North Melbourne,Melbourne Thai Cafe,4512,Takeaway Food Services,Seats - Indoor,10,-37.80542551, 144.9547634
+386,2015,312,108271,108271,19 Reynolds Street,North Melbourne,Reynolds St Takeaway,4512,Takeaway Food Services,Seats - Indoor,4,-37.7972278, 144.9376573
+387,2015,357,109824,109824,352-362 Victoria Street,North Melbourne,Little Africa,4512,Takeaway Food Services,Seats - Indoor,16,-37.80537801, 144.9543386
+388,2015,377,103814,103814,47-59 Flemington Road,North Melbourne,Eat Pizza,4512,Takeaway Food Services,Seats - Outdoor,6,-37.7997297, 144.954319
+389,2015,2392,617402,617402,11-41 Melrose Street,North Melbourne,Melrose Takeaway,4512,Takeaway Food Services,Seats - Outdoor,4,-37.79501722, 144.9414027
+390,2015,326,104588,104588,38-48 Haines Street,North Melbourne,Snapperhead Fish And Chips,4512,Takeaway Food Services,Seats - Indoor,7,-37.79823272, 144.9466965
+391,2015,326,104588,104588,38-48 Haines Street,North Melbourne,Lime Flower Thai Takeaway,4512,Takeaway Food Services,Seats - Indoor,10,-37.79823272, 144.9466965
+392,2015,340,102788,102788,95 Dryburgh Street,North Melbourne,North Melbourne Takeaway & Snack Bar,4512,Takeaway Food Services,Seats - Indoor,12,-37.80428921, 144.9429106
+393,2015,340,102788,102788,95 Dryburgh Street,North Melbourne,North Melbourne Takeaway & Snack Bar,4512,Takeaway Food Services,Seats - Outdoor,17,-37.80428921, 144.9429106
+394,2015,2392,617402,617402,11-41 Melrose Street,North Melbourne,Melrose Takeaway,4512,Takeaway Food Services,Seats - Indoor,4,-37.79501722, 144.9414027
+395,2015,345,103395,103395,11 Errol Street,North Melbourne,Topcatch Fish & Chippery,4512,Takeaway Food Services,Seats - Indoor,16,-37.80470159, 144.9490316
+396,2015,345,103395,103395,11 Errol Street,North Melbourne,Topcatch Fish & Chippery,4512,Takeaway Food Services,Seats - Outdoor,12,-37.80470159, 144.9490316
+397,2015,345,103408,103408,49 Errol Street,North Melbourne,Dong Xing Asian Food & Sushi Noodle Bar,4512,Takeaway Food Services,Seats - Indoor,8,-37.80386264, 144.9490414
+398,2015,345,103408,103408,49 Errol Street,North Melbourne,Dong Xing Asian Food & Sushi Noodle Bar,4512,Takeaway Food Services,Seats - Outdoor,8,-37.80386264, 144.9490414
+399,2015,346,103424,103424,97 Errol Street,North Melbourne,Fandango,4512,Takeaway Food Services,Seats - Indoor,12,-37.80260762, 144.9494062
+400,2015,346,103424,103424,97 Errol Street,North Melbourne,Fandango,4512,Takeaway Food Services,Seats - Outdoor,4,-37.80260762, 144.9494062
+401,2015,327,100112,100112,340-348 Abbotsford Street,North Melbourne,Papa Guiseppe Pizza & Pasta,4512,Takeaway Food Services,Seats - Indoor,16,-37.798728, 144.9465069
+402,2015,327,100112,100112,340-348 Abbotsford Street,North Melbourne,Papa Guiseppe Pizza & Pasta,4512,Takeaway Food Services,Seats - Outdoor,4,-37.798728, 144.9465069
+403,2015,345,103399,103399,27 Errol Street,North Melbourne,Ferguson Plarre Bakehouse,4512,Takeaway Food Services,Seats - Indoor,18,-37.80434881, 144.9490709
+404,2015,345,103399,103399,27 Errol Street,North Melbourne,Ferguson Plarre Bakehouse,4512,Takeaway Food Services,Seats - Outdoor,6,-37.80434881, 144.9490709
+405,2015,362,103246,103246,595A Elizabeth Street,North Melbourne,Kay'z Cafe,4512,Takeaway Food Services,Seats - Indoor,16,-37.80444251, 144.9581484
+406,2015,362,103246,103246,595A Elizabeth Street,North Melbourne,Kay'z Cafe,4512,Takeaway Food Services,Seats - Outdoor,8,-37.80444251, 144.9581484
+407,2015,319,106336,106336,98-166 Macaulay Road,North Melbourne,Cafe 99,4512,Takeaway Food Services,Seats - Indoor,30,-37.79717284, 144.9421193
+408,2015,319,106336,106336,98-166 Macaulay Road,North Melbourne,Cafe 99,4512,Takeaway Food Services,Seats - Outdoor,13,-37.79717284, 144.9421193
+409,2015,369,575151,575151,104-108 Errol Street,North Melbourne,Counter,4512,Takeaway Food Services,Seats - Outdoor,4,-37.80247547, 144.9500275
+410,2015,354,103524,103524,16-18 Errol Street,North Melbourne,Crumbs Organic Bakehouse,4512,Takeaway Food Services,Seats - Indoor,10,-37.80471334, 144.9496466
+411,2015,377,103814,103814,47-59 Flemington Road,North Melbourne,Eat Pizza,4512,Takeaway Food Services,Seats - Indoor,4,-37.7997297, 144.954319
+412,2015,270,104468,104468,156-292 Grattan Street,Parkville,Pronto Pizza Bar,4512,Takeaway Food Services,Seats - Indoor,24,-37.79739836, 144.9612468
+413,2015,270,104468,104468,156-292 Grattan Street,Parkville,Pronto Pizza Bar,4512,Takeaway Food Services,Seats - Outdoor,12,-37.79739836, 144.9612468
+414,2015,270,104468,104468,156-292 Grattan Street,Parkville,Plush Fish,4512,Takeaway Food Services,Seats - Indoor,20,-37.79739836, 144.9612468
+415,2015,270,104468,104468,156-292 Grattan Street,Parkville,Carte Crepes,4512,Takeaway Food Services,Seats - Indoor,30,-37.79739836, 144.9612468
+416,2015,270,104468,104468,156-292 Grattan Street,Parkville,Ho Ho's Canteen,4512,Takeaway Food Services,Seats - Indoor,18,-37.79739836, 144.9612468
+417,2015,270,104468,104468,156-292 Grattan Street,Parkville,Ho Ho's Canteen,4512,Takeaway Food Services,Seats - Outdoor,10,-37.79739836, 144.9612468
+418,2015,270,104468,104468,156-292 Grattan Street,Parkville,Percys,4512,Takeaway Food Services,Seats - Outdoor,16,-37.79739836, 144.9612468
+419,2015,270,104468,104468,156-292 Grattan Street,Parkville,House of Cards,4512,Takeaway Food Services,Seats - Indoor,20,-37.79739836, 144.9612468
+420,2015,270,104468,104468,156-292 Grattan Street,Parkville,Professor Court Cafe,4512,Takeaway Food Services,Seats - Indoor,5,-37.79739836, 144.9612468
+421,2015,270,104468,104468,156-292 Grattan Street,Parkville,Professor Court Cafe,4512,Takeaway Food Services,Seats - Outdoor,28,-37.79739836, 144.9612468
+422,2015,802,575820,575820,1-9 Freshwater Place,Southbank,V P R Vietnamese Pork Roll,4512,Takeaway Food Services,Seats - Indoor,20,-37.82167834, 144.962154
+423,2015,802,575820,575820,1-9 Freshwater Place,Southbank,The Yoghurt Club ,4512,Takeaway Food Services,Seats - Indoor,4,-37.82167834, 144.962154
+424,2015,812,110355,110355,63-65 City Road,Southbank,The Beggar's Bowl,4512,Takeaway Food Services,Seats - Indoor,4,-37.82222503, 144.9658443
+425,2015,812,110355,110355,63-65 City Road,Southbank,The Beggar's Bowl,4512,Takeaway Food Services,Seats - Outdoor,11,-37.82222503, 144.9658443
+426,2015,753,110606,110380,3 Southgate Avenue,Southbank,Trampoline,4512,Takeaway Food Services,Seats - Indoor,28,-37.82066923, 144.9662623
+427,2015,753,110606,110380,3 Southgate Avenue,Southbank,Trampoline,4512,Takeaway Food Services,Seats - Outdoor,10,-37.82066923, 144.9662623
+428,2015,753,110606,110380,3 Southgate Avenue,Southbank,In A Rush,4512,Takeaway Food Services,Seats - Indoor,10,-37.82066923, 144.9662623
+429,2015,812,110361,110361,89-91 City Road,Southbank,Southbank Noodle Box,4512,Takeaway Food Services,Seats - Indoor,8,-37.8225552, 144.9651132
+430,2015,812,110361,110361,89-91 City Road,Southbank,Happy Bites,4512,Takeaway Food Services,Seats - Indoor,8,-37.8225552, 144.9651132
+431,2015,741,110611,110611,101-111 Sturt Street,Southbank,ACCA Cafe,4512,Takeaway Food Services,Seats - Indoor,3,-37.82656258, 144.9671699
+432,2015,741,110611,110611,101-111 Sturt Street,Southbank,ACCA Cafe,4512,Takeaway Food Services,Seats - Outdoor,6,-37.82656258, 144.9671699
+433,2015,802,575820,575820,1-9 Freshwater Place,Southbank,Subway ,4512,Takeaway Food Services,Seats - Indoor,12,-37.82167834, 144.962154
+434,2015,802,575820,575820,1-9 Freshwater Place,Southbank,Chelsini's ,4512,Takeaway Food Services,Seats - Indoor,10,-37.82167834, 144.962154
+435,2015,802,575820,575820,1-9 Freshwater Place,Southbank,Blue Bag,4512,Takeaway Food Services,Seats - Indoor,30,-37.82167834, 144.962154
+436,2015,804,110542,110484,20-30 Convention Centre Place,Southbank,Espresso Room,4512,Takeaway Food Services,Seats - Indoor,26,-37.82539976, 144.9523782
+437,2015,760,108645,108645,517 St Kilda Road,Melbourne (Remainder),Locale Coffee,4512,Takeaway Food Services,Seats - Indoor,4,-37.84459479, 144.9793123
+438,2015,760,108645,108645,517 St Kilda Road,Melbourne (Remainder),Locale Coffee,4512,Takeaway Food Services,Seats - Outdoor,9,-37.84459479, 144.9793123
+439,2015,710,108625,108625,407B-407D St Kilda Road,Melbourne (Remainder),Subway,4512,Takeaway Food Services,Seats - Indoor,8,-37.836275, 144.9762096
+440,2015,710,108625,108625,407B-407D St Kilda Road,Melbourne (Remainder),Subway,4512,Takeaway Food Services,Seats - Outdoor,6,-37.836275, 144.9762096
+441,2015,724,108646,108646,519-539 St Kilda Road,Melbourne (Remainder),Spudbar @ Chevron,4512,Takeaway Food Services,Seats - Indoor,11,-37.8455379, 144.9798191
+442,2015,724,108646,108646,519-539 St Kilda Road,Melbourne (Remainder),Spudbar @ Chevron,4512,Takeaway Food Services,Seats - Outdoor,14,-37.8455379, 144.9798191
+443,2015,724,108646,108646,519-539 St Kilda Road,Melbourne (Remainder),Burger Edge,4512,Takeaway Food Services,Seats - Indoor,8,-37.8455379, 144.9798191
+444,2015,724,108646,108646,519-539 St Kilda Road,Melbourne (Remainder),Burger Edge,4512,Takeaway Food Services,Seats - Outdoor,10,-37.8455379, 144.9798191
+445,2015,502,105226,105226,207 Kensington Road,West Melbourne (Industrial),Degans,4512,Takeaway Food Services,Seats - Indoor,30,-37.80087211, 144.9165074
+446,2015,1005,108797,108797,93-119 Sims Street,West Melbourne (Industrial),Riverside Takeaway,4512,Takeaway Food Services,Seats - Outdoor,8,-37.80395149, 144.9108259
+447,2015,1006,642756,642756,410 Footscray Road,West Melbourne (Industrial),Port Diner,4512,Takeaway Food Services,Seats - Indoor,22,-37.808954, 144.934267
+448,2015,1007,102187,102187,90-98 Coode Road,West Melbourne (Industrial),Teresa's Cafe,4512,Takeaway Food Services,Seats - Indoor,3,-37.81121063, 144.9223483
+449,2015,1007,102187,102187,90-98 Coode Road,West Melbourne (Industrial),Teresa's Cafe,4512,Takeaway Food Services,Seats - Outdoor,10,-37.81121063, 144.9223483
+450,2015,430,108864,108864,505-507 Spencer Street,West Melbourne (Residential),Yan's Cafe ,4512,Takeaway Food Services,Seats - Indoor,10,-37.80883465, 144.9486329
+451,2015,435,109682,109682,173-181 Victoria Street,West Melbourne (Residential),Mr Lee ,4512,Takeaway Food Services,Seats - Indoor,25,-37.80606639, 144.9556037
+452,2015,435,109682,109682,173-181 Victoria Street,West Melbourne (Residential),Yummy Yummy,4512,Takeaway Food Services,Seats - Indoor,9,-37.80606639, 144.9556037
+453,2015,435,109682,109682,173-181 Victoria Street,West Melbourne (Residential),Yummy Yummy,4512,Takeaway Food Services,Seats - Outdoor,4,-37.80606639, 144.9556037
+454,2015,430,108862,108862,499-501 Spencer Street,West Melbourne (Residential),Pizza Max ,4512,Takeaway Food Services,Seats - Outdoor,6,-37.80894762, 144.9487028
+455,2015,415,104762,104762,72 Hawke Street,West Melbourne (Residential),Hawke St Foodstore,4512,Takeaway Food Services,Seats - Indoor,20,-37.8080043, 144.945578
+456,2015,415,104762,104762,72 Hawke Street,West Melbourne (Residential),Hawke St Foodstore,4512,Takeaway Food Services,Seats - Outdoor,8,-37.8080043, 144.945578
+457,2015,91,105325,105325,369-379 King Street,West Melbourne (Residential),Rice Too Asian Cuisine,4512,Takeaway Food Services,Seats - Indoor,10,-37.81166257, 144.9532514
+458,2015,432,108443,108443,42-50 Rosslyn Street,West Melbourne (Residential),The Servery,4512,Takeaway Food Services,Seats - Indoor,34,-37.80739774, 144.9525725
+459,2015,432,108443,108443,42-50 Rosslyn Street,West Melbourne (Residential),The Servery,4512,Takeaway Food Services,Seats - Outdoor,6,-37.80739774, 144.9525725

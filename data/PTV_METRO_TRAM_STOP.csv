@@ -1,0 +1,101 @@
+STOP_ID,STOP_NAME,Latitude,Longitude,TICKETZONE,ROUTEUSSP
+17867,10-Royal Melbourne Hospital/Royal Pde (Melbourne City),-37.799901,144.957441,1,19
+17869,9-Haymarket/Elizabeth St (Melbourne City),-37.802132,144.957743,1,"59,19"
+17866,9-Haymarket/Elizabeth St (Melbourne City),-37.801947,144.957464,1,"59,19"
+20491,12-Flemington Rd/Peel St (North Melbourne),-37.80153,144.956851,1,58
+18210,5-Bourke St/William St (Melbourne City),-37.81544,144.95816,1,58
+17908,3-William St/Collins St (Melbourne City),-37.817372,144.959913,1,"11,12,48,109"
+18199,5-Bourke St/William St (Melbourne City),-37.815874,144.95825,1,58
+17885,3-William St/Bourke St (Melbourne City),-37.815733,144.95789,1,"96,86"
+18466,2-Flinders Lane/Market St (Melbourne City),-37.818539,144.960698,1,58
+18213,2-Market St/Flinders Lane (Melbourne City),-37.81829,144.960365,1,58
+18087,3-Market St/Flinders St (Melbourne City),-37.819199,144.961328,1,"70,75,35"
+17597,3-William St/Bourke St (Melbourne City),-37.815882,144.957625,1,"96,86"
+18178,3-Market St/Flinders St (Melbourne City),-37.819272,144.96136,1,"70,75,35"
+17903,3-William St/Collins St (Melbourne City),-37.817607,144.959429,1,"11,12,48,109"
+18211,4-Collins St/William St (Melbourne City),-37.817457,144.959092,1,58
+18214,1-Flinders St/Queens Bridge St (Melbourne City),-37.819513,144.96124,1,58
+18465,1-Flinders St/Queens Bridge St (Melbourne City),-37.819429,144.961106,1,58
+18469,4-Collins St/William St (Melbourne City),-37.817819,144.959173,1,58
+18467,3-William St/Flinders Lane (Melbourne City),-37.81864,144.959776,1,58
+18035,1-Spencer St/La Trobe St (Melbourne City),-37.813147,144.95168,1,"35,30"
+17849,1-Spencer St/Bourke St (Melbourne City),-37.816709,144.954387,1,"96,86"
+18192,120-Lonsdale St/Spencer St (Melbourne City),-37.81496,144.952311,1,86
+21234,2-Melbourne Aquarium/Flinders St (Melbourne City),-37.820186,144.957972,1,"70,75,35"
+21233,2-Melbourne Aquarium/Flinders St (Melbourne City),-37.820344,144.957706,1,"70,75,35"
+17848,1-Spencer St/Bourke St (Melbourne City),-37.817063,144.953514,1,"96,86"
+17906,1-Spencer St/Collins St (Melbourne City),-37.818773,144.954955,1,"11,12,48,109"
+17905,1-Spencer St/Collins St (Melbourne City),-37.818882,144.954998,1,"11,12,48,109"
+18194,122-Southern Cross Railway Station/Spencer St (Melbourne City),-37.818776,144.954069,1,96
+21231,1-Spencer St/Flinders St (Melbourne City),-37.820893,144.955612,1,"70,75,35"
+21232,1-Spencer St/Flinders St (Melbourne City),-37.821043,144.955415,1,"70,75,35"
+17856,7-Queen Victoria Market/Elizabeth St (Melbourne City),-37.806652,144.959628,1,"57,59,19"
+17871,7-Queen Victoria Market/Elizabeth St (Melbourne City),-37.806954,144.959881,1,"57,59,19"
+18174,6-Russell St/Flinders St (Melbourne City),-37.816657,144.970168,1,"70,75,35"
+17888,6-Swanston St/Bourke St (Melbourne City),-37.813402,144.965895,1,"96,86"
+17593,6-Swanston St/Bourke St (Melbourne City),-37.81352,144.965926,1,"96,86"
+19687,10-Bourke Street Mall/Swanston St (Melbourne City),-37.813068,144.965347,1,"16,3/3a,5,6,64,67,72,1"
+19497,10-Bourke Street Mall/Swanston St (Melbourne City),-37.813397,144.965611,1,"16,3/3a,5,6,64,67,72,1"
+18031,5-Elizabeth St/La Trobe St (Melbourne City),-37.810291,144.961596,1,"35,30"
+17854,5-Melbourne Central Station/Elizabeth St (Melbourne City),-37.810558,144.961429,1,"57,59,19"
+18045,5-Elizabeth St/La Trobe St (Melbourne City),-37.810355,144.961117,1,"35,30"
+17857,8-Peel St/Victoria St (Melbourne City),-37.805981,144.956251,1,57
+17873,5-Melbourne Central Station/Elizabeth St (Melbourne City),-37.811105,144.961778,1,"57,59,19"
+19686,11-City Square/Swanston St (Melbourne City),-37.81573,144.966569,1,"16,3/3a,5,6,64,67,72,1"
+19498,11-City Square/Swanston St (Melbourne City),-37.816378,144.967017,1,"16,3/3a,5,6,64,67,72,1"
+17911,6-Melbourne Town Hall/Collins St (Melbourne City),-37.815559,144.966063,1,"11,12,48,109"
+17901,6-Melbourne Town Hall/Collins St (Melbourne City),-37.815695,144.966127,1,"11,12,48,109"
+18205,9-Queen Victoria Market/49 Peel St (North Melbourne),-37.8071,144.955857,1,58
+17852,3-Bourke Street Mall/Elizabeth St (Melbourne City),-37.813401,144.962703,1,"57,59,19"
+17887,5-Elizabeth St/Bourke St (Melbourne City),-37.814134,144.963376,1,"96,86"
+19685,13-Federation Square/Swanston St (Melbourne City),-37.818065,144.967675,1,"16,3/3a,5,6,64,67,72,1"
+17594,5-Elizabeth St/Bourke St (Melbourne City),-37.814269,144.963395,1,"96,86"
+17875,3-Bourke Street Mall/Elizabeth St (Melbourne City),-37.814039,144.963128,1,"57,59,19"
+18090,5-Swanston St/Flinders St (Melbourne City),-37.817566,144.966939,1,"70,75,35"
+19499,13-Federation Square/Swanston St (Melbourne City),-37.818521,144.967992,1,"16,3/3a,5,6,64,67,72,1"
+18032,4-Queen St/La Trobe St (Melbourne City),-37.811005,144.959122,1,"35,30"
+18175,5-Swanston St/Flinders St (Melbourne City),-37.817721,144.966515,1,"70,75,35"
+17851,2-Collins St/Elizabeth St (Melbourne City),-37.815381,144.963603,1,"57,59,19"
+18044,4-Queen St/La Trobe St (Melbourne City),-37.811061,144.958712,1,"35,30"
+17876,2-Collins St/Elizabeth St (Melbourne City),-37.81602,144.964039,1,"57,59,19"
+17910,5-Elizabeth St/Collins St (Melbourne City),-37.816232,144.963806,1,"11,12,48,109"
+17902,5-Elizabeth St/Collins St (Melbourne City),-37.816341,144.96386,1,"11,12,48,109"
+18207,8-Franklin St/Peel St (Melbourne City),-37.809428,144.955474,1,58
+17877,1-Flinders Street Railway Station/Elizabeth St (Melbourne City),-37.817899,144.96484,1,"57,59,19"
+17850,1-Flinders Street Railway Station/Elizabeth St (Melbourne City),-37.818035,144.964893,1,"57,59,19"
+18089,4-Elizabeth St/Flinders St (Melbourne City),-37.818238,144.964626,1,"70,75,35"
+18176,4-Elizabeth St/Flinders St (Melbourne City),-37.818412,144.96428,1,"70,75,35"
+18033,3-William St/La Trobe St (Melbourne City),-37.811711,144.956718,1,"35,30"
+18208,7-Flagstaff Railway Station/William St (Melbourne City),-37.811562,144.956404,1,58
+17886,4-Queen St/Bourke St (Melbourne City),-37.815122,144.960054,1,"96,86"
+18201,7-Flagstaff Railway Station/William St (Melbourne City),-37.812014,144.956505,1,58
+17596,4-Queen St/Bourke St (Melbourne City),-37.815253,144.959835,1,"96,86"
+18209,6-Lonsdale St/William St (Melbourne City),-37.813506,144.957293,1,58
+18200,6-Lonsdale St/William St (Melbourne City),-37.813904,144.957373,1,58
+22903,7A-William Barak Bridge/Melbourne Park (Melbourne City),-37.818167,144.976204,1,70
+22904,7A-William Barak Bridge/Melbourne Park (Melbourne City),-37.818323,144.975825,1,70
+18092,8-Spring St/Flinders St (Melbourne City),-37.815319,144.974612,1,"75,35"
+18105,8-Spring St/Flinders St (Melbourne City),-37.815537,144.974174,1,"75,35"
+17898,8-Spring St/Collins St (Melbourne City),-37.813558,144.973365,1,"11,12,48,109"
+18173,7-Exhibition St/Flinders St (Melbourne City),-37.816217,144.971815,1,35
+17914,8-Spring St/Collins St (Melbourne City),-37.813431,144.973323,1,"11,12,48,109"
+18091,6-Russell St/Flinders St (Melbourne City),-37.816462,144.970855,1,"70,75,35"
+20979,0-Bourke St/Spring St (Melbourne City),-37.811544,144.973102,1,35
+17891,9-Spring St/Bourke St (Melbourne City),-37.811412,144.972753,1,"96,86"
+17882,9-Spring St/Bourke St (Melbourne City),-37.811544,144.972579,1,"96,86"
+22153,7-101 Collins St (Melbourne City),-37.814437,144.970478,1,"11,12,48,109"
+22152,7-101 Collins St (Melbourne City),-37.814264,144.970404,1,"11,12,48,109"
+17889,7-Russell St/Bourke St (Melbourne City),-37.81245,144.969215,1,"96,86"
+17591,7-Russell St/Bourke St (Melbourne City),-37.812778,144.968343,1,"96,86"
+18010,9-La Trobe St/Victoria St (Melbourne City),-37.807605,144.970938,1,"35,30"
+18049,9-Victoria St/La Trobe St (Melbourne City),-37.807666,144.970323,1,"35,30"
+18011,8-Exhibition St/La Trobe St (Melbourne City),-37.808103,144.969027,1,"35,30"
+18048,8-Exhibition St/La Trobe St (Melbourne City),-37.808185,144.968537,1,"35,30"
+18047,7-Russell St/La Trobe St (Melbourne City),-37.808909,144.966098,1,"35,30"
+19495,8-Melbourne Central Station/Swanston St (Melbourne City),-37.810454,144.964272,1,"16,3/3a,5,6,64,67,72,1"
+19689,8-Melbourne Central Station/Swanston St (Melbourne City),-37.809872,144.963936,1,"16,3/3a,5,6,64,67,72,1"
+18030,6-Swanston St/La Trobe St (Melbourne City),-37.80955,144.964081,1,"35,30"
+18046,6-Swanston St/La Trobe St (Melbourne City),-37.80964,144.963567,1,"35,30"
+19494,7-RMIT University/Swanston St (Melbourne City),-37.808383,144.963329,1,"16,3/3a,5,6,64,67,72,1"
+19691,7-RMIT University/Swanston St (Melbourne City),-37.807818,144.962936,1,"16,3/3a,5,6,64,67,72,1"
+18196,124-Batman Park/Spencer St (Melbourne City),-37.822,144.955525,1,"12,96,109"

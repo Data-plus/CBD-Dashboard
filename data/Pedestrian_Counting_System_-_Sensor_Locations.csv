@@ -1,0 +1,57 @@
+sensor_id,sensor_description,sensor_name,installation_date,status,note,direction_1,direction_2,latitude,longitude
+1,Bourke Street Mall (North),Bou292_T,24/03/2009,A,,West,East,-37.8134944,144.9651532
+2,Bourke Street Mall (South),Bou283_T,30/03/2009,A,,East,West,-37.81380667,144.9651672
+3,Melbourne Central,Swa295_T,25/03/2009,A,,South,North,-37.81101523,144.9642949
+4,Town Hall (West),Swa123_T,23/03/2009,A,,South,North,-37.81487988,144.9660878
+5,Princes Bridge,PriNW_T,26/03/2009,A,,North,South,-37.81874249,144.9678766
+6,Flinders Street Station Underpass,FliS_T,25/03/2009,A,,North,South,-37.81911704,144.9655826
+7,Birrarung Marr,Fed_T,17/12/2014,I,,East,West,-37.81832375,144.9714148
+8,Webb Bridge,WebBN_T,24/03/2009,A,,North,South,-37.82293543,144.9471751
+9,Southern Cross Station,Col700_T,23/03/2009,A,,East,West,-37.81982992,144.9510256
+10,Victoria Point,BouHbr_T,23/04/2009,A,,West,East,-37.81876473,144.9471055
+11,Waterfront City,WatCit_T,20/01/2009,A,,East,West,-37.81564989,144.939707
+12,New Quay,NewQ_T,21/01/2009,A,,West,East,-37.81457987,144.942924
+13,Flagstaff Station,Wil277_T,24/03/2009,I,,,,-37.81239679,144.9565265
+14,Sandridge Bridge,SanBri_T,24/03/2009,A,,North,South,-37.82011242,144.962919
+15,State Library,QV_T,25/03/2009,A,,South,North,-37.81064378,144.9644713
+17,Collins Place (South),Col15_T,30/03/2009,A,,East,West,-37.81362542,144.9732359
+18,Collins Place (North),Col12_T,30/03/2009,A,,East,West,-37.81344861,144.9730535
+19,Chinatown-Swanston St (North),LtB210_T,02/09/2013,A,,East,West,-37.81237202,144.9655067
+20,Chinatown-Lt Bourke St (South),LtB170_T,06/09/2013,A,,East,West,-37.81172913,144.9682466
+21,Bourke St-Russell St (West),Rus180_T,02/09/2013,A,,South,North,-37.81244703,144.9677876
+22,Flinders St-Elizabeth St (East),Eli274_T,12/08/2013,A,,South,North,-37.81786445,144.9650682
+23,Spencer St-Collins St (South),Col623_T,02/09/2013,A,,East,West,-37.81909256,144.9545275
+24,Spencer St-Collins St (North),Col620_T,02/09/2013,A,,East,West,-37.81887962,144.954492
+25,Melbourne Convention Exhibition Centre,MCEC_T,28/08/2013,A,,East,West,-37.82401776,144.9560443
+26,QV Market-Elizabeth St (West),Eli483_T,28/09/2013,A,,South,North,-37.80869542,144.960494
+27,QV Market-Peel St,Vic_T,16/08/2013,A,,East,West,-37.80606888,144.9564469
+28,The Arts Centre,VAC_T,23/08/2013,A,,South,North,-37.82129924,144.9687931
+29,St Kilda Rd-Alexandra Gardens,AG_T,11/10/2013,A,,South,North,-37.81965808,144.9686345
+30,Lonsdale St (South),Lon189_T,14/10/2013,A,,East,West,-37.81121849,144.9665681
+31,Lygon St (West),Lyg161_T,10/10/2013,A,,South,North,-37.8016968,144.9665891
+33,Flinders St-Spring St (West),Spr13_T,23/04/2014,A,,North,South,-37.81483252,144.9745406
+34,Flinders St-Spark La,Fli32_T,08/06/2014,A,,East,West,-37.81537985,144.9741505
+35,Southbank,SouthB_T,11/04/2016,A,,East,West,-37.82017828,144.9650888
+36,Queen St (West),Que85_T,20/01/2015,A,,South,North,-37.81652527,144.9612106
+37,Lygon St (East),Lyg260_T,11/02/2015,A,,North,South,-37.80310271,144.9667145
+39,Alfred Place,AlfPl_T,27/08/2014,A,,South,North,-37.81379749,144.9699575
+40,Lonsdale St-Spring St (West),Spr201_T,19/01/2015,A,,South,North,-37.80999341,144.9722759
+41,Flinders La-Swanston St (West),Swa31,29/06/2017,I,,North,South,-37.81668633,144.9668973
+42,Grattan St-Swanston St (West),UM1_T,15/04/2015,A,,South,North,-37.80008565,144.9638641
+43,Monash Rd-Swanston St (West),UM2_T,15/04/2015,A,,South,North,-37.79844525,144.9641178
+44,Tin Alley-Swanston St (West),UM3_T,15/04/2015,A,,South,North,-37.79690473,144.9644038
+45,Little Collins St-Swanston St (East),Swa148_T,29/06/2017,I,,North,South,-37.81414074,144.9660938
+46,Pelham St (South),Pel147_T,10/07/2017,A,,West,East,-37.80240719,144.9615673
+47,Melbourne Central-Elizabeth St (East)Melbourne Central-Elizabeth St (East),Eli250_T,24/08/2017,A,,South,North,-37.81160331,144.9622008
+48,QVM-Queen St (East),QVMQ_T,02/10/2017,A,,East,West,-37.80631581,144.958667
+49,QVM-Therry St (South),Eli501_T,29/11/2017,A,,West,East,-37.80730067,144.9595606
+50,Faraday St-Lygon St (West),Lyg309_T,30/11/2017,A,,North,South,-37.79808191,144.9672101
+51,QVM-Franklin St (North),Fra118_T,30/11/2017,A,,West,East,-37.80841814,144.9590632
+52,Elizabeth St-Lonsdale St (South),Eli263_T,31/07/2017,A,,West,East,-37.81252157,144.9619401
+53,Collins Street (North),Col254_T,23/09/2015,A,,West,East,-37.8156419,144.965499
+54,Lincoln-Swanston (West),Swa607_T,26/06/2018,A,,South,North,-37.804024,144.963084
+55,Elizabeth St-La Trobe St (East),Eli368_T,19/07/2018,I,,South,North,-37.81006172,144.9614234
+56,Lonsdale St - Elizabeth St (North),Lon364_T,25/07/2018,A,,East,West,-37.81234775,144.9615331
+57,Bourke St Bridge,BouBri_T,13/08/2018,A,,West,East,-37.8176735,144.950256
+58,Bourke St - Spencer St (North),Bou688_T,27/09/2018,A,,West,East,-37.81686074,144.9535808
+59,Building 80 RMIT,RMIT_T,13/02/2019,A,,North,South,-37.80825648,144.9630486

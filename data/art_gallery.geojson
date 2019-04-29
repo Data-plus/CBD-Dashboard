@@ -1,0 +1,252 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.965463853978,-37.8077644149636 ]
+    },
+    "properties": {
+    "FIELD1":0,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Old Melbourne Gaol Crime & Justice Experience"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.953478052064,-37.8242574266145 ]
+    },
+    "properties": {
+    "FIELD1":1,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Polly Woodside"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.967252924593,-37.8266045432686 ]
+    },
+    "properties": {
+    "FIELD1":2,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Australian Centre for Contemporary Art"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.968837288153,-37.8219947335768 ]
+    },
+    "properties": {
+    "FIELD1":3,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Victorian Arts Centre"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.969899048343,-37.8174831423197 ]
+    },
+    "properties": {
+    "FIELD1":4,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"The Ian Potter Centre: NGV Australia"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.9839700954,-37.8188662730911 ]
+    },
+    "properties": {
+    "FIELD1":5,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Thoroughbred Racing Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.948496661709,-37.8213744301481 ]
+    },
+    "properties": {
+    "FIELD1":6,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Fox Classic Car Collection"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.971690718887,-37.8035518129299 ]
+    },
+    "properties": {
+    "FIELD1":7,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Melbourne Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.984669809381,-37.8189544909462 ]
+    },
+    "properties": {
+    "FIELD1":8,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"National Sports Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.980554992725,-37.8145407488014 ]
+    },
+    "properties": {
+    "FIELD1":9,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Sinclair's Cottage"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.954039975197,-37.8222182774409 ]
+    },
+    "properties": {
+    "FIELD1":10,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Victoria Police Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.960426777129,-37.8191798798062 ]
+    },
+    "properties": {
+    "FIELD1":11,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Immigration Museum"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.975373745366,-37.8085761281612 ]
+    },
+    "properties": {
+    "FIELD1":12,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Fire Services Museum Victoria"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.964156669702,-37.7973939595503 ]
+    },
+    "properties": {
+    "FIELD1":13,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"The Ian Potter Museum Of Art"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.954027907736,-37.8133854259085 ]
+    },
+    "properties": {
+    "FIELD1":14,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Koorie Heritage Trust Inc"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.979471339826,-37.8144604899837 ]
+    },
+    "properties": {
+    "FIELD1":15,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Cooks' Cottage"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.971521914952,-37.80460262432 ]
+    },
+    "properties": {
+    "FIELD1":16,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Royal Exhibition Building"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.969070431323,-37.8176107327202 ]
+    },
+    "properties": {
+    "FIELD1":17,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"Australian Centre For The Moving Image (ACMI)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [  144.96923385414,-37.8107686127655 ]
+    },
+    "properties": {
+    "FIELD1":18,
+    "Theme":"Place Of Assembly",
+    "Sub Theme":"Art Gallery/Museum",
+    "Feature Name":"The Museum Of Australian Chinese History"
+    }
+  }
+]
+}

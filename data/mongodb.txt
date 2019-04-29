@@ -1,0 +1,24 @@
+mongoimport --db mydb -c projects --type json --file sensors.geojson
+
+
+
+      // Using local file 2
+      var sensors = {{ sensors }};
+
+      map.on('load', function () {
+          map.addSource('sensors', {
+              type: 'geojson',
+              data: sensors
+          }),
+
+          map.addLayer({
+          'id': 'sensors',
+          'source': 'sensors',
+          'type': 'circle',
+          'paint': {
+          'circle-radius': 4,
+          'circle-color': 'rgba(150,150,120,1)'
+          }
+          });
+      });
+

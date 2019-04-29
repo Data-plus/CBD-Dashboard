@@ -1,0 +1,202 @@
+,Census year,Block ID,Property ID,Base property ID,Street address,CLUE small area,Trading name,Industry (ANZSIC4) code,Industry (ANZSIC4) description,Seating type,Number of seats,Latitude,Longitude
+0,2015,242,104461,104461,191-197 Grattan Street,Carlton,Prince Alfred Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,40,-37.80045792, 144.962209
+1,2015,242,104461,104461,191-197 Grattan Street,Carlton,Prince Alfred Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,30,-37.80045792, 144.962209
+2,2015,257,105516,105516,154-160 Leicester Street,Carlton,The Corkman Irish Pub,4520,"Pubs, Taverns and Bars",Seats - Indoor,150,-37.80243195, 144.960916
+3,2015,257,105516,105516,154-160 Leicester Street,Carlton,The Corkman Irish Pub,4520,"Pubs, Taverns and Bars",Seats - Outdoor,10,-37.80243195, 144.960916
+4,2015,266,106081,106081,27-31 Lygon Street,Carlton,John Curtin Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,71,-37.80619915, 144.9656988
+5,2015,266,106081,106081,27-31 Lygon Street,Carlton,John Curtin Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,16,-37.80619915, 144.9656988
+6,2015,215,108202,108202,415-421 Rathdowne Street,Carlton,The Beaufort,4520,"Pubs, Taverns and Bars",Seats - Indoor,80,-37.79652005, 144.9704262
+7,2015,218,106215,106215,298 Lygon Street,Carlton,Carlton Yacht Club Bar,4520,"Pubs, Taverns and Bars",Seats - Outdoor,40,-37.79998572, 144.9673764
+8,2015,267,106251,106251,66-88 Lygon Street,Carlton,Lagers On Lygon,4520,"Pubs, Taverns and Bars",Seats - Indoor,30,-37.80530329, 144.9665747
+9,2015,218,106222,106222,270-276 Lygon Street,Carlton,University Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.8005263, 144.9672432
+10,2015,218,106222,106222,270-276 Lygon Street,Carlton,University Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,58,-37.8005263, 144.9672432
+11,2015,264,109322,109322,593-597 Swanston Street,Carlton,Queensberry Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.80475348, 144.9629068
+12,2015,204,101613,101613,377-391 Cardigan Street,Carlton,Clyde Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,70,-37.79725532, 144.9657541
+13,2015,204,101613,101613,377-391 Cardigan Street,Carlton,Clyde Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,50,-37.79725532, 144.9657541
+14,2015,255,101593,101593,91-95 Cardigan Street,Carlton,Hotel Lincoln,4520,"Pubs, Taverns and Bars",Seats - Indoor,62,-37.80448528, 144.9645057
+15,2015,255,101593,101593,91-95 Cardigan Street,Carlton,Hotel Lincoln,4520,"Pubs, Taverns and Bars",Seats - Outdoor,20,-37.80448528, 144.9645057
+16,2015,214,106186,106186,414-422 Lygon Street,Carlton,Astor Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,40,-37.79694555, 144.9678126
+17,2015,247,106238,106238,192-202 Lygon Street,Carlton,Players On Lygon,4520,"Pubs, Taverns and Bars",Seats - Outdoor,20,-37.80245924, 144.9670522
+18,2015,252,106244,106244,160-162 Lygon Street,Carlton,Bar Centrale,4520,"Pubs, Taverns and Bars",Seats - Indoor,73,-37.80344164, 144.9667699
+19,2015,252,106244,106244,160-162 Lygon Street,Carlton,Bar Centrale,4520,"Pubs, Taverns and Bars",Seats - Outdoor,50,-37.80344164, 144.9667699
+20,2015,260,103276,103276,614-616 Elizabeth Street,Carlton,The Last Jar,4520,"Pubs, Taverns and Bars",Seats - Indoor,90,-37.80389369, 144.9589387
+21,2015,37,102158,102158,86-88 Collins Street,Melbourne (CBD),Collins Quarter ,4520,"Pubs, Taverns and Bars",Seats - Indoor,171,-37.81393777, 144.9705847
+22,2015,37,102158,102158,86-88 Collins Street,Melbourne (CBD),Collins Quarter ,4520,"Pubs, Taverns and Bars",Seats - Outdoor,90,-37.81393777, 144.9705847
+23,2015,57,106433,106433,18-24 Market Lane,Melbourne (CBD),Ding Dong Lounge,4520,"Pubs, Taverns and Bars",Seats - Indoor,80,-37.81175137, 144.9694031
+24,2015,57,101217,101217,124-128 Bourke Street,Melbourne (CBD),Welcome Stranger,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81207094, 144.9692645
+25,2015,57,103599,103599,169-171 Exhibition Street,Melbourne (CBD),1806,4520,"Pubs, Taverns and Bars",Seats - Indoor,107,-37.81165123, 144.9700684
+26,2015,17,103925,103925,121-123 Flinders Lane,Melbourne (CBD),Fashion Lounge,4520,"Pubs, Taverns and Bars",Seats - Indoor,100,-37.81567009, 144.9705132
+27,2015,77,108573,108573,270 Russell Street,Melbourne (CBD),Whisky and Alement,4520,"Pubs, Taverns and Bars",Seats - Indoor,45,-37.81011116, 144.9671591
+28,2015,57,101221,101221,94-96 Bourke Street,Melbourne (CBD),The Elephant and Wheelbarrow,4520,"Pubs, Taverns and Bars",Seats - Indoor,240,-37.81191058, 144.9702485
+29,2015,57,101221,101221,94-96 Bourke Street,Melbourne (CBD),The Elephant and Wheelbarrow,4520,"Pubs, Taverns and Bars",Seats - Outdoor,36,-37.81191058, 144.9702485
+30,2015,17,574438,574438,84-94 Flinders Street,Melbourne (CBD),Eau-De-Vie ,4520,"Pubs, Taverns and Bars",Seats - Indoor,136,-37.81587662, 144.9716757
+31,2015,48,106559,106559,20 Meyers Place,Melbourne (CBD),Meyers Place Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,63,-37.81207814, 144.9723505
+32,2015,57,101214,101214,146-150 Bourke Street,Melbourne (CBD),FM Karaoke Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,15,-37.81235798, 144.9687387
+33,2015,17,104021,104021,142-148 Flinders Street,Melbourne (CBD),The Duke,4520,"Pubs, Taverns and Bars",Seats - Outdoor,12,-37.81640747, 144.9700863
+34,2015,27,102064,102064,69-73 Collins Street,Melbourne (CBD),La Chinesca,4520,"Pubs, Taverns and Bars",Seats - Indoor,110,-37.8143446, 144.9713489
+35,2015,87,106057,106057,106 Little Lonsdale Street,Melbourne (CBD),Troika Bar ,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.8091536, 144.96859
+36,2015,87,106057,106057,106 Little Lonsdale Street,Melbourne (CBD),Troika Bar ,4520,"Pubs, Taverns and Bars",Seats - Outdoor,8,-37.8091536, 144.96859
+37,2015,58,108986,108986,161 Spring Street,Melbourne (CBD),Singlo Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,80,-37.8109513, 144.9724291
+38,2015,37,102158,102158,86-88 Collins Street,Melbourne (CBD),Ra,4520,"Pubs, Taverns and Bars",Seats - Indoor,55,-37.81393777, 144.9705847
+39,2015,114,104090,104090,422-428 Queen Street,Melbourne (CBD),Muleta's,4520,"Pubs, Taverns and Bars",Seats - Indoor,100,-37.80861319, 144.9581156
+40,2015,114,104090,104090,422-428 Queen Street,Melbourne (CBD),Muleta's,4520,"Pubs, Taverns and Bars",Seats - Outdoor,50,-37.80861319, 144.9581156
+41,2015,48,101113,101113,59-63 Bourke Street,Melbourne (CBD),Madam Brussels ,4520,"Pubs, Taverns and Bars",Seats - Indoor,50,-37.81212537, 144.9715659
+42,2015,48,101113,101113,59-63 Bourke Street,Melbourne (CBD),Madam Brussels ,4520,"Pubs, Taverns and Bars",Seats - Outdoor,100,-37.81212537, 144.9715659
+43,2015,17,103924,103924,107-109 Flinders Lane,Melbourne (CBD),Bambu Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,80,-37.81560645, 144.9708344
+44,2015,17,104021,104021,142-148 Flinders Street,Melbourne (CBD),The Duke,4520,"Pubs, Taverns and Bars",Seats - Indoor,240,-37.81640747, 144.9700863
+45,2015,27,597183,102071,121-131 Collins Street,Melbourne (CBD),Spice Market,4520,"Pubs, Taverns and Bars",Seats - Indoor,140,-37.81516811, 144.9698467
+46,2015,87,101023,101023,25 Bennetts Lane,Melbourne (CBD),Bennetts Lane Jazz Club,4520,"Pubs, Taverns and Bars",Seats - Indoor,250,-37.80889245, 144.967558
+47,2015,87,108567,108567,300 Russell Street,Melbourne (CBD),Jankara Japanese Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,40,-37.80951668, 144.966904
+48,2015,58,101238,101238,2-8 Bourke Street,Melbourne (CBD),Imperial Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,200,-37.8112003, 144.972676
+49,2015,58,101238,101238,2-8 Bourke Street,Melbourne (CBD),Imperial Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,68,-37.8112003, 144.972676
+50,2015,58,105828,105828,19-25 Little Bourke Street,Melbourne (CBD),Mrs Parma's ,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81074304, 144.9719903
+51,2015,48,101109,101109,39-43 Bourke Street,Melbourne (CBD),Spleen Central,4520,"Pubs, Taverns and Bars",Seats - Indoor,100,-37.81193572, 144.9720472
+52,2015,48,101113,101113,59-63 Bourke Street,Melbourne (CBD),Club Asuka,4520,"Pubs, Taverns and Bars",Seats - Indoor,80,-37.81212537, 144.9715659
+53,2015,48,103626,103626,114-122 Exhibition Street,Melbourne (CBD),European Bier Cafe,4520,"Pubs, Taverns and Bars",Seats - Indoor,250,-37.81285806, 144.9711999
+54,2015,38,105911,105911,37 Little Collins Street,Melbourne (CBD),Bar Lourinha,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81278444, 144.9724927
+55,2015,38,105912,105912,39-41 Little Collins Street,Melbourne (CBD),Lupino,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81279876, 144.9723932
+56,2015,78,103618,103618,242-284 Exhibition Street,Melbourne (CBD),Coopers Inn,4520,"Pubs, Taverns and Bars",Seats - Indoor,300,-37.80941489, 144.9699756
+57,2015,78,103618,103618,242-284 Exhibition Street,Melbourne (CBD),Coopers Inn,4520,"Pubs, Taverns and Bars",Seats - Outdoor,16,-37.80941489, 144.9699756
+58,2015,115,104103,104103,34-38 Franklin Street,Melbourne (CBD),Captain Melville ,4520,"Pubs, Taverns and Bars",Seats - Indoor,160,-37.80752292, 144.9616126
+59,2015,115,104103,104103,34-38 Franklin Street,Melbourne (CBD),Captain Melville ,4520,"Pubs, Taverns and Bars",Seats - Outdoor,70,-37.80752292, 144.9616126
+60,2015,48,503031,503031,19-23 Meyers Place,Melbourne (CBD),Loop Project Space & Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,30,-37.8121518, 144.9721078
+61,2015,48,503031,503031,19-23 Meyers Place,Melbourne (CBD),Loop Project Space & Bar,4520,"Pubs, Taverns and Bars",Seats - Outdoor,148,-37.8121518, 144.9721078
+62,2015,104,103219,103219,413-417 Elizabeth Street,Melbourne (CBD),Workshop,4520,"Pubs, Taverns and Bars",Seats - Indoor,50,-37.80918797, 144.9605226
+63,2015,104,103219,103219,413-417 Elizabeth Street,Melbourne (CBD),Workshop,4520,"Pubs, Taverns and Bars",Seats - Outdoor,40,-37.80918797, 144.9605226
+64,2015,105,109318,109318,427-457 Swanston Street,Melbourne (CBD),The Oxford Scholar Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,140,-37.80826292, 144.9626932
+65,2015,105,109318,109318,427-457 Swanston Street,Melbourne (CBD),The Oxford Scholar Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,56,-37.80826292, 144.9626932
+66,2015,114,109493,109493,143-151 Therry Street,Melbourne (CBD),The Mercant Cross Hotel / Fancy Hanks Bar-B-Que,4520,"Pubs, Taverns and Bars",Seats - Indoor,230,-37.80792152, 144.9583711
+67,2015,74,106018,106018,395-397 Little Lonsdale Street,Melbourne (CBD),Horse Bazaar,4520,"Pubs, Taverns and Bars",Seats - Indoor,50,-37.81190077, 144.9602499
+68,2015,15,109257,109257,1-7 Swanston Street,Melbourne (CBD),Young & Jacksons,4520,"Pubs, Taverns and Bars",Seats - Indoor,120,-37.817356, 144.967023
+69,2015,46,101130,101130,193-199 Bourke Street,Melbourne (CBD),The Carlton Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,140,-37.81320485, 144.9676452
+70,2015,35,102141,102141,280-292 Collins Street,Melbourne (CBD),The Charles Dickens Tavern,4520,"Pubs, Taverns and Bars",Seats - Indoor,120,-37.81567229, 144.9645574
+71,2015,14,103946,103946,313-315 Flinders Lane,Melbourne (CBD),Randy Dragon,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81763918, 144.9638507
+72,2015,65,105875,105875,318-322 Little Bourke Street,Melbourne (CBD),NANT Whisky Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,24,-37.81292437, 144.9631276
+73,2015,65,105875,105875,318-322 Little Bourke Street,Melbourne (CBD),NANT Whisky Bar,4520,"Pubs, Taverns and Bars",Seats - Outdoor,8,-37.81292437, 144.9631276
+74,2015,14,103172,103172,31-39 Elizabeth Street,Melbourne (CBD),The Joint Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,88,-37.81741878, 144.9643316
+75,2015,14,103172,103172,31-39 Elizabeth Street,Melbourne (CBD),The Joint Bar,4520,"Pubs, Taverns and Bars",Seats - Outdoor,46,-37.81741878, 144.9643316
+76,2015,6,578321,573333,2 Swanston Street,Melbourne (CBD),Beer De Luxe,4520,"Pubs, Taverns and Bars",Seats - Indoor,200,-37.81784465, 144.9699175
+77,2015,6,578321,573333,2 Swanston Street,Melbourne (CBD),Beer De Luxe,4520,"Pubs, Taverns and Bars",Seats - Outdoor,400,-37.81784465, 144.9699175
+78,2015,46,105962,105962,218-242 Little Collins Street,Melbourne (CBD),Little Sista,4520,"Pubs, Taverns and Bars",Seats - Indoor,80,-37.81413595, 144.9667836
+79,2015,46,105962,105962,218-242 Little Collins Street,Melbourne (CBD),Little Sista,4520,"Pubs, Taverns and Bars",Seats - Outdoor,48,-37.81413595, 144.9667836
+80,2015,65,105875,105875,318-322 Little Bourke Street,Melbourne (CBD),Penny Blue,4520,"Pubs, Taverns and Bars",Seats - Outdoor,14,-37.81292437, 144.9631276
+81,2015,66,109436,109436,27-29 Tattersalls Lane,Melbourne (CBD),Section 8 Bar,4520,"Pubs, Taverns and Bars",Seats - Outdoor,40,-37.81176167, 144.9653899
+82,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),Father's Office,4520,"Pubs, Taverns and Bars",Seats - Indoor,170,-37.810658, 144.9657034
+83,2015,66,108550,108550,213-217 Russell Street,Melbourne (CBD),Escape City,4520,"Pubs, Taverns and Bars",Seats - Indoor,45,-37.81156167, 144.9672365
+84,2015,85,102596,102596,22 Drewery Place,Melbourne (CBD),Sister Bellas,4520,"Pubs, Taverns and Bars",Seats - Indoor,40,-37.81135, 144.9638158
+85,2015,6,578324,573333,2 Swanston Street,Melbourne (CBD),Transit Cocktail Lounge,4520,"Pubs, Taverns and Bars",Seats - Indoor,40,-37.81784465, 144.9699175
+86,2015,25,101789,101789,252-254 Flinders Lane,Melbourne (CBD),Hell's Kitchen,4520,"Pubs, Taverns and Bars",Seats - Indoor,55,-37.8166033, 144.9655966
+87,2015,56,108538,108538,163-169 Russell Street,Melbourne (CBD),Eden Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,150,-37.81246709, 144.9676479
+88,2015,56,108538,108538,163-169 Russell Street,Melbourne (CBD),Eden Bar,4520,"Pubs, Taverns and Bars",Seats - Outdoor,50,-37.81246709, 144.9676479
+89,2015,64,105705,105705,383-387 Lonsdale Street,Melbourne (CBD),Niagara Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81283306, 144.9611929
+90,2015,45,105960,105960,318-322 Little Collins Street,Melbourne (CBD),New Guernica,4520,"Pubs, Taverns and Bars",Seats - Indoor,120,-37.81488174, 144.9640121
+91,2015,66,109392,109392,248-258 Swanston Street,Melbourne (CBD),Cookie,4520,"Pubs, Taverns and Bars",Seats - Indoor,200,-37.81199559, 144.9652504
+92,2015,45,105960,105960,318-322 Little Collins Street,Melbourne (CBD),Chuckle Park,4520,"Pubs, Taverns and Bars",Seats - Indoor,50,-37.81488174, 144.9640121
+93,2015,46,108536,108536,115-127 Russell Street,Melbourne (CBD),Portland Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,100,-37.81367486, 144.9681892
+94,2015,46,108536,108536,115-127 Russell Street,Melbourne (CBD),Portland Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,40,-37.81367486, 144.9681892
+95,2015,74,104662,104662,106-112 Hardware Street,Melbourne (CBD),Nieuw Amsterdam,4520,"Pubs, Taverns and Bars",Seats - Indoor,120,-37.81213605, 144.9606805
+96,2015,84,105449,105449,293-299 La Trobe Street,Melbourne (CBD),Duke of Kent Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,160,-37.81081439, 144.9605086
+97,2015,14,103951,103951,341-347 Flinders Lane,Melbourne (CBD),Bull And Bear Tavern,4520,"Pubs, Taverns and Bars",Seats - Indoor,150,-37.81782313, 144.9630313
+98,2015,64,105869,105869,386-392 Little Bourke Street,Melbourne (CBD),Khokolat Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,34,-37.81359799, 144.9610735
+99,2015,64,105869,105869,386-392 Little Bourke Street,Melbourne (CBD),Khokolat Bar,4520,"Pubs, Taverns and Bars",Seats - Outdoor,20,-37.81359799, 144.9610735
+100,2015,64,104376,104376,14-20 Goldie Place,Melbourne (CBD),Word,4520,"Pubs, Taverns and Bars",Seats - Indoor,72,-37.81328585, 144.960731
+101,2015,36,102152,102152,162-168 Collins Street,Melbourne (CBD),The Long Room,4520,"Pubs, Taverns and Bars",Seats - Indoor,70,-37.81450301, 144.9678476
+102,2015,64,105706,105706,389-395 Lonsdale Street,Melbourne (CBD),Golden Monkey,4520,"Pubs, Taverns and Bars",Seats - Indoor,130,-37.81288006, 144.9610121
+103,2015,64,105706,105706,389-395 Lonsdale Street,Melbourne (CBD),Golden Monkey,4520,"Pubs, Taverns and Bars",Seats - Outdoor,30,-37.81288006, 144.9610121
+104,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Melbourne Central Lion Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,200,-37.81073331, 144.9630189
+105,2015,85,105746,105746,183-265 La Trobe Street,Melbourne (CBD),Hush Bar @ Melbourne Central,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81073331, 144.9630189
+106,2015,76,589841,105749,221 Little Lonsdale Street,Melbourne (CBD),Idarts Hive,4520,"Pubs, Taverns and Bars",Seats - Indoor,70,-37.810658, 144.9657034
+107,2015,41,105948,105948,582-584 Little Collins Street,Melbourne (CBD),Saint & Rogue,4520,"Pubs, Taverns and Bars",Seats - Indoor,120,-37.81740928, 144.9553525
+108,2015,41,105948,105948,582-584 Little Collins Street,Melbourne (CBD),Saint & Rogue,4520,"Pubs, Taverns and Bars",Seats - Outdoor,20,-37.81740928, 144.9553525
+109,2015,33,108065,108065,93-95 Queen Street,Melbourne (CBD),Decca Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81637876, 144.9609695
+110,2015,43,108068,108068,111-129 Queen Street,Melbourne (CBD),CQ Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,40,-37.81581152, 144.9606367
+111,2015,72,110106,110106,263-267 William Street,Melbourne (CBD),Metropolitan Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,240,-37.81292397, 144.9565837
+112,2015,72,110106,110106,263-267 William Street,Melbourne (CBD),Metropolitan Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,16,-37.81292397, 144.9565837
+113,2015,11,103993,103993,508-514 Flinders Street,Melbourne (CBD),Waterside Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,250,-37.820166, 144.9571505
+114,2015,33,100727,100727,5-9 Bank Place,Melbourne (CBD),Mitre Tavern,4520,"Pubs, Taverns and Bars",Seats - Indoor,100,-37.81680457, 144.9603112
+115,2015,33,100727,100727,5-9 Bank Place,Melbourne (CBD),Mitre Tavern,4520,"Pubs, Taverns and Bars",Seats - Outdoor,88,-37.81680457, 144.9603112
+116,2015,33,102123,102123,446-452 Collins Street,Melbourne (CBD),Menzies Tavern Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,90,-37.81730302, 144.959442
+117,2015,23,102098,102098,415-417 Collins Street,Melbourne (CBD),The Sherlock Holmes Inn,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81746814, 144.9608681
+118,2015,62,105379,105379,234-244 King Street,Melbourne (CBD),Colonial Hotel / Brown Alley,4520,"Pubs, Taverns and Bars",Seats - Indoor,128,-37.81459098, 144.9552166
+119,2015,62,105379,105379,234-244 King Street,Melbourne (CBD),Colonial Hotel / Brown Alley,4520,"Pubs, Taverns and Bars",Seats - Outdoor,28,-37.81459098, 144.9552166
+120,2015,33,105933,105933,425-427 Little Collins Street,Melbourne (CBD),The Irish Times,4520,"Pubs, Taverns and Bars",Seats - Indoor,100,-37.8162542, 144.9605354
+121,2015,42,105392,105392,120-138 King Street,Melbourne (CBD),El Coco,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81703156, 144.9564078
+122,2015,33,108067,108067,103-105 Queen Street,Melbourne (CBD),Chaise Lounge,4520,"Pubs, Taverns and Bars",Seats - Indoor,80,-37.81614776, 144.9608476
+123,2015,43,108069,108069,131-141 Queen Street,Melbourne (CBD),The Turf Bar & Restaurant,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.81549904, 144.9605409
+124,2015,41,101160,101160,621-633 Bourke Street,Melbourne (CBD),Royal Melbourne Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,200,-37.81686695, 144.955228
+125,2015,41,101160,101160,621-633 Bourke Street,Melbourne (CBD),Royal Melbourne Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,72,-37.81686695, 144.955228
+126,2015,31,105941,105941,577-583 Little Collins Street,Melbourne (CBD),The Bottom End,4520,"Pubs, Taverns and Bars",Seats - Indoor,70,-37.81782672, 144.955606
+127,2015,62,105384,105384,204-208 King Street,Melbourne (CBD),Great Western Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,100,-37.81521196, 144.9554836
+128,2015,62,105384,105384,204-208 King Street,Melbourne (CBD),Great Western Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,30,-37.81521196, 144.9554836
+129,2015,61,105308,105308,203-207 King Street,Melbourne (CBD),Bar Humbug,4520,"Pubs, Taverns and Bars",Seats - Indoor,45,-37.81538904, 144.9549691
+130,2015,72,105378,105378,248-250 King Street,Melbourne (CBD),Goldfingers Mens Club,4520,"Pubs, Taverns and Bars",Seats - Indoor,150,-37.814067, 144.9551409
+131,2015,72,106021,106021,523-525 Little Lonsdale Street,Melbourne (CBD),Deja Vu Bar And Lounge,4520,"Pubs, Taverns and Bars",Seats - Indoor,120,-37.81311232, 144.9563971
+132,2015,22,102103,102103,487-503 Collins Street,Melbourne (CBD),Market Lane Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,50,-37.81853877, 144.9581185
+133,2015,23,102099,102099,419-429 Collins Street,Melbourne (CBD),Ms Collins,4520,"Pubs, Taverns and Bars",Seats - Indoor,100,-37.81752882, 144.9606531
+134,2015,51,108963,108963,672-696 Bourke Street,Melbourne (CBD),Mail Exchange Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,200,-37.81663038, 144.9535902
+135,2015,22,102103,102103,487-503 Collins Street,Melbourne (CBD),Bluestone Wine Lounge,4520,"Pubs, Taverns and Bars",Seats - Indoor,10,-37.81853877, 144.9581185
+136,2015,1108,604125,604125,143-175 Harbour Esplanade,Docklands,Woolshed Pub,4520,"Pubs, Taverns and Bars",Seats - Indoor,444,-37.8165193, 144.9435654
+137,2015,1108,604125,604125,143-175 Harbour Esplanade,Docklands,Woolshed Pub,4520,"Pubs, Taverns and Bars",Seats - Outdoor,300,-37.8165193, 144.9435654
+138,2015,131,103978,111287,18-38 Siddeley Street,Docklands,The Wharf Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,164,-37.82253633, 144.9536422
+139,2015,131,103978,111287,18-38 Siddeley Street,Docklands,The Wharf Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,139,-37.82253633, 144.9536422
+140,2015,1108,573414,573414,788-812 Bourke Street,Docklands,Watermark Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,340,-37.81888389, 144.9451224
+141,2015,1108,573414,573414,788-812 Bourke Street,Docklands,Watermark Bar,4520,"Pubs, Taverns and Bars",Seats - Outdoor,50,-37.81888389, 144.9451224
+142,2015,1109,560004,560004,24-42 Newquay Promenade,Docklands,The Newquay Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,68,-37.81434525, 144.942139
+143,2015,1109,560004,560004,24-42 Newquay Promenade,Docklands,The Newquay Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,50,-37.81434525, 144.942139
+144,2015,1104,576024,576023,747-757 Bourke Street,Docklands,The Nixon Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,116,-37.81925128, 144.9479753
+145,2015,1104,576024,576023,747-757 Bourke Street,Docklands,The Nixon Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,16,-37.81925128, 144.9479753
+146,2015,606,110012,110012,56-70 Wellington Parade,East Melbourne,The Tippier & Co,4520,"Pubs, Taverns and Bars",Seats - Indoor,50,-37.81638513, 144.9882532
+147,2015,525,106329,106329,521-535 Macaulay Road,Kensington,Hardimans Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,230,-37.79442113, 144.9283553
+148,2015,525,106329,106329,521-535 Macaulay Road,Kensington,Hardimans Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,50,-37.79442113, 144.9283553
+149,2015,2523,614830,614830,524 Macaulay Road,Kensington,Lost and Found,4520,"Pubs, Taverns and Bars",Seats - Indoor,30,-37.79404162, 144.9286331
+150,2015,2530,616160,616160,265-271 Racecourse Road,Kensington,The Quiet Man Irish Pub,4520,"Pubs, Taverns and Bars",Seats - Indoor,85,-37.78860982, 144.9323559
+151,2015,2530,616160,616160,265-271 Racecourse Road,Kensington,The Quiet Man Irish Pub,4520,"Pubs, Taverns and Bars",Seats - Outdoor,81,-37.78860982, 144.9323559
+152,2015,358,107887,107887,351-359 Queensberry Street,North Melbourne,The Crimean,4520,"Pubs, Taverns and Bars",Seats - Indoor,70,-37.80395618, 144.9559672
+153,2015,362,103239,103239,547-549 Elizabeth Street,North Melbourne,Musicbox  - Karaoke Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.80538132, 144.9584784
+154,2015,361,109842,109842,240-248 Victoria Street,North Melbourne,Central Club Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,36,-37.80591439, 144.9581264
+155,2015,361,109842,109842,240-248 Victoria Street,North Melbourne,Central Club Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,12,-37.80591439, 144.9581264
+156,2015,375,103809,103809,1-3 Flemington Road,North Melbourne,Turf Club Hotel ,4520,"Pubs, Taverns and Bars",Seats - Indoor,98,-37.80130394, 144.9563792
+157,2015,375,103809,103809,1-3 Flemington Road,North Melbourne,Turf Club Hotel ,4520,"Pubs, Taverns and Bars",Seats - Outdoor,64,-37.80130394, 144.9563792
+158,2015,377,102236,102236,56-58 Courtney Street,North Melbourne,The Castle Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,160,-37.8008985, 144.953035
+159,2015,377,102236,102236,56-58 Courtney Street,North Melbourne,The Castle Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,19,-37.8008985, 144.953035
+160,2015,345,103402,103402,33 Errol Street,North Melbourne,Townhall Hotel North Melbourne,4520,"Pubs, Taverns and Bars",Seats - Indoor,56,-37.80414139, 144.9489068
+161,2015,345,103402,103402,33 Errol Street,North Melbourne,Townhall Hotel North Melbourne,4520,"Pubs, Taverns and Bars",Seats - Outdoor,34,-37.80414139, 144.9489068
+162,2015,355,105636,105636,46-50 Leveson Street,North Melbourne,The Leveson,4520,"Pubs, Taverns and Bars",Seats - Indoor,200,-37.80370014, 144.9514591
+163,2015,354,109797,109797,470 Victoria Street,North Melbourne,Red Monkey Tea House,4520,"Pubs, Taverns and Bars",Seats - Indoor,20,-37.80499941, 144.9504455
+164,2015,376,508976,110862,42 Courtney Street,North Melbourne,Metropolitan Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,95,-37.80139544, 144.9540178
+165,2015,376,508976,110862,42 Courtney Street,North Melbourne,Metropolitan Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,16,-37.80139544, 144.9540178
+166,2015,347,110920,110920,161-163 Errol Street,North Melbourne,Limerick Castle Hotel & Restaurant,4520,"Pubs, Taverns and Bars",Seats - Indoor,60,-37.80114341, 144.9496139
+167,2015,369,103507,103507,86-90 Errol Street,North Melbourne,Court House Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,100,-37.80287733, 144.9499557
+168,2015,270,104468,104468,156-292 Grattan Street,Parkville,HJC Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,180,-37.79739836, 144.9612468
+169,2015,270,104468,104468,156-292 Grattan Street,Parkville,HJC Bar,4520,"Pubs, Taverns and Bars",Seats - Outdoor,100,-37.79739836, 144.9612468
+170,2015,915,108456,108456,43-49 Royal Parade,Parkville,Naughtons Parkville Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,160,-37.79554181, 144.9575345
+171,2015,915,108456,108456,43-49 Royal Parade,Parkville,Naughtons Parkville Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,36,-37.79554181, 144.9575345
+172,2015,774,600431,600431,816 Lorimer Street,Port Melbourne,Underbridge Sports Bar & Cafe,4520,"Pubs, Taverns and Bars",Seats - Indoor,52,-37.82210926, 144.9309535
+173,2015,774,600431,600431,816 Lorimer Street,Port Melbourne,Underbridge Sports Bar & Cafe,4520,"Pubs, Taverns and Bars",Seats - Outdoor,24,-37.82210926, 144.9309535
+174,2015,804,110988,110988,29-65 South Wharf Promenade,Southbank,Munich Brau Haus,4520,"Pubs, Taverns and Bars",Seats - Indoor,250,-37.82409303, 144.9503336
+175,2015,804,110988,110988,29-65 South Wharf Promenade,Southbank,Munich Brau Haus,4520,"Pubs, Taverns and Bars",Seats - Outdoor,150,-37.82409303, 144.9503336
+176,2015,803,111175,110477,8 Whiteman Street,Southbank,Lumia Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,110,-37.82312164, 144.9586604
+177,2015,803,111175,110477,8 Whiteman Street,Southbank,Lumia Bar,4520,"Pubs, Taverns and Bars",Seats - Outdoor,30,-37.82312164, 144.9586604
+178,2015,801,559161,559161,3-7 Riverside Quay,Southbank,Belgian Beer Cafe Melbourne,4520,"Pubs, Taverns and Bars",Seats - Indoor,150,-37.82166549, 144.9645668
+179,2015,801,559161,559161,3-7 Riverside Quay,Southbank,Belgian Beer Cafe Melbourne,4520,"Pubs, Taverns and Bars",Seats - Outdoor,60,-37.82166549, 144.9645668
+180,2015,753,110606,110380,3 Southgate Avenue,Southbank,P J O'Briens Irish Pub & Side Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,150,-37.82066923, 144.9662623
+181,2015,753,110323,110380,1 Southgate Avenue,Southbank,Aria Bar & Lounge,4520,"Pubs, Taverns and Bars",Seats - Indoor,63,-37.82066923, 144.9662623
+182,2015,752,108653,110733,100 St Kilda Road,Southbank,Mezz Bar,4520,"Pubs, Taverns and Bars",Seats - Indoor,20,-37.82094188, 144.9682264
+183,2015,724,106798,106798,557 St Kilda Road,Melbourne (Remainder),"Village Melbourne - Garden, Arbor, Bistro & Terrace",4520,"Pubs, Taverns and Bars",Seats - Indoor,140,-37.84752524, 144.9814116
+184,2015,724,106798,106798,557 St Kilda Road,Melbourne (Remainder),"Village Melbourne - Garden, Arbor, Bistro & Terrace",4520,"Pubs, Taverns and Bars",Seats - Outdoor,800,-37.84752524, 144.9814116
+185,2015,427,108867,108867,515-523 Spencer Street,West Melbourne (Residential),Royal Mail Hotel On Spencer,4520,"Pubs, Taverns and Bars",Seats - Indoor,55,-37.80844822, 144.9482732
+186,2015,427,108867,108867,515-523 Spencer Street,West Melbourne (Residential),Royal Mail Hotel On Spencer,4520,"Pubs, Taverns and Bars",Seats - Outdoor,15,-37.80844822, 144.9482732
+187,2015,101,108949,108949,396-400 Spencer Street,West Melbourne (Residential),Carron Tavern (Spencer Street) Pty Ltd,4520,"Pubs, Taverns and Bars",Seats - Indoor,200,-37.81114228, 144.9508616
+188,2015,101,108949,108949,396-400 Spencer Street,West Melbourne (Residential),Carron Tavern (Spencer Street) Pty Ltd,4520,"Pubs, Taverns and Bars",Seats - Outdoor,45,-37.81114228, 144.9508616
+189,2015,439,102962,102962,78-86 Dudley Street,West Melbourne (Residential),Witches In Britches Pty Ltd,4520,"Pubs, Taverns and Bars",Seats - Indoor,350,-37.80890193, 144.952636
+190,2015,424,109710,109710,315 Victoria Street,West Melbourne (Residential),The Bodega,4520,"Pubs, Taverns and Bars",Seats - Indoor,20,-37.80556768, 144.9510475
+191,2015,424,109710,109710,315 Victoria Street,West Melbourne (Residential),The Bodega,4520,"Pubs, Taverns and Bars",Seats - Outdoor,8,-37.80556768, 144.9510475
+192,2015,435,107481,107481,65-67 Peel Street,West Melbourne (Residential),The Drunken Poet Pty Ltd,4520,"Pubs, Taverns and Bars",Seats - Indoor,35,-37.80666721, 144.955498
+193,2015,435,107481,107481,65-67 Peel Street,West Melbourne (Residential),The Drunken Poet Pty Ltd,4520,"Pubs, Taverns and Bars",Seats - Outdoor,12,-37.80666721, 144.955498
+194,2015,441,108856,108856,475-477 Spencer Street,West Melbourne (Residential),Hotel Spencer Bar & Dining Room,4520,"Pubs, Taverns and Bars",Seats - Indoor,90,-37.80956913, 144.9492503
+195,2015,441,108856,108856,475-477 Spencer Street,West Melbourne (Residential),Hotel Spencer Bar & Dining Room,4520,"Pubs, Taverns and Bars",Seats - Outdoor,12,-37.80956913, 144.9492503
+196,2015,423,109721,109721,361-365 Victoria Street,West Melbourne (Residential),Three Crowns Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,91,-37.80539883, 144.9494595
+197,2015,423,109721,109721,361-365 Victoria Street,West Melbourne (Residential),Three Crowns Hotel,4520,"Pubs, Taverns and Bars",Seats - Outdoor,40,-37.80539883, 144.9494595
+198,2015,424,109709,109709,313 Victoria Street,West Melbourne (Residential),Clever Polly's,4520,"Pubs, Taverns and Bars",Seats - Indoor,30,-37.80556778, 144.9510931
+199,2015,424,109709,109709,313 Victoria Street,West Melbourne (Residential),Clever Polly's,4520,"Pubs, Taverns and Bars",Seats - Outdoor,8,-37.80556778, 144.9510931
+200,2015,437,110111,110111,333-337 William Street,West Melbourne (Residential),Royal Standard Hotel,4520,"Pubs, Taverns and Bars",Seats - Indoor,150,-37.80781408, 144.9542537
