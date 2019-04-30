@@ -11,7 +11,9 @@ from random import sample
 from flask import jsonify
 
 mapbox_access_token = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA'
-
+# Sensor
+# PCL "5cbb067ae39a5cbeb4a82260"
+# Mac: "5cc683b30e00cbd80dd912ad"
 
 app = Flask(__name__)
 
@@ -27,7 +29,7 @@ def dashboard_projects():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     collection = connection[DBS_NAME][COLLECTION_NAME]
     projects = collection.find_one({"type": "FeatureCollection"}, {"_id":0})
-    sensors = collection.find_one( { "_id": ObjectId("5cbb067ae39a5cbeb4a82260") }, {"_id":0})
+    sensors = collection.find_one( { "_id": ObjectId("5cc683b30e00cbd80dd912ad") }, {"_id":0})
     connection.close()
     return render_template("test-1.php", geojson_data = projects, sensors = sensors)
 
@@ -66,11 +68,12 @@ def get_data():
         connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
         collection = connection[DBS_NAME][COLLECTION_NAME]
         #pprint.pprint(list(collection.aggregate(pipeline)))
-        results = {'chart_data': json_util.dumps(collection.aggregate(pipeline))}
+        chart_data = {'chart_data': json_util.dumps(collection.aggregate(pipeline))}
         connection.close()
-        return jsonify(results)
+        return jsonify(chart_data)
 
-    return jsonify(results)
+    return jsonify(chart_data)
+
 
 # Get geocode from search
 @app.route("/test1", methods=['GET', 'POST'])

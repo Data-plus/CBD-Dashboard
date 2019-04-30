@@ -13,11 +13,13 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.min.js'></script>
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.0.0/mapbox-gl-geocoder.min.js'></script>
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.css' type='text/css' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
   <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
   
   <style>
@@ -150,12 +152,21 @@ body { margin:0; padding:0;}
 
       <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA';
+
+      // Set bounds to CBD
+      var bounds = [
+        [144.94643659774766, -37.8229994505],  // Northeast coordinates
+        [144.9721965824976, -37.80410161391119] // Southwest coordinates
+      ];
+
       var map = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/plusmg/cjtwy2na22bey1gt3tw5hf1ul', // stylesheet location
-      center: [144.9610735, -37.81359799], // starting position [lng, lat]
-      zoom: 15 // starting zoom
+      center: [144.9628079612438, -37.81370894743138], // starting position [lng, lat]
+      zoom: 5, // starting zoom
+      maxBounds: bounds // Sets bounds as max
       });
+
 
       // Using local file
       var url = {{ geojson_data }};
@@ -353,21 +364,48 @@ body { margin:0; padding:0;}
       <hr>
       <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
       <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      
+      <button id="update">Update the Chart</button>
+      <!-- Chart -->
       <script>
-        var data = {
-          labels: ['Mon', 'Tue', ' Wed', ' Thu', ' Fri'],
-          series :[
-            [15,1,40,5,10]
-          ]
-        };
+        var myChart;
+        var getData = $.get('/data');
 
-        var options = {
-          width : 360,
-          height : 400,
+        getData.done(function(results){
+
+          var data = {
+            labels: ['Mon', 'Tue', ' Wed', ' Thu', ' Fri'],
+            series :[
+              results.results
+            ]
+          };
+
+          var options = {
+            width : 360,
+            height : 300
+          }
+          myChart = new Chartist.Line('.ct-chart', data, options);
+        });
+
+      function updateChart(){
+
+        var updateData = $.get('/data');
+
+        updateData.done(function(results){
+
+            var data = {
+              labels: ['Mon', 'Tue', ' Wed', ' Thu', ' Fri'],
+              series :[
+                results.results
+              ]
+            };
+
+          myChart.update(data);
+
+          });
         }
       
-        var myChart = new Chartist.Line('.ct-chart', data, options);
+        $("#update").on('click', updateChart);
+
       </script>
 
 
