@@ -60,8 +60,8 @@
     background: #fff;
     position: absolute;
     z-index: 2;
-    top: 60px;
-    right: 10px;
+    top: 10px;
+    left: 10px;
     border-radius: 3px;
     width: 120px;
     border: 1px solid rgba(0,0,0,0.4);
@@ -127,6 +127,19 @@
   color: #222;
   background: #fff;
   }
+</style>
+
+<style>
+  .button {
+  background-color: #555555; /* Black */
+  border: none;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
 </style>
 
 
@@ -359,13 +372,19 @@ body { margin:0; padding:0;}
 
   <!–– Below is Right side area ––>
 
-    <div class="col-sm-3 ct-chart" >
+    
+    <div class="col-sm-3">
+        <div class="row-sm-4" style="background-color:lightcyan;"></div>
       <h2>Graph</h2>
       <hr>
       <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
       <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <button id="update">Update the Chart</button>
+      <button class="button", id="update">Update the Chart</button>
+
+
+
       <!-- Chart -->
+      <div class="row-sm-4 ct-chart" >
       <script>
         var myChart;
         var getData = $.get('/data');
@@ -380,7 +399,7 @@ body { margin:0; padding:0;}
           };
 
           var options = {
-            width : 360,
+            width : 400,
             height : 300
           }
           myChart = new Chartist.Line('.ct-chart', data, options);
@@ -407,7 +426,8 @@ body { margin:0; padding:0;}
         $("#update").on('click', updateChart);
 
       </script>
-
+      </div>
+      <div class="row-sm-4" style="background-color:lightcyan;">
 
       <h4><small>RECENT POSTS</small></h4>
       <hr>
@@ -415,6 +435,15 @@ body { margin:0; padding:0;}
       <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
       <h5><span class="label label-success">Lorem</span></h5><br>
       <hr>
+      
+      <script>
+        var chart_data = $.get('/test');
+        
+        chart_data
+
+
+      </script>
+      </div>
       </div>
 
 

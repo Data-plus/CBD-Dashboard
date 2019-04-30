@@ -11,8 +11,9 @@ from random import sample
 from flask import jsonify
 
 mapbox_access_token = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA'
+
 # Sensor
-# PCL "5cbb067ae39a5cbeb4a82260"
+# PC: "5cbb067ae39a5cbeb4a82260"
 # Mac: "5cc683b30e00cbd80dd912ad"
 
 app = Flask(__name__)
@@ -23,7 +24,9 @@ DBS_NAME = 'mydb'
 COLLECTION_NAME = 'projects'
 FIELDS = "FeatureCollection"
 
+
 # Initialise
+# Object ID may differ, need to change
 @app.route("/")
 def dashboard_projects():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
@@ -33,44 +36,52 @@ def dashboard_projects():
     connection.close()
     return render_template("test-1.php", geojson_data = projects, sensors = sensors)
 
+
+
 # Get geocode from click
-@app.route("/test", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def get_data():
-    global ss_list # Make it accessible from other function
-    global results
+    global click
 
     if request.method == 'POST':
         ss = json.loads(request.data)
         ss = json.loads(ss['data'])
         click = [ss['lng'], ss['lat']]
-        print(click)
+        return click
 
-        pipeline = [
-            {'$geoNear': {
-                'near': {'type': "Point", 'coordinates': click},
-                'distanceField': "dist.calculated",
-                'maxDistance': 500,
-                'includeLocs': "dist.location",
-                'key': 'features.geometry.coordinates',
-                'uniqueDocs': False,
-                'spherical': True}},
-            {"$unwind": "$features"},
-            {"$redact": {
-                "$cond": {
-                    "if": {"$eq": [{"$cmp": ["$features.geometry.coordinates", "$dist.location"]}, 0]},
-                    "then": "$$KEEP",
-                    "else": "$$PRUNE"
-                }
-            }
-            }
-        ]
 
-        connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
-        collection = connection[DBS_NAME][COLLECTION_NAME]
-        #pprint.pprint(list(collection.aggregate(pipeline)))
-        chart_data = {'chart_data': json_util.dumps(collection.aggregate(pipeline))}
-        connection.close()
-        return jsonify(chart_data)
+# Send it to "/test"
+@app.route("/test", methods=['GET', 'POST'])
+def send_data():
+
+    get_data()  # Get data from click
+
+    pipeline = [
+        {'$geoNear': {
+            'near': {'type': "Point", 'coordinates': click},  # Assign click location
+            'distanceField': "dist.calculated",
+            'maxDistance': 500,  # 500m
+            'includeLocs': "dist.location",
+            'key': 'features.geometry.coordinates',
+            'uniqueDocs': False,
+            'spherical': True}},
+        {"$unwind": "$features"},
+        {"$redact": {
+            "$cond": {
+                "if": {"$eq": [{"$cmp": ["$features.geometry.coordinates", "$dist.location"]}, 0]},
+                "then": "$$KEEP",
+                "else": "$$PRUNE"
+            }
+        }
+        }
+    ]
+
+    # Connect DB
+    connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
+    collection = connection[DBS_NAME][COLLECTION_NAME]
+    # pprint.pprint(list(collection.aggregate(pipeline)))
+    chart_data = {'chart_data': json_util.dumps(collection.aggregate(pipeline))}
+    connection.close()
 
     return jsonify(chart_data)
 
@@ -87,12 +98,63 @@ def get_search():
 
     return ''
 
+
 # Send data
-
-
 @app.route('/data')
 def data():
     return jsonify({'results' : sample(range(1,10), 5)})
+
+
+
+
+
+########################################################################################
+
+# # Get geocode from click
+# @app.route("/test", methods=['GET', 'POST'])
+# def get_data():
+#     global ss_list # Make it accessible from other function
+#     global results
+#
+#     if request.method == 'POST':
+#         ss = json.loads(request.data)
+#         ss = json.loads(ss['data'])
+#         click = [ss['lng'], ss['lat']]
+#         print(click)
+#
+#         pipeline = [
+#             {'$geoNear': {
+#                 'near': {'type': "Point", 'coordinates': click},
+#                 'distanceField': "dist.calculated",
+#                 'maxDistance': 500,
+#                 'includeLocs': "dist.location",
+#                 'key': 'features.geometry.coordinates',
+#                 'uniqueDocs': False,
+#                 'spherical': True}},
+#             {"$unwind": "$features"},
+#             {"$redact": {
+#                 "$cond": {
+#                     "if": {"$eq": [{"$cmp": ["$features.geometry.coordinates", "$dist.location"]}, 0]},
+#                     "then": "$$KEEP",
+#                     "else": "$$PRUNE"
+#                 }
+#             }
+#             }
+#         ]
+#
+#         connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
+#         collection = connection[DBS_NAME][COLLECTION_NAME]
+#         # pprint.pprint(list(collection.aggregate(pipeline)))
+#         chart_data = {'chart_data': json_util.dumps(collection.aggregate(pipeline))}
+#         connection.close()
+#         return jsonify(chart_data)
+#
+#     return jsonify(chart_data)
+
+########################################################################################
+
+
+
 
 
 
