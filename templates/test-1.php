@@ -61,7 +61,7 @@
     position: absolute;
     z-index: 2;
     top: 10px;
-    left: 10px;
+    left: 45px;
     border-radius: 3px;
     width: 120px;
     border: 1px solid rgba(0,0,0,0.4);
@@ -110,7 +110,9 @@
   margin-left:-25%;
   top:20px;
 }
-.mapboxgl-ctrl-geocoder { min-width:100%; }
+.mapboxgl-ctrl-geocoder { 
+  min-width:100%; 
+  }
 </style>
 
 <style type='text/css'>
@@ -168,15 +170,15 @@ body { margin:0; padding:0;}
 
       // Set bounds to CBD
       var bounds = [
-        [144.94643659774766, -37.8229994505],  // Northeast coordinates
-        [144.9721965824976, -37.80410161391119] // Southwest coordinates
+        [144.9437392829542, -37.82724080876474],  // Northeast coordinates
+        [144.97613141562647, -37.8015691517381] // Southwest coordinates
       ];
 
       var map = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/plusmg/cjtwy2na22bey1gt3tw5hf1ul', // stylesheet location
       center: [144.9628079612438, -37.81370894743138], // starting position [lng, lat]
-      zoom: 5, // starting zoom
+      zoom: 11, // starting zoom
       maxBounds: bounds // Sets bounds as max
       });
 
@@ -338,7 +340,8 @@ body { margin:0; padding:0;}
       var geocoder = new MapboxGeocoder({ // Initialize the geocoder
           accessToken: mapboxgl.accessToken, // Set the access token
           placeholder: 'Search for Art Gallery',
-          countries: 'au'
+          countries: 'au',
+          bbox: [144.94643659774766, -37.820382419529345, 144.9771965824976, -37.80410161391119]  // Northeast coordinates
       });
 
       // Add actual geocoder (search bar)
@@ -438,8 +441,6 @@ body { margin:0; padding:0;}
       
       <script>
         var chart_data = $.get('/test');
-        
-        chart_data
 
 
       </script>
