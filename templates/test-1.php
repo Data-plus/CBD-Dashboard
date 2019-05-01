@@ -61,7 +61,7 @@
     position: absolute;
     z-index: 2;
     top: 10px;
-    left: 45px;
+    left: 10px;
     border-radius: 3px;
     width: 120px;
     border: 1px solid rgba(0,0,0,0.4);
@@ -334,7 +334,7 @@ body { margin:0; padding:0;}
 
       // Add zoom and rotation controls to the map.
       var nav = new mapboxgl.NavigationControl();
-      map.addControl(nav, 'top-left');
+      map.addControl(nav, 'bottom-right');
 
       // Search
       var geocoder = new MapboxGeocoder({ // Initialize the geocoder
