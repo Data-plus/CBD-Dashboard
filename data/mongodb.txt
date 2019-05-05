@@ -1,6 +1,6 @@
 mongoimport --db mydb -c projects --type json --file sensors.geojson
 
-
+mongoimport -d mydb -c projects --type csv --file cafe.csv --headerline
 
       // Using local file 2
       var sensors = {{ sensors }};

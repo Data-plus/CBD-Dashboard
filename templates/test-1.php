@@ -3,23 +3,21 @@
 <head>
   <title>Gallevisionery</title>
   <meta charset="utf-8">
-
   <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.min.js'></script>
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.css' type='text/css' />
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
   <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 
@@ -53,20 +51,55 @@
   }
 </style>  
 
+
+
+
+
+<script>
+
+function reloadImg() {
+  var d=new Date();
+  document.getElementById("HousePic").src="/image/house?a="+d.getTime();
+  document.getElementById("PedPic").src="/image/pedestrian?a="+d.getTime();
+  document.getElementById("CafePic").src="/image/cafe?a="+d.getTime();
+  document.getElementById("CarPic").src="/image/carpark?a="+d.getTime();
+  document.getElementById("AccPic").src="/image/accessible?a="+d.getTime();
+}
+
+
+var clicked = false;
+    
+    function countClicks()
+    {
+       if(clicked)
+       {
+        alert("Second Click"); 
+          clicked = false;
+       }
+      else
+      {
+        reloadImg(); 
+         clicked = true;
+      }
+    }
+
+// Update Image Data
+
+</script>
+
 </head>
 
 <body>
-
+<!-- Map Box -->
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-sm-6 sidenav">
-      <h4>Mapbox</h4>
-          
+    <div class="col-sm-6 sidenav" id="map_area" onclick="countClicks()">
+    <h4>Mapbox</h4>
+      
       <div id='geocoder' class='geocoder'></div>
       <nav id='menu'></nav>
       <div id='map'></div>
       <pre id='info'></pre>
-
 
       <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA';
@@ -100,8 +133,8 @@
           'source': 'art_gallery',
           'type': 'circle',
           'paint': {
-          'circle-radius': 4,
-          'circle-color': 'rgba(0,255,0,1)'
+          'circle-radius': 5,
+          'circle-color': 'rgba(255,255,104,1)'
           }
           });
       });
@@ -120,8 +153,8 @@
           'source': 'sensor',
           'type': 'circle',
           'paint': {
-          'circle-radius': 5,
-          'circle-color': 'rgba(255,0,170,1)'
+          'circle-radius': 4,
+          'circle-color': 'rgba(226,133,229,1)'
           }
           });
       });
@@ -183,8 +216,6 @@
               });
       var toggleableLayerIds = [ 'transit_stop_label', 'public-art', 'cafe', 'art-gallery', 'ped-sensor'];
 
-
-
       // Click
       map.on("click", function (e) {
           document.getElementById('info').innerHTML =
@@ -201,10 +232,6 @@
                   }
               );
       });
-
-
-
-
 
       for (var i = 0; i < toggleableLayerIds.length; i++) {
           var id = toggleableLayerIds[i];
@@ -270,114 +297,111 @@
 
           });
       });
-  
 
-    </script>
+      </script>
     </div>
 
 
-  <!–– Below is Right side area ––>
-
-    
+    <!-- Left Side -->
+    <!-- Location A -->
     <div class="col-sm-3">
-        <div class="row-sm-4" style="background-color:lightcyan;"></div>
-      <h2>Graph</h2>
-      <hr>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
-      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <button class="button", id="update">Update the Chart</button>
+      <div class="row-sm-4">
+        <h2>Locaion A</h2>
+        <hr>
+        <h5><span class="glyphicon glyphicon-plus"></span><b> Clicked Location: 111 Elizabeth St</b></h5>
+        <h5><span class="label label-danger">Data</span> <span class="label label-primary">Science</span></h5><br>
+      </div>
 
-
+      <!-- Icons -->
+      <div class="row-sm-4">
+        <h5><span class="glyphicon glyphicon-plus"></span> <b>Quick Stats!</b></h5>
+        <hr>
+        <img id="HousePic"> <img id="PedPic">  <img id="CafePic">  <img id="CarPic">  <img id="AccPic">
+        <hr>
+      </div>
 
       <!-- Chart -->
-      <div class="row-sm-4 ct-chart" >
-      <script>
-        var myChart;
-        var getData = $.get('/data');
-
-        getData.done(function(results){
-
-          var data = {
-            labels: ['Mon', 'Tue', ' Wed', ' Thu', ' Fri'],
-            series :[
-              results.results
-            ]
-          };
-
-          var options = {
-            width : 400,
-            height : 300
-          }
-          myChart = new Chartist.Line('.ct-chart', data, options);
-        });
-
-      function updateChart(){
-
-        var updateData = $.get('/data');
-
-        updateData.done(function(results){
-
+      <div style="text-align: center;" class="row-sm-4 ct-chart" >
+        <h4><span class="label label-primary" >Pedestrian Counts</span></h4>
+        <script>
+          var myChart;
+          var getData = $.get('/data');
+          getData.done(function(results){
             var data = {
-              labels: ['Mon', 'Tue', ' Wed', ' Thu', ' Fri'],
+              labels: ['Sun', 'Mon', 'Tue', ' Wed', ' Thu', ' Fri', 'Sat'],
               series :[
                 results.results
               ]
             };
-
-          myChart.update(data);
-
+            var options = {
+              showPoint: false,
+              lineSmooth: true,
+              width : 400,
+              height : 300
+            }
+            myChart = new Chartist.Line('.ct-chart', data, options);
           });
-        }
-      
-        $("#update").on('click', updateChart);
-
-      </script>
-      </div>
-      <div class="row-sm-4" style="background-color:lightcyan;">
-
-      <h4><small>RECENT POSTS</small></h4>
-      <hr>
-      <h2>Hello World</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      <hr>
-      
-      <script>
-        var chart_data = $.get('/test');
-
-
-      </script>
-      </div>
-      </div>
-
-
-
-      <div class="col-sm-3">
-      <h2>Comparison</h2>
-      <hr>
-      <h2>Text</h2>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
-      <h5><span class="label label-danger">Food</span> <span class="label label-primary">Ipsum</span></h5><br>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <br><br>
-
-      <h4><small>RECENT POSTS</small></h4>
-      <hr>
-      <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
-      <h5><span class="label label-success">Lorem</span></h5><br>
-      
+        function updateChart(){
+          var updateData = $.get('/data');
+          updateData.done(function(results){
+              var data = {
+                labels: ['Sun', 'Mon', 'Tue', ' Wed', ' Thu', ' Fri', 'Sat'],
+                series :[
+                  results.results
+                ]
+              };
+            myChart.update(data);
+            });
+          }
         
+          $("#map_area").on('click', updateChart);
 
-      <hr>
-      <h4>Leave a Comment:</h4>
-      <form role="form">
-        <div class="form-group">
-          <textarea class="form-control" rows="3" required></textarea>
-        </div>
+
+
+        </script>
       </div>
-
 
     </div>
+    
+    <!-- Right Side -->
+    <div class="col-sm-3" >
+      <!-- Location B -->
+      <div class="row-sm-4">
+        <h2>Locaion B</h2>
+        <hr>
+        <h5><span class="glyphicon glyphicon-plus"></span> <b> Clicked Location: 222 Collins St</b></h5>
+        <h5><span class="label label-danger">Hawawa</span> <span class="label label-primary">Testing</span></h5><br>
+        <canvas id="lineChart" height="300" width="455"></canvas>
+        <script src="../static/js/lineChart.js"></script>
+
+
+      </div>
+
+      <div class="row-sm-4">
+        <h4><small>RECENT POSTS</small></h4>
+        <hr>
+        <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
+        <h5><span class="label label-success">Lorem</span></h5><br>
+        <h5>This place will be Location B</h5>
+        <hr>      
+      </div>
+
+      <div class="row-sm-4">
+        <h4>Leave a Comment:</h4>
+        <p>nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+       </div>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
 
 </body>
 </html>
+
+
+
+

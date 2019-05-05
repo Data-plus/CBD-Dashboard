@@ -1,32 +1,46 @@
 from flask import Flask
 from flask import render_template
-from flask import  request
+from flask import request
+from flask import jsonify
+from flask import send_file
 
 from pymongo import MongoClient
-import json
 from bson import json_util, ObjectId
+import json
 
 import pandas as pd
 from random import sample
-from flask import jsonify
 
 # Pedestrian
-from datetime import date
-import calendar# Find Sensor information and Distance
+import calendar  # Find Sensor information and Distance
 import geopy
 from geopy import distance
+import time
 
+
+"""
+Import Required Files and Tokens
+"""
 
 mapbox_access_token = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA'
 
-df = pd.read_csv("static/data/pedestrian_temp.csv")
+df = pd.read_csv("static/data/pedestrian.csv")  # 10-5 data
+#  df = pd.read_csv("static/data/pedestrian.csv")  # Full time data
 df2 = pd.read_csv('static/data/sensors.csv')
+df_cafe = pd.read_csv('static/data/cafe.csv')
 population = pd.read_csv('static/data/population.csv')
-
+df_office = pd.read_csv('static/data/office.csv')
+on_street = pd.read_csv('static/data/on_street.csv')
+off_street = pd.read_csv('static/data/off_street.csv')
+df_accessible = pd.read_csv('static/data/accessible.csv')
 
 # Sensor
 # PC: "5cbb067ae39a5cbeb4a82260"
 # Mac: "5cc683b30e00cbd80dd912ad"
+
+"""
+Databse and Flask Set up
+"""
 
 app = Flask(__name__)
 
@@ -37,57 +51,52 @@ COLLECTION_NAME = 'projects'
 FIELDS = "FeatureCollection"
 
 
+"""
+Within Functions
+"""
+
 def within(df, target, radius, g):
     temp = []
-
+    dist = [(geopy.distance.distance((df["Latitude"][g], df["Longitude"][g]),
+                                    (target["latitude"][x], target["longitude"][x])).km) for x in range(len(target))]
     for x in range(len(target)):
-        # Use try-except for error handling
-        try:
-            # Find coordinate1,2 calculate distance in km
-            coords_1 = (df["Latitude"][g], df["Longitude"][g])
-            coords_2 = (target["latitude"][x], target["longitude"][x])
-            dist = geopy.distance.distance(coords_1, coords_2).km
-
-            if dist <= radius:
-                temp.append(target.iloc[x])
-        except:
+        if dist[x] < radius:
+            temp.append(target.iloc[x])
+        else:
             pass
-    return temp
 
+    return temp
 
 def within_d(df, target, radius, g):
     distances = []
-
+    dist = [(geopy.distance.distance((df["Latitude"][g], df["Longitude"][g]),
+                                    (target["latitude"][x], target["longitude"][x])).km) for x in range(len(target))]
     for x in range(len(target)):
-        # Use try-except for error handling
-        try:
-            # Find coordinate1,2 calculate distance in km
-            coords_1 = (df["Latitude"][g], df["Longitude"][g])
-            coords_2 = (target["latitude"][x], target["longitude"][x])
-            dist = geopy.distance.distance(coords_1, coords_2).km
-
-            if dist <= radius:
-                distances.append(dist)
-        except:
+        if dist[x] < radius:
+            distances.append(dist[x])
+        else:
             pass
+
     return distances
 
 
 def within_p(population, clicked, radius):
     temp = []
+    dist = [(geopy.distance.distance((clicked["latitude"][0], clicked["longitude"][0]),
+                                    (population["Latitude"][x], population["Longitude"][x])).km) for x in range(len(population))]
     for x in range(len(population)):
-        # Use try-except for error handling
-        # Find coordinate1,2 calculate distance in km
-        coords_1 = (population["Latitude"][x], population["Longitude"][x])
-        coords_2 = (clicked["latitude"][0], clicked["longitude"][0])
-        dist = geopy.distance.distance(coords_1, coords_2).km
-
-        if dist <= radius:
+        if dist[x] < radius:
             temp.append(population.iloc[x])
         else:
             pass
 
     return temp
+
+
+
+"""
+Get Functions
+"""
 
 
 def get_ped_any(click, pedestrian):
@@ -107,12 +116,14 @@ def get_ped_any(click, pedestrian):
                             (pedestrian['sensor_id'] == df_temp['sensor_id'][1]) |
                             ((pedestrian['sensor_id'] == df_temp['sensor_id'][2]))]
 
+    divider = ((1 / df_temp['distance'][0]) + (1 / df_temp['distance'][1]) + (1 / df_temp['distance'][2]))
+
     d1 = df_nearest[df_nearest['sensor_id'] == df_temp['sensor_id'][0]]['hourly_counts'] * (
-            df_temp['distance'][0] / df_temp['distance'].sum())
+            (1 / df_temp['distance'][0]) / divider)
     d2 = df_nearest[df_nearest['sensor_id'] == df_temp['sensor_id'][1]]['hourly_counts'] * (
-            df_temp['distance'][1] / df_temp['distance'].sum())
+            (1 / df_temp['distance'][1]) / divider)
     d3 = df_nearest[df_nearest['sensor_id'] == df_temp['sensor_id'][2]]['hourly_counts'] * (
-            df_temp['distance'][2] / df_temp['distance'].sum())
+            (1 / df_temp['distance'][2]) / divider)
 
     ## Change sensor
     sensor_interest = pd.concat([pd.DataFrame(
@@ -137,15 +148,85 @@ def get_ped_any(click, pedestrian):
     return sensor_interest
 
 
+def for_eachday(df):
+    each = []
+    day_list = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
+    # Change time to int
+    time = df['date_time'].apply(lambda x: int(x.strftime('%H')))
+    df['time'] = time
+
+    # Loop over days
+    for i in range(7):
+        # 10AM - 5PM
+        dday = round(df[(df['Day'] == day_list[i]) & (df['time'] < 18) & (df['time'] > 9)]['hourly_counts'].mean())
+        each.append(dday)
+
+    return each
+
+
 def get_residential(click, population):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
     filtered = pd.DataFrame(within_p(population, clicked, 0.5))
-    household = filtered['Household'].sum()
-    return household
+    if len(filtered) > 0:
+        household = filtered['Household'].sum()
+        return household
+    else:
+        household = 0
+        return household
 
 
+def get_cafe(click, df_cafe):
+    clicked = pd.DataFrame([{'latitude':click[1],'longitude': click[0]}])
+    filtered = pd.DataFrame(within_p(df_cafe, clicked, 0.5))
+    if len(filtered) > 0:
+        n_cr = len(filtered['Street address'].unique()) # unique
+        return n_cr
+    else:
+        n_cr = 0
+        return n_cr
 
 
+def get_office(click, df_office):
+    clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
+    filtered = pd.DataFrame(within_p(df_office, clicked, 0.5))
+
+    if len(filtered) > 0:
+        n_of = len(filtered['Trading name'].unique())  # unique
+        return n_of
+    else:
+        n_of = 0
+        return n_of
+
+
+def get_carpark(click, off_street, on_street):
+    clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
+    filtered1 = pd.DataFrame(within_p(off_street, clicked, 0.5))
+    filtered2 = pd.DataFrame(within_p(on_street, clicked, 0.5))
+
+    if len(filtered1) > 0:
+        f1 = filtered1['Parking spaces'].sum()  # number of parking
+    else:
+        f1 = 0
+
+    if len(filtered2) > 0:
+        f2 = len(filtered2)
+    else:
+        f2 = 0
+
+    return f1 + f2
+
+
+def get_accessible(click, df_accessible):
+    clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
+    filtered = pd.DataFrame(within_p(df_accessible, clicked, 0.5))
+
+    if len(filtered) > 0:
+        n_wheelchair = len(filtered[filtered['wheelchair'] == 'yes'])  # unique
+        return n_wheelchair
+    else:
+        n_wheelchair = 0
+        return n_wheelchair
 
 # Initialise
 # Object ID may differ, need to change
@@ -215,23 +296,44 @@ def send_data():
         chart_data = {'chart_data': json_util.dumps(collection.aggregate(pipeline))}
         connection.close()
 
+        print('-'*320)
+        start = time.time()
 
-        print('------------------------------------------------------------------------------------------------------------------------------------------------')
+        weekly_ped = for_eachday(get_ped_any(click, df))
+        #print(chart_data)
+        #print('-'*300)
         print(click)
-        print('------------------------------------------------------------------------------------------------------------------------------------------------')
-        print(chart_data)
-        print('------------------------------------------------------------------------------------------------------------------------------------------------')
+        print('-'*300)
         print(get_ped_any(click, df).head())
-        print('------------------------------------------------------------------------------------------------------------------------------------------------')
-        print('Number of Residents Nearby : ', get_residential(click, population))
-        print('------------------------------------------------------------------------------------------------------------------------------------------------')
-
+        print('-'*300)
+        print('Number of Residents Nearby: ', get_residential(click, population))
+        print('-'*300)
+        print("Number of Cafes nearby: ", get_cafe(click, df_cafe))
+        print('-'*300)
+        print("Number of Car Parks Nearby: ", get_carpark(click, on_street, off_street))
+        print('-'*300)
+        print("Number of Accessible toilets Nearby: ", get_accessible(click, df_accessible))
+        print('-'*300)
+        print('Weekly Pedestrian: ', weekly_ped)
+        print('-'*300)
+        print("Number of Average Pedestrian between 10AM ~ 5PM: ", round(sum(weekly_ped) / 7))
+        print('-' * 300)
+        # print("Number of Offices nearby: ", get_office(click, df_office))  # This takes most of the time, 4.5sec should we keep it? or drop it?
+        # print('-' * 300)
+        
+        end = time.time()
+        print(end - start)
+        print('-'*300)
 
         return jsonify(chart_data)
 
     except:
         return ''
 
+
+"""
+Data To Client
+"""
 
 @app.route("/pedestrian", methods=['GET', 'POST'])
 def send_ped():
@@ -245,7 +347,7 @@ def send_ped():
         return ''
 
 @app.route("/resident", methods=['GET', 'POST'])
-def send_res():
+def send_data_resident():
     try:  # Only activates if click exist
         get_data()  # Get data from click
         res_data = pd.DataFrame([{'resident': get_residential(click, population)}]).to_json(orient='records')
@@ -254,11 +356,94 @@ def send_res():
     except:
         return ''
 
+"""
+Imange To Client
+"""
+
+@app.route('/image/house')
+def send_image_resident():
+    try:
+        get_data()  # Get data from click
+        if get_residential(click, population) > 10000:
+            filename = './static/image/1.png'
+            return send_file(filename, mimetype='image/png')
+        else:
+            filename = './static/image/2.png'
+            return send_file(filename, mimetype='image/png')
+    except:
+        return ""
+
+
+@app.route('/image/pedestrian')
+def send_image_pedestrian():
+    try:
+        get_data()  # Get data from click
+        # If Large number of 10-5 pedestrian movements
+        if round(sum(for_eachday(get_ped_any(click, df))) / 7) > 1200:
+            filename = './static/image/pedestrian1.png'
+            return send_file(filename, mimetype='image/png')
+        else:
+        # If Not
+            filename = './static/image/pedestrian2.png'
+            return send_file(filename, mimetype='image/png')
+    except:
+        return ""
+
+@app.route('/image/cafe')
+def send_image_cafe():
+    try:
+        get_data()  # Get data from click
+        # If Large number of 10-5 pedestrian movements
+        if get_cafe(click, df_cafe) > 150:
+            filename = './static/image/cafe1.png'
+            return send_file(filename, mimetype='image/png')
+        else:
+        # If Not
+            filename = './static/image/cafe2.png'
+            return send_file(filename, mimetype='image/png')
+    except:
+        return ""
+
+@app.route('/image/carpark')
+def send_image_carpark():
+    try:
+        get_data()  # Get data from click
+        # If Large number of 10-5 pedestrian movements
+        if get_carpark(click, on_street, off_street) > 5000:
+            filename = './static/image/carpark1.png'
+            return send_file(filename, mimetype='image/png')
+        else:
+        # If Not
+            filename = './static/image/carpark2.png'
+            return send_file(filename, mimetype='image/png')
+    except:
+        return ""
+
+@app.route('/image/accessible')
+def send_image_accessible():
+    try:
+        get_data()  # Get data from click
+        # If Large number of 10-5 pedestrian movements
+        if get_accessible(click, df_accessible) > 0:
+            filename = './static/image/accessible1.png'
+            return send_file(filename, mimetype='image/png')
+        else:
+        # If Not
+            filename = './static/image/accessible2.png'
+            return send_file(filename, mimetype='image/png')
+    except:
+        return ""
 
 # Send dummy data
 @app.route('/data')
 def data():
-    return jsonify({'results' : sample(range(1,10), 5)})
+    try:
+        get_data()
+        each_day = for_eachday(get_ped_any(click, df))
+        return jsonify({'results': each_day})
+
+    except:
+        return jsonify({'results' :  sample(range(1,10), 7) })
 
 
 if __name__ == "__main__":
