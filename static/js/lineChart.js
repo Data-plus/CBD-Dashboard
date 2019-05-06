@@ -1,7 +1,20 @@
 /* CHANGE THIS TO A FOR LOOP TO FETCH DATA LATER */
 Chart.defaults.global.responsive = false;
 
-/* LINE CHART SCRIPT */
+
+var updateLineChart = function() {
+    $.ajax({
+      url: '/data',
+      success: function(data) {
+
+        // add new label and data point to chart's underlying data structures
+        lineChart.data.datasets.data.push(url);
+        
+        // re-render the chart
+        lineChart.update();
+      }
+    });
+  };
 
 const CHART = document.getElementById("lineChart");
 console.log(CHART);
@@ -73,102 +86,4 @@ let lineChart = new Chart(CHART, {
 
 });
 
-
-
-
-
-
-
-
-
-// 
-// {/* <script>
-
-// /* LINE CHART SCRIPT */
-// var lineChart;
-// var getLineData = $.get('/data');
-
-// getLineData.done(function(results){
-//   var type = 'line';
-//   var datas = {
-//     labels: ['Sun', 'Mon', 'Tue', ' Wed', ' Thu', ' Fri', 'Sat'],
-//     datasets :[
-//       {
-//         label: "Past 6 Months",
-//         fill: false,
-//         backgroundColor: "rgb(82,105,136,0.8)",
-//         borderColor: "rgb(82,105,136)",
-//         borderCapStyle: "butt",
-//         borderDash: [],
-//         borderDashOffset: 0.0,
-//         borderJoinStyle: 'miter',
-//         pointBorderColor: 'white',
-//         pointBackgroundColor: "#fff",
-//         pointBorderWidth: 2,
-//         pointHoverRadius: 10,
-//         pointHoverBackgroundColor: "rgb(82,105,136,0.8)",
-//         pointHoverBorderColor: "rgba(220,220,220,1)",
-//         pointHoverBorderWidth: 8,
-//         pointRadius: 1,
-//         pointHitRadius: 10,
-//         lineTension: 0.4,
-//         data: [results.results]
-//       }
-//     ]
-//   };
-//   var options = {
-//         responsive: false,
-//         maintainAspectRatio: this.maintainAspectRatio,
-//         title: {
-//             display: true,
-//             text: "Number of Pedestrian Count",
-//             fontSize: 16,
-//         },
-//         legend: {
-//             position: 'bottom',
-
-//             labels: {
-//                 padding: 20,
-//             }
-//         }
-//   }
-//   lineChart = new Chart("lineChart", type, datas, options)
-// });
-
-// function updateLineChart(){
-// var updateLineData = $.get('/data');
-
-// updateLineData.done(function(results){
-//   var datas = {
-//     labels: ['Sun', 'Mon', 'Tue', ' Wed', ' Thu', ' Fri', 'Sat'],
-//     datasets :[
-//       {
-//         label: "Past 6 Months",
-//         fill: false,
-//         backgroundColor: "rgb(82,105,136,0.8)",
-//         borderColor: "rgb(82,105,136)",
-//         borderCapStyle: "butt",
-//         borderDash: [],
-//         borderDashOffset: 0.0,
-//         borderJoinStyle: 'miter',
-//         pointBorderColor: 'white',
-//         pointBackgroundColor: "#fff",
-//         pointBorderWidth: 2,
-//         pointHoverRadius: 10,
-//         pointHoverBackgroundColor: "rgb(82,105,136,0.8)",
-//         pointHoverBorderColor: "rgba(220,220,220,1)",
-//         pointHoverBorderWidth: 8,
-//         pointRadius: 1,
-//         pointHitRadius: 10,
-//         lineTension: 0.4,
-//         data: [results.results]
-//       }
-//     ]
-//   };
-//   lineChart.update(datas);
-//   })
-// };
-
-// $("#map_area").on('click', updateLineChart);
-
-// </script> */}
+$("#map_area").on('click', updateLineChart);

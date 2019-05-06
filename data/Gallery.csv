@@ -1,26 +1,26 @@
-﻿Gallery Name,Latitude,Longitude
-Old Melbourne Gaol Crime,-37.80776441,144.9654639
-Victorian Arts Centre,-37.82199473,144.9688373
-The Ian Potter Centre: NGV Australia,-37.81748314,144.969899
-Thoroughbred Racing Gallery,-37.81886627,144.9839701
-Fox Classic Car Collection,-37.82137443,144.9484967
-Koorie Heritage Trust Inc,-37.81338543,144.9540279
-Australian Centre For The Moving Image (ACMI),-37.81761073,144.9690704
-Blindside Gallery,-37.816711,144.966812
-Flinders Lane Gallery,-37.815715,144.970033
-Mailbox Art Space,-37.815758,144.969861
-RMIT Gallery,-37.8125865,144.9554579
-Neon Parc,-37.813892,144.96402
-Outre Gallery,-37.812816,144.962224
-Anna Schwartz Gallery,-37.816048,144.96889
-ARC ONE Gallery,-37.81473,144.97308
-Gallery Funaki,-37.811609,144.971399
-Lesley Kehoe Galleries,-37.814922,144.97052
-SpACE@Collins,-37.815775,144.964823
-Tolarno Galleries,-37.813133,144.97133
-Immigration Museum,-37.8183741,144.9592075
-National Gallery of Victoria,-37.8225942,144.9689278
-The Dax Centre,-37.7982687,144.9585509
-Fortyfivedownstairs Inc,-37.8169558,144.9708847
-Pieces of Eight Gallery,-37.8134924,144.9673838
-Magnet Galleries Melbourne,-37.8165815,144.9523872
+﻿Gallery Name,Latitude,Longitude,Type
+Old Melbourne Gaol Crime,-37.80776441,144.9654639,Gallery
+Victorian Arts Centre,-37.82199473,144.9688373,Gallery
+The Ian Potter Centre: NGV Australia,-37.81748314,144.969899,Gallery
+Thoroughbred Racing Gallery,-37.81886627,144.9839701,Gallery
+Fox Classic Car Collection,-37.82137443,144.9484967,Gallery
+Koorie Heritage Trust Inc,-37.81338543,144.9540279,Gallery
+Australian Centre For The Moving Image (ACMI),-37.81761073,144.9690704,Gallery
+Blindside Gallery,-37.816711,144.966812,Gallery
+Flinders Lane Gallery,-37.815715,144.970033,Gallery
+Mailbox Art Space,-37.815758,144.969861,Gallery
+RMIT Gallery,-37.8125865,144.9554579,Gallery
+Neon Parc,-37.813892,144.96402,Gallery
+Outre Gallery,-37.812816,144.962224,Gallery
+Anna Schwartz Gallery,-37.816048,144.96889,Gallery
+ARC ONE Gallery,-37.81473,144.97308,Gallery
+Gallery Funaki,-37.811609,144.971399,Gallery
+Lesley Kehoe Galleries,-37.814922,144.97052,Gallery
+SpACE@Collins,-37.815775,144.964823,Gallery
+Tolarno Galleries,-37.813133,144.97133,Gallery
+Immigration Museum,-37.8183741,144.9592075,Gallery
+National Gallery of Victoria,-37.8225942,144.9689278,Gallery
+The Dax Centre,-37.7982687,144.9585509,Gallery
+Fortyfivedownstairs Inc,-37.8169558,144.9708847,Gallery
+Pieces of Eight Gallery,-37.8134924,144.9673838,Gallery
+Magnet Galleries Melbourne,-37.8165815,144.9523872,Gallery

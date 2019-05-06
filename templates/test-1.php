@@ -56,7 +56,7 @@
 
 
 <script>
-
+// Update Image Data
 function reloadImg() {
   var d=new Date();
   document.getElementById("HousePic").src="/image/house?a="+d.getTime();
@@ -64,26 +64,37 @@ function reloadImg() {
   document.getElementById("CafePic").src="/image/cafe?a="+d.getTime();
   document.getElementById("CarPic").src="/image/carpark?a="+d.getTime();
   document.getElementById("AccPic").src="/image/accessible?a="+d.getTime();
+  document.getElementById("GalPic").src="/image/gallery?a="+d.getTime();
+}
+function reloadImg2() {
+  var d=new Date();
+  document.getElementById("HousePic2").src="/image/house?a="+d.getTime();
+  document.getElementById("PedPic2").src="/image/pedestrian?a="+d.getTime();
+  document.getElementById("CafePic2").src="/image/cafe?a="+d.getTime();
+  document.getElementById("CarPic2").src="/image/carpark?a="+d.getTime();
+  document.getElementById("AccPic2").src="/image/accessible?a="+d.getTime();
+  document.getElementById("GalPic2").src="/image/gallery?a="+d.getTime();
+  
 }
 
-
+// First Second clicks
 var clicked = false;
     
     function countClicks()
     {
        if(clicked)
        {
-        alert("Second Click"); 
+        reloadImg2(); // Right
+        updateLineChart();
           clicked = false;
        }
       else
       {
-        reloadImg(); 
+        reloadImg();  // Left
+        updateChart();
          clicked = true;
       }
     }
-
-// Update Image Data
 
 </script>
 
@@ -293,11 +304,8 @@ var clicked = false;
                   data : JSON.stringify({'data':clickLog})
                   }
               );
-
-
           });
       });
-
       </script>
     </div>
 
@@ -316,7 +324,7 @@ var clicked = false;
       <div class="row-sm-4">
         <h5><span class="glyphicon glyphicon-plus"></span> <b>Quick Stats!</b></h5>
         <hr>
-        <img id="HousePic"> <img id="PedPic">  <img id="CafePic">  <img id="CarPic">  <img id="AccPic">
+        <img id="HousePic"> <img id="PedPic">  <img id="CafePic">  <img id="CarPic">  <img id="AccPic">  <img id="GalPic">
         <hr>
       </div>
 
@@ -354,10 +362,7 @@ var clicked = false;
             });
           }
         
-          $("#map_area").on('click', updateChart);
-
-
-
+          
         </script>
       </div>
 
@@ -371,8 +376,94 @@ var clicked = false;
         <hr>
         <h5><span class="glyphicon glyphicon-plus"></span> <b> Clicked Location: 222 Collins St</b></h5>
         <h5><span class="label label-danger">Hawawa</span> <span class="label label-primary">Testing</span></h5><br>
-        <canvas id="lineChart" height="300" width="455"></canvas>
-        <script src="../static/js/lineChart.js"></script>
+        <h5><span class="glyphicon glyphicon-plus"></span> <b>Quick Stats!</b></h5>
+        <hr>
+        <img id="HousePic2"> <img id="PedPic2">  <img id="CafePic2">  <img id="CarPic2">  <img id="AccPic2">  <img id="GalPic2">
+        <hr>
+        <canvas id="lineChart" height="300" width=auto></canvas>
+        <script>
+        
+
+        const CHART = document.getElementById("lineChart");
+        console.log(CHART);
+        let lineChart = new Chart(CHART, {
+            type: 'line',
+            data: {
+                labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                datasets: [
+                    {   data: [],
+                        label: "Past 6 Months",
+                        fill: false,
+                        backgroundColor: "rgb(82,105,136,0.8)",
+                        borderColor: "rgb(82,105,136)",
+                        borderCapStyle: "butt",
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: 'white',
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 10,
+                        pointHoverBackgroundColor: "rgb(82,105,136,0.8)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 8,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        lineTension: 0.4,
+                    },
+                    {    
+                        data: [],
+                        label: "Next 3 Months",
+                        fill: false,
+                        backgroundColor: "rgb(194,182,208,0.5)",
+                        borderColor: "rgb(255,170,170)",
+                        borderCapStyle: "butt",
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "white",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 10,
+                        pointHoverBackgroundColor: "rgb(194,182,208,0.5)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 8,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        lineTension: 0.4,
+                    }
+                ]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: this.maintainAspectRatio,
+                title: {
+                    display: true,
+                    text: "Number of Pedestrian Count",
+                    fontSize: 16,
+                },
+                legend: {
+                    position: 'bottom',
+
+                    labels: {
+                        padding: 20,
+                    }
+                }
+            }
+
+        });
+
+          var updateLineChart = function() {
+              $.get("/data", function (result) {
+                console.log(result)
+                lineChart.data.datasets[0].data = result.click2;
+                lineChart.update();
+            }); 
+        }
+
+        
+
+        </script>
 
 
       </div>
@@ -388,7 +479,7 @@ var clicked = false;
 
       <div class="row-sm-4">
         <h4>Leave a Comment:</h4>
-        <p>nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident.</p>
        </div>
       
     </div>

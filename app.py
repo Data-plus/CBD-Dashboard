@@ -33,6 +33,7 @@ df_office = pd.read_csv('static/data/office.csv')
 on_street = pd.read_csv('static/data/on_street.csv')
 off_street = pd.read_csv('static/data/off_street.csv')
 df_accessible = pd.read_csv('static/data/accessible.csv')
+df_gallery = pd.read_csv('static/data/gallery.csv')
 
 # Sensor
 # PC: "5cbb067ae39a5cbeb4a82260"
@@ -91,7 +92,6 @@ def within_p(population, clicked, radius):
             pass
 
     return temp
-
 
 
 """
@@ -228,14 +228,26 @@ def get_accessible(click, df_accessible):
         n_wheelchair = 0
         return n_wheelchair
 
+def get_gallery(click, df_gallery):
+    clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
+    filtered = pd.DataFrame(within_p(df_gallery, clicked, 0.5))
+
+    if len(filtered) > 0:
+        n_gal = len(filtered)  # unique
+        return n_gal
+    else:
+        n_gal = 0
+        return n_gal
+
+
 # Initialise
 # Object ID may differ, need to change
 @app.route("/")
 def dashboard_projects():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find_one({"type": "FeatureCollection"}, {"_id":0})
-    sensors = collection.find_one( { "_id": ObjectId("5cbb067ae39a5cbeb4a82260") }, {"_id":0})  # Need to swap this
+    projects = collection.find_one({"features.properties.Gallery Name" : { "$exists" : True }}, {"_id":0})
+    sensors = collection.find_one( { "_id": ObjectId("5cc683b30e00cbd80dd912ad") }, {"_id":0})  # Need to swap this
     connection.close()
     return render_template("test-1.php", geojson_data = projects, sensors = sensors)
 
@@ -313,6 +325,8 @@ def send_data():
         print("Number of Car Parks Nearby: ", get_carpark(click, on_street, off_street))
         print('-'*300)
         print("Number of Accessible toilets Nearby: ", get_accessible(click, df_accessible))
+        print('-'*300)
+        print("NUmber of Art Galleries Nearby: ", get_gallery(click, df_gallery))
         print('-'*300)
         print('Weekly Pedestrian: ', weekly_ped)
         print('-'*300)
@@ -408,7 +422,7 @@ def send_image_cafe():
 def send_image_carpark():
     try:
         get_data()  # Get data from click
-        # If Large number of 10-5 pedestrian movements
+        # If Large number of carparks 5k
         if get_carpark(click, on_street, off_street) > 5000:
             filename = './static/image/carpark1.png'
             return send_file(filename, mimetype='image/png')
@@ -423,7 +437,7 @@ def send_image_carpark():
 def send_image_accessible():
     try:
         get_data()  # Get data from click
-        # If Large number of 10-5 pedestrian movements
+        # If Exists
         if get_accessible(click, df_accessible) > 0:
             filename = './static/image/accessible1.png'
             return send_file(filename, mimetype='image/png')
@@ -434,16 +448,34 @@ def send_image_accessible():
     except:
         return ""
 
+@app.route('/image/gallery')
+def send_image_gallery():
+    try:
+        get_data()  # Get data from click
+        # If exists
+        if get_gallery(click, df_gallery) > 0:
+            filename = './static/image/gallery1.png'
+            return send_file(filename, mimetype='image/png')
+        else:
+        # If Not
+            filename = './static/image/gallery2.png'
+            return send_file(filename, mimetype='image/png')
+    except:
+        return ""
+
+
 # Send dummy data
 @app.route('/data')
 def data():
     try:
         get_data()
         each_day = for_eachday(get_ped_any(click, df))
-        return jsonify({'results': each_day})
+        return jsonify({'results': each_day, 'click2': each_day})
 
     except:
-        return jsonify({'results' :  sample(range(1,10), 7) })
+        return jsonify({'results':  sample(range(1,10), 7) })
+
+
 
 
 if __name__ == "__main__":

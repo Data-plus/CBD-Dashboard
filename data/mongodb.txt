@@ -1,4 +1,4 @@
-mongoimport --db mydb -c projects --type json --file sensors.geojson
+mongoimport --db mydb -c projects --type json --file gallery.geojson
 
 mongoimport -d mydb -c projects --type csv --file cafe.csv --headerline
 

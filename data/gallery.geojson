@@ -1,0 +1,280 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9654639,-37.80776441 ]
+    },
+    "properties": {
+    "Gallery Name":"Old Melbourne Gaol Crime",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9688373,-37.82199473 ]
+    },
+    "properties": {
+    "Gallery Name":"Victorian Arts Centre",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.969899,-37.81748314 ]
+    },
+    "properties": {
+    "Gallery Name":"The Ian Potter Centre: NGV Australia",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9839701,-37.81886627 ]
+    },
+    "properties": {
+    "Gallery Name":"Thoroughbred Racing Gallery",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9484967,-37.82137443 ]
+    },
+    "properties": {
+    "Gallery Name":"Fox Classic Car Collection",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9540279,-37.81338543 ]
+    },
+    "properties": {
+    "Gallery Name":"Koorie Heritage Trust Inc",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9690704,-37.81761073 ]
+    },
+    "properties": {
+    "Gallery Name":"Australian Centre For The Moving Image (ACMI)",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.966812,-37.816711 ]
+    },
+    "properties": {
+    "Gallery Name":"Blindside Gallery",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.970033,-37.815715 ]
+    },
+    "properties": {
+    "Gallery Name":"Flinders Lane Gallery",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.969861,-37.815758 ]
+    },
+    "properties": {
+    "Gallery Name":"Mailbox Art Space",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9554579,-37.8125865 ]
+    },
+    "properties": {
+    "Gallery Name":"RMIT Gallery",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.96402,-37.813892 ]
+    },
+    "properties": {
+    "Gallery Name":"Neon Parc",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.962224,-37.812816 ]
+    },
+    "properties": {
+    "Gallery Name":"Outre Gallery",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.96889,-37.816048 ]
+    },
+    "properties": {
+    "Gallery Name":"Anna Schwartz Gallery",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.97308,-37.81473 ]
+    },
+    "properties": {
+    "Gallery Name":"ARC ONE Gallery",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.971399,-37.811609 ]
+    },
+    "properties": {
+    "Gallery Name":"Gallery Funaki",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.97052,-37.814922 ]
+    },
+    "properties": {
+    "Gallery Name":"Lesley Kehoe Galleries",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.964823,-37.815775 ]
+    },
+    "properties": {
+    "Gallery Name":"SpACE@Collins",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.97133,-37.813133 ]
+    },
+    "properties": {
+    "Gallery Name":"Tolarno Galleries",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9592075,-37.8183741 ]
+    },
+    "properties": {
+    "Gallery Name":"Immigration Museum",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9689278,-37.8225942 ]
+    },
+    "properties": {
+    "Gallery Name":"National Gallery of Victoria",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9585509,-37.7982687 ]
+    },
+    "properties": {
+    "Gallery Name":"The Dax Centre",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9708847,-37.8169558 ]
+    },
+    "properties": {
+    "Gallery Name":"Fortyfivedownstairs Inc",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9673838,-37.8134924 ]
+    },
+    "properties": {
+    "Gallery Name":"Pieces of Eight Gallery",
+    "Type":"Gallery"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9523872,-37.8165815 ]
+    },
+    "properties": {
+    "Gallery Name":"Magnet Galleries Melbourne",
+    "Type":"Gallery"
+    }
+  }
+]
+}
