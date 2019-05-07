@@ -12,14 +12,12 @@
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.min.js'></script>
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.css' type='text/css' />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+  <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
 
   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
+
 
 <style>
 .geocoder {
@@ -48,6 +46,7 @@
   text-align: center;
   color: #222;
   background: #fff;
+  z-index:-1;
   }
 </style>  
 
@@ -65,6 +64,10 @@ function reloadImg() {
   document.getElementById("CarPic").src="/image/carpark?a="+d.getTime();
   document.getElementById("AccPic").src="/image/accessible?a="+d.getTime();
   document.getElementById("GalPic").src="/image/gallery?a="+d.getTime();
+  document.getElementById("PrintPic").src="/image/print?a="+d.getTime();
+  document.getElementById("PubPic").src="/image/pub?a="+d.getTime();
+
+
 }
 function reloadImg2() {
   var d=new Date();
@@ -74,7 +77,9 @@ function reloadImg2() {
   document.getElementById("CarPic2").src="/image/carpark?a="+d.getTime();
   document.getElementById("AccPic2").src="/image/accessible?a="+d.getTime();
   document.getElementById("GalPic2").src="/image/gallery?a="+d.getTime();
-  
+  document.getElementById("PrintPic2").src="/image/print?a="+d.getTime();
+  document.getElementById("PubPic2").src="/image/pub?a="+d.getTime();
+
 }
 
 // First Second clicks
@@ -84,14 +89,28 @@ var clicked = false;
     {
        if(clicked)
        {
+        var mapLayer2 = map.getLayer('circle2');
+        if (typeof mapLayer2 !== 'undefined') {
+                    // Remove map layer & source.
+        map.removeLayer('circle2').removeSource('circle2');
+                };
+        circleMaker2(); // Right
         reloadImg2(); // Right
         updateLineChart();
+
           clicked = false;
        }
       else
       {
+        var mapLayer1 = map.getLayer('circle1');
+        if (typeof mapLayer1 !== 'undefined') {
+                    // Remove map layer & source.
+        map.removeLayer('circle1').removeSource('circle1');
+                };
+        circleMaker1(); // Left
         reloadImg();  // Left
-        updateChart();
+        updateLineChart1();
+
          clicked = true;
       }
     }
@@ -123,9 +142,9 @@ var clicked = false;
 
       var map = new mapboxgl.Map({
       container: 'map', // container id
-      style: 'mapbox://styles/plusmg/cjtwy2na22bey1gt3tw5hf1ul', // stylesheet location
+      style: 'mapbox://styles/plusmg/cjvchk9qc0fdn1fp74xjuz92r',
       center: [144.9628079612438, -37.81370894743138], // starting position [lng, lat]
-      zoom: 11, // starting zoom
+      zoom: 5, // starting zoom
       maxBounds: bounds // Sets bounds as max
       });
 
@@ -145,10 +164,11 @@ var clicked = false;
           'type': 'circle',
           'paint': {
           'circle-radius': 5,
-          'circle-color': 'rgba(255,255,104,1)'
+          'circle-color': 'rgba(255,224,98,1)'
           }
           });
       });
+
 
       // Using local file
       var url2 = {{ sensors }};
@@ -165,8 +185,28 @@ var clicked = false;
           'type': 'circle',
           'paint': {
           'circle-radius': 4,
-          'circle-color': 'rgba(226,133,229,1)'
+          'circle-color': 'rgba(185,238,255,1)'
           }
+          });
+      });
+
+      var url3 = {{ geojson_cafe }};
+
+      map.on('load', function () {
+          map.addSource('cafe', {
+              type: 'geojson',
+              data: url3
+          }),
+
+          map.addLayer({
+          'id': 'cafe',
+          'source': 'cafe',
+          'minzoom': 16,
+          'type': 'circle',
+          'paint': {
+          'circle-radius': 4,
+          'circle-color': 'rgba(249,235,218,0.8)'
+          },
           });
       });
 
@@ -227,11 +267,13 @@ var clicked = false;
               });
       var toggleableLayerIds = [ 'transit_stop_label', 'public-art', 'cafe', 'art-gallery', 'ped-sensor'];
 
+      
       // Click
       map.on("click", function (e) {
           document.getElementById('info').innerHTML =
           JSON.stringify(e.lngLat);
           var location = JSON.stringify(e.lngLat);
+          obj = JSON.parse(location);
           console.log(location);
 
           $.ajax(
@@ -306,6 +348,60 @@ var clicked = false;
               );
           });
       });
+
+      function circleMaker1(e) {
+          var center = [obj.lng, obj.lat];
+          var radius = 200;
+          var options = {
+              steps: 30,
+              units: 'meters',
+              properties: {
+                  foo: 'bar'
+              }
+          }
+          var circle1 = turf.circle(center, radius, options);
+          map.addLayer({
+              "id": "circle1",
+              "type": "fill",
+              "source": {
+                  "type": "geojson",
+                  "data": circle1
+              },
+              "paint": {
+                  "fill-color": 'rgba(255,170,170,1)',
+                  "fill-opacity": 0.3
+              }
+          });
+      };
+
+
+      function circleMaker2(e) {
+          var center = [obj.lng, obj.lat];
+          var radius = 200;
+          var options = {
+              steps: 30,
+              units: 'meters',
+              properties: {
+                  foo: 'bar'
+              }
+          }
+          var circle2 = turf.circle(center, radius, options);
+          map.addLayer({
+              "id": "circle2",
+              "type": "fill",
+              "source": {
+                  "type": "geojson",
+                  "data": circle2
+              },
+              "paint": {
+                  "fill-color": 'rgba(255,228,196,1)',
+                  "fill-opacity": 0.3
+              }
+          });
+      };
+
+
+
       </script>
     </div>
 
@@ -322,74 +418,24 @@ var clicked = false;
 
       <!-- Icons -->
       <div class="row-sm-4">
-        <h5><span class="glyphicon glyphicon-plus"></span> <b>Quick Stats!</b></h5>
+        <h5><span class="glyphicon glyphicon-plus"></span> <b>Nearby Amenities</b></h5>
         <hr>
-        <img id="HousePic"> <img id="PedPic">  <img id="CafePic">  <img id="CarPic">  <img id="AccPic">  <img id="GalPic">
+        <img id="HousePic"> <img id="PedPic"> <img id="CafePic"> <img id="CarPic"> <img id="AccPic"> <img id="GalPic"> <img id="PrintPic"> <img id="PubPic">
         <hr>
       </div>
 
       <!-- Chart -->
-      <div style="text-align: center;" class="row-sm-4 ct-chart" >
-        <h4><span class="label label-primary" >Pedestrian Counts</span></h4>
-        <script>
-          var myChart;
-          var getData = $.get('/data');
-          getData.done(function(results){
-            var data = {
-              labels: ['Sun', 'Mon', 'Tue', ' Wed', ' Thu', ' Fri', 'Sat'],
-              series :[
-                results.results
-              ]
-            };
-            var options = {
-              showPoint: false,
-              lineSmooth: true,
-              width : 400,
-              height : 300
-            }
-            myChart = new Chartist.Line('.ct-chart', data, options);
-          });
-        function updateChart(){
-          var updateData = $.get('/data');
-          updateData.done(function(results){
-              var data = {
-                labels: ['Sun', 'Mon', 'Tue', ' Wed', ' Thu', ' Fri', 'Sat'],
-                series :[
-                  results.results
-                ]
-              };
-            myChart.update(data);
-            });
-          }
-        
-          
-        </script>
-      </div>
-
-    </div>
-    
-    <!-- Right Side -->
-    <div class="col-sm-3" >
-      <!-- Location B -->
       <div class="row-sm-4">
-        <h2>Locaion B</h2>
-        <hr>
-        <h5><span class="glyphicon glyphicon-plus"></span> <b> Clicked Location: 222 Collins St</b></h5>
-        <h5><span class="label label-danger">Hawawa</span> <span class="label label-primary">Testing</span></h5><br>
-        <h5><span class="glyphicon glyphicon-plus"></span> <b>Quick Stats!</b></h5>
-        <hr>
-        <img id="HousePic2"> <img id="PedPic2">  <img id="CafePic2">  <img id="CarPic2">  <img id="AccPic2">  <img id="GalPic2">
-        <hr>
-        <canvas id="lineChart" height="300" width=auto></canvas>
+        <h4><span class="label label-primary" >Pedestrian Counts</span></h4>
+        <canvas id="lineChart1" height="300" width=auto></canvas>
         <script>
-        
 
-        const CHART = document.getElementById("lineChart");
-        console.log(CHART);
-        let lineChart = new Chart(CHART, {
+        const CHART1 = document.getElementById("lineChart1");
+        console.log(CHART1);
+        let lineChart1 = new Chart(CHART1, {
             type: 'line',
             data: {
-                labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
                 datasets: [
                     {   data: [],
                         label: "Past 6 Months",
@@ -416,7 +462,105 @@ var clicked = false;
                         label: "Next 3 Months",
                         fill: false,
                         backgroundColor: "rgb(194,182,208,0.5)",
-                        borderColor: "rgb(255,170,170)",
+                        borderColor: "rgb(194,182,208,0.5)",
+                        borderCapStyle: "butt",
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "white",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 10,
+                        pointHoverBackgroundColor: "rgb(194,182,208,0.5)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 8,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        lineTension: 0.4,
+                    }
+                ]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: this.maintainAspectRatio,
+                title: {
+                    display: true,
+                    text: "Number of Pedestrian Count",
+                    fontSize: 16,
+                },
+                legend: {
+                    position: 'bottom',
+
+                    labels: {
+                        padding: 20,
+                    }
+                }
+            }
+
+        });
+
+          var updateLineChart1 = function() {
+              $.get("/data", function (result) {
+                console.log(result)
+                lineChart1.data.datasets[0].data = result.results;
+                lineChart1.update();
+            }); 
+        }
+        </script>
+      </div>
+
+    </div>
+    
+    <!-- Right Side -->
+    <div class="col-sm-3" >
+      <!-- Location B -->
+      <div class="row-sm-4">
+        <h2>Locaion B</h2>
+        <hr>
+        <h5><span class="glyphicon glyphicon-plus"></span> <b> Clicked Location: 222 Collins St</b></h5>
+        <h5><span class="label label-danger">Hawawa</span> <span class="label label-primary">Testing</span></h5><br>
+        <h5><span class="glyphicon glyphicon-plus"></span> <b>Nearby Amenities</b></h5>
+        <hr>
+        <img id="HousePic2"> <img id="PedPic2">  <img id="CafePic2">  <img id="CarPic2">  <img id="AccPic2">  <img id="GalPic2"> <img id="PrintPic2"> <img id="PubPic2">
+        <hr>
+        <h4><span class="label label-primary" >Pedestrian Counts</span></h4>
+        <canvas id="lineChart" height="300" width=auto></canvas>
+        <script>
+        
+
+        const CHART = document.getElementById("lineChart");
+        console.log(CHART);
+        let lineChart = new Chart(CHART, {
+            type: 'line',
+            data: {
+                labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                datasets: [
+                    {   data: [],
+                        label: "Past 6 Months",
+                        fill: false,
+                        backgroundColor: "rgb(82,105,136,0.8)",
+                        borderColor: "rgb(82,105,136)",
+                        borderCapStyle: "butt",
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: 'white',
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 10,
+                        pointHoverBackgroundColor: "rgb(82,105,136,0.8)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 8,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        lineTension: 0.4,
+                    },
+                    {    
+                        data: [],
+                        label: "Next 3 Months",
+                        fill: false,
+                        backgroundColor: "rgb(194,182,208,0.5)",
+                        borderColor: "rgb(194,182,208,0.5)",
                         borderCapStyle: "butt",
                         borderDash: [],
                         borderDashOffset: 0.0,
@@ -460,18 +604,13 @@ var clicked = false;
                 lineChart.update();
             }); 
         }
-
         
-
         </script>
-
-
       </div>
 
       <div class="row-sm-4">
         <h4><small>RECENT POSTS</small></h4>
         <hr>
-        <h5><span class="glyphicon glyphicon-time"></span> Post by me, 20, April, 2019.</h5>
         <h5><span class="label label-success">Lorem</span></h5><br>
         <h5>This place will be Location B</h5>
         <hr>      
@@ -487,12 +626,5 @@ var clicked = false;
 </div>
 
 
-
-
-
 </body>
 </html>
-
-
-
-

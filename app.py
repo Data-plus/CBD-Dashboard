@@ -34,6 +34,8 @@ on_street = pd.read_csv('static/data/on_street.csv')
 off_street = pd.read_csv('static/data/off_street.csv')
 df_accessible = pd.read_csv('static/data/accessible.csv')
 df_gallery = pd.read_csv('static/data/gallery.csv')
+df_print = pd.read_csv('static/data/print.csv')
+df_pubs = pd.read_csv('static/data/pubs.csv')
 
 # Sensor
 # PC: "5cbb067ae39a5cbeb4a82260"
@@ -167,7 +169,7 @@ def for_eachday(df):
 
 def get_residential(click, population):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
-    filtered = pd.DataFrame(within_p(population, clicked, 0.5))
+    filtered = pd.DataFrame(within_p(population, clicked, 0.2))
     if len(filtered) > 0:
         household = filtered['Household'].sum()
         return household
@@ -178,7 +180,7 @@ def get_residential(click, population):
 
 def get_cafe(click, df_cafe):
     clicked = pd.DataFrame([{'latitude':click[1],'longitude': click[0]}])
-    filtered = pd.DataFrame(within_p(df_cafe, clicked, 0.5))
+    filtered = pd.DataFrame(within_p(df_cafe, clicked, 0.2))
     if len(filtered) > 0:
         n_cr = len(filtered['Street address'].unique()) # unique
         return n_cr
@@ -189,7 +191,7 @@ def get_cafe(click, df_cafe):
 
 def get_office(click, df_office):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
-    filtered = pd.DataFrame(within_p(df_office, clicked, 0.5))
+    filtered = pd.DataFrame(within_p(df_office, clicked, 0.2))
 
     if len(filtered) > 0:
         n_of = len(filtered['Trading name'].unique())  # unique
@@ -201,8 +203,8 @@ def get_office(click, df_office):
 
 def get_carpark(click, off_street, on_street):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
-    filtered1 = pd.DataFrame(within_p(off_street, clicked, 0.5))
-    filtered2 = pd.DataFrame(within_p(on_street, clicked, 0.5))
+    filtered1 = pd.DataFrame(within_p(off_street, clicked, 0.2))
+    filtered2 = pd.DataFrame(within_p(on_street, clicked, 0.2))
 
     if len(filtered1) > 0:
         f1 = filtered1['Parking spaces'].sum()  # number of parking
@@ -219,7 +221,7 @@ def get_carpark(click, off_street, on_street):
 
 def get_accessible(click, df_accessible):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
-    filtered = pd.DataFrame(within_p(df_accessible, clicked, 0.5))
+    filtered = pd.DataFrame(within_p(df_accessible, clicked, 0.2))
 
     if len(filtered) > 0:
         n_wheelchair = len(filtered[filtered['wheelchair'] == 'yes'])  # unique
@@ -230,7 +232,7 @@ def get_accessible(click, df_accessible):
 
 def get_gallery(click, df_gallery):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
-    filtered = pd.DataFrame(within_p(df_gallery, clicked, 0.5))
+    filtered = pd.DataFrame(within_p(df_gallery, clicked, 0.2))
 
     if len(filtered) > 0:
         n_gal = len(filtered)  # unique
@@ -240,6 +242,30 @@ def get_gallery(click, df_gallery):
         return n_gal
 
 
+def get_print(click, df_print):
+    clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
+    filtered = pd.DataFrame(within_p(df_print, clicked, 0.2))
+
+    if len(filtered) > 0:
+        n_print = len(filtered)  # unique
+        return n_print
+    else:
+        n_print = 0
+        return n_print
+
+
+def get_pubs(click, df_pubs):
+    clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
+    filtered = pd.DataFrame(within_p(df_pubs, clicked, 0.2))
+
+    if len(filtered) > 0:
+        n_pubs = len(filtered)  # unique
+        return n_pubs
+    else:
+        n_pubs = 0
+        return n_pubs
+
+
 # Initialise
 # Object ID may differ, need to change
 @app.route("/")
@@ -247,9 +273,10 @@ def dashboard_projects():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     collection = connection[DBS_NAME][COLLECTION_NAME]
     projects = collection.find_one({"features.properties.Gallery Name" : { "$exists" : True }}, {"_id":0})
-    sensors = collection.find_one( { "_id": ObjectId("5cc683b30e00cbd80dd912ad") }, {"_id":0})  # Need to swap this
+    sensors = collection.find_one({"features.properties.sensor_id" : { "$exists" : True }}, {"_id":0})
+    cafes = collection.find_one({"features.properties.Type" : "Cafe"}, {"_id":0})
     connection.close()
-    return render_template("test-1.php", geojson_data = projects, sensors = sensors)
+    return render_template("test-1.php", geojson_data = projects, sensors = sensors, geojson_cafe = cafes)
 
 
 # Get geocode from click
@@ -326,7 +353,11 @@ def send_data():
         print('-'*300)
         print("Number of Accessible toilets Nearby: ", get_accessible(click, df_accessible))
         print('-'*300)
-        print("NUmber of Art Galleries Nearby: ", get_gallery(click, df_gallery))
+        print("Number of Art Galleries Nearby: ", get_gallery(click, df_gallery))
+        print('-'*300)
+        print("Number of Printing Stores Nearby: ", get_print(click, df_print))
+        print('-'*300)
+        print("Number of Pubs Nearby: ", get_pubs(click, df_pubs))
         print('-'*300)
         print('Weekly Pedestrian: ', weekly_ped)
         print('-'*300)
@@ -463,8 +494,39 @@ def send_image_gallery():
     except:
         return ""
 
+@app.route('/image/print')
+def send_image_print():
+    try:
+        get_data()  # Get data from click
+        # If exists
+        if get_print(click, df_print) > 0:
+            filename = './static/image/print1.png'
+            return send_file(filename, mimetype='image/png')
+        else:
+        # If Not
+            filename = './static/image/print2.png'
+            return send_file(filename, mimetype='image/png')
+    except:
+        return ""
 
-# Send dummy data
+@app.route('/image/pub')
+def send_image_pub():
+    try:
+        get_data()  # Get data from click
+        # If exists
+        if get_pubs(click, df_pubs) > 0:
+            filename = './static/image/pub1.png'
+            return send_file(filename, mimetype='image/png')
+        else:
+        # If Not
+            filename = './static/image/pub2.png'
+            return send_file(filename, mimetype='image/png')
+    except:
+        return ""
+
+
+
+# Send Pedestrian Chart Data
 @app.route('/data')
 def data():
     try:

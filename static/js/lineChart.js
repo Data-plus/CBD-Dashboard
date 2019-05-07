@@ -1,21 +1,3 @@
-/* CHANGE THIS TO A FOR LOOP TO FETCH DATA LATER */
-Chart.defaults.global.responsive = false;
-
-
-var updateLineChart = function() {
-    $.ajax({
-      url: '/data',
-      success: function(data) {
-
-        // add new label and data point to chart's underlying data structures
-        lineChart.data.datasets.data.push(url);
-        
-        // re-render the chart
-        lineChart.update();
-      }
-    });
-  };
-
 const CHART = document.getElementById("lineChart");
 console.log(CHART);
 let lineChart = new Chart(CHART, {
@@ -23,7 +5,7 @@ let lineChart = new Chart(CHART, {
     data: {
         labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         datasets: [
-            {
+            {   data: [],
                 label: "Past 6 Months",
                 fill: false,
                 backgroundColor: "rgb(82,105,136,0.8)",
@@ -41,10 +23,10 @@ let lineChart = new Chart(CHART, {
                 pointHoverBorderWidth: 8,
                 pointRadius: 1,
                 pointHitRadius: 10,
-                data: [70, 55, 33, 120, 50, 80, 70],
                 lineTension: 0.4,
             },
-            {
+            {    
+                data: [],
                 label: "Next 3 Months",
                 fill: false,
                 backgroundColor: "rgb(194,182,208,0.5)",
@@ -62,7 +44,6 @@ let lineChart = new Chart(CHART, {
                 pointHoverBorderWidth: 8,
                 pointRadius: 1,
                 pointHitRadius: 10,
-                data: [70, 65, 55, 70, 60, 90, 100],
                 lineTension: 0.4,
             }
         ]
@@ -85,5 +66,3 @@ let lineChart = new Chart(CHART, {
     }
 
 });
-
-$("#map_area").on('click', updateLineChart);
