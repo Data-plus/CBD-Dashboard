@@ -3,7 +3,7 @@
 <head>
   <title>Gallevisionery</title>
   <meta charset="utf-8">
-  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -22,7 +22,7 @@
 <style>
 .geocoder {
   position:absolute;
-  z-index:1;
+  z-index:7;
   width:100%;
   left:50%;
   margin-left:-25%;
@@ -30,6 +30,7 @@
 }
 .mapboxgl-ctrl-geocoder { 
   min-width:100%; 
+  z-index:7;
   }
 </style>
 
@@ -48,6 +49,7 @@
   background: #fff;
   z-index:-1;
   }
+
 </style>  
 
 
@@ -88,7 +90,7 @@ var clicked = false;
     function countClicks()
     {
        if(clicked)
-       {
+       { // Second Click
         var mapLayer2 = map.getLayer('circle2');
         if (typeof mapLayer2 !== 'undefined') {
                     // Remove map layer & source.
@@ -97,11 +99,14 @@ var clicked = false;
         circleMaker2(); // Right
         reloadImg2(); // Right
         updateLineChart();
+        if($(window).width() >= 1900) {
+          expandSecond(); // Second Click
+        }
 
           clicked = false;
        }
       else
-      {
+      { // First Click
         var mapLayer1 = map.getLayer('circle1');
         if (typeof mapLayer1 !== 'undefined') {
                     // Remove map layer & source.
@@ -110,10 +115,55 @@ var clicked = false;
         circleMaker1(); // Left
         reloadImg();  // Left
         updateLineChart1();
+        if($(window).width() >= 1900) {
+          expandFirst(); // First click
+        }
 
          clicked = true;
       }
     }
+    var clicked = false;
+
+// Expand Page Feature
+  function expandFirst() {
+
+  $('#map').animate({
+    'width': '75%'
+  }, 600);
+
+  $("#right-bg1").css({'display' : 'inline-block'});
+  $('#right-bg1').animate({
+    'min-width': '25%',
+    'min-height': '100%'
+  }, 600);
+  $("#right-bg1").addClass('col-sm-3');
+
+  $("#right-bg2").hide();
+
+}
+
+function expandSecond() {
+
+
+  $('#map').animate({
+    'width': '50%'
+  }, 600);
+
+  $('#right-bg1').animate({
+    'min-width': '50%',
+    'min-height': '100%'
+  }, 600);
+
+  $("#right-bg2").css('display', 'inline-block');
+  $('#right-bg2').animate({
+    'min-width': '25%',
+    'min-height': '100%'
+  }, 600);
+  $("#right-bg2").addClass('col-sm-3');
+
+
+}
+
 
 </script>
 
@@ -123,29 +173,28 @@ var clicked = false;
 <!-- Map Box -->
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-sm-6 sidenav" id="map_area" onclick="countClicks()">
-    <h4>Mapbox</h4>
-      
+    <div class="col-sm-6 sidenav" id=map_area onclick="countClicks()">
       <div id='geocoder' class='geocoder'></div>
       <nav id='menu'></nav>
       <div id='map'></div>
       <pre id='info'></pre>
 
+
       <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA';
 
       // Set bounds to CBD
-      var bounds = [
-        [144.9437392829542, -37.82724080876474],  // Northeast coordinates
-        [144.97613141562647, -37.8015691517381] // Southwest coordinates
-      ];
+      // var bounds = [
+      //   [144.9437392829542, -37.82724080876474],  // Northeast coordinates
+      //   [144.97613141562647, -37.8015691517381] // Southwest coordinates
+      // ];
 
       var map = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/plusmg/cjvchk9qc0fdn1fp74xjuz92r',
       center: [144.9628079612438, -37.81370894743138], // starting position [lng, lat]
-      zoom: 5, // starting zoom
-      maxBounds: bounds // Sets bounds as max
+      zoom: 14.2 // starting zoom
+      // maxBounds: bounds // Sets bounds as max
       });
 
 
@@ -408,7 +457,7 @@ var clicked = false;
 
     <!-- Left Side -->
     <!-- Location A -->
-    <div class="col-sm-3">
+    <div class="col-sm-3" id="right-bg1">
       <div class="row-sm-4">
         <h2>Locaion A</h2>
         <hr>
@@ -512,7 +561,7 @@ var clicked = false;
     </div>
     
     <!-- Right Side -->
-    <div class="col-sm-3" >
+    <div class="col-sm-3" id="right-bg2">
       <!-- Location B -->
       <div class="row-sm-4">
         <h2>Locaion B</h2>
