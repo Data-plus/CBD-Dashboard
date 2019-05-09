@@ -17,12 +17,14 @@ import geopy
 from geopy import distance
 import time
 
+from mapbox import Geocoder
 
 """
 Import Required Files and Tokens
 """
 
 mapbox_access_token = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA'
+geocoder = Geocoder(access_token=mapbox_access_token)
 
 df = pd.read_csv("static/data/pedestrian.csv")  # 10-5 data
 #  df = pd.read_csv("static/data/pedestrian.csv")  # Full time data
@@ -99,7 +101,10 @@ def within_p(population, clicked, radius):
 """
 Get Functions
 """
-
+def reverse_geocoding(click):
+    response = geocoder.reverse(lon=click[0], lat=click[1], limit=1, types=['address'])
+    features = sorted(response.geojson()['features'], key=lambda x: x['place_name'])
+    return features[0]['place_name']
 
 def get_ped_any(click, pedestrian):
     click_sensor = pd.DataFrame([{'Latitude': click[1], 'Longitude': click[0]}])
@@ -306,62 +311,75 @@ def get_search():
 # Send everything within 500 to "/test"
 @app.route("/test", methods=['GET', 'POST'])
 def send_data():
+    global residents, cafe, accessible, gallery, prints, pubs, weekly_ped, average_ped, car_park
+
     try:  # Only activates if click exist
         get_data()  # Get data from click
 
-        pipeline = [
-            {'$geoNear': {
-                'near': {'type': "Point", 'coordinates': click},  # Assign click location
-                'distanceField': "dist.calculated",
-                'maxDistance': 500,  # 500m
-                'includeLocs': "dist.location",
-                'key': 'features.geometry.coordinates',
-                'uniqueDocs': False,
-                'spherical': True}},
-            {"$unwind": "$features"},
-            {"$redact": {
-                "$cond": {
-                    "if": {"$eq": [{"$cmp": ["$features.geometry.coordinates", "$dist.location"]}, 0]},
-                    "then": "$$KEEP",
-                    "else": "$$PRUNE"
-                }
-            }
-            }
-        ]
-        # Connect DB
-        connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
-        collection = connection[DBS_NAME][COLLECTION_NAME]
-        # pprint.pprint(list(collection.aggregate(pipeline)))
-        chart_data = {'chart_data': json_util.dumps(collection.aggregate(pipeline))}
-        connection.close()
+        # pipeline = [
+        #     {'$geoNear': {
+        #         'near': {'type': "Point", 'coordinates': click},  # Assign click location
+        #         'distanceField': "dist.calculated",
+        #         'maxDistance': 500,  # 500m
+        #         'includeLocs': "dist.location",
+        #         'key': 'features.geometry.coordinates',
+        #         'uniqueDocs': False,
+        #         'spherical': True}},
+        #     {"$unwind": "$features"},
+        #     {"$redact": {
+        #         "$cond": {
+        #             "if": {"$eq": [{"$cmp": ["$features.geometry.coordinates", "$dist.location"]}, 0]},
+        #             "then": "$$KEEP",
+        #             "else": "$$PRUNE"
+        #         }
+        #     }
+        #     }
+        # ]
+        # # Connect DB
+        # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
+        # collection = connection[DBS_NAME][COLLECTION_NAME]
+        # # pprint.pprint(list(collection.aggregate(pipeline)))
+        # chart_data = {'chart_data': json_util.dumps(collection.aggregate(pipeline))}
+        # connection.close()
 
         print('-'*320)
         start = time.time()
 
+        residents = get_residential(click, population)
+        cafe = get_cafe(click, df_cafe)
+        gallery = get_gallery(click, df_gallery)
+        prints = get_print(click, df_print)
+        pubs = get_pubs(click, df_pubs)
+        car_park = get_carpark(click, on_street, off_street)
         weekly_ped = for_eachday(get_ped_any(click, df))
+        accessible = get_accessible(click, df_accessible)
+        average_ped = round(sum(weekly_ped) / 7)
+        address = reverse_geocoding(click)
+
         #print(chart_data)
         #print('-'*300)
         print(click)
+        print(address)
         print('-'*300)
         print(get_ped_any(click, df).head())
         print('-'*300)
-        print('Number of Residents Nearby: ', get_residential(click, population))
+        print('Number of Residents Nearby: ', residents)
         print('-'*300)
-        print("Number of Cafes nearby: ", get_cafe(click, df_cafe))
+        print("Number of Cafes nearby: ", cafe)
         print('-'*300)
-        print("Number of Car Parks Nearby: ", get_carpark(click, on_street, off_street))
+        print("Number of Accessible toilets Nearby: ", accessible)
         print('-'*300)
-        print("Number of Accessible toilets Nearby: ", get_accessible(click, df_accessible))
+        print("Number of Car Parks Nearby: ", car_park)
         print('-'*300)
-        print("Number of Art Galleries Nearby: ", get_gallery(click, df_gallery))
+        print("Number of Art Galleries Nearby: ", gallery)
         print('-'*300)
-        print("Number of Printing Stores Nearby: ", get_print(click, df_print))
+        print("Number of Printing Stores Nearby: ", prints)
         print('-'*300)
-        print("Number of Pubs Nearby: ", get_pubs(click, df_pubs))
+        print("Number of Pubs Nearby: ", average_ped)
         print('-'*300)
         print('Weekly Pedestrian: ', weekly_ped)
         print('-'*300)
-        print("Number of Average Pedestrian between 10AM ~ 5PM: ", round(sum(weekly_ped) / 7))
+        print("Number of Average Pedestrian between 10AM ~ 5PM: ", average_ped)
         print('-' * 300)
         # print("Number of Offices nearby: ", get_office(click, df_office))  # This takes most of the time, 4.5sec should we keep it? or drop it?
         # print('-' * 300)
@@ -370,7 +388,7 @@ def send_data():
         print(end - start)
         print('-'*300)
 
-        return jsonify(chart_data)
+        return ''
 
     except:
         return ''
@@ -395,7 +413,7 @@ def send_ped():
 def send_data_resident():
     try:  # Only activates if click exist
         get_data()  # Get data from click
-        res_data = pd.DataFrame([{'resident': get_residential(click, population)}]).to_json(orient='records')
+        res_data = pd.DataFrame([{'resident': residents}]).to_json(orient='records')
         return jsonify(res_data)
 
     except:
@@ -409,7 +427,7 @@ Imange To Client
 def send_image_resident():
     try:
         get_data()  # Get data from click
-        if get_residential(click, population) > 10000:
+        if residents > 10000:
             filename = './static/image/1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -424,7 +442,7 @@ def send_image_pedestrian():
     try:
         get_data()  # Get data from click
         # If Large number of 10-5 pedestrian movements
-        if round(sum(for_eachday(get_ped_any(click, df))) / 7) > 1200:
+        if average_ped > 1200:
             filename = './static/image/pedestrian1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -439,7 +457,7 @@ def send_image_cafe():
     try:
         get_data()  # Get data from click
         # If Large number of 10-5 pedestrian movements
-        if get_cafe(click, df_cafe) > 150:
+        if cafe > 150:
             filename = './static/image/cafe1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -454,7 +472,7 @@ def send_image_carpark():
     try:
         get_data()  # Get data from click
         # If Large number of carparks 5k
-        if get_carpark(click, on_street, off_street) > 5000:
+        if car_park > 1500:
             filename = './static/image/carpark1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -469,7 +487,7 @@ def send_image_accessible():
     try:
         get_data()  # Get data from click
         # If Exists
-        if get_accessible(click, df_accessible) > 0:
+        if accessible > 0:
             filename = './static/image/accessible1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -484,7 +502,7 @@ def send_image_gallery():
     try:
         get_data()  # Get data from click
         # If exists
-        if get_gallery(click, df_gallery) > 0:
+        if gallery > 0:
             filename = './static/image/gallery1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -499,7 +517,7 @@ def send_image_print():
     try:
         get_data()  # Get data from click
         # If exists
-        if get_print(click, df_print) > 0:
+        if prints > 0:
             filename = './static/image/print1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -514,7 +532,7 @@ def send_image_pub():
     try:
         get_data()  # Get data from click
         # If exists
-        if get_pubs(click, df_pubs) > 0:
+        if pubs > 0:
             filename = './static/image/pub1.png'
             return send_file(filename, mimetype='image/png')
         else:

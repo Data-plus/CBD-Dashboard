@@ -24,7 +24,7 @@
   position:absolute;
   z-index:7;
   width:100%;
-  left:50%;
+  left:25%;
   margin-left:-25%;
   top:20px;
 }
@@ -63,24 +63,49 @@ function reloadImg() {
   document.getElementById("HousePic").src="/image/house?a="+d.getTime();
   document.getElementById("PedPic").src="/image/pedestrian?a="+d.getTime();
   document.getElementById("CafePic").src="/image/cafe?a="+d.getTime();
-  document.getElementById("CarPic").src="/image/carpark?a="+d.getTime();
   document.getElementById("AccPic").src="/image/accessible?a="+d.getTime();
   document.getElementById("GalPic").src="/image/gallery?a="+d.getTime();
   document.getElementById("PrintPic").src="/image/print?a="+d.getTime();
   document.getElementById("PubPic").src="/image/pub?a="+d.getTime();
+  document.getElementById("CarPic").src="/image/carpark?a="+d.getTime();
 
+
+  // $.get("/test", function (data) {
+  //               document.getElementById("HousePic").title = data.residents;
+  //               document.getElementById("PedPic").title = data.ped;
+  //               document.getElementById("CafePic").title = data.cafe;
+  //               document.getElementById("AccPic").title = data.accessible;
+  //               document.getElementById("GalPic").title = data.gallery;
+  //               document.getElementById("PrintPic").title = data.prints;
+  //               document.getElementById("PubPic").title = data.pubs;
+
+  //             });
 
 }
+
+
 function reloadImg2() {
   var d=new Date();
   document.getElementById("HousePic2").src="/image/house?a="+d.getTime();
   document.getElementById("PedPic2").src="/image/pedestrian?a="+d.getTime();
   document.getElementById("CafePic2").src="/image/cafe?a="+d.getTime();
-  document.getElementById("CarPic2").src="/image/carpark?a="+d.getTime();
   document.getElementById("AccPic2").src="/image/accessible?a="+d.getTime();
   document.getElementById("GalPic2").src="/image/gallery?a="+d.getTime();
   document.getElementById("PrintPic2").src="/image/print?a="+d.getTime();
   document.getElementById("PubPic2").src="/image/pub?a="+d.getTime();
+  document.getElementById("CarPic2").src="/image/carpark?a="+d.getTime();
+
+
+  // $.get("/test", function (data) {
+  //               document.getElementById("HousePic2").title = data.residents;
+  //               document.getElementById("PedPic2").title = data.ped;
+  //               document.getElementById("CafePic2").title = data.cafe;
+  //               document.getElementById("AccPic2").title = data.accessible;
+  //               document.getElementById("GalPic2").title = data.gallery;
+  //               document.getElementById("PrintPic2").title = data.prints;
+  //               document.getElementById("PubPic2").title = data.pubs;
+
+  //             });
 
 }
 
@@ -99,7 +124,7 @@ var clicked = false;
         circleMaker2(); // Right
         reloadImg2(); // Right
         updateLineChart();
-        if($(window).width() >= 1900) {
+        if($(window).width() >= 1600) {
           expandSecond(); // Second Click
         }
 
@@ -115,7 +140,7 @@ var clicked = false;
         circleMaker1(); // Left
         reloadImg();  // Left
         updateLineChart1();
-        if($(window).width() >= 1900) {
+        if($(window).width() >= 1600) {
           expandFirst(); // First click
         }
 
@@ -322,8 +347,22 @@ function expandSecond() {
           document.getElementById('info').innerHTML =
           JSON.stringify(e.lngLat);
           var location = JSON.stringify(e.lngLat);
+          console.log(location)
           obj = JSON.parse(location);
-          console.log(location);
+          console.log(obj);
+
+          // GEOCODING NOT WOKRING ATM
+
+          // geocodingClient.reverseGeocode({
+          // query: [obj.lng, obj.lat],
+          //  })
+          // .send()
+          // .then(response => {
+          //   // GeoJSON document with geocoding matches
+          //   const match = response.body;
+          //   console.log(match)
+          // });
+          
 
           $.ajax(
                   { type : 'POST',
@@ -383,21 +422,23 @@ function expandSecond() {
       // `result` event is triggered when a user makes a selection
       // Add a marker at the result's coordinates
       geocoder.on('result', function(e) {
+          
           map.getSource('single-point').setData(e.result.geometry);
-          var clickLog = JSON.stringify(e.result.geometry.coordinates);
-          console.log(clickLog);
+          var clickLog = e.result.geometry.coordinates;
 
           $.ajax(
                   { type : 'POST',
                   url : "/test1",
                   contentType: "application/json;charset=UTF-8",
                   dataType:'json',
-                  data : JSON.stringify({'data':clickLog})
+                  data : JSON.stringify({'data':JSON.stringify(clickLog)})
                   }
               );
           });
       });
 
+
+      // Circle on Click
       function circleMaker1(e) {
           var center = [obj.lng, obj.lat];
           var radius = 200;
@@ -469,7 +510,7 @@ function expandSecond() {
       <div class="row-sm-4">
         <h5><span class="glyphicon glyphicon-plus"></span> <b>Nearby Amenities</b></h5>
         <hr>
-        <img id="HousePic"> <img id="PedPic"> <img id="CafePic"> <img id="CarPic"> <img id="AccPic"> <img id="GalPic"> <img id="PrintPic"> <img id="PubPic">
+        <img id="HousePic" title = ""> <img id="PedPic" title = ""> <img id="CafePic" title = "">  <img id="AccPic"  title = ""> <img id="GalPic"  title = ""> <img id="PrintPic"  title = ""> <img id="PubPic"  title = "">  <img id="CarPic"  title = "">
         <hr>
       </div>
 
@@ -570,7 +611,7 @@ function expandSecond() {
         <h5><span class="label label-danger">Hawawa</span> <span class="label label-primary">Testing</span></h5><br>
         <h5><span class="glyphicon glyphicon-plus"></span> <b>Nearby Amenities</b></h5>
         <hr>
-        <img id="HousePic2"> <img id="PedPic2">  <img id="CafePic2">  <img id="CarPic2">  <img id="AccPic2">  <img id="GalPic2"> <img id="PrintPic2"> <img id="PubPic2">
+        <img id="HousePic2" title = ""> <img id="PedPic2" title = ""> <img id="CafePic2" title = "">  <img id="AccPic2"  title = ""> <img id="GalPic2"  title = ""> <img id="PrintPic2"  title = ""> <img id="PubPic2"  title = "">  <img id="CarPic2"  title = "">
         <hr>
         <h4><span class="label label-primary" >Pedestrian Counts</span></h4>
         <canvas id="lineChart" height="300" width=auto></canvas>

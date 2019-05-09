@@ -9,7 +9,7 @@
     }
     
 
-  @media screen and (min-width: 1900px){
+  @media screen and (min-width: 1600px){
     #right-bg1 {
       display: none;
       position: absolute;
@@ -50,7 +50,7 @@
   }
   
     /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (min-width: 0px) and (max-width: 1899px) {
+    @media screen and (min-width: 0px) and (max-width: 1599px) {
       #row.content {height: auto;} 
 
       .right-bg1 {
