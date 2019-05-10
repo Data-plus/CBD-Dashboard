@@ -14,8 +14,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-136">
-              <caret line="357" column="48" lean-forward="false" selection-start-line="357" selection-start-column="48" selection-end-line="357" selection-end-column="48" />
+            <state relative-caret-position="225">
+              <caret line="376" column="22" lean-forward="false" selection-start-line="376" selection-start-column="22" selection-end-line="376" selection-end-column="22" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -230,8 +230,8 @@
     <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/flask/templating.py" />
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="357" column="48" lean-forward="false" selection-start-line="357" selection-start-column="48" selection-end-line="357" selection-end-column="48" />
+        <state relative-caret-position="225">
+          <caret line="376" column="22" lean-forward="false" selection-start-line="376" selection-start-column="22" selection-end-line="376" selection-end-column="22" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>

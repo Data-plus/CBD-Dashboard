@@ -20,17 +20,18 @@
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 
 <style>
-.geocoder {
-  position:absolute;
-  z-index:7;
-  width:100%;
-  left:25%;
-  margin-left:-25%;
-  top:20px;
+    .geocoder {
+      position:absolute;
+      z-index:1;
+      width:100%;
+      left:50%;
+      margin-left:-25%;
+      top:70px;       
 }
 .mapboxgl-ctrl-geocoder { 
-  min-width:100%; 
-  z-index:7;
+      min-width:100%;
+      top: 70px; 
+      z-index:7;
   }
 </style>
 
@@ -202,15 +203,27 @@ function expandSecond() {
 </head>
 
 <body>
+<!-- Nav Bar -->
+<div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+
 <!-- Map Box -->
 <div class="container-fluid">
   <div class="row content">
     <div class="col-sm-6 sidenav" id=map_area onclick="countClicks()">
-      <div id='geocoder' class='geocoder'></div>
       <nav id='menu'></nav>
       <div id='map'></div>
+      <div id='geocoder' class='geocoder'></div>
       <pre id='info'></pre>
-
 
       <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA';
