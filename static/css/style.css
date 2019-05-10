@@ -155,3 +155,47 @@ text-decoration: none;
 display: inline-block;
 font-size: 12px;
 }
+
+
+#right-bg1 {
+  background-color: #f0f0f0;
+  height: 100vh;
+}
+
+
+#LocButton {
+  margin-left: 70px;
+  margin-top: 80px;
+  font-family: "Roboto Lt", sans-serif;
+  border-radius: none;
+  padding: 8px 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #324e6f;
+  color: #fff;
+  font-size: 16px;
+  border-color: transparent;
+}
+
+#LocButton2 {
+  margin-left: 70px;
+  margin-top: 80px;
+  font-family: "Roboto Lt", sans-serif;
+  border-radius: none;
+  padding: 8px 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: #324e6f;
+  color: #fff;
+  font-size: 16px;
+  border-color: transparent;
+}
+
+#LocTitle {
+  margin-left: 0px;
+  margin-top: 10px;
+  padding: 2px 5px;
+  color: #fff;
+  font-size: 11px;
+  background-color: rgb(89,89,89);
+}

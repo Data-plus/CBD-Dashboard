@@ -13,11 +13,11 @@
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.css' type='text/css' />
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
-
   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
 
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 
 <style>
 .geocoder {
@@ -69,6 +69,9 @@ function reloadImg() {
   document.getElementById("PubPic").src="/image/pub?a="+d.getTime();
   document.getElementById("CarPic").src="/image/carpark?a="+d.getTime();
 
+  $.get("/address", function (data){
+    document.getElementById(id="address1").innerHTML=data.address;
+  });
 
   // $.get("/test", function (data) {
   //               document.getElementById("HousePic").title = data.residents;
@@ -81,7 +84,7 @@ function reloadImg() {
 
   //             });
 
-}
+};
 
 
 function reloadImg2() {
@@ -94,6 +97,10 @@ function reloadImg2() {
   document.getElementById("PrintPic2").src="/image/print?a="+d.getTime();
   document.getElementById("PubPic2").src="/image/pub?a="+d.getTime();
   document.getElementById("CarPic2").src="/image/carpark?a="+d.getTime();
+
+  $.get("/address", function (data){
+    document.getElementById(id="address2").innerHTML=data.address;
+  });
 
 
   // $.get("/test", function (data) {
@@ -500,24 +507,26 @@ function expandSecond() {
     <!-- Location A -->
     <div class="col-sm-3" id="right-bg1">
       <div class="row-sm-4">
-        <h2>Locaion A</h2>
-        <hr>
-        <h5><span class="glyphicon glyphicon-plus"></span><b> Clicked Location: 111 Elizabeth St</b></h5>
-        <h5><span class="label label-danger">Data</span> <span class="label label-primary">Science</span></h5><br>
+      <button type="button" id=LocButton>LOCATION A</button>
+        <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
+        <h5><b> Clicked Location: </b></h5><h5 id = address1></h5>
+        <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
       </div>
 
       <!-- Icons -->
       <div class="row-sm-4">
-        <h5><span class="glyphicon glyphicon-plus"></span> <b>Nearby Amenities</b></h5>
-        <hr>
-        <img id="HousePic" title = ""> <img id="PedPic" title = ""> <img id="CafePic" title = "">  <img id="AccPic"  title = ""> <img id="GalPic"  title = ""> <img id="PrintPic"  title = ""> <img id="PubPic"  title = "">  <img id="CarPic"  title = "">
+      <button type="button" id="LocTitle">WHATS NEARBY</button>
+                 <br>
+                 <div class="empty" style="padding-top: 5px; padding-bottom: 5px;"></div>   
+          <img id="HousePic" title = ""> <img id="PedPic" title = ""> <img id="CafePic" title = "">  <img id="AccPic"  title = ""> <img id="GalPic"  title = ""> <img id="PrintPic"  title = ""> <img id="PubPic"  title = "">  <img id="CarPic"  title = "">
         <hr>
       </div>
 
       <!-- Chart -->
       <div class="row-sm-4">
-        <h4><span class="label label-primary" >Pedestrian Counts</span></h4>
-        <canvas id="lineChart1" height="300" width=auto></canvas>
+      <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
+          <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
+          <canvas id="lineChart1" height="300" width=auto></canvas>
         <script>
 
         const CHART1 = document.getElementById("lineChart1");
@@ -549,10 +558,10 @@ function expandSecond() {
                     },
                     {    
                         data: [],
-                        label: "Next 3 Months",
+                        label: "This Winter",
                         fill: false,
-                        backgroundColor: "rgb(194,182,208,0.5)",
-                        borderColor: "rgb(194,182,208,0.5)",
+                        backgroundColor: "rgb(255,135,120,0.5)",
+                        borderColor: "rgb(255,135,120)",
                         borderCapStyle: "butt",
                         borderDash: [],
                         borderDashOffset: 0.0,
@@ -561,7 +570,7 @@ function expandSecond() {
                         pointBackgroundColor: "#fff",
                         pointBorderWidth: 2,
                         pointHoverRadius: 10,
-                        pointHoverBackgroundColor: "rgb(194,182,208,0.5)",
+                        pointHoverBackgroundColor: "rgb(255,135,120,0.5)",
                         pointHoverBorderColor: "rgba(220,220,220,1)",
                         pointHoverBorderWidth: 8,
                         pointRadius: 1,
@@ -584,6 +593,11 @@ function expandSecond() {
                     labels: {
                         padding: 20,
                     }
+                ,scale: {
+                  yAxes: [{
+                    beginAtZero: true
+                  }]
+                }
                 }
             }
 
@@ -593,6 +607,7 @@ function expandSecond() {
               $.get("/data", function (result) {
                 console.log(result)
                 lineChart1.data.datasets[0].data = result.results;
+                lineChart1.data.datasets[1].data = result.results_winter;
                 lineChart1.update();
             }); 
         }
@@ -605,16 +620,24 @@ function expandSecond() {
     <div class="col-sm-3" id="right-bg2">
       <!-- Location B -->
       <div class="row-sm-4">
-        <h2>Locaion B</h2>
-        <hr>
-        <h5><span class="glyphicon glyphicon-plus"></span> <b> Clicked Location: 222 Collins St</b></h5>
-        <h5><span class="label label-danger">Hawawa</span> <span class="label label-primary">Testing</span></h5><br>
-        <h5><span class="glyphicon glyphicon-plus"></span> <b>Nearby Amenities</b></h5>
-        <hr>
+      <button type="button" id=LocButton2>LOCATION B</button>
+               <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
+        <h5><b> Clicked Location: </b></h5><h5 id = address2></h5>
+        <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
+             </div>
+             <div class="row-sm-4">
+                 <button type="button" id="LocTitle">WHATS NEARBY</button>
+                 <br>
+                 <div class="empty" style="padding-top: 5px; padding-bottom: 5px;"></div>     
         <img id="HousePic2" title = ""> <img id="PedPic2" title = ""> <img id="CafePic2" title = "">  <img id="AccPic2"  title = ""> <img id="GalPic2"  title = ""> <img id="PrintPic2"  title = ""> <img id="PubPic2"  title = "">  <img id="CarPic2"  title = "">
-        <hr>
-        <h4><span class="label label-primary" >Pedestrian Counts</span></h4>
+        <div class="empty" style="padding-top: 15px; padding-bottom: 15px;"></div>
+                 
+              
+                 </div>
+                 <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
+        <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
         <canvas id="lineChart" height="300" width=auto></canvas>
+
         <script>
         
 
@@ -628,7 +651,7 @@ function expandSecond() {
                     {   data: [],
                         label: "Past 6 Months",
                         fill: false,
-                        backgroundColor: "rgb(82,105,136,0.8)",
+                        backgroundColor: "rgba(82,105,136,0.8)",
                         borderColor: "rgb(82,105,136)",
                         borderCapStyle: "butt",
                         borderDash: [],
@@ -638,7 +661,7 @@ function expandSecond() {
                         pointBackgroundColor: "#fff",
                         pointBorderWidth: 2,
                         pointHoverRadius: 10,
-                        pointHoverBackgroundColor: "rgb(82,105,136,0.8)",
+                        pointHoverBackgroundColor: "rgba(82,105,136,0.8)",
                         pointHoverBorderColor: "rgba(220,220,220,1)",
                         pointHoverBorderWidth: 8,
                         pointRadius: 1,
@@ -647,10 +670,10 @@ function expandSecond() {
                     },
                     {    
                         data: [],
-                        label: "Next 3 Months",
+                        label: "This Winter",
                         fill: false,
-                        backgroundColor: "rgb(194,182,208,0.5)",
-                        borderColor: "rgb(194,182,208,0.5)",
+                        backgroundColor: "rgba(255,135,120,0.8)",
+                        borderColor: "rgb(255,135,120)",
                         borderCapStyle: "butt",
                         borderDash: [],
                         borderDashOffset: 0.0,
@@ -659,7 +682,7 @@ function expandSecond() {
                         pointBackgroundColor: "#fff",
                         pointBorderWidth: 2,
                         pointHoverRadius: 10,
-                        pointHoverBackgroundColor: "rgb(194,182,208,0.5)",
+                        pointHoverBackgroundColor: "rgba(255,135,120,0.8)",
                         pointHoverBorderColor: "rgba(220,220,220,1)",
                         pointHoverBorderWidth: 8,
                         pointRadius: 1,
@@ -683,6 +706,11 @@ function expandSecond() {
                         padding: 20,
                     }
                 }
+                ,scale: {
+                  yAxes: [{
+                    beginAtZero: true
+                  }]
+                }
             }
 
         });
@@ -691,6 +719,7 @@ function expandSecond() {
               $.get("/data", function (result) {
                 console.log(result)
                 lineChart.data.datasets[0].data = result.click2;
+                lineChart.data.datasets[1].data = result.click2_winter;
                 lineChart.update();
             }); 
         }

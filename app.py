@@ -27,11 +27,13 @@ mapbox_access_token = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG
 geocoder = Geocoder(access_token=mapbox_access_token)
 
 df = pd.read_csv("static/data/pedestrian.csv")  # 10-5 data
-#  df = pd.read_csv("static/data/pedestrian.csv")  # Full time data
+#  df = pd.read_csv("static/data/pedestrian_temp.csv")  # Full time data
+winter = pd.read_csv("static/data/winter.csv")  # 10-5 data winter
+
 df2 = pd.read_csv('static/data/sensors.csv')
 df_cafe = pd.read_csv('static/data/cafe.csv')
 population = pd.read_csv('static/data/population.csv')
-df_office = pd.read_csv('static/data/office.csv')
+#df_office = pd.read_csv('static/data/office.csv')
 on_street = pd.read_csv('static/data/on_street.csv')
 off_street = pd.read_csv('static/data/off_street.csv')
 df_accessible = pd.read_csv('static/data/accessible.csv')
@@ -388,6 +390,7 @@ def send_data():
         print(end - start)
         print('-'*300)
 
+        # return jsonify({'residents': residents, 'ped':average_ped, 'cafe':cafe, 'accessible':accessible, 'gallery':gallery, 'prints':prints, 'pubs':pubs })
         return ''
 
     except:
@@ -419,6 +422,17 @@ def send_data_resident():
     except:
         return ''
 
+@app.route("/address", methods=['GET', 'POST'])
+def send_data_address():
+    try:
+        get_data()
+        address_data = reverse_geocoding(click)
+        return jsonify ({'address':address_data})
+
+    except:
+        return ''
+
+
 """
 Imange To Client
 """
@@ -427,7 +441,7 @@ Imange To Client
 def send_image_resident():
     try:
         get_data()  # Get data from click
-        if residents > 10000:
+        if residents > 2000:
             filename = './static/image/1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -457,7 +471,7 @@ def send_image_cafe():
     try:
         get_data()  # Get data from click
         # If Large number of 10-5 pedestrian movements
-        if cafe > 150:
+        if cafe > 15:
             filename = './static/image/cafe1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -472,7 +486,7 @@ def send_image_carpark():
     try:
         get_data()  # Get data from click
         # If Large number of carparks 5k
-        if car_park > 1500:
+        if car_park > 1000:
             filename = './static/image/carpark1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -532,7 +546,7 @@ def send_image_pub():
     try:
         get_data()  # Get data from click
         # If exists
-        if pubs > 0:
+        if pubs > 5:
             filename = './static/image/pub1.png'
             return send_file(filename, mimetype='image/png')
         else:
@@ -550,7 +564,8 @@ def data():
     try:
         get_data()
         each_day = for_eachday(get_ped_any(click, df))
-        return jsonify({'results': each_day, 'click2': each_day})
+        each_day_winter = for_eachday(get_ped_any(click, winter))
+        return jsonify({'results': each_day, 'click2': each_day, 'results_winter': each_day_winter, 'click2_winter': each_day_winter})
 
     except:
         return jsonify({'results':  sample(range(1,10), 7) })
