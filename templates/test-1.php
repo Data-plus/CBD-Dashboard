@@ -132,6 +132,7 @@ var clicked = false;
         circleMaker2(); // Right
         reloadImg2(); // Right
         updateLineChart();
+        updateLineChart2_2();
         if($(window).width() >= 1600) {
           expandSecond(); // Second Click
         }
@@ -148,6 +149,7 @@ var clicked = false;
         circleMaker1(); // Left
         reloadImg();  // Left
         updateLineChart1();
+        updateLineChart1_1();
         if($(window).width() >= 1600) {
           expandFirst(); // First click
         }
@@ -521,26 +523,21 @@ function expandSecond() {
     <div class="col-sm-3" id="right-bg1">
       <div class="row-sm-4">
       <button type="button" id=LocButton>LOCATION A</button>
-        <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
         <h5><b> Clicked Location: </b></h5><h5 id = address1></h5>
-        <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
+        <!-- Icons -->
+        <button type="button" id="LocTitle">WHATS NEARBY</button>
+        <br>
+        <img id="HousePic" title = ""> <img id="PedPic" title = ""> <img id="CafePic" title = "">  <img id="AccPic"  title = ""> <img id="GalPic"  title = ""> <img id="PrintPic"  title = ""> <img id="PubPic"  title = "">  <img id="CarPic"  title = ""> 
+        <br>
+        <br>
       </div>
 
-      <!-- Icons -->
-      <div class="row-sm-4">
-      <button type="button" id="LocTitle">WHATS NEARBY</button>
-                 <br>
-                 <div class="empty" style="padding-top: 5px; padding-bottom: 5px;"></div>   
-          <img id="HousePic" title = ""> <img id="PedPic" title = ""> <img id="CafePic" title = "">  <img id="AccPic"  title = ""> <img id="GalPic"  title = ""> <img id="PrintPic"  title = ""> <img id="PubPic"  title = "">  <img id="CarPic"  title = "">
-        <hr>
-      </div>
-
-      <!-- Chart -->
+      <!-- Chart A -->
       <div class="row-sm-4">
       <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
-          <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
-          <canvas id="lineChart1" height="300" width=auto></canvas>
-        <script>
+      <br>
+      <canvas id="lineChart1" height="300" width=auto></canvas>
+      <script>
 
         const CHART1 = document.getElementById("lineChart1");
         console.log(CHART1);
@@ -623,10 +620,104 @@ function expandSecond() {
                 lineChart1.data.datasets[1].data = result.results_winter;
                 lineChart1.update();
             }); 
-        }
+        };
+
+
         </script>
       </div>
 
+       <!-- Chart A-2 -->
+      <div class="row-sm-4">
+      <button type="button" id="LocTitle">HOURLY FOOT TRAFFIC</button>
+      <br>
+      <canvas id="lineChart1_1" height="300" width=auto></canvas>
+      <script>
+
+        const CHART1_1 = document.getElementById("lineChart1_1");
+        let lineChart1_1 = new Chart(CHART1_1, {
+            type: 'line',
+            data: {
+                labels: ["10", "11", "12", "13", "14", "15", "16", "17"],
+                datasets: [
+                    {   data: [],
+                        label: "Weekdays",
+                        fill: false,
+                        backgroundColor: "rgb(82,105,136,0.8)",
+                        borderColor: "rgb(82,105,136)",
+                        borderCapStyle: "butt",
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: 'white',
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 10,
+                        pointHoverBackgroundColor: "rgb(82,105,136,0.8)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 8,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        lineTension: 0.4,
+                    },
+                    {    
+                        data: [],
+                        label: "Weekends",
+                        fill: false,
+                        backgroundColor: "rgb(255,135,120,0.5)",
+                        borderColor: "rgb(255,135,120)",
+                        borderCapStyle: "butt",
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "white",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 10,
+                        pointHoverBackgroundColor: "rgb(255,135,120,0.5)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 8,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        lineTension: 0.4,
+                    }
+                ]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: this.maintainAspectRatio,
+                title: {
+                    display: true,
+                    text: "Number of Pedestrian Count",
+                    fontSize: 16,
+                },
+                legend: {
+                    position: 'bottom',
+
+                    labels: {
+                        padding: 20,
+                    }
+                ,scale: {
+                  yAxes: [{
+                    beginAtZero: true
+                  }]
+                }
+                }
+            }
+
+        });
+
+          var updateLineChart1_1 = function() {
+              $.get("/data", function (result) {
+                console.log(result)
+                lineChart1_1.data.datasets[0].data = result.eachhour;
+                lineChart1_1.data.datasets[1].data = result.weekends;
+                lineChart1_1.update();
+            }); 
+        };
+
+
+        </script>
+      </div>
     </div>
     
     <!-- Right Side -->
@@ -634,26 +725,20 @@ function expandSecond() {
       <!-- Location B -->
       <div class="row-sm-4">
       <button type="button" id=LocButton2>LOCATION B</button>
-               <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
         <h5><b> Clicked Location: </b></h5><h5 id = address2></h5>
-        <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
-             </div>
-             <div class="row-sm-4">
-                 <button type="button" id="LocTitle">WHATS NEARBY</button>
-                 <br>
-                 <div class="empty" style="padding-top: 5px; padding-bottom: 5px;"></div>     
+        <br>
+        <button type="button" id="LocTitle">WHATS NEARBY</button>
+        <br>
         <img id="HousePic2" title = ""> <img id="PedPic2" title = ""> <img id="CafePic2" title = "">  <img id="AccPic2"  title = ""> <img id="GalPic2"  title = ""> <img id="PrintPic2"  title = ""> <img id="PubPic2"  title = "">  <img id="CarPic2"  title = "">
-        <div class="empty" style="padding-top: 15px; padding-bottom: 15px;"></div>
-                 
-              
-                 </div>
-                 <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
-        <div class="empty" style="padding-top: 10px; padding-bottom: 10px;"></div>
+        <br>
+      </div>
+
+        <!-- Chart B -->
+        <div class="row-sm-4">
+        <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
         <canvas id="lineChart" height="300" width=auto></canvas>
 
         <script>
-        
-
         const CHART = document.getElementById("lineChart");
         console.log(CHART);
         let lineChart = new Chart(CHART, {
@@ -740,20 +825,97 @@ function expandSecond() {
         </script>
       </div>
 
+      <!-- Chart B-2 -->
       <div class="row-sm-4">
-        <h4><small>RECENT POSTS</small></h4>
-        <hr>
-        <h5><span class="label label-success">Lorem</span></h5><br>
-        <h5>This place will be Location B</h5>
-        <hr>      
-      </div>
+        <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
+        <canvas id="lineChart2_2" height="300" width=auto></canvas>
 
-      <div class="row-sm-4">
-        <h4>Leave a Comment:</h4>
-        <p>nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident.</p>
-       </div>
-      
+        <script>
+        const CHART2_2 = document.getElementById("lineChart2_2");
+        let lineChart2_2 = new Chart(CHART2_2, {
+            type: 'line',
+            data: {
+                labels: ["10", "11", "12", "13", "14", "15", "16", "17"],
+                datasets: [
+                    {   data: [],
+                        label: "Weekdays",
+                        fill: false,
+                        backgroundColor: "rgba(82,105,136,0.8)",
+                        borderColor: "rgb(82,105,136)",
+                        borderCapStyle: "butt",
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: 'white',
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 10,
+                        pointHoverBackgroundColor: "rgba(82,105,136,0.8)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 8,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        lineTension: 0.4,
+                    },
+                    {    
+                        data: [],
+                        label: "Weekends",
+                        fill: false,
+                        backgroundColor: "rgba(255,135,120,0.8)",
+                        borderColor: "rgb(255,135,120)",
+                        borderCapStyle: "butt",
+                        borderDash: [],
+                        borderDashOffset: 0.0,
+                        borderJoinStyle: 'miter',
+                        pointBorderColor: "white",
+                        pointBackgroundColor: "#fff",
+                        pointBorderWidth: 2,
+                        pointHoverRadius: 10,
+                        pointHoverBackgroundColor: "rgba(255,135,120,0.8)",
+                        pointHoverBorderColor: "rgba(220,220,220,1)",
+                        pointHoverBorderWidth: 8,
+                        pointRadius: 1,
+                        pointHitRadius: 10,
+                        lineTension: 0.4,
+                    }
+                ]
+            },
+            options: {
+                responsive: false,
+                maintainAspectRatio: this.maintainAspectRatio,
+                title: {
+                    display: true,
+                    text: "Number of Pedestrian Count",
+                    fontSize: 16,
+                },
+                legend: {
+                    position: 'bottom',
+
+                    labels: {
+                        padding: 20,
+                    }
+                }
+                ,scale: {
+                  yAxes: [{
+                    beginAtZero: true
+                  }]
+                }
+            }
+
+        });
+
+          var updateLineChart2_2 = function() {
+              $.get("/data", function (result) {
+                lineChart2_2.data.datasets[0].data = result.click2_eachhour;
+                lineChart2_2.data.datasets[1].data = result.click2_weekends;
+                lineChart2_2.update();
+            }); 
+        }
+        
+        </script>
+      </div>
     </div>
+
   </div>
 </div>
 

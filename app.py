@@ -29,6 +29,8 @@ geocoder = Geocoder(access_token=mapbox_access_token)
 df = pd.read_csv("static/data/pedestrian.csv")  # 10-5 data
 #  df = pd.read_csv("static/data/pedestrian_temp.csv")  # Full time data
 winter = pd.read_csv("static/data/winter.csv")  # 10-5 data winter
+df_weekday = pd.read_csv("static/data/weekday.csv")
+df_weekends = pd.read_csv('static/data/weekends.csv')
 
 df2 = pd.read_csv('static/data/sensors.csv')
 df_cafe = pd.read_csv('static/data/cafe.csv')
@@ -172,6 +174,29 @@ def for_eachday(df):
         each.append(dday)
 
     return each
+
+def get_ped_hourly(click, pedestrian):
+    counts = []
+    time = [10,11,12,13,14,15,16,17]
+
+    click_sensor = pd.DataFrame([{'Latitude': click[1], 'Longitude': click[0]}])
+    df_temp = pd.concat([pd.DataFrame(within(click_sensor, df2, 1.5, 0)).reset_index(drop=True),
+                         pd.DataFrame(within_d(click_sensor, df2, 1.5, 0)).reset_index(drop=True)], axis=1)
+
+    # Get Nearest 3 sensors
+    df_temp = df_temp.sort_values(0).iloc[0:3, :]
+    df_temp = df_temp.reset_index(drop=True)
+
+    # DF Nearest
+    df_nearest = pedestrian[(pedestrian['sensor_id'] == df_temp['sensor_id'][0]) |
+                            (pedestrian['sensor_id'] == df_temp['sensor_id'][1]) |
+                            ((pedestrian['sensor_id'] == df_temp['sensor_id'][2]))]
+
+    for x in time:
+        x = round(df_nearest[(df_nearest['time'] == x)]['hourly_counts'].mean())
+        counts.append(x)
+
+    return counts
 
 
 def get_residential(click, population):
@@ -381,6 +406,10 @@ def send_data():
         print('-'*300)
         print('Weekly Pedestrian: ', weekly_ped)
         print('-'*300)
+        print('Hourly', get_ped_hourly(click, df_weekday))
+        print('-'*300)
+        print('Weekends', get_ped_hourly(click, df_weekends))
+        print('-' * 300)
         print("Number of Average Pedestrian between 10AM ~ 5PM: ", average_ped)
         print('-' * 300)
         # print("Number of Offices nearby: ", get_office(click, df_office))  # This takes most of the time, 4.5sec should we keep it? or drop it?
@@ -564,8 +593,14 @@ def data():
     try:
         get_data()
         each_day = for_eachday(get_ped_any(click, df))
+        weekday = get_ped_hourly(click, df_weekday)
+        ped_weekends = get_ped_hourly(click, df_weekends)
         each_day_winter = for_eachday(get_ped_any(click, winter))
-        return jsonify({'results': each_day, 'click2': each_day, 'results_winter': each_day_winter, 'click2_winter': each_day_winter})
+
+        return jsonify({ 'results': each_day, 'click2': each_day,
+                        'results_winter': each_day_winter, 'click2_winter': each_day_winter,
+                        'eachhour': weekday, 'click2_eachhour': weekday,
+                        'weekends': ped_weekends, 'click2_weekends': ped_weekends})
 
     except:
         return jsonify({'results':  sample(range(1,10), 7) })
