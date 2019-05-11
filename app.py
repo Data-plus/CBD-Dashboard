@@ -337,7 +337,8 @@ def get_search():
     return ''
 
 
-# Send everything within 500 to "/test"
+# Send everything within 200 to "/test"
+# Also, checks if click is received
 @app.route("/test", methods=['GET', 'POST'])
 def send_data():
     # global residents, cafe, accessible, gallery, prints, pubs, weekly_ped, average_ped, car_park
@@ -403,7 +404,6 @@ def send_data():
 
         #return jsonify({'residents': residents, 'ped':average_ped, 'cafe':cafe, 'accessible':accessible, 'gallery':gallery, 'prints':prints, 'pubs':pubs })
         return ''
-
     except:
         return ''
 
@@ -414,6 +414,7 @@ Data To Client
 
 @app.route("/resident", methods=['GET', 'POST'])
 def send_data_resident():
+    global res_data
     try:  # Only activates if click exist
         get_data()  # Get data from click
         res_data = get_residential(click, population)
@@ -423,6 +424,7 @@ def send_data_resident():
 
 @app.route("/pedestrian", methods=['GET', 'POST'])
 def send_ped():
+    global average_ped
     try:  # Only activates if click exist
         get_data()  # Get data from click
         weekly_ped = for_eachday(get_ped_any(click, df))
@@ -442,6 +444,7 @@ def send_gallery():
 
 @app.route("/cafe", methods=['GET', 'POST'])
 def send_cafe():
+    global cafe_data
     try:  # Only activates if click exist
         get_data()  # Get data from click
         cafe_data = get_cafe(click, df_cafe)
@@ -451,6 +454,7 @@ def send_cafe():
 
 @app.route("/accessible", methods=['GET', 'POST'])
 def send_accessible():
+    global accessible_data
     try:  # Only activates if click exist
         get_data()  # Get data from click
         accessible_data = get_accessible(click, df_accessible)
@@ -460,6 +464,7 @@ def send_accessible():
 
 @app.route("/bar", methods=['GET', 'POST'])
 def send_bar():
+    global bar_data
     try:  # Only activates if click exist
         get_data()  # Get data from click
         bar_data = get_pubs(click, df_pubs)
@@ -469,6 +474,7 @@ def send_bar():
 
 @app.route("/print", methods=['GET', 'POST'])
 def send_print():
+    global print_data
     try:  # Only activates if click exist
         get_data()  # Get data from click
         print_data = get_print(click, df_print)
@@ -478,6 +484,7 @@ def send_print():
 
 @app.route("/carpark", methods=['GET', 'POST'])
 def send_carpark():
+    global car_park
     try:  # Only activates if click exist
         get_data()  # Get data from click
         car_park = get_carpark(click, on_street, off_street)
@@ -493,6 +500,32 @@ def send_data_address():
         return jsonify ({'address':address_data})
     except:
         return ''
+
+
+# Send Pedestrian Chart Data
+@app.route('/data')
+def data():
+    try:
+        start = time.time()
+        get_data()
+        each_day = for_eachday(get_ped_any(click, df))
+        weekday = get_ped_hourly(click, df_weekday)
+        ped_weekends = get_ped_hourly(click, df_weekends)
+        each_day_winter = for_eachday(get_ped_any(click, winter))
+        radar_data = [min(res_data*5/1500,10),min(bar_data/5,10),
+                      min(car_park/500,10),min(average_ped*5/2057,10),
+                      min(print_data+5/2,10),min(cafe_data/2,10),min(accessible_data,10)]
+        end = time.time()
+        print(end - start)
+
+        return jsonify({'results': each_day, 'click2': each_day,
+                        'results_winter': each_day_winter, 'click2_winter': each_day_winter,
+                        'eachhour': weekday, 'click2_eachhour': weekday,
+                        'weekends': ped_weekends, 'click2_weekends': ped_weekends,
+                        "radar": radar_data, "click2_radar": radar_data})
+
+    except:
+        return jsonify({'results': sample(range(1, 10), 7)})
 
 
 """
@@ -620,74 +653,5 @@ Imange To Client
 
 
 
-# Send Pedestrian Chart Data
-@app.route('/data')
-def data():
-    try:
-        get_data()
-        each_day = for_eachday(get_ped_any(click, df))
-        weekday = get_ped_hourly(click, df_weekday)
-        ped_weekends = get_ped_hourly(click, df_weekends)
-        each_day_winter = for_eachday(get_ped_any(click, winter))
-
-        return jsonify({ 'results': each_day, 'click2': each_day,
-                        'results_winter': each_day_winter, 'click2_winter': each_day_winter,
-                        'eachhour': weekday, 'click2_eachhour': weekday,
-                        'weekends': ped_weekends, 'click2_weekends': ped_weekends})
-
-    except:
-        return jsonify({'results':  sample(range(1,10), 7) })
-
-
-
-
 if __name__ == "__main__":
     app.run(host='localhost',port=5000)
-
-
-
-    ########################################################################################
-
-    # # Get geocode from click
-    # @app.route("/test", methods=['GET', 'POST'])
-    # def get_data():
-    #     global ss_list # Make it accessible from other function
-    #     global results
-    #
-    #     if request.method == 'POST':
-    #         ss = json.loads(request.data)
-    #         ss = json.loads(ss['data'])
-    #         click = [ss['lng'], ss['lat']]
-    #         print(click)
-    #
-    #         pipeline = [
-    #             {'$geoNear': {
-    #                 'near': {'type': "Point", 'coordinates': click},
-    #                 'distanceField': "dist.calculated",
-    #                 'maxDistance': 500,
-    #                 'includeLocs': "dist.location",
-    #                 'key': 'features.geometry.coordinates',
-    #                 'uniqueDocs': False,
-    #                 'spherical': True}},
-    #             {"$unwind": "$features"},
-    #             {"$redact": {
-    #                 "$cond": {
-    #                     "if": {"$eq": [{"$cmp": ["$features.geometry.coordinates", "$dist.location"]}, 0]},
-    #                     "then": "$$KEEP",
-    #                     "else": "$$PRUNE"
-    #                 }
-    #             }
-    #             }
-    #         ]
-    #
-    #         connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
-    #         collection = connection[DBS_NAME][COLLECTION_NAME]
-    #         # pprint.pprint(list(collection.aggregate(pipeline)))
-    #         chart_data = {'chart_data': json_util.dumps(collection.aggregate(pipeline))}
-    #         connection.close()
-    #         return jsonify(chart_data)
-    #
-    #     return jsonify(chart_data)
-
-    ########################################################################################
-

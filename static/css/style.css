@@ -131,11 +131,11 @@ border: none;
 
 #menu a:hover {
 background-color: #f8f8f8;
-color: #404040;
+color: #636363;
 }
 
 #menu a.active {
-background-color: #7bb8e4;
+background-color: #a1a1a1;
 color: #ffffff;
 }
 
@@ -200,12 +200,13 @@ font-size: 12px;
 .product-tabs {
     position: absolute;
     width: 370px;
-    padding-left: 20px;
+    padding-top: -10px;
+    padding-left: 25px;
 }
 
 .nav-tabs {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 10px;
     border-bottom: 3px solid #ddd;
 }
 
@@ -243,3 +244,4 @@ font-size: 12px;
   font-family: "Roboto";
   color: rgb(40, 40, 40);
 }
+
