@@ -33,10 +33,10 @@ df_weekday = pd.read_csv("static/data/weekday.csv")
 df_weekends = pd.read_csv('static/data/weekends.csv')
 
 df2 = pd.read_csv('static/data/sensors.csv')
-df_cafe = pd.read_csv('static/data/cafe.csv')
 population = pd.read_csv('static/data/population.csv')
 #df_office = pd.read_csv('static/data/office.csv')
 on_street = pd.read_csv('static/data/on_street.csv')
+df_cafe = pd.read_csv('static/data/cafe.csv')
 off_street = pd.read_csv('static/data/off_street.csv')
 df_accessible = pd.read_csv('static/data/accessible.csv')
 df_gallery = pd.read_csv('static/data/gallery.csv')
@@ -108,7 +108,7 @@ Get Functions
 def reverse_geocoding(click):
     response = geocoder.reverse(lon=click[0], lat=click[1], limit=1, types=['address'])
     features = sorted(response.geojson()['features'], key=lambda x: x['place_name'])
-    return features[0]['place_name']
+    return features[0]['place_name'].replace(', Australia', '')
 
 def get_ped_any(click, pedestrian):
     click_sensor = pd.DataFrame([{'Latitude': click[1], 'Longitude': click[0]}])
@@ -248,7 +248,9 @@ def get_carpark(click, off_street, on_street):
     else:
         f2 = 0
 
-    return f1 + f2
+    f3 = int(f1 + f2)
+
+    return f3
 
 
 def get_accessible(click, df_accessible):
@@ -338,10 +340,11 @@ def get_search():
 # Send everything within 500 to "/test"
 @app.route("/test", methods=['GET', 'POST'])
 def send_data():
-    global residents, cafe, accessible, gallery, prints, pubs, weekly_ped, average_ped, car_park
-
+    # global residents, cafe, accessible, gallery, prints, pubs, weekly_ped, average_ped, car_park
     try:  # Only activates if click exist
         get_data()  # Get data from click
+        # print('-'*320)
+        # start = time.time()
 
         # pipeline = [
         #     {'$geoNear': {
@@ -369,57 +372,36 @@ def send_data():
         # chart_data = {'chart_data': json_util.dumps(collection.aggregate(pipeline))}
         # connection.close()
 
-        print('-'*320)
-        start = time.time()
+        # residents = get_residential(click, population)
+        # cafe = get_cafe(click, df_cafe)
+        # gallery = get_gallery(click, df_gallery)
+        # prints = get_print(click, df_print)
+        # pubs = get_pubs(click, df_pubs)
+        # car_park = get_carpark(click, on_street, off_street)
+        # weekly_ped = for_eachday(get_ped_any(click, df))
+        # accessible = get_accessible(click, df_accessible)
+        # average_ped = round(sum(weekly_ped) / 7)
+        #
+        # #print(chart_data)
+        # print(click)
+        # print(get_ped_any(click, df).head())
+        # print('Number of Residents Nearby: ', residents)
+        # print("Number of Cafes nearby: ", cafe)
+        # print("Number of Accessible toilets Nearby: ", accessible)
+        # print("Number of Car Parks Nearby: ", car_park)
+        # print("Number of Art Galleries Nearby: ", gallery)
+        # print("Number of Printing Stores Nearby: ", prints)
+        # print("Number of Pubs Nearby: ", pubs)
+        # print('Weekly Pedestrian: ', weekly_ped)
+        # print('Hourly', get_ped_hourly(click, df_weekday))
+        # print('Weekends', get_ped_hourly(click, df_weekends))
+        # print("Number of Average Pedestrian between 10AM ~ 5PM: ", average_ped)
+        # # print("Number of Offices nearby: ", get_office(click, df_office))  # This takes most of the time, 4.5sec should we keep it? or drop it?
+        # # print('-' * 300)
+        # end = time.time()
+        # print(end - start)
 
-        residents = get_residential(click, population)
-        cafe = get_cafe(click, df_cafe)
-        gallery = get_gallery(click, df_gallery)
-        prints = get_print(click, df_print)
-        pubs = get_pubs(click, df_pubs)
-        car_park = get_carpark(click, on_street, off_street)
-        weekly_ped = for_eachday(get_ped_any(click, df))
-        accessible = get_accessible(click, df_accessible)
-        average_ped = round(sum(weekly_ped) / 7)
-        address = reverse_geocoding(click)
-
-        #print(chart_data)
-        #print('-'*300)
-        print(click)
-        print(address)
-        print('-'*300)
-        print(get_ped_any(click, df).head())
-        print('-'*300)
-        print('Number of Residents Nearby: ', residents)
-        print('-'*300)
-        print("Number of Cafes nearby: ", cafe)
-        print('-'*300)
-        print("Number of Accessible toilets Nearby: ", accessible)
-        print('-'*300)
-        print("Number of Car Parks Nearby: ", car_park)
-        print('-'*300)
-        print("Number of Art Galleries Nearby: ", gallery)
-        print('-'*300)
-        print("Number of Printing Stores Nearby: ", prints)
-        print('-'*300)
-        print("Number of Pubs Nearby: ", average_ped)
-        print('-'*300)
-        print('Weekly Pedestrian: ', weekly_ped)
-        print('-'*300)
-        print('Hourly', get_ped_hourly(click, df_weekday))
-        print('-'*300)
-        print('Weekends', get_ped_hourly(click, df_weekends))
-        print('-' * 300)
-        print("Number of Average Pedestrian between 10AM ~ 5PM: ", average_ped)
-        print('-' * 300)
-        # print("Number of Offices nearby: ", get_office(click, df_office))  # This takes most of the time, 4.5sec should we keep it? or drop it?
-        # print('-' * 300)
-        
-        end = time.time()
-        print(end - start)
-        print('-'*300)
-
-        # return jsonify({'residents': residents, 'ped':average_ped, 'cafe':cafe, 'accessible':accessible, 'gallery':gallery, 'prints':prints, 'pubs':pubs })
+        #return jsonify({'residents': residents, 'ped':average_ped, 'cafe':cafe, 'accessible':accessible, 'gallery':gallery, 'prints':prints, 'pubs':pubs })
         return ''
 
     except:
@@ -430,24 +412,76 @@ def send_data():
 Data To Client
 """
 
-@app.route("/pedestrian", methods=['GET', 'POST'])
-def send_ped():
-    try:  # Only activates if click exist
-        get_data()  # Get data from click
-        ped_data = get_ped_any(click, df).to_json(orient='index')
-        print(ped_data)
-        return jsonify(ped_data)
-
-    except:
-        return ''
-
 @app.route("/resident", methods=['GET', 'POST'])
 def send_data_resident():
     try:  # Only activates if click exist
         get_data()  # Get data from click
-        res_data = pd.DataFrame([{'resident': residents}]).to_json(orient='records')
+        res_data = get_residential(click, population)
         return jsonify(res_data)
+    except:
+        return ''
 
+@app.route("/pedestrian", methods=['GET', 'POST'])
+def send_ped():
+    try:  # Only activates if click exist
+        get_data()  # Get data from click
+        weekly_ped = for_eachday(get_ped_any(click, df))
+        average_ped = round(sum(weekly_ped) / 7)
+        return jsonify(average_ped)
+    except:
+        return ''
+
+@app.route("/gallery", methods=['GET', 'POST'])
+def send_gallery():
+    try:  # Only activates if click exist
+        get_data()  # Get data from click
+        gal_data = get_gallery(click, df_gallery)
+        return jsonify(gal_data)
+    except:
+        return ''
+
+@app.route("/cafe", methods=['GET', 'POST'])
+def send_cafe():
+    try:  # Only activates if click exist
+        get_data()  # Get data from click
+        cafe_data = get_cafe(click, df_cafe)
+        return jsonify(cafe_data)
+    except:
+        return ''
+
+@app.route("/accessible", methods=['GET', 'POST'])
+def send_accessible():
+    try:  # Only activates if click exist
+        get_data()  # Get data from click
+        accessible_data = get_accessible(click, df_accessible)
+        return jsonify(accessible_data)
+    except:
+        return ''
+
+@app.route("/bar", methods=['GET', 'POST'])
+def send_bar():
+    try:  # Only activates if click exist
+        get_data()  # Get data from click
+        bar_data = get_pubs(click, df_pubs)
+        return jsonify(bar_data)
+    except:
+        return ''
+
+@app.route("/print", methods=['GET', 'POST'])
+def send_print():
+    try:  # Only activates if click exist
+        get_data()  # Get data from click
+        print_data = get_print(click, df_print)
+        return jsonify(print_data)
+    except:
+        return ''
+
+@app.route("/carpark", methods=['GET', 'POST'])
+def send_carpark():
+    try:  # Only activates if click exist
+        get_data()  # Get data from click
+        car_park = get_carpark(click, on_street, off_street)
+        return jsonify({'carpark': car_park})
     except:
         return ''
 
@@ -457,7 +491,6 @@ def send_data_address():
         get_data()
         address_data = reverse_geocoding(click)
         return jsonify ({'address':address_data})
-
     except:
         return ''
 
@@ -465,125 +498,125 @@ def send_data_address():
 """
 Imange To Client
 """
-
-@app.route('/image/house')
-def send_image_resident():
-    try:
-        get_data()  # Get data from click
-        if residents > 2000:
-            filename = './static/image/1.png'
-            return send_file(filename, mimetype='image/png')
-        else:
-            filename = './static/image/2.png'
-            return send_file(filename, mimetype='image/png')
-    except:
-        return ""
-
-
-@app.route('/image/pedestrian')
-def send_image_pedestrian():
-    try:
-        get_data()  # Get data from click
-        # If Large number of 10-5 pedestrian movements
-        if average_ped > 1200:
-            filename = './static/image/pedestrian1.png'
-            return send_file(filename, mimetype='image/png')
-        else:
-        # If Not
-            filename = './static/image/pedestrian2.png'
-            return send_file(filename, mimetype='image/png')
-    except:
-        return ""
-
-@app.route('/image/cafe')
-def send_image_cafe():
-    try:
-        get_data()  # Get data from click
-        # If Large number of 10-5 pedestrian movements
-        if cafe > 15:
-            filename = './static/image/cafe1.png'
-            return send_file(filename, mimetype='image/png')
-        else:
-        # If Not
-            filename = './static/image/cafe2.png'
-            return send_file(filename, mimetype='image/png')
-    except:
-        return ""
-
-@app.route('/image/carpark')
-def send_image_carpark():
-    try:
-        get_data()  # Get data from click
-        # If Large number of carparks 5k
-        if car_park > 1000:
-            filename = './static/image/carpark1.png'
-            return send_file(filename, mimetype='image/png')
-        else:
-        # If Not
-            filename = './static/image/carpark2.png'
-            return send_file(filename, mimetype='image/png')
-    except:
-        return ""
-
-@app.route('/image/accessible')
-def send_image_accessible():
-    try:
-        get_data()  # Get data from click
-        # If Exists
-        if accessible > 0:
-            filename = './static/image/accessible1.png'
-            return send_file(filename, mimetype='image/png')
-        else:
-        # If Not
-            filename = './static/image/accessible2.png'
-            return send_file(filename, mimetype='image/png')
-    except:
-        return ""
-
-@app.route('/image/gallery')
-def send_image_gallery():
-    try:
-        get_data()  # Get data from click
-        # If exists
-        if gallery > 0:
-            filename = './static/image/gallery1.png'
-            return send_file(filename, mimetype='image/png')
-        else:
-        # If Not
-            filename = './static/image/gallery2.png'
-            return send_file(filename, mimetype='image/png')
-    except:
-        return ""
-
-@app.route('/image/print')
-def send_image_print():
-    try:
-        get_data()  # Get data from click
-        # If exists
-        if prints > 0:
-            filename = './static/image/print1.png'
-            return send_file(filename, mimetype='image/png')
-        else:
-        # If Not
-            filename = './static/image/print2.png'
-            return send_file(filename, mimetype='image/png')
-    except:
-        return ""
-
-@app.route('/image/pub')
-def send_image_pub():
-    try:
-        get_data()  # Get data from click
-        # If exists
-        if pubs > 5:
-            filename = './static/image/pub1.png'
-            return send_file(filename, mimetype='image/png')
-        else:
-        # If Not
-            filename = './static/image/pub2.png'
-            return send_file(filename, mimetype='image/png')
-    except:
-        return ""
+#
+# @app.route('/image/house')
+# def send_image_resident():
+#     try:
+#         get_data()  # Get data from click
+#         if residents > 2000:
+#             filename = './static/image/1.png'
+#             return send_file(filename, mimetype='image/png')
+#         else:
+#             filename = './static/image/2.png'
+#             return send_file(filename, mimetype='image/png')
+#     except:
+#         return ""
+#
+#
+# @app.route('/image/pedestrian')
+# def send_image_pedestrian():
+#     try:
+#         get_data()  # Get data from click
+#         # If Large number of 10-5 pedestrian movements
+#         if average_ped > 1200:
+#             filename = './static/image/pedestrian1.png'
+#             return send_file(filename, mimetype='image/png')
+#         else:
+#         # If Not
+#             filename = './static/image/pedestrian2.png'
+#             return send_file(filename, mimetype='image/png')
+#     except:
+#         return ""
+#
+# @app.route('/image/cafe')
+# def send_image_cafe():
+#     try:
+#         get_data()  # Get data from click
+#         # If Large number of 10-5 pedestrian movements
+#         if cafe > 15:
+#             filename = './static/image/cafe1.png'
+#             return send_file(filename, mimetype='image/png')
+#         else:
+#         # If Not
+#             filename = './static/image/cafe2.png'
+#             return send_file(filename, mimetype='image/png')
+#     except:
+#         return ""
+#
+# @app.route('/image/carpark')
+# def send_image_carpark():
+#     try:
+#         get_data()  # Get data from click
+#         # If Large number of carparks 5k
+#         if car_park > 1000:
+#             filename = './static/image/carpark1.png'
+#             return send_file(filename, mimetype='image/png')
+#         else:
+#         # If Not
+#             filename = './static/image/carpark2.png'
+#             return send_file(filename, mimetype='image/png')
+#     except:
+#         return ""
+#
+# @app.route('/image/accessible')
+# def send_image_accessible():
+#     try:
+#         get_data()  # Get data from click
+#         # If Exists
+#         if accessible > 0:
+#             filename = './static/image/accessible1.png'
+#             return send_file(filename, mimetype='image/png')
+#         else:
+#         # If Not
+#             filename = './static/image/accessible2.png'
+#             return send_file(filename, mimetype='image/png')
+#     except:
+#         return ""
+#
+# @app.route('/image/gallery')
+# def send_image_gallery():
+#     try:
+#         get_data()  # Get data from click
+#         # If exists
+#         if gallery > 0:
+#             filename = './static/image/gallery1.png'
+#             return send_file(filename, mimetype='image/png')
+#         else:
+#         # If Not
+#             filename = './static/image/gallery2.png'
+#             return send_file(filename, mimetype='image/png')
+#     except:
+#         return ""
+#
+# @app.route('/image/print')
+# def send_image_print():
+#     try:
+#         get_data()  # Get data from click
+#         # If exists
+#         if prints > 0:
+#             filename = './static/image/print1.png'
+#             return send_file(filename, mimetype='image/png')
+#         else:
+#         # If Not
+#             filename = './static/image/print2.png'
+#             return send_file(filename, mimetype='image/png')
+#     except:
+#         return ""
+#
+# @app.route('/image/pub')
+# def send_image_pub():
+#     try:
+#         get_data()  # Get data from click
+#         # If exists
+#         if pubs > 5:
+#             filename = './static/image/pub1.png'
+#             return send_file(filename, mimetype='image/png')
+#         else:
+#         # If Not
+#             filename = './static/image/pub2.png'
+#             return send_file(filename, mimetype='image/png')
+#     except:
+#         return ""
 
 
 

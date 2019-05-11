@@ -19,6 +19,9 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
 
+
+  
+
 <style>
     .geocoder {
       position:absolute;
@@ -60,49 +63,181 @@
 <script>
 // Update Image Data
 function reloadImg() {
-  var d=new Date();
-  document.getElementById("HousePic").src="/image/house?a="+d.getTime();
-  document.getElementById("PedPic").src="/image/pedestrian?a="+d.getTime();
-  document.getElementById("CafePic").src="/image/cafe?a="+d.getTime();
-  document.getElementById("AccPic").src="/image/accessible?a="+d.getTime();
-  document.getElementById("GalPic").src="/image/gallery?a="+d.getTime();
-  document.getElementById("PrintPic").src="/image/print?a="+d.getTime();
-  document.getElementById("PubPic").src="/image/pub?a="+d.getTime();
-  document.getElementById("CarPic").src="/image/carpark?a="+d.getTime();
 
   $.get("/address", function (data){
     document.getElementById(id="address1").innerHTML=data.address;
   });
 
-  // $.get("/test", function (data) {
-  //               document.getElementById("HousePic").title = data.residents;
-  //               document.getElementById("PedPic").title = data.ped;
-  //               document.getElementById("CafePic").title = data.cafe;
-  //               document.getElementById("AccPic").title = data.accessible;
-  //               document.getElementById("GalPic").title = data.gallery;
-  //               document.getElementById("PrintPic").title = data.prints;
-  //               document.getElementById("PubPic").title = data.pubs;
+  $.get("/resident", function (data) {
+    if(data < 1000){
+      $("#residentIcon").hide();
+    } else{
+      $("#residentIcon").show();
+      $('#residentIcon').prop('title', data);
+    }});
 
-  //             });
+    $.get("/pedestrian", function (data) {
+    if(data < 1500){
+      $("#pedestrianIcon").hide();
+    } else{
+      $("#pedestrianIcon").show();
+      $('#pedestrianIcon').prop('title', data);
+    }});
+
+  $.get("/gallery", function (data) {
+    if(data < 1){
+      $("#artworkIcon").hide();
+    } else{
+      $("#artworkIcon").show();
+      $('#artworkIcon').prop('title', data);
+    }});
+
+    $.get("/cafe", function (data) {
+    if(data < 5){
+      $("#cafekIcon").hide();
+    } else{
+      $("#cafeIcon").show();
+      $('#cafeIcon').prop('title', data);
+    }});    
+
+    $.get("/accessible", function (data) {
+    if(data < 1){
+      $("#toiletIcon").hide();
+    } else{
+      $("#toiletIcon").show();
+      $('#toiletIcon').prop('title', data);
+    }});
+
+    $.get("/bar", function (data) {
+    if(data < 5){
+      $("#barIcon").hide();
+    } else{
+      $("#barIcon").show();
+      $('#barIcon').prop('title', data);
+
+    }});
+
+    $.get("/print", function (data) {
+    if(data < 1){
+      $("#printIcon").hide();
+    } else{
+      $("#printIcon").show();
+      $('#printIcon').prop('title', data);
+    }});
+
+    $.get("/carpark", function (data) {
+    if(data.carpark < 1000){
+      $("#parkingIcon").hide();
+    } else{
+      $("#parkingIcon").show();
+      $('#parkingIcon').prop('title', data.carpark);
+    }});    
+
+  // Call for image
+  // var d=new Date();
+
+  // document.getElementById("HousePic").src="/image/house?a="+d.getTime();
+  // document.getElementById("PedPic").src="/image/pedestrian?a="+d.getTime();
+  // document.getElementById("CafePic").src="/image/cafe?a="+d.getTime();
+  // document.getElementById("AccPic").src="/image/accessible?a="+d.getTime();
+  // document.getElementById("GalPic").src="/image/gallery?a="+d.getTime();
+  // document.getElementById("PrintPic").src="/image/print?a="+d.getTime();
+  // document.getElementById("PubPic").src="/image/pub?a="+d.getTime();
+  // document.getElementById("CarPic").src="/image/carpark?a="+d.getTime();
+
+  //   document.getElementById("HousePic").title = data.residents;
+  //   document.getElementById("PedPic").title = data.ped;
+  //   document.getElementById("CafePic").title = data.cafe;
+  //   document.getElementById("AccPic").title = data.accessible;
+  //   document.getElementById("GalPic").title = data.gallery;
+  //   document.getElementById("PrintPic").title = data.prints;
+  //   document.getElementById("PubPic").title = data.pubs;
+
+  // });
 
 };
 
-
 function reloadImg2() {
-  var d=new Date();
-  document.getElementById("HousePic2").src="/image/house?a="+d.getTime();
-  document.getElementById("PedPic2").src="/image/pedestrian?a="+d.getTime();
-  document.getElementById("CafePic2").src="/image/cafe?a="+d.getTime();
-  document.getElementById("AccPic2").src="/image/accessible?a="+d.getTime();
-  document.getElementById("GalPic2").src="/image/gallery?a="+d.getTime();
-  document.getElementById("PrintPic2").src="/image/print?a="+d.getTime();
-  document.getElementById("PubPic2").src="/image/pub?a="+d.getTime();
-  document.getElementById("CarPic2").src="/image/carpark?a="+d.getTime();
 
   $.get("/address", function (data){
     document.getElementById(id="address2").innerHTML=data.address;
   });
 
+  $.get("/resident", function (data) {
+    if(data < 1000){
+      $("#residentIcon2").hide();
+    } else{
+      $("#residentIcon2").show();
+      $('#residentIcon2').prop('title', data);
+    }});
+
+    $.get("/pedestrian", function (data) {
+    if(data < 1500){
+      $("#pedestrianIcon2").hide();
+    } else{
+      $("#pedestrianIcon2").show();
+      $('#pedestrianIcon2').prop('title', data);
+    }});
+
+    $.get("/gallery", function (data) {
+    if(data < 1){
+      $("#artworkIcon2").hide();
+    } else{
+      $("#artworkIcon2").show();
+      $('#artworkIcon2').prop('title', data);
+    }});
+
+    $.get("/cafe", function (data) {
+    if(data < 5){
+      $("#cafekIcon2").hide();
+    } else{
+      $("#cafeIcon2").show();
+      $('#cafeIcon2').prop('title', data);
+    }});    
+
+    $.get("/accessible", function (data) {
+    if(data < 5){
+      $("#toiletIcon2").hide();
+    } else{
+      $("#toiletIcon2").show();
+      $('#toiletIcon2').prop('title', data);
+    }});
+
+    $.get("/bar", function (data) {
+    if(data < 5){
+      $("#barIcon2").hide();
+    } else{
+      $("#barIcon2").show();
+      $('#barIcon2').prop('title', data);
+    }});
+
+    $.get("/print", function (data) {
+    if(data < 1){
+      $("#printIcon2").hide();
+    } else{
+      $("#printIcon2").show();
+      $('#printIcon2').prop('title', data);
+    }});
+
+    $.get("/carpark", function (data) {
+    if(data.carpark < 1000){
+      $("#parkingIcon2").hide();
+    } else{
+      $("#parkingIcon2").show();
+      $('#parkingIcon2').prop('title', data.carpark);
+    }});    
+
+  // Call for image
+  // var d=new Date();
+
+  // document.getElementById("HousePic2").src="/image/house?a="+d.getTime();
+  // document.getElementById("PedPic2").src="/image/pedestrian?a="+d.getTime();
+  // document.getElementById("CafePic2").src="/image/cafe?a="+d.getTime();
+  // document.getElementById("AccPic2").src="/image/accessible?a="+d.getTime();
+  // document.getElementById("GalPic2").src="/image/gallery?a="+d.getTime();
+  // document.getElementById("PrintPic2").src="/image/print?a="+d.getTime();
+  // document.getElementById("PubPic2").src="/image/pub?a="+d.getTime();
+  // document.getElementById("CarPic2").src="/image/carpark?a="+d.getTime();
 
   // $.get("/test", function (data) {
   //               document.getElementById("HousePic2").title = data.residents;
@@ -131,7 +266,7 @@ var clicked = false;
                 };
         circleMaker2(); // Right
         reloadImg2(); // Right
-        updateLineChart();
+        updateLineChart2();
         updateLineChart2_2();
         if($(window).width() >= 1600) {
           expandSecond(); // Second Click
@@ -198,7 +333,6 @@ function expandSecond() {
 
 
 }
-
 
 </script>
 
@@ -523,20 +657,46 @@ function expandSecond() {
     <div class="col-sm-3" id="right-bg1">
       <div class="row-sm-4">
       <button type="button" id=LocButton>LOCATION A</button>
+      <br>
+      <br>
         <h5><b> Clicked Location: </b></h5><h5 id = address1></h5>
         <!-- Icons -->
         <button type="button" id="LocTitle">WHATS NEARBY</button>
         <br>
-        <img id="HousePic" title = ""> <img id="PedPic" title = ""> <img id="CafePic" title = "">  <img id="AccPic"  title = ""> <img id="GalPic"  title = ""> <img id="PrintPic"  title = ""> <img id="PubPic"  title = "">  <img id="CarPic"  title = ""> 
         <br>
+
+        <i id="artworkIcon" class="material-icons" style="font-size:36px">wallpaper</i>
+        <i id="residentIcon" class="material-icons" style="font-size:36px">home</i>
+        <i id="cafeIcon" class="material-icons" style="font-size:36px">local_cafe</i>
+        <i id="toiletIcon" class="material-icons" style="font-size:36px">accessible</i>
+        <i id="parkingIcon" class="material-icons" style="font-size:36px">local_parking</i>
+        <i id="barIcon" class="material-icons" style="font-size:36px">local_bar</i>
+        <i id="pedestrianIcon" class="material-icons" style="font-size:36px">directions_walk</i>
+        <i id="printIcon" class="material-icons" style="font-size:36px">local_printshop</i>
+
+
+        <!-- <img id="PedPic" title = ""> <img id="CafePic" title = "">  <img id="AccPic"  title = ""> <img id="GalPic"  title = ""> <img id="PrintPic"  title = ""> <img id="PubPic"  title = "">  <img id="CarPic"  title = "">  -->
         <br>
       </div>
 
       <!-- Chart A -->
       <div class="row-sm-4">
-      <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
-      <br>
-      <canvas id="lineChart1" height="300" width=auto></canvas>
+      <div class="col-sm-12 product-tabs">
+                <ul class="nav nav-tabs">
+                    <li class="tab col s3"><a class="active" href="#tab1" data-toggle="tab"><p>Forecast</p></a></li>
+                    <li class="tab col s3"><a href="#tab2" data-toggle="tab"><p>Hourly</p></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab1">
+                        <canvas id="lineChart1" height="300" width="auto"></canvas>
+                    </div>
+                    <div class="tab-pane" id="tab2">
+                        <canvas id="lineChart1_1" height="300" width="auto"></canvas>
+                    </div>
+
+                </div>
+            </div>
+
       <script>
 
         const CHART1 = document.getElementById("lineChart1");
@@ -568,7 +728,7 @@ function expandSecond() {
                     },
                     {    
                         data: [],
-                        label: "This Winter",
+                        label: "Winter Season",
                         fill: false,
                         backgroundColor: "rgb(255,135,120,0.5)",
                         borderColor: "rgb(255,135,120)",
@@ -628,8 +788,6 @@ function expandSecond() {
 
        <!-- Chart A-2 -->
       <div class="row-sm-4">
-      <button type="button" id="LocTitle">HOURLY FOOT TRAFFIC</button>
-      <br>
       <canvas id="lineChart1_1" height="300" width=auto></canvas>
       <script>
 
@@ -725,23 +883,47 @@ function expandSecond() {
       <!-- Location B -->
       <div class="row-sm-4">
       <button type="button" id=LocButton2>LOCATION B</button>
+      <br>
+      <br>
         <h5><b> Clicked Location: </b></h5><h5 id = address2></h5>
-        <br>
         <button type="button" id="LocTitle">WHATS NEARBY</button>
         <br>
-        <img id="HousePic2" title = ""> <img id="PedPic2" title = ""> <img id="CafePic2" title = "">  <img id="AccPic2"  title = ""> <img id="GalPic2"  title = ""> <img id="PrintPic2"  title = ""> <img id="PubPic2"  title = "">  <img id="CarPic2"  title = "">
+        <br>
+        <i id="artworkIcon2" class="material-icons" style="font-size:36px">wallpaper</i>
+        <i id="residentIcon2" class="material-icons" style="font-size:36px">home</i>
+        <i id="cafeIcon2" class="material-icons" style="font-size:36px">local_cafe</i>
+        <i id="toiletIcon2" class="material-icons" style="font-size:36px">accessible</i>
+        <i id="parkingIcon2" class="material-icons" style="font-size:36px">local_parking</i>
+        <i id="barIcon2" class="material-icons" style="font-size:36px">local_bar</i>
+        <i id="pedestrianIcon2" class="material-icons" style="font-size:36px">directions_walk</i>
+        <i id="printIcon2" class="material-icons" style="font-size:36px">local_printshop</i>
+
+        <!-- <img id="HousePic2" title = ""> <img id="PedPic2" title = ""> <img id="CafePic2" title = "">  <img id="AccPic2"  title = ""> <img id="GalPic2"  title = ""> <img id="PrintPic2"  title = ""> <img id="PubPic2"  title = "">  <img id="CarPic2"  title = ""> -->
         <br>
       </div>
 
         <!-- Chart B -->
         <div class="row-sm-4">
-        <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
-        <canvas id="lineChart" height="300" width=auto></canvas>
+        <div class="col-sm-12 product-tabs">
+                <ul class="nav nav-tabs">
+                    <li class="tab col s3"><a class="active" href="#tab1_B" data-toggle="tab"><p>Forecast</p></a></li>
+                    <li class="tab col s3"><a href="#tab2_B" data-toggle="tab"><p>Hourly</p></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab1_B">
+                        <canvas id="lineChart2" height="300" width="auto"></canvas>
+                    </div>
+                    <div class="tab-pane" id="tab2_B">
+                        <canvas id="lineChart2_2" height="300" width="auto"></canvas>
+                    </div>
+
+                </div>
+            </div>
 
         <script>
-        const CHART = document.getElementById("lineChart");
-        console.log(CHART);
-        let lineChart = new Chart(CHART, {
+        const CHART2 = document.getElementById("lineChart2");
+        console.log(CHART2);
+        let lineChart2 = new Chart(CHART2, {
             type: 'line',
             data: {
                 labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
@@ -768,7 +950,7 @@ function expandSecond() {
                     },
                     {    
                         data: [],
-                        label: "This Winter",
+                        label: "Winter Season",
                         fill: false,
                         backgroundColor: "rgba(255,135,120,0.8)",
                         borderColor: "rgb(255,135,120)",
@@ -813,12 +995,12 @@ function expandSecond() {
 
         });
 
-          var updateLineChart = function() {
+          var updateLineChart2 = function() {
               $.get("/data", function (result) {
                 console.log(result)
-                lineChart.data.datasets[0].data = result.click2;
-                lineChart.data.datasets[1].data = result.click2_winter;
-                lineChart.update();
+                lineChart2.data.datasets[0].data = result.click2;
+                lineChart2.data.datasets[1].data = result.click2_winter;
+                lineChart2.update();
             }); 
         }
         
@@ -827,8 +1009,8 @@ function expandSecond() {
 
       <!-- Chart B-2 -->
       <div class="row-sm-4">
-        <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
-        <canvas id="lineChart2_2" height="300" width=auto></canvas>
+        <!-- <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button> -->
+        <!-- <canvas id="lineChart2_2" height="300" width=auto></canvas> -->
 
         <script>
         const CHART2_2 = document.getElementById("lineChart2_2");

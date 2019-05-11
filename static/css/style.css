@@ -8,7 +8,6 @@
       height: 100%;
     }
     
-
   @media screen and (min-width: 1600px){
     #right-bg1 {
       display: none;
@@ -97,7 +96,6 @@
 
 body { margin:0; padding:0;}
 
-
 .svgCanvas {
   border: solid 1px;
   width : 100%;
@@ -145,7 +143,6 @@ color: #ffffff;
 background: #3074a4;
 }
 
-
 .button {
 background-color: #555555; /* Black */
 border: none;
@@ -157,13 +154,10 @@ display: inline-block;
 font-size: 12px;
 }
 
-
 #right-bg1 {
   background-color: #f0f0f0;
   height: 100vh;
 }
-
-
 
 #LocButton {
   margin-left: 70px;
@@ -202,7 +196,50 @@ font-size: 12px;
   background-color: rgb(89,89,89);
 }
 
-.br1 {
-  display: block;
-  margin: 10px 0;
+
+.product-tabs {
+    position: absolute;
+    width: 370px;
+    padding-left: 20px;
+}
+
+.nav-tabs {
+    text-align: center;
+    margin-top: 40px;
+    border-bottom: 3px solid #ddd;
+}
+
+.nav-tabs > li {
+    float: none;
+    display: inline-block;
+    margin-bottom: -3px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.nav-tabs>li>a:hover {
+    border-color: #eee #eee #ddd;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    border: 1px solid transparent;
+    border-bottom-color:black;
+    border-bottom-width: 3px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.tab-pane{
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+.nav-tabs p {
+  font-size: 17px;
+  font-family: "Roboto";
+  color: rgb(40, 40, 40);
 }
