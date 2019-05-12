@@ -332,7 +332,7 @@ var clicked = false;
     'min-width': '25%',
     'min-height': '100%'
   }, 600);
-  $("#right-bg1").addClass('col-sm-3');
+  $("#right-bg1").addClass('col-md-3');
 
   $("#right-bg2").hide();
 
@@ -353,7 +353,7 @@ function expandSecond() {
     'min-width': '25%',
     'min-height': '100%'
   }, 600);
-  $("#right-bg2").addClass('col-sm-3');
+  $("#right-bg2").addClass('col-md-3');
 };
 </script>
 
@@ -362,21 +362,19 @@ function expandSecond() {
 <body>
 <!-- Nav Bar -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
-      <div class="navbar-header">
+  <div class="container-fluid">
+    <div class="navbar-header">
         <a class="navbar-brand" href="http://gallevisionery.cf">GALLEVISIONERY</a>
-      </div>
-      <ul class="nav navbar-nav">
-        <li><a href="http://gallevisionery.cf">Home</a></li>
-        <li><a href="javascript: history.back()" style="position:fixed; right:60px;">Back</a></li>
-      </ul>    
+        <a class="navbar-brand" href="http://gallevisionery.cf">Home</a>
+        <a class="navbar-brand" href="javascript: history.back()" style="position: fixed; right: 30px;">Back</a>
     </div>
+  </div>
 </nav>
 
 <!-- Map Box -->
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-sm-6 sidenav" id=map_area onclick="countClicks()">
+    <div class="col-md-6 sidenav" id=map_area onclick="countClicks()">
       <nav id='menu'></nav>
       <div id='map'></div>
       <div id='geocoder' class='geocoder'></div>
@@ -404,7 +402,7 @@ function expandSecond() {
       map.on('load', function () {
 
           map.addLayer({
-              'id': 'transit_stop_label',
+              'id': 'Tram Stop',
               'type': 'line',
               'source': {
                   type: 'vector',
@@ -442,14 +440,14 @@ function expandSecond() {
 
       map.on('click', function(e) {
               var features = map.queryRenderedFeatures(e.point, {
-                  layers: ['transit_stop_label', 'public-art']
+                  layers: ['Tram Stop', 'public-art']
               });
               if (!features.length) {
                   return;
               }
               var feature = features[0];
               });
-      var toggleableLayerIds = [ 'transit_stop_label', 'public-art'];
+      var toggleableLayerIds = [ 'Tram Stop', 'public-art'];
 
       
       // Click
@@ -601,16 +599,14 @@ function expandSecond() {
           });
       };
 
-
-
       </script>
     </div>
 
 
     <!-- Left Side -->
     <!-- Location A -->
-    <div class="col-sm-3" id="right-bg1">
-      <div class="row-sm-4">
+    <div class="col-md-3" id="right-bg1">
+      <div class="row-md-4">
       <button type="button" id=LocButton>LOCATION A</button>
       <br>
       <br>
@@ -637,8 +633,8 @@ function expandSecond() {
       </div>
 
       <!-- Chart A -->
-      <div class="row-sm-4">
-      <div class="col-sm-12 product-tabs">
+      <div class="row-md-4">
+      <div class="col-md-12 product-tabs">
                 <ul class="nav nav-tabs">
                     <li class="tab col s3"><a class="active" href="#tab1" data-toggle="tab"><p>Forecast</p></a></li>
                     <li class="tab col s3"><a href="#tab2" data-toggle="tab"><p>Hourly</p></a></li>
@@ -835,12 +831,12 @@ function expandSecond() {
       </div>
 
           <!-- Chart A-2 -->
-          <div class="row-sm-4">
+          <div class="row-md-4">
           <br>
           <div style="padding-top: 80px;"></div>
-          <canvas id="radarChart_1" height="300" width="360"></canvas>
+          <canvas id="radarChart_1" height="290" width="350"></canvas>
           <div id="tooltip"><img src="/static/image/questionmark.png">
-            <span id="tooltiptext">This shows comparison based on Average Public Gallery Amenities.</span></div>
+            <span id="tooltiptext">Comparison based on Average Public Gallery Amenities.</span></div>
           <script>
           const RADAR_CHART_1 = document.getElementById("radarChart_1");
           let radarChart_1 = new Chart(RADAR_CHART_1, {
@@ -919,9 +915,9 @@ function expandSecond() {
     </div>
     
     <!-- Right Side -->
-    <div class="col-sm-3" id="right-bg2">
+    <div class="col-md-3" id="right-bg2">
       <!-- Location B -->
-      <div class="row-sm-4">
+      <div class="row-md-4">
       <button type="button" id=LocButton2>LOCATION B</button>
       <br>
       <br>
@@ -945,8 +941,8 @@ function expandSecond() {
       </div>
 
         <!-- Chart B -->
-        <div class="row-sm-4">
-        <div class="col-sm-12 product-tabs">
+        <div class="row-md-4">
+        <div class="col-md-12 product-tabs">
                 <ul class="nav nav-tabs">
                     <li class="tab col s3"><a class="active" href="#tab1_B" data-toggle="tab"><p>Forecast</p></a></li>
                     <li class="tab col s3"><a href="#tab2_B" data-toggle="tab"><p>Hourly</p></a></li>
@@ -1141,10 +1137,10 @@ function expandSecond() {
       </div>
 
       <!-- Chart B-2 -->
-      <div class="row-sm-4">
+      <div class="row-md-4">
       <br>
-      <div style="padding-top: 80px;"></div>
-      <canvas id="radarChart_2" height="300" width="360"></canvas>
+      <div style="padding-top: 70px;"></div>
+      <canvas id="radarChart_2" height="290" width="360"></canvas>
           <script>
           const RADAR_CHART_2 = document.getElementById("radarChart_2");
           let radarChart_2 = new Chart(RADAR_CHART_2, {

@@ -1,6 +1,6 @@
     
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 100%;}
+    .row.content {min-height: 100%;}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -43,18 +43,20 @@
       color: #fff;
       width: 100%;
       margin: 0;
-      height: auto;
+      min-height: 100%;
     }
-    #map { position:absolute; top:0; bottom:0; left:0; width:100%; height:auto;}
-
+    #map { position:absolute; top:0; bottom:0; left:0; width:100%; min-height: 100%;}
   }
+
+
   
     /* On small screens, set height to 'auto' for sidenav and grid */
-    @media screen and (min-width: 0px) and (max-width: 1499px) {
+    @media screen and (min-width: 1300px) and (max-width: 1499px) {
       #row.content {height: auto;} 
 
       .right-bg1 {
         position: absolute;
+        height:auto;
         right: 0;
         bottom: 0;
         top: 0;
@@ -63,7 +65,6 @@
         margin: 0;
         z-index: 3;
         width:50%;
-        height:auto;
       }
       
       .right-bg2 {
@@ -74,8 +75,8 @@
         top: 0;
         background-color: #ffffff;
         color: #141618;
-        margin: 0;
         z-index: 4;
+        margin: 0;
       }
       
       .map_area {
@@ -84,16 +85,17 @@
         left: 0;
         bottom: 0;
         width: auto;
-        height: auto;
+        min-height: 100%;
         background-color: #000;
         color: #fff;
         margin: 0;
       }
   
-      #map { position:absolute; top:0; bottom:0; left:0; width:100%; height:auto;}
+      #map { position:absolute; top:0; bottom:0; left:0; width:100%; min-height: 100%;}
     }
 
-body { margin:0; padding:0; width:100%;}
+
+body { margin:0; padding:0; width:100%; height: 100%;}
 
 .svgCanvas {
   border: solid 1px;
@@ -130,7 +132,7 @@ border: none;
 
 #menu a:hover {
 background-color: #f8f8f8;
-color: #636363;
+color: #4e4a4a;
 }
 
 #menu a.active {
@@ -139,11 +141,11 @@ color: #ffffff;
 }
 
 #menu a.active:hover {
-background: #3074a4;
+background: #3f7aa3;
 }
 
 .button {
-background-color: #555555; /* Black */
+background-color: #383333; /* Black */
 border: none;
 color: white;
 padding: 10px 24px;
