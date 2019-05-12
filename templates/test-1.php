@@ -20,9 +20,6 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
   
-<script type="text/javascript">
-    var RootUrl = '@Url.Content("~/")';
-</script>
 
 <style>
     .geocoder {
@@ -422,10 +419,9 @@ function expandSecond() {
           //   console.log(match)
           // });
           
-          var theUrl = RootUrl
           $.ajax(
                   { type : 'POST',
-                  url : RootUrl + "http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test",
+                  url : "http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test",
                   contentType: "application/json;charset=UTF-8",
                   dataType:'json',
                   data : JSON.stringify({'data':location})
@@ -487,7 +483,7 @@ function expandSecond() {
 
           $.ajax(
                   { type : 'POST',
-                  url : "/test1",
+                  url : "http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test1",
                   contentType: "application/json;charset=UTF-8",
                   dataType:'json',
                   data : JSON.stringify({'data':JSON.stringify(clickLog)})

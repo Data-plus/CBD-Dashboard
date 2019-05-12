@@ -301,7 +301,7 @@ def get_pubs(click, df_pubs):
 
 # Initialise
 # Object ID may differ, need to change
-@app.route("/")
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/")
 def dashboard_projects():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     collection = connection[DBS_NAME][COLLECTION_NAME]
@@ -313,7 +313,7 @@ def dashboard_projects():
 
 
 # Get geocode from click
-@app.route("/", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/", methods=['GET', 'POST'])
 def get_data():
     global click
 
@@ -329,7 +329,7 @@ def get_data():
 
 
 # Get geocode from search bar
-@app.route("/test1", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test1", methods=['GET', 'POST'])
 def get_search():
     if request.method == 'POST':
         s1 = json.loads(request.data)
@@ -343,7 +343,7 @@ def get_search():
 
 # Send everything within 200 to "/test"
 # Also, checks if click is received
-@app.route("/test", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test", methods=['GET', 'POST'])
 def send_data():
     # global residents, cafe, accessible, gallery, prints, pubs, weekly_ped, average_ped, car_park
     try:  # Only activates if click exist
@@ -416,7 +416,7 @@ def send_data():
 Data To Client
 """
 
-@app.route("/resident", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/resident", methods=['GET', 'POST'])
 def send_data_resident():
     global res_data
     try:  # Only activates if click exist
@@ -426,7 +426,7 @@ def send_data_resident():
     except:
         return ''
 
-@app.route("/pedestrian", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/pedestrian", methods=['GET', 'POST'])
 def send_ped():
     global average_ped
     try:  # Only activates if click exist
@@ -437,7 +437,7 @@ def send_ped():
     except:
         return ''
 
-@app.route("/gallery", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/gallery", methods=['GET', 'POST'])
 def send_gallery():
     try:  # Only activates if click exist
         get_data()  # Get data from click
@@ -446,7 +446,7 @@ def send_gallery():
     except:
         return ''
 
-@app.route("/cafe", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/cafe", methods=['GET', 'POST'])
 def send_cafe():
     global cafe_data
     try:  # Only activates if click exist
@@ -456,7 +456,7 @@ def send_cafe():
     except:
         return ''
 
-@app.route("/accessible", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/accessible", methods=['GET', 'POST'])
 def send_accessible():
     global accessible_data
     try:  # Only activates if click exist
@@ -466,7 +466,7 @@ def send_accessible():
     except:
         return ''
 
-@app.route("/bar", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/bar", methods=['GET', 'POST'])
 def send_bar():
     global bar_data
     try:  # Only activates if click exist
@@ -476,7 +476,7 @@ def send_bar():
     except:
         return ''
 
-@app.route("/print", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/print", methods=['GET', 'POST'])
 def send_print():
     global print_data
     try:  # Only activates if click exist
@@ -486,7 +486,7 @@ def send_print():
     except:
         return ''
 
-@app.route("/carpark", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/carpark", methods=['GET', 'POST'])
 def send_carpark():
     global car_park
     try:  # Only activates if click exist
@@ -496,7 +496,7 @@ def send_carpark():
     except:
         return ''
 
-@app.route("/address", methods=['GET', 'POST'])
+@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/address", methods=['GET', 'POST'])
 def send_data_address():
     try:
         get_data()
@@ -507,7 +507,7 @@ def send_data_address():
 
 
 # Send Pedestrian Chart Data
-@app.route('/data')
+@app.route('http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/data')
 def data():
     try:
         start = time.time()
