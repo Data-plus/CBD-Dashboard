@@ -1,6 +1,6 @@
     
     /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {min-height: 100%;}
+    .row.content {height: 100%;}
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -45,7 +45,39 @@
       margin: 0;
       min-height: 100%;
     }
-    #map { position:absolute; top:0; bottom:0; left:0; width:100%; min-height: 100%;}
+    #map { position:absolute; top:0; bottom:0; left:0; min-height:100vh; width:100%}
+
+    #LocButton {
+      margin-left: 15%;
+      margin-top: 60px;
+      font-family: "Roboto Lt", sans-serif;
+      border-radius: none;
+      padding: 8px 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: #324e6f;
+      color: #fff;
+      font-size: 15px;
+      border-color: transparent;
+      pointer-events: none;
+    
+    }
+    
+    #LocButton2 {
+      margin-left: 30%;
+      margin-top: 60px;
+      font-family: "Roboto Lt", sans-serif;
+      border-radius: none;
+      padding: 8px 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: rgba(224, 166, 95, 0.9);
+      color: #fff;
+      font-size: 15px;
+      border-color: transparent;
+      pointer-events: none;
+    
+    }
   }
 
 
@@ -84,16 +116,17 @@
         top: 0;
         left: 0;
         bottom: 0;
-        width: auto;
+        width: 100%;
         min-height: 100%;
         background-color: #000;
         color: #fff;
         margin: 0;
       }
   
-      #map { position:absolute; top:0; bottom:0; left:0; width:100%; min-height: 100%;}
+      #map { position:absolute; top:0; bottom:0; left:0; min-height:100%; width:100%;}
     }
 
+#map { position:absolute; top:0; bottom:0; left:0; min-height:100%; width:100%;}
 
 body { margin:0; padding:0; width:100%; height: 100%;}
 
@@ -163,32 +196,32 @@ pointer-events: none;
 }
 
 #LocButton {
-  margin-left: 70px;
-  margin-top: 80px;
+  margin-left: 140;
+  margin-top: 60px;
   font-family: "Roboto Lt", sans-serif;
   border-radius: none;
-  padding: 8px 12px;
+  padding: 8px 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
   background: #324e6f;
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   border-color: transparent;
   pointer-events: none;
 
 }
 
 #LocButton2 {
-  margin-left: 70px;
-  margin-top: 80px;
+  margin-left: 140;
+  margin-top: 60px;
   font-family: "Roboto Lt", sans-serif;
   border-radius: none;
-  padding: 8px 12px;
+  padding: 8px 11px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  background: #324e6f;
+  background: rgba(224, 166, 95, 0.9);
   color: #fff;
-  font-size: 16px;
+  font-size: 15px;
   border-color: transparent;
   pointer-events: none;
 
@@ -240,7 +273,7 @@ pointer-events: none;
 }
 
 .tab-pane{
-    padding-left: 15px;
+    padding-left: 10px;
     padding-right: 50px;
     padding-bottom: 20px;
     padding-top: 20px;
