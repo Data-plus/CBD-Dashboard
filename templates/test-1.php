@@ -71,7 +71,7 @@ function reloadImg() {
 //   }
 // }
 
-  $.get("/test", function (r) {
+  $.get("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test", function (r) {
   if (r.cafe > 20)
   then {
       document.getElementById(id="restaurantIcon");
@@ -102,7 +102,7 @@ function reloadImg() {
   // document.getElementById("PubPic").src="/image/pub?a="+d.getTime();
   // document.getElementById("parkingIcon").src="/image/carpark?a="+d.getTime();
 
-  $.get("/address", function (data){
+  $.get("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/address", function (data){
     document.getElementById(id="address1").innerHTML=data.address;
   });
 
@@ -135,7 +135,7 @@ function reloadImg2() {
   // document.getElementById("PubPic2").src="/image/pub?a="+d.getTime();
   // document.getElementById("CarPic2").src="/image/carpark?a="+d.getTime();
 
-  $.get("/address", function (data){
+  $.get("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/address", function (data){
     document.getElementById(id="address2").innerHTML=data.address;
   });
 
