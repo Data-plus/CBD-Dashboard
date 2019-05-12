@@ -913,7 +913,7 @@ function expandSecond() {
                   labels: ["Residents", "Pubs",  "Parking Spots", "Pedestrian", "Printing Stores", "Cafe", "Toilets"],
                   datasets: [
                       {
-                          label: 'Selected Area',
+                          label: 'Clicked Area',
                           backgroundColor: "rgba(120,140,255,0.7)",
                           lineTension: 1,
                           borderWidth: 3,
@@ -938,7 +938,7 @@ function expandSecond() {
                   maintainAspectRatio: false,
                   title: {
                       display: true,
-                      text: "Public Gallery vs Selected Area",
+                      text: "Public Gallery vs Clicked Area",
                       fontSize: 16,
                   },
                   label: {
@@ -1219,7 +1219,7 @@ function expandSecond() {
                   labels: ["Residents", "Pubs",  "Parking Spots", "Pedestrian", "Printing Stores", "Cafe", "Toilets"],
                   datasets: [
                       {
-                          label: 'Selected Area',
+                          label: 'Clicked Area',
                           backgroundColor: "rgba(120,140,255,0.7)",
                           lineTension: 1,
                           borderWidth: 3,
@@ -1244,7 +1244,7 @@ function expandSecond() {
                   maintainAspectRatio: false,
                   title: {
                       display: true,
-                      text: "Public Gallery vs Selected Area",
+                      text: "Public Gallery vs Clicked Area",
                       fontSize: 16,
                   },
                   label: {

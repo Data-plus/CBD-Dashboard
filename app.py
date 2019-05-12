@@ -2,10 +2,8 @@ from flask import Flask
 from flask import render_template
 from flask import request
 from flask import jsonify
-from flask import send_file
 
 from pymongo import MongoClient
-from bson import json_util, ObjectId
 import json
 
 import pandas as pd
@@ -35,7 +33,6 @@ df_weekends = pd.read_csv('static/data/weekends.csv')
 
 df2 = pd.read_csv('static/data/sensors.csv')
 population = pd.read_csv('static/data/population.csv')
-#df_office = pd.read_csv('static/data/office.csv')
 on_street = pd.read_csv('static/data/on_street.csv')
 df_cafe = pd.read_csv('static/data/cafe.csv')
 off_street = pd.read_csv('static/data/off_street.csv')
@@ -43,6 +40,7 @@ df_accessible = pd.read_csv('static/data/accessible.csv')
 df_gallery = pd.read_csv('static/data/gallery.csv')
 df_print = pd.read_csv('static/data/print.csv')
 df_pubs = pd.read_csv('static/data/pubs.csv')
+#df_office = pd.read_csv('static/data/office.csv')
 
 # Sensor
 # PC: "5cbb067ae39a5cbeb4a82260"
@@ -323,7 +321,12 @@ def get_data():
         ss = json.loads(request.data)
         ss = json.loads(ss['data'])
         click = [ss['lng'], ss['lat']]
-        return click
+        if len(click) > 0:
+            print("received click")
+            return click
+        else:
+            print("Not received click")
+
 
 # Get geocode from search bar
 @app.route("/test1", methods=['GET', 'POST'])
@@ -655,4 +658,4 @@ Imange To Client
 
 
 if __name__ == "__main__":
-    app.run(host='localhost',port=5000)
+    app.run(host='0.0.0.0', port=5000)
