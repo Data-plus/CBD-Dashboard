@@ -425,7 +425,7 @@ function expandSecond() {
           var theUrl = RootUrl
           $.ajax(
                   { type : 'POST',
-                  url : RootUrl + "/test",
+                  url : RootUrl + "http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test",
                   contentType: "application/json;charset=UTF-8",
                   dataType:'json',
                   data : JSON.stringify({'data':location})
