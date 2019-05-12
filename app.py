@@ -309,7 +309,7 @@ def dashboard_projects():
     sensors = collection.find_one({"features.properties.sensor_id" : { "$exists" : True }}, {"_id":0})
     cafes = collection.find_one({"features.properties.Type" : "Cafe"}, {"_id":0})
     connection.close()
-    return render_template("test-1.php", geojson_data = projects, sensors = sensors, geojson_cafe = cafes)
+    return render_template("index.php", geojson_data = projects, sensors = sensors, geojson_cafe = cafes)
 
 
 # Get geocode from click

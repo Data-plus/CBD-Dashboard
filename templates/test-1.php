@@ -6,23 +6,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.js'></script>
   <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.54.0/mapbox-gl.css' rel='stylesheet' />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.min.js'></script>
   <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v3.1.6/mapbox-gl-geocoder.css' type='text/css' />
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.3/Chart.min.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="../static/css/style.css">
-
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-
-
+  
+<script type="text/javascript">
+    var RootUrl = '@Url.Content("~/")';
+</script>
 
 <style>
-  .geocoder {
+    .geocoder {
       position:absolute;
       z-index:1;
       width:100%;
@@ -30,7 +33,7 @@
       margin-left:-25%;
       top:70px;       
 }
-  .mapboxgl-ctrl-geocoder { 
+.mapboxgl-ctrl-geocoder { 
       min-width:100%;
       top: 70px; 
       z-index:7;
@@ -53,112 +56,46 @@
   z-index:-1;
   }
 
-
-#tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-#tooltip #tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: black;
-  color: #fff;
-  bottom: 110%;
-  left: 50%; 
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-
-  /* Position the tooltip */
-  position: absolute;
-  z-index: 1;
-}
-
-#tooltip:hover #tooltiptext {
-  visibility: visible;
-}
+</style>  
 
 
-</style>
+
 
 
 <script>
 // Update Image Data
 function reloadImg() {
+  var d=new Date();
 
-  $.get("/address", function (data){
-    document.getElementById(id="address1").innerHTML=data.address;
-  });
+  // NEW SCRIPT (pedestrian deleted) - BZ
+//   $.get("/test", function (r)){
+//   if (r.cafe>20) {
+//     document.getElementById(id="restaurantIcon") + d.getTime(); // + counts  
+//   }
+// }
 
-  $.get("/resident", function (data) {
-    if(data < 1000){
-      $("#residentIcon").hide();
-    } else{
-      $("#residentIcon").show();
-      $('#residentIcon').prop('title', "Number of Residents Nearby " + data);
-    }});
+  $.get("/test", function (r) {
+  if (r.cafe > 20)
+  then {
+      document.getElementById(id="restaurantIcon");
+      document.getElementById("restaurantIcon").title = r.cafe;
+    } 
+  else {
+    document.getElementById(id="restaurantIcon").style.display='hide';
+    // document.getElementById("restaurantIcon").title = r.cafe; 
+  }
+  })  
 
-    $.get("/pedestrian", function (data) {
-    if(data < 1500){
-      $("#pedestrianIcon").hide();
-    } else{
-      $("#pedestrianIcon").show();
-      $('#pedestrianIcon').prop('title', "Pedestrian counts Nearby " + data);
-    }});
 
-  $.get("/gallery", function (data) {
-    if(data < 1){
-      $("#artworkIcon").hide();
-    } else{
-      $("#artworkIcon").show();
-      $('#artworkIcon').prop('title', "Public Art galleries Nearby " + data);
-    }});
+  // document.getElementById("HousePic")+d.getTime();
+  // document.getElementById("restaurantIcon")+d.getTime();
+  // document.getElementById("toiletIcon")+d.getTime();
+  // document.getElementById("GalPic").src="/image/gallery?a="+d.getTime();
+  // document.getElementById("PrintPic").src="/image/print?a="+d.getTime();
+  // document.getElementById("artworkIcon")+d.getTime();
+  // document.getElementById("parkingIcon")+d.getTime();
 
-    $.get("/cafe", function (data) {
-    if(data < 10){
-      $("#cafekIcon").hide();
-    } else{
-      $("#cafeIcon").show();
-      $('#cafeIcon').prop('title', "Number of Cafes Nearby " + data);
-    }});    
-
-    $.get("/accessible", function (data) {
-    if(data < 1){
-      $("#toiletIcon").hide();
-    } else{
-      $("#toiletIcon").show();
-      $('#toiletIcon').prop('title', "Number of Accessible Toielts Nearby " + data);
-    }});
-
-    $.get("/bar", function (data) {
-    if(data < 5){
-      $("#barIcon").hide();
-    } else{
-      $("#barIcon").show();
-      $('#barIcon').prop('title', "Number of Bars Nearby " + data);
-    }});
-
-    $.get("/print", function (data) {
-    if(data < 1){
-      $("#printIcon").hide();
-    } else{
-      $("#printIcon").show();
-      $('#printIcon').prop('title', "Number of Print Stores Nearby " + data);
-    }});
-
-    $.get("/carpark", function (data) {
-    if(data.carpark < 1000){
-      $("#parkingIcon").hide();
-    } else{
-      $("#parkingIcon").show();
-      $('#parkingIcon').prop('title', "Number of Carparks Nearby " + data.carpark);
-    }});    
-
-  // Call for image
-  // var d=new Date();
-
+  // THIS IS THE ORIGINAL SCRIPT
   // document.getElementById("HousePic").src="/image/house?a="+d.getTime();
   // document.getElementById("PedPic").src="/image/pedestrian?a="+d.getTime();
   // document.getElementById("CafePic").src="/image/cafe?a="+d.getTime();
@@ -166,92 +103,31 @@ function reloadImg() {
   // document.getElementById("GalPic").src="/image/gallery?a="+d.getTime();
   // document.getElementById("PrintPic").src="/image/print?a="+d.getTime();
   // document.getElementById("PubPic").src="/image/pub?a="+d.getTime();
-  // document.getElementById("CarPic").src="/image/carpark?a="+d.getTime();
+  // document.getElementById("parkingIcon").src="/image/carpark?a="+d.getTime();
 
-  //   document.getElementById("HousePic").title = data.residents;
-  //   document.getElementById("PedPic").title = data.ped;
-  //   document.getElementById("CafePic").title = data.cafe;
-  //   document.getElementById("AccPic").title = data.accessible;
-  //   document.getElementById("GalPic").title = data.gallery;
-  //   document.getElementById("PrintPic").title = data.prints;
-  //   document.getElementById("PubPic").title = data.pubs;
+  $.get("/address", function (data){
+    document.getElementById(id="address1").innerHTML=data.address;
+  });
 
-  // });
+  // $.get("/test", function (data) {
+  //               document.getElementById("HousePic").title = data.residents;
+  //               document.getElementById("PedPic").title = data.ped;
+  //               document.getElementById("CafePic").title = data.cafe;
+  //               document.getElementById("AccPic").title = data.accessible;
+  //               document.getElementById("GalPic").title = data.gallery;
+  //               document.getElementById("PrintPic").title = data.prints;
+  //               document.getElementById("PubPic").title = data.pubs;
+
+  //             });
 
 };
 
+
 function reloadImg2() {
+  var d=new Date();
 
-  $.get("/address", function (data){
-    document.getElementById(id="address2").innerHTML=data.address;
-  });
 
-  $.get("/resident", function (data) {
-    if(data < 1000){
-      $("#residentIcon2").hide();
-    } else{
-      $("#residentIcon2").show();
-      $('#residentIcon2').prop('title', "Number of Residents Nearby " + data);
-    }});
 
-    $.get("/pedestrian", function (data) {
-    if(data < 1500){
-      $("#pedestrianIcon2").hide();
-    } else{
-      $("#pedestrianIcon2").show();
-      $('#pedestrianIcon2').prop('title', "Pedestrian counts Nearby " + data);
-    }});
-
-    $.get("/gallery", function (data) {
-    if(data < 1){
-      $("#artworkIcon2").hide();
-    } else{
-      $("#artworkIcon2").show();
-      $('#artworkIcon2').prop('title', "Public Art galleries Nearby " + data);
-    }});
-
-    $.get("/cafe", function (data) {
-    if(data < 10){
-      $("#cafekIcon2").hide();
-    } else{
-      $("#cafeIcon2").show();
-      $('#cafeIcon2').prop('title', "Number of Cafes Nearby " + data);
-    }});    
-
-    $.get("/accessible", function (data) {
-    if(data < 5){
-      $("#toiletIcon2").hide();
-    } else{
-      $("#toiletIcon2").show();
-      $('#toiletIcon2').prop('title', "Number of Accessible Toielts Nearby " + data);
-    }});
-
-    $.get("/bar", function (data) {
-    if(data < 5){
-      $("#barIcon2").hide();
-    } else{
-      $("#barIcon2").show();
-      $('#barIcon2').prop('title', "Number of Bars Nearby " + data);
-    }});
-
-    $.get("/print", function (data) {
-    if(data < 1){
-      $("#printIcon2").hide();
-    } else{
-      $("#printIcon2").show();
-      $('#printIcon2').prop('title', "Number of Print Stores Nearby " + data);
-    }});
-
-    $.get("/carpark", function (data) {
-    if(data.carpark < 1000){
-      $("#parkingIcon2").hide();
-    } else{
-      $("#parkingIcon2").show();
-      $('#parkingIcon2').prop('title', "Number of Carparks Nearby " + data.carpark);
-    }});    
-
-  // Call for image
-  // var d=new Date();
 
   // document.getElementById("HousePic2").src="/image/house?a="+d.getTime();
   // document.getElementById("PedPic2").src="/image/pedestrian?a="+d.getTime();
@@ -261,6 +137,11 @@ function reloadImg2() {
   // document.getElementById("PrintPic2").src="/image/print?a="+d.getTime();
   // document.getElementById("PubPic2").src="/image/pub?a="+d.getTime();
   // document.getElementById("CarPic2").src="/image/carpark?a="+d.getTime();
+
+  $.get("/address", function (data){
+    document.getElementById(id="address2").innerHTML=data.address;
+  });
+
 
   // $.get("/test", function (data) {
   //               document.getElementById("HousePic2").title = data.residents;
@@ -289,10 +170,7 @@ var clicked = false;
                 };
         circleMaker2(); // Right
         reloadImg2(); // Right
-        updateLineChart2();
-        // updateLineChart2_2();
-        // updateRadarChart_2();
-
+        updateLineChart();
         if($(window).width() >= 1600) {
           expandSecond(); // Second Click
         }
@@ -309,8 +187,6 @@ var clicked = false;
         circleMaker1(); // Left
         reloadImg();  // Left
         updateLineChart1();
-        // updateLineChart1_1();
-        // updateRadarChart_1();
         if($(window).width() >= 1600) {
           expandFirst(); // First click
         }
@@ -336,9 +212,11 @@ var clicked = false;
 
   $("#right-bg2").hide();
 
-};
+}
 
 function expandSecond() {
+
+
   $('#map').animate({
     'width': '50%'
   }, 600);
@@ -354,7 +232,11 @@ function expandSecond() {
     'min-height': '100%'
   }, 600);
   $("#right-bg2").addClass('col-sm-3');
-};
+
+
+}
+
+
 </script>
 
 </head>
@@ -540,10 +422,10 @@ function expandSecond() {
           //   console.log(match)
           // });
           
-
+          var theUrl = RootUrl
           $.ajax(
                   { type : 'POST',
-                  url : "/test",
+                  url : RootUrl + "/test",
                   contentType: "application/json;charset=UTF-8",
                   dataType:'json',
                   data : JSON.stringify({'data':location})
@@ -678,50 +560,45 @@ function expandSecond() {
     <div class="col-sm-3" id="right-bg1">
       <div class="row-sm-4">
       <button type="button" id=LocButton>LOCATION A</button>
-      <br>
-      <br>
-        <h5><b> Clicked Location: </b></h5><h5 id = address1></h5>
-        <!-- Icons -->
-        <button type="button" id="LocTitle">WHATS NEARBY</button>
-        <div id="tooltip"><img src="/static/image/tooltip.png">
-        <span id="tooltiptext">Nearby Amenities are shown below</span>
-        </div>
         <br>
+        <h5><i style='font-size:14px' class='fas'>&#xf124;</i><b>Address: </b></h5><h5 id = address1></h5>
         <br>
-
-        <i id="artworkIcon" class="material-icons" style="font-size:36px">wallpaper</i>
-        <i id="residentIcon" class="material-icons" style="font-size:36px">home</i>
-        <i id="cafeIcon" class="material-icons" style="font-size:36px">local_cafe</i>
-        <i id="toiletIcon" class="material-icons" style="font-size:36px">accessible</i>
-        <i id="parkingIcon" class="material-icons" style="font-size:36px">local_parking</i>
-        <i id="barIcon" class="material-icons" style="font-size:36px">local_bar</i>
-        <i id="pedestrianIcon" class="material-icons" style="font-size:36px">directions_walk</i>
-        <i id="printIcon" class="material-icons" style="font-size:36px">local_printshop</i>
-
-
-        <!-- <img id="PedPic" title = ""> <img id="CafePic" title = "">  <img id="AccPic"  title = ""> <img id="GalPic"  title = ""> <img id="PrintPic"  title = ""> <img id="PubPic"  title = "">  <img id="CarPic"  title = "">  -->
+        
       </div>
 
-      <!-- Chart A -->
+      <!-- Icons -->
       <div class="row-sm-4">
-      <div class="col-sm-12 product-tabs">
-                <ul class="nav nav-tabs">
-                    <li class="tab col s3"><a class="active" href="#tab1" data-toggle="tab"><p>Forecast</p></a></li>
-                    <li class="tab col s3"><a href="#tab2" data-toggle="tab"><p>Hourly</p></a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane active" id="tab1">
-                        <canvas id="lineChart1" height="300" width="auto"></canvas>
-                    </div>
-                    <div class="tab-pane" id="tab2">
-                        <canvas id="lineChart1_1" height="300" width="auto"></canvas>
-                    </div>
-                </div>
-        </div>
+      <button type="button" id="LocTitle">WHATS NEARBY</button>
+                 <br>
+                 <br> 
+          
+           <!-- TOILET ICON -->
+          <i id="toiletIcon" class="material-icons" style="font-size:36px">accessible</i>
+          <!-- ARTWORK ICON -->
+          <i id="artworkIcon" class="material-icons"  style="font-size:36px;">wallpaper</i>
+          <!-- RESTAURANT ICON -->
+          <i id="restaurantIcon" class="material-icons" style="font-size:36px">restaurant</i>
+          <!-- PARKING ICON -->
+          <i id="parkingIcon" class="material-icons" style="font-size:36px">local_parking</i>
+          <!-- TRAM STOP ICON -->
+          <i id="tramstopIcon" class="material-icons" style="font-size:36px">tram</i>
+          <!-- OFFICEBUILDING ICON -->
+          <i id="officeIcon" class="material-icons" style="font-size:36px">work</i>
+         
+          <!-- <img id="HousePic" title = ""> <img id="PedPic" title = ""> <img id="CafePic" title = "">  <img id="AccPic"  title = ""> <img id="GalPic"  title = ""> <img id="PrintPic"  title = ""> <img id="PubPic"  title = "">  <img id="CarPic"  title = ""> -->
+        <br>
+      </div>
 
-      <script>
+      <!-- Chart -->
+      <div class="row-sm-4">
+      <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
+          <br>
+          <canvas id="lineChart1" height="300" width=auto></canvas>
+          <br>
+        <script>
 
         const CHART1 = document.getElementById("lineChart1");
+        console.log(CHART1);
         let lineChart1 = new Chart(CHART1, {
             type: 'line',
             data: {
@@ -749,7 +626,7 @@ function expandSecond() {
                     },
                     {    
                         data: [],
-                        label: "Winter Season",
+                        label: "This Winter",
                         fill: false,
                         backgroundColor: "rgb(255,135,120,0.5)",
                         borderColor: "rgb(255,135,120)",
@@ -800,237 +677,57 @@ function expandSecond() {
                 lineChart1.data.datasets[0].data = result.results;
                 lineChart1.data.datasets[1].data = result.results_winter;
                 lineChart1.update();
-
-                radarChart_1.data.datasets[0].data = result.radar;
-                radarChart_1.update();
-
-                lineChart1_1.data.datasets[0].data = result.eachhour;
-                lineChart1_1.data.datasets[1].data = result.weekends;
-                lineChart1_1.update();
-
             }); 
-        };
-
-
-        </script>
-
-      <canvas id="lineChart1_1" height="300" width=auto></canvas>
-      <script>
-        const CHART1_1 = document.getElementById("lineChart1_1");
-        let lineChart1_1 = new Chart(CHART1_1, {
-            type: 'line',
-            data: {
-                labels: ["10", "11", "12", "13", "14", "15", "16", "17"],
-                datasets: [
-                    {   data: [],
-                        label: "Weekdays",
-                        fill: false,
-                        backgroundColor: "rgb(82,105,136,0.8)",
-                        borderColor: "rgb(82,105,136)",
-                        borderCapStyle: "butt",
-                        borderDash: [],
-                        borderDashOffset: 0.0,
-                        borderJoinStyle: 'miter',
-                        pointBorderColor: 'white',
-                        pointBackgroundColor: "#fff",
-                        pointBorderWidth: 2,
-                        pointHoverRadius: 10,
-                        pointHoverBackgroundColor: "rgb(82,105,136,0.8)",
-                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                        pointHoverBorderWidth: 8,
-                        pointRadius: 1,
-                        pointHitRadius: 10,
-                        lineTension: 0.4,
-                    },
-                    {    
-                        data: [],
-                        label: "Weekends",
-                        fill: false,
-                        backgroundColor: "rgb(255,135,120,0.5)",
-                        borderColor: "rgb(255,135,120)",
-                        borderCapStyle: "butt",
-                        borderDash: [],
-                        borderDashOffset: 0.0,
-                        borderJoinStyle: 'miter',
-                        pointBorderColor: "white",
-                        pointBackgroundColor: "#fff",
-                        pointBorderWidth: 2,
-                        pointHoverRadius: 10,
-                        pointHoverBackgroundColor: "rgb(255,135,120,0.5)",
-                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                        pointHoverBorderWidth: 8,
-                        pointRadius: 1,
-                        pointHitRadius: 10,
-                        lineTension: 0.4,
-                    }
-                ]
-            },
-            options: {
-                responsive: false,
-                maintainAspectRatio: this.maintainAspectRatio,
-                title: {
-                    display: true,
-                    text: "Number of Pedestrian Count",
-                    fontSize: 16,
-                },
-                legend: {
-                    position: 'bottom',
-
-                    labels: {
-                        padding: 20,
-                    }
-                ,scale: {
-                  yAxes: [{
-                    beginAtZero: true
-                  }]
-                }
-                }
-            }
-
-        });
-
-        // var updateLineChart1_1 = function() {
-        //     $.get("/data", function (result) {
-        //       console.log(result)
-        //       lineChart1_1.data.datasets[0].data = result.eachhour;
-        //       lineChart1_1.data.datasets[1].data = result.weekends;
-        //       lineChart1_1.update();
-        //   }); 
-        // };
+        }
         </script>
       </div>
 
-          <!-- Chart A-2 -->
-          <div class="row-sm-4">
-          <br>
-          <div style="padding-top: 80px;"></div>
-          <canvas id="radarChart_1" height="340" width="360"></canvas>
-          <script>
-          const RADAR_CHART_1 = document.getElementById("radarChart_1");
-          let radarChart_1 = new Chart(RADAR_CHART_1, {
-              type: 'radar',
-              data: {
-                  labels: ["Residents", "Pubs",  "Parking Spots", "Pedestrian", "Printing Stores", "Cafe", "Toilets"],
-                  datasets: [
-                      {
-                          label: 'Clicked Area',
-                          backgroundColor: "rgba(120,140,255,0.7)",
-                          lineTension: 1,
-                          borderWidth: 3,
-                          pointHoverBorderWidth: 8,
-                          pointHoverBackgroundColor: "rgba(255,255,255,0)",
-                          data: [],
-                          pointLabelFontSize: 50,
-                      },
-                      {
-                          label: 'Public Gallery Average',
-                          backgroundColor: "rgba(255,170,170,0.8)",
-                          lineTension: 1,
-                          borderWidth: 3,
-                          pointHoverBorderWidth: 8,
-                          pointHoverBackgroundColor: "rgba(255,255,255,0)",
-                          data: [5,5,5,5,5,5,5,5]
-                      }
-                  ]
-              },
-              options: {
-                  responsive: false,
-                  maintainAspectRatio: false,
-                  title: {
-                      display: true,
-                      text: "Public Gallery vs Clicked Area",
-                      fontSize: 16,
-                  },
-                  label: {
-                      fontColor: "rgba(75,192,192,1)",
-                  },
-                  legend: {
-                      display: false,
-                      position: 'bottom',
-                      onClick: false,
-                  },
-                  scale: {
-                      ticks: {
-                          beginAtZero: true,
-                          max: 10,
-                          maxTicksLimit: 10,
-                          display: true,
-                          backdropColor: 'transparent',
-                      },
-                      gridLines: {
-                          circular: true,
-                          lineWidth: 0.8,
-                      },
-                      labels: {
-                          padding: 5,
-                      },
-                      pointLabels :{
-                          fontSize: 15,
-                      },
-                  }    
-              },
-          });
-
-        //   var updateRadarChart_1 = function() {
-        //       $.get("/data", function (result) {
-        //         radarChart_1.data.datasets[0].data = result.radar;
-        //         radarChart_1.update();
-        //     }); 
-        // };          
-        </script>
-        <br>
-        <br>
-        <br>
-      </div>
     </div>
     
-    <!-- Right Side -->
-    <div class="col-sm-3" id="right-bg2">
+      <!-- Right Side -->
       <!-- Location B -->
+      <div class="col-sm-3" id="right-bg2">
       <div class="row-sm-4">
       <button type="button" id=LocButton2>LOCATION B</button>
-      <br>
-      <br>
-        <h5><b> Clicked Location: </b></h5><h5 id = address2></h5>
-        <button type="button" id="LocTitle">WHATS NEARBY</button>
-        <div id="tooltip"><img src="/static/image/tooltip.png">
-        <span id="tooltiptext">Nearby Amenities are shown</span>
-        </div>
         <br>
+        <h5><i style='font-size:14px' class='fas'>&#xf124;</i><b>Address: </b></h5><h5 id = address2></h5>
         <br>
-        <i id="artworkIcon2" class="material-icons" style="font-size:36px">wallpaper</i>
-        <i id="residentIcon2" class="material-icons" style="font-size:36px">home</i>
-        <i id="cafeIcon2" class="material-icons" style="font-size:36px">local_cafe</i>
-        <i id="toiletIcon2" class="material-icons" style="font-size:36px">accessible</i>
-        <i id="parkingIcon2" class="material-icons" style="font-size:36px">local_parking</i>
-        <i id="barIcon2" class="material-icons" style="font-size:36px">local_bar</i>
-        <i id="pedestrianIcon2" class="material-icons" style="font-size:36px">directions_walk</i>
-        <i id="printIcon2" class="material-icons" style="font-size:36px">local_printshop</i>
-
-        <!-- <img id="HousePic2" title = ""> <img id="PedPic2" title = ""> <img id="CafePic2" title = "">  <img id="AccPic2"  title = ""> <img id="GalPic2"  title = ""> <img id="PrintPic2"  title = ""> <img id="PubPic2"  title = "">  <img id="CarPic2"  title = ""> -->
       </div>
 
-        <!-- Chart B -->
-        <div class="row-sm-4">
-        <div class="col-sm-12 product-tabs">
-                <ul class="nav nav-tabs">
-                    <li class="tab col s3"><a class="active" href="#tab1_B" data-toggle="tab"><p>Forecast</p></a></li>
-                    <li class="tab col s3"><a href="#tab2_B" data-toggle="tab"><p>Hourly</p></a></li>
-                </ul>
-                <div class="tab-content">
-                    <div class="tab-pane active" id="tab1_B">
-                        <canvas id="lineChart2" height="300" width="auto"></canvas>
-                    </div>
-                    <div class="tab-pane" id="tab2_B">
-                        <canvas id="lineChart2_2" height="300" width="auto"></canvas>
-                    </div>
-                </div>
-          </div>
+         <!-- Icons -->
+         <div class="row-sm-4">
+          <button type="button" id="LocTitle">WHATS NEARBY</button>
+                 <br>
+                 <br>  
+          <!-- TOILET ICON -->
+          <i id="toiletIcon2" class="material-icons" style="font-size:36px">accessible</i>
+          <!-- ARTWORK ICON -->
+          <i id="artworkIcon2" class="material-icons"  style="font-size:36px;">wallpaper</i>
+          <!-- RESTAURANT ICON -->
+          <i id="restaurantIcon2" class="material-icons" style="font-size:36px">restaurant</i>
+          <!-- PARKING ICON -->
+          <i id="parkingIcon2" class="material-icons" style="font-size:36px">local_parking</i>
+          <!-- TRAM STOP ICON -->
+          <i id="tramstopIcon2" class="material-icons" style="font-size:36px">tram</i>
+          <!-- OFFICEBUILDING ICON -->
+          <i id="officeIcon2" class="material-icons" style="font-size:36px">work</i>
 
-        <script>
-        const CHART2 = document.getElementById("lineChart2");
-        console.log(CHART2);
-        let lineChart2 = new Chart(CHART2, {
+
+          <!-- <img id="HousePic2" title = ""> <img id="PedPic2" title = ""> <img id="CafePic2" title = "">  <img id="AccPic2"  title = ""> <img id="GalPic2"  title = ""> <img id="PrintPic2"  title = ""> <img id="PubPic2"  title = "">  <img id="CarPic2"  title = ""> -->
+                 <br>
+        </div>
+        
+        <!-- Chart -->
+        <button type="button" id="LocTitle">FOOT TRAFFIC FORECAST</button>
+             <br>
+              <canvas id="lineChart" height="300" width=auto></canvas>
+              <br>
+
+      <script>
+        
+        const CHART = document.getElementById("lineChart");
+        console.log(CHART);
+        let lineChart = new Chart(CHART, {
             type: 'line',
             data: {
                 labels: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
@@ -1057,7 +754,7 @@ function expandSecond() {
                     },
                     {    
                         data: [],
-                        label: "Winter Season",
+                        label: "This Winter",
                         fill: false,
                         backgroundColor: "rgba(255,135,120,0.8)",
                         borderColor: "rgb(255,135,120)",
@@ -1102,190 +799,35 @@ function expandSecond() {
 
         });
 
-          var updateLineChart2 = function() {
+          var updateLineChart = function() {
               $.get("/data", function (result) {
                 console.log(result)
-                lineChart2.data.datasets[0].data = result.click2;
-                lineChart2.data.datasets[1].data = result.click2_winter;
-
-                lineChart2_2.data.datasets[0].data = result.click2_eachhour;
-                lineChart2_2.data.datasets[1].data = result.click2_weekends;
-
-                radarChart_2.data.datasets[0].data = result.click2_radar;
-
-                lineChart2.update();
-                radarChart_2.update();
-                lineChart2_2.update();
+                lineChart.data.datasets[0].data = result.click2;
+                lineChart.data.datasets[1].data = result.click2_winter;
+                lineChart.update();
             }); 
-        };
-        </script>
-        <canvas id="lineChart2_2" height="300" width=auto></canvas>
-        <script>
-        const CHART2_2 = document.getElementById("lineChart2_2");
-        let lineChart2_2 = new Chart(CHART2_2, {
-            type: 'line',
-            data: {
-                labels: ["10", "11", "12", "13", "14", "15", "16", "17"],
-                datasets: [
-                    {   data: [],
-                        label: "Weekdays",
-                        fill: false,
-                        backgroundColor: "rgba(82,105,136,0.8)",
-                        borderColor: "rgb(82,105,136)",
-                        borderCapStyle: "butt",
-                        borderDash: [],
-                        borderDashOffset: 0.0,
-                        borderJoinStyle: 'miter',
-                        pointBorderColor: 'white',
-                        pointBackgroundColor: "#fff",
-                        pointBorderWidth: 2,
-                        pointHoverRadius: 10,
-                        pointHoverBackgroundColor: "rgba(82,105,136,0.8)",
-                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                        pointHoverBorderWidth: 8,
-                        pointRadius: 1,
-                        pointHitRadius: 10,
-                        lineTension: 0.4,
-                    },
-                    {    
-                        data: [],
-                        label: "Weekends",
-                        fill: false,
-                        backgroundColor: "rgba(255,135,120,0.8)",
-                        borderColor: "rgb(255,135,120)",
-                        borderCapStyle: "butt",
-                        borderDash: [],
-                        borderDashOffset: 0.0,
-                        borderJoinStyle: 'miter',
-                        pointBorderColor: "white",
-                        pointBackgroundColor: "#fff",
-                        pointBorderWidth: 2,
-                        pointHoverRadius: 10,
-                        pointHoverBackgroundColor: "rgba(255,135,120,0.8)",
-                        pointHoverBorderColor: "rgba(220,220,220,1)",
-                        pointHoverBorderWidth: 8,
-                        pointRadius: 1,
-                        pointHitRadius: 10,
-                        lineTension: 0.4,
-                    }
-                ]
-            },
-            options: {
-                responsive: false,
-                maintainAspectRatio: this.maintainAspectRatio,
-                title: {
-                    display: true,
-                    text: "Number of Pedestrian Count",
-                    fontSize: 16,
-                },
-                legend: {
-                    position: 'bottom',
-
-                    labels: {
-                        padding: 20,
-                    }
-                }
-                ,scale: {
-                  yAxes: [{
-                    beginAtZero: true
-                  }]
-                }
-            }
-
-        });
-
-        //   var updateLineChart2_2 = function() {
-        //       $.get("/data", function (result) {
-        //         lineChart2_2.data.datasets[0].data = result.click2_eachhour;
-        //         lineChart2_2.data.datasets[1].data = result.click2_weekends;
-        //         lineChart2_2.update();
-        //     }); 
-        // }
+        }
         
         </script>
-        <br>
+      </div>
       </div>
 
-      <!-- Chart B-2 -->
       <div class="row-sm-4">
-      <br>
-      <div style="padding-top: 80px;"></div>
-      <canvas id="radarChart_2" height="340" width="360"></canvas>
-          <script>
-          const RADAR_CHART_2 = document.getElementById("radarChart_2");
-          let radarChart_2 = new Chart(RADAR_CHART_2, {
-              type: 'radar',
-              data: {
-                  labels: ["Residents", "Pubs",  "Parking Spots", "Pedestrian", "Printing Stores", "Cafe", "Toilets"],
-                  datasets: [
-                      {
-                          label: 'Clicked Area',
-                          backgroundColor: "rgba(120,140,255,0.7)",
-                          lineTension: 1,
-                          borderWidth: 3,
-                          pointHoverBorderWidth: 8,
-                          pointHoverBackgroundColor: "rgba(255,255,255,0)",
-                          data: [],
-                          pointLabelFontSize: 50,
-                      },
-                      {
-                          label: 'Public Gallery Average',
-                          backgroundColor: "rgba(255,170,170,0.8)",
-                          lineTension: 1,
-                          borderWidth: 3,
-                          pointHoverBorderWidth: 8,
-                          pointHoverBackgroundColor: "rgba(255,255,255,0)",
-                          data: [5,5,5,5,5,5,5,5]
-                      }
-                  ]
-              },
-              options: {
-                  responsive: false,
-                  maintainAspectRatio: false,
-                  title: {
-                      display: true,
-                      text: "Public Gallery vs Clicked Area",
-                      fontSize: 16,
-                  },
-                  label: {
-                      fontColor: "rgba(75,192,192,1)",
-                  },
-                  legend: {
-                      display: false,
-                      position: 'bottom',
-                      onClick: false,
-                  },
-                  scale: {
-                      ticks: {
-                          beginAtZero: true,
-                          max: 10,
-                          maxTicksLimit: 10,
-                          display: true,
-                          backdropColor: 'transparent',
-                      },
-                      gridLines: {
-                          circular: true,
-                          lineWidth: 0.8,
-                      },
-                      labels: {
-                          padding: 5,
-                      },
-                      pointLabels :{
-                          fontSize: 15,
-                      },
-                  }    
-              },
-          });
+        <br>  
+        <br>
+        <h4><small>RECENT POSTS</small></h4>
+        <br>
+        <h5><span class="label label-success">Lorem</span></h5><br>
+        <h5>This place will be Location B</h5>
+        <br>   
+      </div>
 
-        //   var updateRadarChart_2 = function() {
-        //       $.get("/data", function (result) {
-        //         radarChart_2.data.datasets[0].data = result.click2_radar;
-        //         radarChart_2.update();
-        //     }); 
-        // };          
-        </script>
-        </div>
-    </div>
+      <div class="row-sm-4">
+        <h4>Leave a Comment:</h4>
+        <p>nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident.</p>
+       </div>
+      
+
   </div>
 </div>
 
