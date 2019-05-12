@@ -406,18 +406,6 @@ function expandSecond() {
           console.log(location)
           obj = JSON.parse(location);
           console.log(obj);
-
-          // GEOCODING NOT WOKRING ATM
-
-          // geocodingClient.reverseGeocode({
-          // query: [obj.lng, obj.lat],
-          //  })
-          // .send()
-          // .then(response => {
-          //   // GeoJSON document with geocoding matches
-          //   const match = response.body;
-          //   console.log(match)
-          // });
           
           $.ajax(
                   { type : 'POST',

@@ -400,68 +400,6 @@ function expandSecond() {
       });
 
 
-      // Using local file
-      var url = {{ geojson_data }};
-
-      map.on('load', function () {
-          map.addSource('art_gallery', {
-              type: 'geojson',
-              data: url
-          }),
-
-          map.addLayer({
-          'id': 'art-gallery',
-          'source': 'art_gallery',
-          'type': 'circle',
-          'paint': {
-          'circle-radius': 5,
-          'circle-color': 'rgba(255,224,98,1)'
-          }
-          });
-      });
-
-
-      // Using local file
-      var url2 = {{ sensors }};
-
-      map.on('load', function () {
-          map.addSource('sensor', {
-              type: 'geojson',
-              data: url2
-          }),
-
-          map.addLayer({
-          'id': 'ped-sensor',
-          'source': 'sensor',
-          'type': 'circle',
-          'paint': {
-          'circle-radius': 4,
-          'circle-color': 'rgba(185,238,255,1)'
-          }
-          });
-      });
-
-      var url3 = {{ geojson_cafe }};
-
-      map.on('load', function () {
-          map.addSource('cafe', {
-              type: 'geojson',
-              data: url3
-          }),
-
-          map.addLayer({
-          'id': 'cafe',
-          'source': 'cafe',
-          'minzoom': 16,
-          'type': 'circle',
-          'paint': {
-          'circle-radius': 4,
-          'circle-color': 'rgba(249,235,218,0.8)'
-          },
-          });
-      });
-
-
       // Using mapbox api
       map.on('load', function () {
 

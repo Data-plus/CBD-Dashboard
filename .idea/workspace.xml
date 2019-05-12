@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d92bb42f-1ad3-4508-b42d-7dfd54119f7c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/data.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tabs.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tabs_v2.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/test-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/test-1.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +19,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="658" lean-forward="true" selection-start-line="658" selection-end-line="658" />
+            <state relative-caret-position="78">
+              <caret line="305" column="14" selection-start-line="305" selection-start-column="14" selection-end-line="305" selection-end-column="14" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -46,6 +49,8 @@
       <find>rece</find>
       <find>/data</find>
       <find>clicked</find>
+      <find>ind</find>
+      <find>.php</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -164,7 +169,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7859375" visible="true" weight="0.34165722" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7859375" weight="0.34165722" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49791667" weight="0.39915967" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -222,10 +227,17 @@
     <entry file="file://$PROJECT_DIR$/MongoDB.ipynb" />
     <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/flask/templating.py" />
     <entry file="file://$PROJECT_DIR$/1.py" />
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/subprocess.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="658" lean-forward="true" selection-start-line="658" selection-end-line="658" />
+        <state relative-caret-position="78">
+          <caret line="305" column="14" selection-start-line="305" selection-start-column="14" selection-end-line="305" selection-end-column="14" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
