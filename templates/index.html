@@ -303,7 +303,7 @@ var clicked = false;
       { // First Click
         var mapLayer1 = map.getLayer('circle1');
         if (typeof mapLayer1 !== 'undefined') {
-                    // Remove map layer & source.
+        // Remove map layer & source.
         map.removeLayer('circle1').removeSource('circle1');
                 };
         circleMaker1(); // Left
@@ -361,17 +361,17 @@ function expandSecond() {
 
 <body>
 <!-- Nav Bar -->
-<div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-        </div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="http://gallevisionery.cf">GALLEVISIONERY</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="http://gallevisionery.cf">Home</a></li>
+        <li><a href="javascript: history.back()" style="position:fixed; right:60px;">Back</a></li>
+      </ul>    
     </div>
+</nav>
 
 <!-- Map Box -->
 <div class="container-fluid">
@@ -442,19 +442,14 @@ function expandSecond() {
 
       map.on('click', function(e) {
               var features = map.queryRenderedFeatures(e.point, {
-                  layers: ['public-art', 'cafe']
+                  layers: ['transit_stop_label', 'public-art']
               });
               if (!features.length) {
                   return;
               }
               var feature = features[0];
-              var popup = new mapboxgl.Popup({ offset: [0, -15] })
-                  .setLngLat(feature.geometry.coordinates)
-                  .setHTML('<h4>' + feature.properties.Artist + '</h4><p>' + feature.properties.Name + '<p>' + feature.properties['Art Date'] + '</p>')
-                  .setLngLat(feature.geometry.coordinates)
-                  .addTo(map);
               });
-      var toggleableLayerIds = [ 'transit_stop_label', 'public-art', 'cafe', 'art-gallery', 'ped-sensor'];
+      var toggleableLayerIds = [ 'transit_stop_label', 'public-art'];
 
       
       // Click
@@ -622,7 +617,7 @@ function expandSecond() {
         <h5><b> Clicked Location: </b></h5><h5 id = address1></h5>
         <!-- Icons -->
         <button type="button" id="LocTitle">WHATS NEARBY</button>
-        <div id="tooltip"><img src="/static/image/tooltip.png">
+        <div id="tooltip"><img src="/static/image/questionmark.png">
         <span id="tooltiptext">Nearby Amenities are shown below</span>
         </div>
         <br>
@@ -932,7 +927,7 @@ function expandSecond() {
       <br>
         <h5><b> Clicked Location: </b></h5><h5 id = address2></h5>
         <button type="button" id="LocTitle">WHATS NEARBY</button>
-        <div id="tooltip"><img src="/static/image/tooltip.png">
+        <div id="tooltip"><img src="/static/image/questionmark.png">
         <span id="tooltiptext">Nearby Amenities are shown</span>
         </div>
         <br>

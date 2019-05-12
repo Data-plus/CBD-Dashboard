@@ -197,15 +197,6 @@ font-size: 12px;
 }
 
 
-/* new changes to adjust line chart*/
-#right-bg1 .row-sm-4{
-  position: absolute;
-  margin-left: 10px;
-}
-
-
-
-
 .product-tabs {
     position: absolute;
     width: 370px;
@@ -253,4 +244,3 @@ font-size: 12px;
   font-family: "Roboto";
   color: rgb(40, 40, 40);
 }
-
