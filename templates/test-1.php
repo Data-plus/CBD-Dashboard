@@ -668,7 +668,7 @@ function expandSecond() {
         });
 
           var updateLineChart1 = function() {
-              $.get("/data", function (result) {
+              $.get("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/data", function (result) {
                 console.log(result)
                 lineChart1.data.datasets[0].data = result.results;
                 lineChart1.data.datasets[1].data = result.results_winter;
@@ -796,7 +796,7 @@ function expandSecond() {
         });
 
           var updateLineChart = function() {
-              $.get("/data", function (result) {
+              $.get("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/data", function (result) {
                 console.log(result)
                 lineChart.data.datasets[0].data = result.click2;
                 lineChart.data.datasets[1].data = result.click2_winter;
