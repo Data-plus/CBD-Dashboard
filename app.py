@@ -25,21 +25,21 @@ Import Required Files and Tokens
 mapbox_access_token = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA'
 geocoder = Geocoder(access_token=mapbox_access_token)
 
-df = pd.read_csv("static/data/pedestrian.csv")  # 10-5 data
+df = pd.read_csv("/static/data/pedestrian.csv")  # 10-5 data
 #  df = pd.read_csv("static/data/pedestrian_temp.csv")  # Full time data
-winter = pd.read_csv("static/data/winter.csv")  # 10-5 data winter
-df_weekday = pd.read_csv("static/data/weekday.csv")
-df_weekends = pd.read_csv('static/data/weekends.csv')
+winter = pd.read_csv("/static/data/winter.csv")  # 10-5 data winter
+df_weekday = pd.read_csv("/static/data/weekday.csv")
+df_weekends = pd.read_csv('/static/data/weekends.csv')
 
-df2 = pd.read_csv('static/data/sensors.csv')
-population = pd.read_csv('static/data/population.csv')
-on_street = pd.read_csv('static/data/on_street.csv')
-df_cafe = pd.read_csv('static/data/cafe.csv')
-off_street = pd.read_csv('static/data/off_street.csv')
-df_accessible = pd.read_csv('static/data/accessible.csv')
-df_gallery = pd.read_csv('static/data/gallery.csv')
-df_print = pd.read_csv('static/data/print.csv')
-df_pubs = pd.read_csv('static/data/pubs.csv')
+df2 = pd.read_csv('/static/data/sensors.csv')
+population = pd.read_csv('/static/data/population.csv')
+on_street = pd.read_csv('/static/data/on_street.csv')
+df_cafe = pd.read_csv('/static/data/cafe.csv')
+off_street = pd.read_csv('/static/data/off_street.csv')
+df_accessible = pd.read_csv('/static/data/accessible.csv')
+df_gallery = pd.read_csv('/static/data/gallery.csv')
+df_print = pd.read_csv('/static/data/print.csv')
+df_pubs = pd.read_csv('/static/data/pubs.csv')
 #df_office = pd.read_csv('static/data/office.csv')
 
 # Sensor
@@ -301,7 +301,7 @@ def get_pubs(click, df_pubs):
 
 # Initialise
 # Object ID may differ, need to change
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/")
+@app.route("/")
 def dashboard_projects():
     connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
     collection = connection[DBS_NAME][COLLECTION_NAME]
@@ -313,7 +313,7 @@ def dashboard_projects():
 
 
 # Get geocode from click
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/", methods=['GET', 'POST'])
+@app.route("/", methods=['GET', 'POST'])
 def get_data():
     global click
 
@@ -329,7 +329,7 @@ def get_data():
 
 
 # Get geocode from search bar
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test1", methods=['GET', 'POST'])
+@app.route("/test1", methods=['GET', 'POST'])
 def get_search():
     if request.method == 'POST':
         s1 = json.loads(request.data)
@@ -343,7 +343,7 @@ def get_search():
 
 # Send everything within 200 to "/test"
 # Also, checks if click is received
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test", methods=['GET', 'POST'])
+@app.route("/test", methods=['GET', 'POST'])
 def send_data():
     # global residents, cafe, accessible, gallery, prints, pubs, weekly_ped, average_ped, car_park
     try:  # Only activates if click exist
@@ -416,7 +416,7 @@ def send_data():
 Data To Client
 """
 
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/resident", methods=['GET', 'POST'])
+@app.route("/resident", methods=['GET', 'POST'])
 def send_data_resident():
     global res_data
     try:  # Only activates if click exist
@@ -426,7 +426,7 @@ def send_data_resident():
     except:
         return ''
 
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/pedestrian", methods=['GET', 'POST'])
+@app.route("/pedestrian", methods=['GET', 'POST'])
 def send_ped():
     global average_ped
     try:  # Only activates if click exist
@@ -437,7 +437,7 @@ def send_ped():
     except:
         return ''
 
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/gallery", methods=['GET', 'POST'])
+@app.route("/gallery", methods=['GET', 'POST'])
 def send_gallery():
     try:  # Only activates if click exist
         get_data()  # Get data from click
@@ -446,7 +446,7 @@ def send_gallery():
     except:
         return ''
 
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/cafe", methods=['GET', 'POST'])
+@app.route("/cafe", methods=['GET', 'POST'])
 def send_cafe():
     global cafe_data
     try:  # Only activates if click exist
@@ -456,7 +456,7 @@ def send_cafe():
     except:
         return ''
 
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/accessible", methods=['GET', 'POST'])
+@app.route("/accessible", methods=['GET', 'POST'])
 def send_accessible():
     global accessible_data
     try:  # Only activates if click exist
@@ -466,7 +466,7 @@ def send_accessible():
     except:
         return ''
 
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/bar", methods=['GET', 'POST'])
+@app.route("/bar", methods=['GET', 'POST'])
 def send_bar():
     global bar_data
     try:  # Only activates if click exist
@@ -476,7 +476,7 @@ def send_bar():
     except:
         return ''
 
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/print", methods=['GET', 'POST'])
+@app.route("/print", methods=['GET', 'POST'])
 def send_print():
     global print_data
     try:  # Only activates if click exist
@@ -486,7 +486,7 @@ def send_print():
     except:
         return ''
 
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/carpark", methods=['GET', 'POST'])
+@app.route("/carpark", methods=['GET', 'POST'])
 def send_carpark():
     global car_park
     try:  # Only activates if click exist
@@ -496,7 +496,7 @@ def send_carpark():
     except:
         return ''
 
-@app.route("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/address", methods=['GET', 'POST'])
+@app.route("/address", methods=['GET', 'POST'])
 def send_data_address():
     try:
         get_data()
@@ -507,7 +507,7 @@ def send_data_address():
 
 
 # Send Pedestrian Chart Data
-@app.route('http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/data')
+@app.route('/data')
 def data():
     try:
         start = time.time()
