@@ -61,7 +61,7 @@
 
 #tooltip #tooltiptext {
   visibility: hidden;
-  width: 120px;
+  width: 200px;
   background-color: black;
   color: #fff;
   bottom: 110%;
@@ -69,7 +69,7 @@
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+  margin-left: -150px; /* Use half of the width (120/2 = 60), to center the tooltip */
 
   /* Position the tooltip */
   position: absolute;
@@ -97,7 +97,7 @@ function reloadImg() {
       $("#residentIcon").hide();
     } else{
       $("#residentIcon").show();
-      $('#residentIcon').prop('title', "Number of Residents Nearby " + data);
+      $('#residentIcon').prop('title', "Number of Residents Nearby: " + data);
     }});
 
     $.get("/pedestrian", function (data) {
@@ -105,7 +105,7 @@ function reloadImg() {
       $("#pedestrianIcon").hide();
     } else{
       $("#pedestrianIcon").show();
-      $('#pedestrianIcon').prop('title', "Pedestrian counts Nearby " + data);
+      $('#pedestrianIcon').prop('title', "Pedestrian counts Nearby: " + data);
     }});
 
   $.get("/gallery", function (data) {
@@ -113,7 +113,7 @@ function reloadImg() {
       $("#artworkIcon").hide();
     } else{
       $("#artworkIcon").show();
-      $('#artworkIcon').prop('title', "Public Art galleries Nearby " + data);
+      $('#artworkIcon').prop('title', "Public Art galleries Nearby: " + data);
     }});
 
     $.get("/cafe", function (data) {
@@ -121,7 +121,7 @@ function reloadImg() {
       $("#cafekIcon").hide();
     } else{
       $("#cafeIcon").show();
-      $('#cafeIcon').prop('title', "Number of Cafes Nearby " + data);
+      $('#cafeIcon').prop('title', "Number of Cafes Nearby: " + data);
     }});    
 
     $.get("/accessible", function (data) {
@@ -129,7 +129,7 @@ function reloadImg() {
       $("#toiletIcon").hide();
     } else{
       $("#toiletIcon").show();
-      $('#toiletIcon').prop('title', "Number of Accessible Toielts Nearby " + data);
+      $('#toiletIcon').prop('title', "Number of Accessible Toielts Nearby: " + data);
     }});
 
     $.get("/bar", function (data) {
@@ -137,7 +137,7 @@ function reloadImg() {
       $("#barIcon").hide();
     } else{
       $("#barIcon").show();
-      $('#barIcon').prop('title', "Number of Bars Nearby " + data);
+      $('#barIcon').prop('title', "Number of Bars Nearby: " + data);
     }});
 
     $.get("/print", function (data) {
@@ -145,7 +145,7 @@ function reloadImg() {
       $("#printIcon").hide();
     } else{
       $("#printIcon").show();
-      $('#printIcon').prop('title', "Number of Print Stores Nearby " + data);
+      $('#printIcon').prop('title', "Number of Print Stores Nearby: " + data);
     }});
 
     $.get("/carpark", function (data) {
@@ -153,7 +153,7 @@ function reloadImg() {
       $("#parkingIcon").hide();
     } else{
       $("#parkingIcon").show();
-      $('#parkingIcon').prop('title', "Number of Carparks Nearby " + data.carpark);
+      $('#parkingIcon').prop('title', "Number of Carparks Nearby: " + data.carpark);
     }});    
 
   // Call for image
@@ -191,7 +191,7 @@ function reloadImg2() {
       $("#residentIcon2").hide();
     } else{
       $("#residentIcon2").show();
-      $('#residentIcon2').prop('title', "Number of Residents Nearby " + data);
+      $('#residentIcon2').prop('title', "Number of Residents Nearby: " + data);
     }});
 
     $.get("/pedestrian", function (data) {
@@ -199,7 +199,7 @@ function reloadImg2() {
       $("#pedestrianIcon2").hide();
     } else{
       $("#pedestrianIcon2").show();
-      $('#pedestrianIcon2').prop('title', "Pedestrian counts Nearby " + data);
+      $('#pedestrianIcon2').prop('title', "Pedestrian counts Nearby: " + data);
     }});
 
     $.get("/gallery", function (data) {
@@ -207,7 +207,7 @@ function reloadImg2() {
       $("#artworkIcon2").hide();
     } else{
       $("#artworkIcon2").show();
-      $('#artworkIcon2').prop('title', "Public Art galleries Nearby " + data);
+      $('#artworkIcon2').prop('title', "Public Art galleries Nearby: " + data);
     }});
 
     $.get("/cafe", function (data) {
@@ -215,7 +215,7 @@ function reloadImg2() {
       $("#cafekIcon2").hide();
     } else{
       $("#cafeIcon2").show();
-      $('#cafeIcon2').prop('title', "Number of Cafes Nearby " + data);
+      $('#cafeIcon2').prop('title', "Number of Cafes Nearby: " + data);
     }});    
 
     $.get("/accessible", function (data) {
@@ -223,7 +223,7 @@ function reloadImg2() {
       $("#toiletIcon2").hide();
     } else{
       $("#toiletIcon2").show();
-      $('#toiletIcon2').prop('title', "Number of Accessible Toielts Nearby " + data);
+      $('#toiletIcon2').prop('title', "Number of Accessible Toielts Nearby: " + data);
     }});
 
     $.get("/bar", function (data) {
@@ -231,7 +231,7 @@ function reloadImg2() {
       $("#barIcon2").hide();
     } else{
       $("#barIcon2").show();
-      $('#barIcon2').prop('title', "Number of Bars Nearby " + data);
+      $('#barIcon2').prop('title', "Number of Bars Nearby: " + data);
     }});
 
     $.get("/print", function (data) {
@@ -239,7 +239,7 @@ function reloadImg2() {
       $("#printIcon2").hide();
     } else{
       $("#printIcon2").show();
-      $('#printIcon2').prop('title', "Number of Print Stores Nearby " + data);
+      $('#printIcon2').prop('title', "Number of Print Stores Nearby: " + data);
     }});
 
     $.get("/carpark", function (data) {
@@ -247,7 +247,7 @@ function reloadImg2() {
       $("#parkingIcon2").hide();
     } else{
       $("#parkingIcon2").show();
-      $('#parkingIcon2').prop('title', "Number of Carparks Nearby " + data.carpark);
+      $('#parkingIcon2').prop('title', "Number of Carparks Nearby: " + data.carpark);
     }});    
 
   // Call for image
@@ -293,7 +293,7 @@ var clicked = false;
         // updateLineChart2_2();
         // updateRadarChart_2();
 
-        if($(window).width() >= 1600) {
+        if($(window).width() >= 1500) {
           expandSecond(); // Second Click
         }
 
@@ -311,7 +311,7 @@ var clicked = false;
         updateLineChart1();
         // updateLineChart1_1();
         // updateRadarChart_1();
-        if($(window).width() >= 1600) {
+        if($(window).width() >= 1500) {
           expandFirst(); // First click
         }
 
@@ -386,17 +386,17 @@ function expandSecond() {
       mapboxgl.accessToken = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA';
 
       // Set bounds to CBD
-      // var bounds = [
-      //   [144.9437392829542, -37.82724080876474],  // Northeast coordinates
-      //   [144.97613141562647, -37.8015691517381] // Southwest coordinates
-      // ];
+      var bounds = [
+        [144.9310, -37.8283],  // Northeast coordinates
+        [145.0164, -37.8] // Southwest coordinates
+      ];
 
       var map = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/plusmg/cjvchk9qc0fdn1fp74xjuz92r',
       center: [144.9628079612438, -37.81370894743138], // starting position [lng, lat]
-      zoom: 14.2 // starting zoom
-      // maxBounds: bounds // Sets bounds as max
+      zoom: 14.2, // starting zoom
+      maxBounds: bounds // Sets bounds as max
       });
 
 
@@ -645,10 +645,10 @@ function expandSecond() {
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="tab1">
-                        <canvas id="lineChart1" height="300" width="auto"></canvas>
+                        <canvas id="lineChart1" height="290" width="auto"></canvas>
                     </div>
                     <div class="tab-pane" id="tab2">
-                        <canvas id="lineChart1_1" height="300" width="auto"></canvas>
+                        <canvas id="lineChart1_1" height="290" width="auto"></canvas>
                     </div>
                 </div>
         </div>
@@ -838,13 +838,15 @@ function expandSecond() {
           <div class="row-sm-4">
           <br>
           <div style="padding-top: 80px;"></div>
-          <canvas id="radarChart_1" height="340" width="360"></canvas>
+          <canvas id="radarChart_1" height="300" width="360"></canvas>
+          <div id="tooltip"><img src="/static/image/questionmark.png">
+            <span id="tooltiptext">This shows comparison based on Average Public Gallery Amenities.</span></div>
           <script>
           const RADAR_CHART_1 = document.getElementById("radarChart_1");
           let radarChart_1 = new Chart(RADAR_CHART_1, {
               type: 'radar',
               data: {
-                  labels: ["Residents", "Pubs",  "Parking Spots", "Pedestrian", "Printing Stores", "Cafe", "Toilets"],
+                  labels: ["Residents", "Pubs",  "Parking", "Pedestrian", "Printing Stores", "Cafe", "Toilets"],
                   datasets: [
                       {
                           label: 'Clicked Area',
@@ -913,8 +915,6 @@ function expandSecond() {
         // };          
         </script>
         <br>
-        <br>
-        <br>
       </div>
     </div>
     
@@ -953,10 +953,10 @@ function expandSecond() {
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="tab1_B">
-                        <canvas id="lineChart2" height="300" width="auto"></canvas>
+                        <canvas id="lineChart2" height="290" width="auto"></canvas>
                     </div>
                     <div class="tab-pane" id="tab2_B">
-                        <canvas id="lineChart2_2" height="300" width="auto"></canvas>
+                        <canvas id="lineChart2_2" height="290" width="auto"></canvas>
                     </div>
                 </div>
           </div>
@@ -1144,13 +1144,13 @@ function expandSecond() {
       <div class="row-sm-4">
       <br>
       <div style="padding-top: 80px;"></div>
-      <canvas id="radarChart_2" height="340" width="360"></canvas>
+      <canvas id="radarChart_2" height="300" width="360"></canvas>
           <script>
           const RADAR_CHART_2 = document.getElementById("radarChart_2");
           let radarChart_2 = new Chart(RADAR_CHART_2, {
               type: 'radar',
               data: {
-                  labels: ["Residents", "Pubs",  "Parking Spots", "Pedestrian", "Printing Stores", "Cafe", "Toilets"],
+                  labels: ["Residents", "Pubs",  "Parking", "Pedestrian", "Printing Stores", "Cafe", "Toilets"],
                   datasets: [
                       {
                           label: 'Clicked Area',
