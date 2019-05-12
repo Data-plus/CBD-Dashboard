@@ -3,7 +3,7 @@ from flask import render_template
 from flask import request
 from flask import jsonify
 
-from pymongo import MongoClient
+# from pymongo import MongoClient
 import json
 
 import pandas as pd
@@ -52,11 +52,11 @@ Databse and Flask Set up
 
 app = Flask(__name__)
 
-MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
-DBS_NAME = 'mydb'
-COLLECTION_NAME = 'projects'
-FIELDS = "FeatureCollection"
+# MONGODB_HOST = 'localhost'
+# MONGODB_PORT = 27017
+# DBS_NAME = 'mydb'
+# COLLECTION_NAME = 'projects'
+# FIELDS = "FeatureCollection"
 
 
 """
@@ -303,13 +303,13 @@ def get_pubs(click, df_pubs):
 # Object ID may differ, need to change
 @app.route("/")
 def dashboard_projects():
-    connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
-    collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find_one({"features.properties.Gallery Name" : { "$exists" : True }}, {"_id":0})
-    sensors = collection.find_one({"features.properties.sensor_id" : { "$exists" : True }}, {"_id":0})
-    cafes = collection.find_one({"features.properties.Type" : "Cafe"}, {"_id":0})
-    connection.close()
-    return render_template("index.html", geojson_data = projects, sensors = sensors, geojson_cafe = cafes)
+    # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
+    # collection = connection[DBS_NAME][COLLECTION_NAME]
+    # projects = collection.find_one({"features.properties.Gallery Name" : { "$exists" : True }}, {"_id":0})
+    # sensors = collection.find_one({"features.properties.sensor_id" : { "$exists" : True }}, {"_id":0})
+    # cafes = collection.find_one({"features.properties.Type" : "Cafe"}, {"_id":0})
+    # connection.close()
+    return render_template("index.html") #geojson_data = projects, sensors = sensors, geojson_cafe = cafes
 
 
 # Get geocode from click
