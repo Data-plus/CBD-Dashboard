@@ -16,6 +16,7 @@ import calendar  # Find Sensor information and Distance
 import geopy
 from geopy import distance
 import time
+import math
 
 from mapbox import Geocoder
 
@@ -512,9 +513,9 @@ def data():
         weekday = get_ped_hourly(click, df_weekday)
         ped_weekends = get_ped_hourly(click, df_weekends)
         each_day_winter = for_eachday(get_ped_any(click, winter))
-        radar_data = [min(res_data*5/1500,10),min(bar_data/5,10),
-                      min(car_park/500,10),min(average_ped*5/2057,10),
-                      min(print_data+5/2,10),min(cafe_data/2,10),min(accessible_data,10)]
+        radar_data = [min(math.ceil(res_data*5/1500), 10), min(math.ceil(bar_data/5), 10),
+                      min(math.ceil(car_park/500), 10), min(math.ceil(average_ped*5/2057), 10),
+                      min(math.ceil(print_data+5/2), 10), min(math.ceil(cafe_data/2), 10), min(math.ceil(accessible_data*5), 10)]
         end = time.time()
         print(end - start)
 
