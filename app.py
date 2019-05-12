@@ -501,7 +501,7 @@ def send_data_address():
     try:
         get_data()
         address_data = reverse_geocoding(click)
-        return jsonify ({'address':address_data})
+        return jsonify({'address':address_data})
     except:
         return ''
 

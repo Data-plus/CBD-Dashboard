@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d92bb42f-1ad3-4508-b42d-7dfd54119f7c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/data.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tabs.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/tabs_v2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/test-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/test-1.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +17,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="305" column="14" selection-start-line="305" selection-start-column="14" selection-end-line="305" selection-end-column="14" />
+            <state relative-caret-position="352">
+              <caret line="521" column="25" lean-forward="true" selection-start-line="521" selection-start-column="25" selection-end-line="521" selection-end-column="25" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -47,10 +45,13 @@
       <find>/test</find>
       <find>global click</find>
       <find>rece</find>
-      <find>/data</find>
       <find>clicked</find>
       <find>ind</find>
       <find>.php</find>
+      <find>.ht</find>
+      <find>/data</find>
+      <find>/addres</find>
+      <find>.</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -169,7 +170,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.7859375" weight="0.34165722" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.7859375" visible="true" weight="0.34165722" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49791667" weight="0.39915967" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -236,8 +237,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="305" column="14" selection-start-line="305" selection-start-column="14" selection-end-line="305" selection-end-column="14" />
+        <state relative-caret-position="352">
+          <caret line="521" column="25" lean-forward="true" selection-start-line="521" selection-start-column="25" selection-end-line="521" selection-end-column="25" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
