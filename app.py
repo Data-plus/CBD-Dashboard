@@ -25,21 +25,21 @@ Import Required Files and Tokens
 mapbox_access_token = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA'
 geocoder = Geocoder(access_token=mapbox_access_token)
 
-df = pd.read_csv("/static/data/pedestrian.csv")  # 10-5 data
+df = pd.read_csv("static/data/pedestrian.csv")  # 10-5 data
 #  df = pd.read_csv("static/data/pedestrian_temp.csv")  # Full time data
-winter = pd.read_csv("/static/data/winter.csv")  # 10-5 data winter
-df_weekday = pd.read_csv("/static/data/weekday.csv")
-df_weekends = pd.read_csv('/static/data/weekends.csv')
+winter = pd.read_csv("static/data/winter.csv")  # 10-5 data winter
+df_weekday = pd.read_csv("static/data/weekday.csv")
+df_weekends = pd.read_csv('static/data/weekends.csv')
 
-df2 = pd.read_csv('/static/data/sensors.csv')
-population = pd.read_csv('/static/data/population.csv')
-on_street = pd.read_csv('/static/data/on_street.csv')
-df_cafe = pd.read_csv('/static/data/cafe.csv')
-off_street = pd.read_csv('/static/data/off_street.csv')
-df_accessible = pd.read_csv('/static/data/accessible.csv')
-df_gallery = pd.read_csv('/static/data/gallery.csv')
-df_print = pd.read_csv('/static/data/print.csv')
-df_pubs = pd.read_csv('/static/data/pubs.csv')
+df2 = pd.read_csv('static/data/sensors.csv')
+population = pd.read_csv('static/data/population.csv')
+on_street = pd.read_csv('static/data/on_street.csv')
+df_cafe = pd.read_csv('static/data/cafe.csv')
+off_street = pd.read_csv('static/data/off_street.csv')
+df_accessible = pd.read_csv('static/data/accessible.csv')
+df_gallery = pd.read_csv('static/data/gallery.csv')
+df_print = pd.read_csv('static/data/print.csv')
+df_pubs = pd.read_csv('static/data/pubs.csv')
 #df_office = pd.read_csv('static/data/office.csv')
 
 # Sensor

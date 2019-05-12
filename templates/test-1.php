@@ -71,7 +71,7 @@ function reloadImg() {
 //   }
 // }
 
-  $.get("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test", function (r) {
+  $.get('/test', function (r) {
   if (r.cafe > 20)
   then {
       document.getElementById(id="restaurantIcon");
@@ -102,7 +102,7 @@ function reloadImg() {
   // document.getElementById("PubPic").src="/image/pub?a="+d.getTime();
   // document.getElementById("parkingIcon").src="/image/carpark?a="+d.getTime();
 
-  $.get("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/address", function (data){
+  $.get('/address', function (data){
     document.getElementById(id="address1").innerHTML=data.address;
   });
 
@@ -135,7 +135,7 @@ function reloadImg2() {
   // document.getElementById("PubPic2").src="/image/pub?a="+d.getTime();
   // document.getElementById("CarPic2").src="/image/carpark?a="+d.getTime();
 
-  $.get("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/address", function (data){
+  $.get('/address', function (data){
     document.getElementById(id="address2").innerHTML=data.address;
   });
 
@@ -421,10 +421,11 @@ function expandSecond() {
           
           $.ajax(
                   { type : 'POST',
-                  url : "http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test",
+                  url : '/test',
                   contentType: "application/json;charset=UTF-8",
                   dataType:'json',
                   data : JSON.stringify({'data':location})
+                  console.log("success")
                   }
               );
       });
@@ -483,7 +484,7 @@ function expandSecond() {
 
           $.ajax(
                   { type : 'POST',
-                  url : "http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/test1",
+                  url : '/test1',
                   contentType: "application/json;charset=UTF-8",
                   dataType:'json',
                   data : JSON.stringify({'data':JSON.stringify(clickLog)})
@@ -668,7 +669,7 @@ function expandSecond() {
         });
 
           var updateLineChart1 = function() {
-              $.get("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/data", function (result) {
+              $.get('/data', function (result) {
                 console.log(result)
                 lineChart1.data.datasets[0].data = result.results;
                 lineChart1.data.datasets[1].data = result.results_winter;
@@ -796,7 +797,7 @@ function expandSecond() {
         });
 
           var updateLineChart = function() {
-              $.get("http://ec2-13-58-204-56.us-east-2.compute.amazonaws.com:5000/data", function (result) {
+              $.get('/data', function (result) {
                 console.log(result)
                 lineChart.data.datasets[0].data = result.click2;
                 lineChart.data.datasets[1].data = result.click2_winter;
