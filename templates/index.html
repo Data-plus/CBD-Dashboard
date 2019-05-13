@@ -336,12 +336,17 @@ var clicked = false;
 
   $("#right-bg2").hide();
 
+  $('#map_area').on('shown.bs.modal',function(){
+                map.resize();
+              });
+
 };
 
 function expandSecond() {
   $('#map').animate({
     'width': '50%'
   }, 600);
+  
 
   $('#right-bg1').animate({
     'min-width': '50%',
@@ -354,6 +359,10 @@ function expandSecond() {
     'min-height': '100%'
   }, 600);
   $("#right-bg2").addClass('col-sm-3');
+
+  $('#map_area').on('shown.bs.modal',function(){
+                map.resize();
+              });
 };
 </script>
 
@@ -374,7 +383,7 @@ function expandSecond() {
 <!-- Map Box -->
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-lg-6 sidenav" id=map_area onclick="countClicks()">
+    <div class="col-lg-6 sidenav" id='map_area' onclick="countClicks()">
       <nav id='menu'></nav>
       <div id='map'></div>
       <div id='geocoder' class='geocoder'></div>
@@ -481,6 +490,9 @@ function expandSecond() {
                   data : JSON.stringify({'data':location})
                   }
               );
+              $('#map_area').on('shown.bs.modal',function(){
+                map.resize();
+              });
       });
 
       for (var i = 0; i < toggleableLayerIds.length; i++) {
@@ -604,8 +616,9 @@ function expandSecond() {
 
 
     <!-- Left Side -->
-    <!-- Location A -->
+  
     <div class="col-sm-3" id="right-bg1">
+        <!-- Location A -->
       <div class="row-sm-4">
       <button type="button" id=LocButton>LOCATION A</button>
       <br>
@@ -634,7 +647,7 @@ function expandSecond() {
 
       <!-- Chart A -->
       <div class="row-sm-4">
-      <div class="col-md-12 product-tabs">
+      <div class="col-md-12 product-tabs" style="padding-left:0px;">
                 <ul class="nav nav-tabs">
                     <li class="tab col s3"><a class="active" href="#tab1" data-toggle="tab"><p>Forecast</p></a></li>
                     <li class="tab col s3"><a href="#tab2" data-toggle="tab"><p>Hourly</p></a></li>
@@ -942,7 +955,7 @@ function expandSecond() {
 
         <!-- Chart B -->
         <div class="row-sm-4">
-        <div class="col-md-12 product-tabs">
+        <div class="col-md-12 product-tabs" style="padding-left:0px;">
                 <ul class="nav nav-tabs">
                     <li class="tab col s3"><a class="active" href="#tab1_B" data-toggle="tab"><p>Forecast</p></a></li>
                     <li class="tab col s3"><a href="#tab2_B" data-toggle="tab"><p>Hourly</p></a></li>
@@ -1218,7 +1231,6 @@ function expandSecond() {
     </div>
   </div>
 </div>
-
 
 </body>
 </html>
