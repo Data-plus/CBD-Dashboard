@@ -443,14 +443,14 @@ function expandSecond() {
 
       map.on('click', function(e) {
               var features = map.queryRenderedFeatures(e.point, {
-                  layers: ['Tram Stop', 'public-art']
+                  layers: ['Tram Stop', 'Public Artworks']
               });
               if (!features.length) {
                   return;
               }
               var feature = features[0];
               });
-      var toggleableLayerIds = [ 'Tram Stop', 'public-art'];
+      var toggleableLayerIds = [ 'Tram Stop', 'Public Artworks'];
 
       
       // Click
@@ -1226,5 +1226,8 @@ function expandSecond() {
   </div>
 </div>
 
+
+
 </body>
+
 </html>

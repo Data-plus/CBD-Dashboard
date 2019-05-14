@@ -1,0 +1,2527 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.907291,-37.80569579 ]
+    },
+    "properties": {
+    "Name":"Port Phillip Monument",
+    "Artist":"unknown",
+    "Art Date":"1941",
+    "Structure":"Basalt monument"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.946871,-37.82201822 ]
+    },
+    "properties": {
+    "Name":"Blowhole",
+    "Artist":"Duncan Stemler",
+    "Art Date":"2005",
+    "Structure":"Stainless-steel and aluminium sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9406873,-37.79535268 ]
+    },
+    "properties": {
+    "Name":"Bird Panels",
+    "Artist":"Di Christensen and Bernice McPherson",
+    "Art Date":"1995",
+    "Structure":"Stainless-steel panels"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9673387,-37.81405487 ]
+    },
+    "properties": {
+    "Name":"Bandstand",
+    "Artist":"George Dodd",
+    "Art Date":"1864",
+    "Structure":"Concrete bandstand"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741588,-37.81869733 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741672,-37.81867389 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741285,-37.81868823 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9467651,-37.82191072 ]
+    },
+    "properties": {
+    "Name":"Blowhole",
+    "Artist":"Duncan Stemler",
+    "Art Date":"2005",
+    "Structure":"Stainless-steel and aluminium sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9664959,-37.81515829 ]
+    },
+    "properties": {
+    "Name":"Coat of Arms",
+    "Artist":"City of Melbourne",
+    "Art Date":"1992",
+    "Structure":"Brass pavement inlay"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.946829,-37.81552396 ]
+    },
+    "properties": {
+    "Name":"Threaded Field",
+    "Artist":"Simon Perry",
+    "Art Date":"1999",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9477719,-37.81529791 ]
+    },
+    "properties": {
+    "Name":"Threaded Field",
+    "Artist":"Simon Perry",
+    "Art Date":"1999",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9468761,-37.81536234 ]
+    },
+    "properties": {
+    "Name":"Threaded Field",
+    "Artist":"Simon Perry",
+    "Art Date":"1999",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9670615,-37.81642366 ]
+    },
+    "properties": {
+    "Name":"Beyond the Ocean of Existence",
+    "Artist":"Loretta Quinn",
+    "Art Date":"1993",
+    "Structure":"Bronze sculpture on granite plinth"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9467985,-37.82193081 ]
+    },
+    "properties": {
+    "Name":"Blowhole",
+    "Artist":"Duncan Stemler",
+    "Art Date":"2005",
+    "Structure":"Stainless-steel and aluminium sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9452798,-37.81712232 ]
+    },
+    "properties": {
+    "Name":"Cow Up A Tree",
+    "Artist":"John Kelly",
+    "Art Date":"2000",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9664442,-37.81504812 ]
+    },
+    "properties": {
+    "Name":"Coat of Arms",
+    "Artist":"City of Melbourne",
+    "Art Date":"1992",
+    "Structure":"Brass pavement inlay"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9664589,-37.8150814 ]
+    },
+    "properties": {
+    "Name":"Coat of Arms",
+    "Artist":"City of Melbourne",
+    "Art Date":"1992",
+    "Structure":"Brass pavement inlay"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9664795,-37.81512255 ]
+    },
+    "properties": {
+    "Name":"Coat of Arms",
+    "Artist":"City of Melbourne",
+    "Art Date":"1992",
+    "Structure":"Brass pavement inlay"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741107,-37.81872071 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741417,-37.81871573 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9713353,-37.82220982 ]
+    },
+    "properties": {
+    "Name":"The Water Nymph",
+    "Artist":"Paul Montford",
+    "Art Date":"1925",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9504373,-37.8214934 ]
+    },
+    "properties": {
+    "Name":"The Wave",
+    "Artist":"Vashti Gonda",
+    "Art Date":"2006",
+    "Structure":"Media installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9634008,-37.81409769 ]
+    },
+    "properties": {
+    "Name":"The Public Purse",
+    "Artist":"Simon Perry",
+    "Art Date":"1994",
+    "Structure":"Calca red-granite and stainless-steel sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.946746,-37.82195241 ]
+    },
+    "properties": {
+    "Name":"Blowhole",
+    "Artist":"Duncan Stemler",
+    "Art Date":"2005",
+    "Structure":"Stainless-steel and aluminium sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9470094,-37.82186283 ]
+    },
+    "properties": {
+    "Name":"Blowhole",
+    "Artist":"Duncan Stemler",
+    "Art Date":"2005",
+    "Structure":"Stainless-steel and aluminium sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741362,-37.81876281 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741724,-37.81875087 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9709507,-37.82215327 ]
+    },
+    "properties": {
+    "Name":"The Phoenix",
+    "Artist":"Yrsa Von Leister",
+    "Art Date":"1973",
+    "Structure":"Bronze and sheet copper statue"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9785775,-37.81395384 ]
+    },
+    "properties": {
+    "Name":"Statue of Meditation",
+    "Artist":"Robert Delandere",
+    "Art Date":"1933",
+    "Structure":"Marble statue"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.947042,-37.82195545 ]
+    },
+    "properties": {
+    "Name":"Blowhole",
+    "Artist":"Duncan Stemler",
+    "Art Date":"2005",
+    "Structure":"Stainless-steel and aluminium sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9726155,-37.81372575 ]
+    },
+    "properties": {
+    "Name":"Bust of Sir Samuel Gillott",
+    "Artist":"Charles Douglas Richardson",
+    "Art Date":"1905",
+    "Structure":"Marble statue"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9415717,-37.8151429 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9414832,-37.81509603 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9415465,-37.81510706 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741756,-37.81877452 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9532939,-37.78256135 ]
+    },
+    "properties": {
+    "Name":"Zoo Paving",
+    "Artist":"Tanya Court and Kate Cullity",
+    "Art Date":"1995",
+    "Structure":"Coloured concrete paving"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9703552,-37.82202807 ]
+    },
+    "properties": {
+    "Name":"The Pathfinder",
+    "Artist":"John Edward Robinson",
+    "Art Date":"1974",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9655745,-37.8136854 ]
+    },
+    "properties": {
+    "Name":"Three Businessmen Who Brought Their Own Lunch",
+    "Artist":"Alison Weaver and Paul Quinn",
+    "Art Date":"1993",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741028,-37.81874048 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9549376,-37.81031618 ]
+    },
+    "properties": {
+    "Name":"Sundial",
+    "Artist":"unknown",
+    "Art Date":"unknown",
+    "Structure":"Bronze sundial on sandstone plinth"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.971811,-37.82208607 ]
+    },
+    "properties": {
+    "Name":"Lake Waterfall",
+    "Artist":"unknown",
+    "Art Date":"1973",
+    "Structure":"Stone waterfall"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9611037,-37.77887225 ]
+    },
+    "properties": {
+    "Name":"Within Three Worlds",
+    "Artist":"Loretta Quinn",
+    "Art Date":"1995",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9596997,-37.82007652 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9470729,-37.81532441 ]
+    },
+    "properties": {
+    "Name":"Threaded Field",
+    "Artist":"Simon Perry",
+    "Art Date":"1999",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9472481,-37.81527858 ]
+    },
+    "properties": {
+    "Name":"Threaded Field",
+    "Artist":"Simon Perry",
+    "Art Date":"1999",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9467121,-37.81548362 ]
+    },
+    "properties": {
+    "Name":"Threaded Field",
+    "Artist":"Simon Perry",
+    "Art Date":"1999",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9531655,-37.81147502 ]
+    },
+    "properties": {
+    "Name":"City Living",
+    "Artist":"Andrew Rogers",
+    "Art Date":"1995",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.968513,-37.8136958 ]
+    },
+    "properties": {
+    "Name":"Ceremony and Vehicle for Conveying Spirit",
+    "Artist":"Maurie Hughes",
+    "Art Date":"1996",
+    "Structure":"Silicon bronze, galvanized and mild steel sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9811023,-37.81340998 ]
+    },
+    "properties": {
+    "Name":"Fairies Tree",
+    "Artist":"Ola Cohn",
+    "Art Date":"1934",
+    "Structure":"Red Gum carving"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9696731,-37.82110932 ]
+    },
+    "properties": {
+    "Name":"Farnex Hercules",
+    "Artist":"unknown",
+    "Art Date":"1780",
+    "Structure":"Marble bust with granite pedestal"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.970662,-37.82212412 ]
+    },
+    "properties": {
+    "Name":"Water Children",
+    "Artist":"John Edward Robinson",
+    "Art Date":"c. 1970",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9594042,-37.82011163 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9597182,-37.82006141 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.959704,-37.82009533 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9749315,-37.81502998 ]
+    },
+    "properties": {
+    "Name":"Horse Hitching Post",
+    "Artist":"unknown",
+    "Art Date":"c. 1900",
+    "Structure":"Stone post"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9597252,-37.82008302 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9597331,-37.82010025 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9596274,-37.82007857 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.955039,-37.81026402 ]
+    },
+    "properties": {
+    "Name":"The Court Favourite",
+    "Artist":"Paul Montford",
+    "Art Date":"unknown",
+    "Structure":"Bronze statue with granite pedestal"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9472468,-37.81924313 ]
+    },
+    "properties": {
+    "Name":"Signature Work",
+    "Artist":"Emily Floyd",
+    "Art Date":"2004",
+    "Structure":"Painted aluminium sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9717964,-37.81859228 ]
+    },
+    "properties": {
+    "Name":"Birrarung Wilam",
+    "Artist":"Vicki Couzens, Lee Darroch and Treahna Hamm",
+    "Art Date":"2006",
+    "Structure":"Stone, wood, stainless steel, bronze, nickel and audio installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9717843,-37.81858722 ]
+    },
+    "properties": {
+    "Name":"Birrarung Wilam",
+    "Artist":"Vicki Couzens, Lee Darroch and Treahna Hamm",
+    "Art Date":"2006",
+    "Structure":"Stone, wood, stainless steel, bronze, nickel and audio installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9611581,-37.77893118 ]
+    },
+    "properties": {
+    "Name":"Within Three Worlds",
+    "Artist":"Loretta Quinn",
+    "Art Date":"1995",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9239392,-37.79020536 ]
+    },
+    "properties": {
+    "Name":"Lynch's Bridge Mosaic Mural",
+    "Artist":"Elizabeth MacKinnon",
+    "Art Date":"1998",
+    "Structure":"Ceramic tile mural"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9640765,-37.81037208 ]
+    },
+    "properties": {
+    "Name":"Resting Place",
+    "Artist":"Bronwyn Snow",
+    "Art Date":"1994",
+    "Structure":"Steel and jarrah seat"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.973169,-37.81129429 ]
+    },
+    "properties": {
+    "Name":"Another View, Site 1",
+    "Artist":"Ray Thomas",
+    "Art Date":"1994",
+    "Structure":"Red granite and brass paving inlay"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.968211,-37.81304936 ]
+    },
+    "properties": {
+    "Name":"A History Apparatus - Vessel, Craft & Beacon",
+    "Artist":"Chris Reynolds",
+    "Art Date":"1993",
+    "Structure":"Steel and fibreglass sculpture on bitumen, concrete and bluestone foundation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9697574,-37.82105934 ]
+    },
+    "properties": {
+    "Name":"Apollo Belvedere",
+    "Artist":"unknown",
+    "Art Date":"unknown",
+    "Structure":"Marble and granite bust"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.968381,-37.81480512 ]
+    },
+    "properties": {
+    "Name":"Another View, Site 17",
+    "Artist":"Ray Thomas",
+    "Art Date":"1994-1995",
+    "Structure":"Bluestone paver with brass inlay"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9601987,-37.81941332 ]
+    },
+    "properties": {
+    "Name":"Another View, Site 8",
+    "Artist":"Ray Thomas",
+    "Art Date":"1994",
+    "Structure":"Stone and brass paving inlay"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9474446,-37.81823233 ]
+    },
+    "properties": {
+    "Name":"Anchor",
+    "Artist":"Neil Dawson",
+    "Art Date":"2005",
+    "Structure":"Decorative rope work"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9468563,-37.81869379 ]
+    },
+    "properties": {
+    "Name":"Aurora",
+    "Artist":"Geoffrey Bartlett",
+    "Art Date":"2005",
+    "Structure":"Stainless steel"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9450676,-37.81884333 ]
+    },
+    "properties": {
+    "Name":"Aqualung",
+    "Artist":"John Mead",
+    "Art Date":"2006",
+    "Structure":"Abstract sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.982657,-37.81182205 ]
+    },
+    "properties": {
+    "Name":"Australia Today and Tomorrow",
+    "Artist":"Karl Duldig",
+    "Art Date":"1970",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9640461,-37.80982756 ]
+    },
+    "properties": {
+    "Name":"Architectural Fragment",
+    "Artist":"Petrus Spronk",
+    "Art Date":"1992",
+    "Structure":"Bluestone sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9463251,-37.82023234 ]
+    },
+    "properties": {
+    "Name":"Reed Vessel",
+    "Artist":"Virginia King",
+    "Art Date":"2002",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9523648,-37.78477301 ]
+    },
+    "properties": {
+    "Name":"Peter Pan",
+    "Artist":"Paul Montford",
+    "Art Date":"1925",
+    "Structure":"Bronze statue"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741308,-37.81866101 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9592305,-37.80725192 ]
+    },
+    "properties": {
+    "Name":"Wind Contrivance",
+    "Artist":"Pauline Fraser",
+    "Art Date":"1995",
+    "Structure":"Bronze, Red Gum and Harcourt granite sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9600041,-37.78366121 ]
+    },
+    "properties": {
+    "Name":"Reynold's Reserve Drinking Fountain",
+    "Artist":"unknown",
+    "Art Date":"c. 1935",
+    "Structure":"Red-granite and brick drinking fountain"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9677328,-37.82607142 ]
+    },
+    "properties": {
+    "Name":"Vault",
+    "Artist":"Ron Roberston-Swann",
+    "Art Date":"1980",
+    "Structure":"Steel plate sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9404027,-37.81464277 ]
+    },
+    "properties": {
+    "Name":"Ned and Dan",
+    "Artist":"Alexander Knox",
+    "Art Date":"2006",
+    "Structure":"Three-dimensional frieze"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9476191,-37.8243372 ]
+    },
+    "properties": {
+    "Name":"HeartLand",
+    "Artist":"Karen Casey",
+    "Art Date":"2003",
+    "Structure":"Animated Image"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9511049,-37.81982275 ]
+    },
+    "properties": {
+    "Name":"Feng Shui",
+    "Artist":"Guan Wei",
+    "Art Date":"2003",
+    "Structure":"Multi-panel painting"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9403835,-37.79490479 ]
+    },
+    "properties": {
+    "Name":"Hotham Hill Paving Inlay",
+    "Artist":"Bernice McPherson",
+    "Art Date":"1995",
+    "Structure":"Ceramic tiles and asphalt"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9463212,-37.81557794 ]
+    },
+    "properties": {
+    "Name":"Art Wall",
+    "Artist":"Peter D. Cole",
+    "Art Date":"2000",
+    "Structure":"3D Installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9721343,-37.8037692 ]
+    },
+    "properties": {
+    "Name":"Lie of the Land",
+    "Artist":"Fiona Foley and Chris Knowles",
+    "Art Date":"1997",
+    "Structure":"Sandstone sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9595476,-37.82010034 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9592839,-37.82015405 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9469387,-37.82193352 ]
+    },
+    "properties": {
+    "Name":"Blowhole",
+    "Artist":"Duncan Stemler",
+    "Art Date":"2005",
+    "Structure":"Stainless-steel and aluminium sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9593181,-37.82014953 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9591532,-37.8202412 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9497392,-37.80334181 ]
+    },
+    "properties": {
+    "Name":"Henderson Drinking Fountain",
+    "Artist":"Walter MacFarlane",
+    "Art Date":"1877",
+    "Structure":"Cast-iron drinking fountain"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9455394,-37.81760523 ]
+    },
+    "properties": {
+    "Name":"Shoal Fly By",
+    "Artist":"Cat McCleod and Michael Bellemo",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9668921,-37.81554857 ]
+    },
+    "properties": {
+    "Name":"Larry LaTrobe",
+    "Artist":"Pamela Irving",
+    "Art Date":"1992 and 1996",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9783892,-37.81102354 ]
+    },
+    "properties": {
+    "Name":"People's Path",
+    "Artist":"Ian Sprague et al",
+    "Art Date":"1978-1979",
+    "Structure":"Terracotta bricks (tiles)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9469984,-37.8191897 ]
+    },
+    "properties": {
+    "Name":"Continuum",
+    "Artist":"Michael Snape",
+    "Art Date":"2005",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9416184,-37.81511134 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9415938,-37.81506035 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9415989,-37.81505197 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9414726,-37.81508896 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9415094,-37.81515938 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.964238,-37.82115256 ]
+    },
+    "properties": {
+    "Name":"Fault Line",
+    "Artist":"Hossein Valamesh",
+    "Art Date":"1996",
+    "Structure":"Sandstone, wood and bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9711947,-37.82148774 ]
+    },
+    "properties": {
+    "Name":"The Genie",
+    "Artist":"Sculptor Tom Bass; founder F.J. & I. Lemon",
+    "Art Date":"1973",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9651539,-37.81270568 ]
+    },
+    "properties": {
+    "Name":"The Echo",
+    "Artist":"Edward Ginger",
+    "Art Date":"1996",
+    "Structure":"Steel plate sculpture with polyurethane paint"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9414646,-37.81513455 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.941574,-37.81508775 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9414828,-37.81508277 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9415878,-37.81505285 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9416293,-37.8151131 ]
+    },
+    "properties": {
+    "Name":"Silence",
+    "Artist":"Adrian Mauriks",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9611284,-37.77886885 ]
+    },
+    "properties": {
+    "Name":"Within Three Worlds",
+    "Artist":"Loretta Quinn",
+    "Art Date":"1995",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9718349,-37.8185907 ]
+    },
+    "properties": {
+    "Name":"Birrarung Wilam",
+    "Artist":"Vicki Couzens, Lee Darroch and Treahna Hamm",
+    "Art Date":"2006",
+    "Structure":"Stone, wood, stainless steel, bronze, nickel and audio installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9718216,-37.81859569 ]
+    },
+    "properties": {
+    "Name":"Birrarung Wilam",
+    "Artist":"Vicki Couzens, Lee Darroch and Treahna Hamm",
+    "Art Date":"2006",
+    "Structure":"Stone, wood, stainless steel, bronze, nickel and audio installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.971809,-37.81859548 ]
+    },
+    "properties": {
+    "Name":"Birrarung Wilam",
+    "Artist":"Vicki Couzens, Lee Darroch and Treahna Hamm",
+    "Art Date":"2006",
+    "Structure":"Stone, wood, stainless steel, bronze, nickel and audio installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9799102,-37.81438926 ]
+    },
+    "properties": {
+    "Name":"Boy on a Turtle",
+    "Artist":"unknown",
+    "Art Date":"c. 1850",
+    "Structure":"Bronze statue"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9742019,-37.81870236 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.947887,-37.81797244 ]
+    },
+    "properties": {
+    "Name":"Threaded Field",
+    "Artist":"Simon Perry",
+    "Art Date":"1999",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.965689,-37.81344226 ]
+    },
+    "properties": {
+    "Name":"Weathervanes",
+    "Artist":"Daniel Jenkins",
+    "Art Date":"1993",
+    "Structure":"Hand-beaten copper sculpture with gold-leaf detail"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9605978,-37.82027159 ]
+    },
+    "properties": {
+    "Name":"Constellation",
+    "Artist":"Bruce Armstrong and Geoffrey Bartlett",
+    "Art Date":"1996",
+    "Structure":"Stainless steel, copper and Cyrpus-pine sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9606625,-37.8202461 ]
+    },
+    "properties": {
+    "Name":"Constellation",
+    "Artist":"Bruce Armstrong and Geoffrey Bartlett",
+    "Art Date":"1996",
+    "Structure":"Stainless steel, copper and Cyrpus-pine sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9607253,-37.82021855 ]
+    },
+    "properties": {
+    "Name":"Constellation",
+    "Artist":"Bruce Armstrong and Geoffrey Bartlett",
+    "Art Date":"1996",
+    "Structure":"Stainless steel, copper and Cyrpus-pine sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9607897,-37.82018982 ]
+    },
+    "properties": {
+    "Name":"Constellation",
+    "Artist":"Bruce Armstrong and Geoffrey Bartlett",
+    "Art Date":"1996",
+    "Structure":"Stainless steel, copper and Cyrpus-pine sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9605345,-37.82029993 ]
+    },
+    "properties": {
+    "Name":"Constellation",
+    "Artist":"Bruce Armstrong and Geoffrey Bartlett",
+    "Art Date":"1996",
+    "Structure":"Stainless steel, copper and Cyrpus-pine sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9658089,-37.81360246 ]
+    },
+    "properties": {
+    "Name":"Maxims of Behaviour",
+    "Artist":"Alexander Knox",
+    "Art Date":"2008",
+    "Structure":"Kinetic light installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9757167,-37.82008259 ]
+    },
+    "properties": {
+    "Name":"Speakers Corner",
+    "Artist":"Evangelos Sakaris",
+    "Art Date":"c. 2000",
+    "Structure":"Earthwork and pink-granite memorial"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9593369,-37.82013251 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9596989,-37.82005556 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9667735,-37.81576099 ]
+    },
+    "properties": {
+    "Name":"Painted Poles",
+    "Artist":"Maree Clarke and Sonja Hodge",
+    "Art Date":"1992",
+    "Structure":"Metal poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741515,-37.82401347 ]
+    },
+    "properties": {
+    "Name":"Miraggio",
+    "Artist":"Pino Conte",
+    "Art Date":"1964",
+    "Structure":"Bronze statue"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9670065,-37.81626853 ]
+    },
+    "properties": {
+    "Name":"Painted Poles",
+    "Artist":"Maree Clarke and Sonja Hodge",
+    "Art Date":"1992",
+    "Structure":"Metal poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9593601,-37.82012299 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9767611,-37.82563932 ]
+    },
+    "properties": {
+    "Name":"Grotto Waterfall",
+    "Artist":"unknown",
+    "Art Date":"1981",
+    "Structure":"Basalt and cement"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9652649,-37.81295407 ]
+    },
+    "properties": {
+    "Name":"Personal Islands",
+    "Artist":"Robert Jacks",
+    "Art Date":"1992",
+    "Structure":"Brass and bluestone"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9827718,-37.81376754 ]
+    },
+    "properties": {
+    "Name":"Boy and Pelican",
+    "Artist":"William Leslie Bowles",
+    "Art Date":"1936",
+    "Structure":"Pyrmont sandstone sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9467747,-37.82198536 ]
+    },
+    "properties": {
+    "Name":"Blowhole",
+    "Artist":"Duncan Stemler",
+    "Art Date":"2005",
+    "Structure":"Stainless-steel and aluminium sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9817359,-37.81280964 ]
+    },
+    "properties": {
+    "Name":"Temple of the Winds",
+    "Artist":"Thomas Jones & Co",
+    "Art Date":"1873",
+    "Structure":"Masonry and bluestone rotunda"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741799,-37.81871822 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9718662,-37.81859143 ]
+    },
+    "properties": {
+    "Name":"Birrarung Wilam",
+    "Artist":"Vicki Couzens, Lee Darroch and Treahna Hamm",
+    "Art Date":"2006",
+    "Structure":"Stone, wood, stainless steel, bronze, nickel and audio installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.940308,-37.81493518 ]
+    },
+    "properties": {
+    "Name":"Ned and Dan",
+    "Artist":"Alexander Knox",
+    "Art Date":"2006",
+    "Structure":"Three-dimensional frieze"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9611127,-37.77886275 ]
+    },
+    "properties": {
+    "Name":"Within Three Worlds",
+    "Artist":"Loretta Quinn",
+    "Art Date":"1995",
+    "Structure":"Bronze sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9594524,-37.82010199 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9592003,-37.82017368 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9461365,-37.81582053 ]
+    },
+    "properties": {
+    "Name":"Art Wall",
+    "Artist":"Peter D. Cole",
+    "Art Date":"2000",
+    "Structure":"3D Installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9403407,-37.79493519 ]
+    },
+    "properties": {
+    "Name":"Hotham Hill Seat",
+    "Artist":"Bernice McPherson, Di Christensen and Craig Perry",
+    "Art Date":"",
+    "Structure":"Steel seat"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9479235,-37.82011208 ]
+    },
+    "properties": {
+    "Name":"IOU",
+    "Artist":"Mikala Dwyer",
+    "Art Date":"2005",
+    "Structure":"Stainless steel and toughened glass"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9462027,-37.81569483 ]
+    },
+    "properties": {
+    "Name":"Art Wall",
+    "Artist":"Peter D. Cole",
+    "Art Date":"2000",
+    "Structure":"3D Installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9478944,-37.820083 ]
+    },
+    "properties": {
+    "Name":"IOU",
+    "Artist":"Mikala Dwyer",
+    "Art Date":"2005",
+    "Structure":"Stainless steel and toughened glass"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9479489,-37.82013381 ]
+    },
+    "properties": {
+    "Name":"IOU",
+    "Artist":"Mikala Dwyer",
+    "Art Date":"2005",
+    "Structure":"Stainless steel and toughened glass"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9408384,-37.81469946 ]
+    },
+    "properties": {
+    "Name":"Ned and Dan",
+    "Artist":"Alexander Knox",
+    "Art Date":"2006",
+    "Structure":"Three-dimensional frieze"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9402238,-37.81480303 ]
+    },
+    "properties": {
+    "Name":"Ned and Dan",
+    "Artist":"Alexander Knox",
+    "Art Date":"2006",
+    "Structure":"Three-dimensional frieze"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9406088,-37.81452428 ]
+    },
+    "properties": {
+    "Name":"Ned and Dan",
+    "Artist":"Alexander Knox",
+    "Art Date":"2006",
+    "Structure":"Three-dimensional frieze"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9594266,-37.8201043 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9784994,-37.81430676 ]
+    },
+    "properties": {
+    "Name":"Diana and the Hounds",
+    "Artist":"Sculptor William Leslie Bowles; founder A.B. Brunton",
+    "Art Date":"1940",
+    "Structure":"Cast bronze statue on granite pedestal"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9592717,-37.80720678 ]
+    },
+    "properties": {
+    "Name":"Dairy Hall Window",
+    "Artist":"Artist Bernice McPherson; architect Craig Perry",
+    "Art Date":"1996",
+    "Structure":"Glass and steel window"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9707695,-37.82124042 ]
+    },
+    "properties": {
+    "Name":"Domed Drinking Fountain",
+    "Artist":"unknown",
+    "Art Date":"",
+    "Structure":"Marble and granite drinking fountain"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9523913,-37.82072474 ]
+    },
+    "properties": {
+    "Name":"Eagle",
+    "Artist":"Bruce Armstrong",
+    "Art Date":"2003",
+    "Structure":"Sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9655159,-37.81348839 ]
+    },
+    "properties": {
+    "Name":"Weathervanes",
+    "Artist":"Daniel Jenkins",
+    "Art Date":"1993",
+    "Structure":"Hand-beaten copper sculpture with gold-leaf detail"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9657514,-37.81357555 ]
+    },
+    "properties": {
+    "Name":"Weathervanes",
+    "Artist":"Daniel Jenkins",
+    "Art Date":"1993",
+    "Structure":"Hand-beaten copper sculpture with gold-leaf detail"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9472331,-37.82397565 ]
+    },
+    "properties": {
+    "Name":"Webb Bridge",
+    "Artist":"Robert Owen and Denton Corker Marshall",
+    "Art Date":"2003",
+    "Structure":"Pedestrian and cyclist bridge"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9655792,-37.8136266 ]
+    },
+    "properties": {
+    "Name":"Weathervanes",
+    "Artist":"Daniel Jenkins",
+    "Art Date":"1993",
+    "Structure":"Hand-beaten copper sculpture with gold-leaf detail"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9411301,-37.81435923 ]
+    },
+    "properties": {
+    "Name":"Outside Inside Out",
+    "Artist":"Matthew McCarthy",
+    "Art Date":"2006",
+    "Structure":"Mural"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9810124,-37.81325725 ]
+    },
+    "properties": {
+    "Name":"Model Tudor Village",
+    "Artist":"Edgar Wilson",
+    "Art Date":"1948",
+    "Structure":"Painted cement model"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9622099,-37.82069983 ]
+    },
+    "properties": {
+    "Name":"The Travellers",
+    "Artist":"Artist Nadim Karam; manufacturer Arup Engineering",
+    "Art Date":"2005",
+    "Structure":"Stainless-steel tubing and glass panel installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9243068,-37.79662906 ]
+    },
+    "properties": {
+    "Name":"Commonwealth Games Aquatic Sculptures - Eels",
+    "Artist":"unknown",
+    "Art Date":"2006",
+    "Structure":"Painted steel sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9468307,-37.81801057 ]
+    },
+    "properties": {
+    "Name":"Poise",
+    "Artist":"Warren Langley",
+    "Art Date":"2005",
+    "Structure":"Glass"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9595053,-37.82009795 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9693477,-37.81125374 ]
+    },
+    "properties": {
+    "Name":"Chinese Lion Guardians",
+    "Artist":"unknown",
+    "Art Date":"unknown",
+    "Structure":"Marble lions"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9591684,-37.82021942 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9580572,-37.80932638 ]
+    },
+    "properties": {
+    "Name":"Island Wave",
+    "Artist":"Lisa Young",
+    "Art Date":"2003",
+    "Structure":"Steel sculpture on concrete footing"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9388232,-37.81529824 ]
+    },
+    "properties": {
+    "Name":"Walk of Stars",
+    "Artist":"Peter Cortlett and Jamie Cooper",
+    "Art Date":"2006",
+    "Structure":"Bronze statue and plaques"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9640888,-37.80993259 ]
+    },
+    "properties": {
+    "Name":"Painted Poles",
+    "Artist":"Jennifer McCarthy",
+    "Art Date":"1992",
+    "Structure":"Metal poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9641651,-37.81009688 ]
+    },
+    "properties": {
+    "Name":"Painted Poles",
+    "Artist":"Jennifer McCarthy",
+    "Art Date":"1992",
+    "Structure":"Metal poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9642806,-37.81034715 ]
+    },
+    "properties": {
+    "Name":"Painted Poles",
+    "Artist":"Jennifer McCarthy",
+    "Art Date":"1992",
+    "Structure":"Metal poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9592284,-37.82016094 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9596536,-37.82006084 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9662509,-37.81439839 ]
+    },
+    "properties": {
+    "Name":"Time and Tide",
+    "Artist":"Akio Makigawa",
+    "Art Date":"1994",
+    "Structure":"Bluestone, white marble, bronze and stainless-steel sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9491698,-37.82173846 ]
+    },
+    "properties": {
+    "Name":"Car Nuggets",
+    "Artist":"Patricia Piccinini",
+    "Art Date":"2006",
+    "Structure":"Sculptural forms"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9491687,-37.82172447 ]
+    },
+    "properties": {
+    "Name":"Car Nuggets",
+    "Artist":"Patricia Piccinini",
+    "Art Date":"2006",
+    "Structure":"Sculptural forms"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9740758,-37.81912218 ]
+    },
+    "properties": {
+    "Name":"Eel Trap",
+    "Artist":"Fiona Clarke and Ken McKean",
+    "Art Date":"2003",
+    "Structure":"Plate-steel sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9592522,-37.82015474 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9596802,-37.82005414 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.938854,-37.81524566 ]
+    },
+    "properties": {
+    "Name":"Walk of Stars",
+    "Artist":"Peter Cortlett and Jamie Cooper",
+    "Art Date":"2006",
+    "Structure":"Bronze statue and plaques"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9513255,-37.81960599 ]
+    },
+    "properties": {
+    "Name":"Parrallax",
+    "Artist":"Ari Purhonen",
+    "Art Date":"2002",
+    "Structure":"Public installation"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.947427,-37.82490651 ]
+    },
+    "properties": {
+    "Name":"Photo art billboard",
+    "Artist":"Various artists",
+    "Art Date":"various",
+    "Structure":"Photographic images"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9593818,-37.82011675 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9436883,-37.80881693 ]
+    },
+    "properties": {
+    "Name":"Railway Viewing Platform",
+    "Artist":"Designer Bernice McPherson; architects Craig Perry and Peter Dann",
+    "Art Date":"1994",
+    "Structure":"Metal platform"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9741002,-37.81866661 ]
+    },
+    "properties": {
+    "Name":"Federation Bells",
+    "Artist":"Designers Neil McLachlan and Anton Hasell",
+    "Art Date":"2002",
+    "Structure":"Bronze-alloy bells on galvanised-steel poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9734173,-37.80509131 ]
+    },
+    "properties": {
+    "Name":"Westgarth Drinking Fountain",
+    "Artist":"Alexander McDonald & Co",
+    "Art Date":"c. 1888",
+    "Structure":"Aberdeen pink-granite and bronze drinking fountain"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.959529,-37.82009506 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9491421,-37.82174011 ]
+    },
+    "properties": {
+    "Name":"Car Nuggets",
+    "Artist":"Patricia Piccinini",
+    "Art Date":"2006",
+    "Structure":"Sculptural forms"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9595939,-37.82008406 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9668362,-37.81574106 ]
+    },
+    "properties": {
+    "Name":"Painted Poles",
+    "Artist":"Maree Clarke and Sonja Hodge",
+    "Art Date":"1992",
+    "Structure":"Metal poles"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.9729592,-37.81895423 ]
+    },
+    "properties": {
+    "Name":"Angel",
+    "Artist":"Deborah Halpern",
+    "Art Date":"1988",
+    "Structure":"Ceramic, steel and concrete sculpture"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.959478,-37.82010464 ]
+    },
+    "properties": {
+    "Name":"Scar - A Stolen Vision",
+    "Artist":"Karen Casey, Craig Charles, Glenn Romanis, Maree Clarke, Ray Thomas, Ricardo Idagi and Treahna Hamm",
+    "Art Date":"2001",
+    "Structure":"Wooden pier post and metal sculptures"
+    }
+  }
+]
+}
