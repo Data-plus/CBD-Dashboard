@@ -40,7 +40,7 @@
       top: 0;
       left: 0;
       bottom: 0;
-      background-color: #000;
+      background-color: rgb(255, 255, 255);
       color: #fff;
       width: 100%;
       margin: 0;
@@ -209,7 +209,7 @@ pointer-events: none;
 
 .product-tabs {
     position: absolute;
-    width: 370px;
+    width: 300px;
     padding-top: -10px;
 }
 
@@ -244,7 +244,7 @@ pointer-events: none;
 .tab-pane{
     padding-right: 50px;
     padding-bottom: 20px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .nav-tabs p {

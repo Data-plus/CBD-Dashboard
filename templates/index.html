@@ -27,13 +27,13 @@
       z-index:1;
       width:100%;
       left:50%;
-      margin-left:-25%;
+      margin-right:-25%;
       top:70px;       
 }
   .mapboxgl-ctrl-geocoder { 
       min-width:100%;
       top: 70px; 
-      z-index:7;
+      z-index:5;
   }
 </style>
 
@@ -336,17 +336,14 @@ var clicked = false;
 
   $("#right-bg2").hide();
 
-  $('#map_area').on('shown.bs.modal',function(){
-                map.resize();
-              });
-
 };
 
 function expandSecond() {
   $('#map').animate({
     'width': '50%'
-  }, 600);
-  
+  }, 800);
+  map.resize();
+
 
   $('#right-bg1').animate({
     'min-width': '50%',
@@ -359,10 +356,7 @@ function expandSecond() {
     'min-height': '100%'
   }, 600);
   $("#right-bg2").addClass('col-sm-3');
-
-  $('#map_area').on('shown.bs.modal',function(){
-                map.resize();
-              });
+  
 };
 </script>
 
@@ -526,7 +520,7 @@ function expandSecond() {
 
       // Add zoom and rotation controls to the map.
       var nav = new mapboxgl.NavigationControl();
-      map.addControl(nav, 'bottom-right');
+      map.addControl(nav, 'bottom-left');
 
       // Search
       var geocoder = new MapboxGeocoder({ // Initialize the geocoder
