@@ -3,7 +3,7 @@ from flask import render_template
 from flask import request
 from flask import jsonify
 
-from pymongo import MongoClient
+# from pymongo import MongoClient
 import json
 
 import pandas as pd
@@ -42,21 +42,16 @@ df_print = pd.read_csv('static/data/print.csv')
 df_pubs = pd.read_csv('static/data/pubs.csv')
 #df_office = pd.read_csv('static/data/office.csv')
 
-# Sensor
-# PC: "5cbb067ae39a5cbeb4a82260"
-# Mac: "5cc683b30e00cbd80dd912ad"
-
 """
 Databse and Flask Set up
 """
-
 app = Flask(__name__)
 
-MONGODB_HOST = 'localhost'
-MONGODB_PORT = 27017
-DBS_NAME = 'mydb'
-COLLECTION_NAME = 'projects'
-FIELDS = "FeatureCollection"
+# MONGODB_HOST = 'localhost'
+# MONGODB_PORT = 27017
+# DBS_NAME = 'mydb'
+# COLLECTION_NAME = 'projects'
+# FIELDS = "FeatureCollection"
 
 
 """
@@ -658,4 +653,4 @@ Imange To Client
 
 
 if __name__ == "__main__":
-    app.run(host='localhost', port=5000)
+    app.run(host='0.0.0.0', port=5000)
