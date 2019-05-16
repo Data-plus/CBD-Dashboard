@@ -18,8 +18,7 @@
 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
-
-
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 
 <style>
   .geocoder {
@@ -340,7 +339,9 @@ var clicked = false;
 
 function expandSecond() {
   $('#map').animate({
-    'width': '50%'
+    'width': '50%',
+    // CHANGED - added min-h 16/5
+    'min-height':'100%'
   }, 800);
   map.resize();
 
@@ -356,8 +357,8 @@ function expandSecond() {
     'min-height': '100%'
   }, 600);
   $("#right-bg2").addClass('col-sm-3');
-  
 };
+
 </script>
 
 </head>
@@ -368,9 +369,10 @@ function expandSecond() {
   <div class="container-fluid">
     <div class="navbar-header">
         <a class="navbar-brand" href="http://gallevisionery.cf">GALLEVISIONERY</a>
-        <a class="navbar-brand" href="http://gallevisionery.cf">Home</a>
+        <!-- <a class="navbar-brand" href="http://gallevisionery.cf">Home</a> -->
         <a class="navbar-brand" data-toggle="modal" data-target="#myModal">Instruction</a>
-        <a class="navbar-brand" href="javascript: history.back()" style="position: fixed; right: 30px;">Back</a>
+        <!-- <a class="navbar-brand" href="javascript: history.back()" style="position: fixed; right: 30px;">Back</a> -->
+        <a class="navbar-band" href="http://gallevisionery.cf"><img src="/static/image/logo.png" style="position: fixed; height: 50px; width: 50px; right: 5vw;"></a>
     </div>
   </div>
 </nav>
@@ -390,7 +392,6 @@ function expandSecond() {
         <p><b>This page compares 2 different areas by Clicking</b></p>
         <br>
         <img src="../static/image/popup.gif" style=width:100%>
-        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -410,7 +411,7 @@ function expandSecond() {
       <pre id='info'></pre>
 
       <div class="arrow">
-            <button style="position:absolute; height: 30px; width: 100px; left:45px; bottom:5%;"><a href="#right-bg1" style="text-decoration:none">Analysis <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></button>
+            <button><a href="#right-bg1" style="color:black; text-decoration-line: none">Analysis <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></button>
       </div> 
 
       <script>

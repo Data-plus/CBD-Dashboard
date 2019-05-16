@@ -1,7 +1,12 @@
+    /* NEW 16/05 */
+    .body {
+      font-family: "Roboto Lt", sans-serif;
+    }
     
-    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    
-    .content {height: 100%;}
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */    
+    .content {
+      height: 100%;
+    }
     
     /* Set gray background color and 100% height */
     .sidenav {
@@ -166,13 +171,14 @@ background: #3f7aa3;
 
 .button {
 background-color: #383333; /* Black */
-border: none;
+border-radius: none;
 color: white;
 padding: 10px 24px;
 text-align: center;
 text-decoration: none;
 display: inline-block;
 font-size: 12px;
+border-color: transparent;
 pointer-events: none;
 }
 
@@ -195,7 +201,6 @@ pointer-events: none;
   font-size: 15px;
   border-color: transparent;
   pointer-events: none;
-
 }
 
 #LocButton2 {
@@ -222,6 +227,7 @@ pointer-events: none;
   font-size: 11px;
   background-color: rgb(89,89,89);
   pointer-events: none;
+  border-color: transparent;
 }
 
 
@@ -267,7 +273,15 @@ pointer-events: none;
 
 .nav-tabs p {
   font-size: 17px;
-  font-family: "Roboto";
+  /* NEW 16/05 */
+  font-family: "Roboto Lt", sans-serif;
   color: rgb(40, 40, 40);
 }
 
+.arrow{
+  position:absolute; 
+  height: 30px; 
+  width: 100px; 
+  left:45px; 
+  bottom:5%;
+}
