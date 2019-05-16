@@ -280,8 +280,8 @@ var clicked = false;
     
     function countClicks()
     {
-       if(clicked)
-       { // Second Click
+       if (clicked) { 
+         // Second Click
         var mapLayer2 = map.getLayer('circle2');
         if (typeof mapLayer2 !== 'undefined') {
                     // Remove map layer & source.
@@ -293,14 +293,14 @@ var clicked = false;
         // updateLineChart2_2();
         // updateRadarChart_2();
 
-        if($(window).width() >= 1500) {
+        if ($(window).width() >= 1500) {
           expandSecond(); // Second Click
         }
 
           clicked = false;
        }
-      else
-      { // First Click
+      else { 
+        // First Click
         var mapLayer1 = map.getLayer('circle1');
         if (typeof mapLayer1 !== 'undefined') {
         // Remove map layer & source.
@@ -311,7 +311,7 @@ var clicked = false;
         updateLineChart1();
         // updateLineChart1_1();
         // updateRadarChart_1();
-        if($(window).width() >= 1500) {
+        if ($(window).width() >= 1500) {
           expandFirst(); // First click
         }
 
@@ -400,15 +400,18 @@ function expandSecond() {
 </div>
 
 
-
 <!-- Map Box -->
 <div class="container-fluid">
   <div class="row content">
-    <div class="col-lg-6 sidenav" id='map_area' onclick="countClicks()">
+    <div class="col-lg-6 sidenav" id='map_area'>     
       <nav id='menu'></nav>
-      <div id='map'></div>
+      <div id='map' onclick="countClicks()"></div>
       <div id='geocoder' class='geocoder'></div>
       <pre id='info'></pre>
+
+      <div class="arrow">
+            <button style="position:absolute; height: 30px; width: 100px; left:45px; bottom:5%;"><a href="#right-bg1" style="text-decoration:none">Analysis <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></a></button>
+      </div> 
 
       <script>
       mapboxgl.accessToken = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA';

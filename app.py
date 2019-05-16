@@ -21,7 +21,6 @@ from mapbox import Geocoder
 """
 Import Required Files and Tokens
 """
-
 mapbox_access_token = 'pk.eyJ1IjoicGx1c21nIiwiYSI6ImNqdGwxb3kxNjAwdmo0YW8xdjM4NG9zZWwifQ.Z9-QBnfpJDefBW7VzvC4mA'
 geocoder = Geocoder(access_token=mapbox_access_token)
 
@@ -296,15 +295,16 @@ def get_pubs(click, df_pubs):
 
 # Initialise
 # Object ID may differ, need to change
+# Only if using MongoDB
 @app.route("/")
 def dashboard_projects():
-    connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
-    collection = connection[DBS_NAME][COLLECTION_NAME]
-    projects = collection.find_one({"features.properties.Gallery Name" : { "$exists" : True }}, {"_id":0})
-    sensors = collection.find_one({"features.properties.sensor_id" : { "$exists" : True }}, {"_id":0})
-    cafes = collection.find_one({"features.properties.Type" : "Cafe"}, {"_id":0})
-    connection.close()
-    return render_template("index.html", geojson_data = projects, sensors = sensors, geojson_cafe = cafes)
+    # connection = MongoClient(MONGODB_HOST, MONGODB_PORT)
+    # collection = connection[DBS_NAME][COLLECTION_NAME]
+    # projects = collection.find_one({"features.properties.Gallery Name" : { "$exists" : True }}, {"_id":0})
+    # sensors = collection.find_one({"features.properties.sensor_id" : { "$exists" : True }}, {"_id":0})
+    # cafes = collection.find_one({"features.properties.Type" : "Cafe"}, {"_id":0})
+    # connection.close()
+    return render_template("index.html") #, geojson_data = projects, sensors = sensors, geojson_cafe = cafes)
 
 
 # Get geocode from click
@@ -410,7 +410,6 @@ def send_data():
 """
 Data To Client
 """
-
 @app.route("/resident", methods=['GET', 'POST'])
 def send_data_resident():
     global res_data
@@ -649,7 +648,6 @@ Imange To Client
 #             return send_file(filename, mimetype='image/png')
 #     except:
 #         return ""
-
 
 
 if __name__ == "__main__":
