@@ -56,7 +56,7 @@ app = Flask(__name__)
 """
 Within Functions
 """
-
+# Take 2 coordinates as input, return list of amenities within 'radius' range using geopy distance  
 def within(df, target, radius, g):
     temp = []
     dist = [(geopy.distance.distance((df["Latitude"][g], df["Longitude"][g]),
@@ -98,11 +98,13 @@ def within_p(population, clicked, radius):
 """
 Get Functions
 """
+# Take input coordinate, Return Address
 def reverse_geocoding(click):
     response = geocoder.reverse(lon=click[0], lat=click[1], limit=1, types=['address'])
     features = sorted(response.geojson()['features'], key=lambda x: x['place_name'])
     return features[0]['place_name'].replace(', Australia', '')
 
+# Take input coordinate, return pedestrian counts using nearest 3 sensors 
 def get_ped_any(click, pedestrian):
     click_sensor = pd.DataFrame([{'Latitude': click[1], 'Longitude': click[0]}])
 
@@ -151,7 +153,7 @@ def get_ped_any(click, pedestrian):
 
     return sensor_interest
 
-
+# Show in daily
 def for_eachday(df):
     each = []
     day_list = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
@@ -168,6 +170,7 @@ def for_eachday(df):
 
     return each
 
+# Show in hourly
 def get_ped_hourly(click, pedestrian):
     counts = []
     time = [10,11,12,13,14,15,16,17]
@@ -191,7 +194,7 @@ def get_ped_hourly(click, pedestrian):
 
     return counts
 
-
+# Take coordinate as input, Return filtered (within distance) dataframe and perform required calculation 
 def get_residential(click, population):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
     filtered = pd.DataFrame(within_p(population, clicked, 0.2))
@@ -201,7 +204,6 @@ def get_residential(click, population):
     else:
         household = 0
         return household
-
 
 def get_cafe(click, df_cafe):
     clicked = pd.DataFrame([{'latitude':click[1],'longitude': click[0]}])
@@ -213,7 +215,6 @@ def get_cafe(click, df_cafe):
         n_cr = 0
         return n_cr
 
-
 def get_office(click, df_office):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
     filtered = pd.DataFrame(within_p(df_office, clicked, 0.2))
@@ -224,7 +225,6 @@ def get_office(click, df_office):
     else:
         n_of = 0
         return n_of
-
 
 def get_carpark(click, off_street, on_street):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
@@ -244,7 +244,6 @@ def get_carpark(click, off_street, on_street):
     f3 = int(f1 + f2)
 
     return f3
-
 
 def get_accessible(click, df_accessible):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
@@ -268,7 +267,6 @@ def get_gallery(click, df_gallery):
         n_gal = 0
         return n_gal
 
-
 def get_print(click, df_print):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
     filtered = pd.DataFrame(within_p(df_print, clicked, 0.2))
@@ -279,7 +277,6 @@ def get_print(click, df_print):
     else:
         n_print = 0
         return n_print
-
 
 def get_pubs(click, df_pubs):
     clicked = pd.DataFrame([{'latitude': click[1], 'longitude': click[0]}])
@@ -338,6 +335,7 @@ def get_search():
 
 # Send everything within 200 to "/test"
 # Also, checks if click is received
+# This part is also used for testing purpose
 @app.route("/test", methods=['GET', 'POST'])
 def send_data():
     # global residents, cafe, accessible, gallery, prints, pubs, weekly_ped, average_ped, car_park
@@ -410,6 +408,8 @@ def send_data():
 """
 Data To Client
 """
+# Send data to client, target url = '/abc'
+# Client will be able to fetch data from the target url
 @app.route("/resident", methods=['GET', 'POST'])
 def send_data_resident():
     global res_data
@@ -529,7 +529,8 @@ def data():
 """
 Imange To Client
 """
-#
+# This will only be used if we are using image from local (stored file)
+
 # @app.route('/image/house')
 # def send_image_resident():
 #     try:
